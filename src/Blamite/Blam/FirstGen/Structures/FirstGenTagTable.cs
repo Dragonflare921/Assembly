@@ -75,7 +75,7 @@ namespace Blamite.Blam.FirstGen.Structures
             {
                 StructureValueCollection values = StructureReader.ReadStructure(reader, layout);
                 ITagGroup groupRes = new FirstGenTagGroup(values);
-                if (!result.Contains(groupRes))
+                if (!result.Exists(x => x.Magic == groupRes.Magic))
                 {
                     result.Add(groupRes);
                 }
