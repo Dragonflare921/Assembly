@@ -3,6 +3,22 @@
 	<!-- Blamite Engine Information Database -->
 	<!-- Only edit this if you know what you're doing! -->
 
+    <!-- Halo 1 Builds -->
+    <engine name="Halo 1 PC" version="01.00.00.0564">
+        <shortName>H1PC</shortName>
+        <plugins>Halo1</plugins>
+        <engineInfo>
+            <headerSize>0x800</headerSize>
+            <segmentAlignment>0x4</segmentAlignment>
+            <gameExecutable>halo</gameExecutable>
+        </engineInfo>
+        <databases>
+            <layouts type="layouts" path="Formats/Halo1/Layouts" />
+            <groupNames type="groupNames" path="Formats/Halo1/H1_GroupNames.xml" />
+            <poking type="poking" path="Formats/Halo1/H1_Poking.xml" />
+        </databases>
+    </engine>
+    
 	<!-- Halo 2 Builds -->
 	<engine name="Halo 2 Vista" version="11081.07.04.30.0934.main">
 		<shortName>H2Vista</shortName>

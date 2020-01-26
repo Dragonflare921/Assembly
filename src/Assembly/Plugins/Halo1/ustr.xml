@@ -1,0 +1,5 @@
+<plugin>
+	<tagblock name="String References" offset="0x0" visible="true" elementSize="0x8">
+		<dataref name="String" offset="0x0" visible="true" />
+	</tagblock>
+</plugin>

@@ -104,6 +104,15 @@
     <Compile Include="Blam\CacheFileLoader.cs" />
     <Compile Include="Blam\EngineType.cs" />
     <Compile Include="Blam\EffectInterop.cs" />
+    <Compile Include="Blam\FirstGenIndexedStringTable.cs" />
+    <Compile Include="Blam\FirstGen\FirstGenCacheFile.cs" />
+    <Compile Include="Blam\FirstGen\FirstGenPointerExpander.cs" />
+    <Compile Include="Blam\FirstGen\FirstGenResourceMetaLoader.cs" />
+    <Compile Include="Blam\FirstGen\MetaOffsetConverter.cs" />
+    <Compile Include="Blam\FirstGen\Structures\FirstGenHeader.cs" />
+    <Compile Include="Blam\FirstGen\Structures\FirstGenTag.cs" />
+    <Compile Include="Blam\FirstGen\Structures\FirstGenTagGroup.cs" />
+    <Compile Include="Blam\FirstGen\Structures\FirstGenTagTable.cs" />
     <Compile Include="Blam\ITagInterop.cs" />
     <Compile Include="Blam\Localization\CachedLanguagePackLoader.cs" />
     <Compile Include="Blam\Resources\ResourcePageInjector.cs" />
@@ -203,6 +212,8 @@
     <Compile Include="Extensions\BitArrayExtensions.cs" />
     <Compile Include="IO\IPointerExpander.cs" />
     <Compile Include="Native\ProcessModuleMemoryStream.cs" />
+    <Compile Include="RTE\H1PC\H1PCMapPointerReader.cs" />
+    <Compile Include="RTE\H1PC\H1PCRTEProvider.cs" />
     <Compile Include="RTE\MCC\MCCRTEProvider.cs" />
     <Compile Include="Serialization\PokingCollection.cs" />
     <Compile Include="Serialization\GroupNameCollection.cs" />
@@ -362,6 +373,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Formats\Engines.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Formats\Halo1\H1_GroupNames.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Formats\Halo1\H1_Poking.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Formats\Halo1\Layouts\H1_Layouts_Core.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Formats\Halo2Vista\H2V_GroupNames.xml">

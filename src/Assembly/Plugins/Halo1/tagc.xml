@@ -1,0 +1,5 @@
+<plugin>
+	<tagblock name="Tag References" offset="0x0" visible="true" elementSize="0x8">
+		<tagRef name="Tag" offset="0x0" visible="true" />
+	</tagblock>
+</plugin>

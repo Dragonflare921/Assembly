@@ -33,6 +33,7 @@ using Newtonsoft.Json;
 using XBDMCommunicator;
 using Blamite.Blam.ThirdGen;
 using Blamite.RTE.MCC;
+using Blamite.RTE.H1PC;
 
 namespace Assembly.Metro.Controls.PageTemplates.Games
 {
@@ -200,6 +201,10 @@ namespace Assembly.Metro.Controls.PageTemplates.Games
 				// Set up RTE
 				switch (_cacheFile.Engine)
 				{
+                    case EngineType.FirstGeneration:
+                        _rteProvider = new H1PCRTEProvider(_buildInfo);
+                        break;
+
 					case EngineType.SecondGeneration:
 						_rteProvider = new H2VistaRTEProvider(_buildInfo);
 						break;

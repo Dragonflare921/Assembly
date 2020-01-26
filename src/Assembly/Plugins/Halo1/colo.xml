@@ -1,0 +1,6 @@
+<plugin>
+	<tagblock name="Colors" offset="0x0" visible="true" elementSize="0x30">
+		<ascii name="Name" offset="0x0" length="0x20" visible="true" />
+		<colorf name="Color" offset="0x20" alpha="true" visible="true" />
+	</tagblock>
+</plugin>

@@ -1,0 +1,5 @@
+<plugin>
+	<tagblock name="Ui Widget Definitions" offset="0x0" visible="true" elementSize="0x8">
+		<tagRef name="Ui Widget Definition" offset="0x0" visible="true" />
+	</tagblock>
+</plugin>
