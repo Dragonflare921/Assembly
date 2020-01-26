@@ -1,4 +1,8 @@
-<plugin>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo1" baseSize="0x80">
+	<revisions>
+		<revision author="Lord Zedd" version="1">ayy lmao</revision>
+	</revisions>
 	<float32 name="Radius" offset="0x0" visible="true" tooltip="positive uses old inferior physics, negative uses new improved physics" />
 	<float32 name="Moment Scale" offset="0x4" visible="true" />
 	<float32 name="Mass" offset="0x8" visible="true" />
@@ -25,7 +29,7 @@
 		<vector3 name=" -Xy    Zz+Xx    -Yz" offset="0xC" visible="true" />
 		<vector3 name=" -Zx     -Yz    Xx+Yy" offset="0x18" visible="true" />
 	</tagblock>
-	<tagblock name="Powered Mass Points" offset="0x64" visible="true" elementSize="0x80">
+	<tagblock name="Powered Mass Points" offset="0x68" visible="true" elementSize="0x80">
 		<ascii name="Name" offset="0x0" length="0x20" visible="true" />
 		<flags32 name="Flags" offset="0x20" visible="true">
 			<bit name="Ground Friction" index="0" />
@@ -60,7 +64,7 @@
 		<undefined name="Unknown" offset="0x78" visible="false" />
 		<undefined name="Unknown" offset="0x7C" visible="false" />
 	</tagblock>
-	<tagblock name="Mass Points" offset="0x6C" visible="true" elementSize="0x80">
+	<tagblock name="Mass Points" offset="0x74" visible="true" elementSize="0x80">
 		<ascii name="Name" offset="0x0" length="0x20" visible="true" />
 		<int16 name="Powered Mass Point index" offset="0x20" visible="true" />
 		<int16 name="Model Node" offset="0x22" visible="true" />

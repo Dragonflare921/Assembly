@@ -1,17 +1,17 @@
-<plugin>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo1" baseSize="0x380">
+	<revisions>
+		<revision author="Lord Zedd" version="1">ayy lmao</revision>
+	</revisions>
 	<ascii name="Name" offset="0x0" length="0x20" visible="true" />
 	<colorf name="Primary Color" offset="0x20" alpha="false" visible="true" />
 	<colorf name="Secondary Color" offset="0x2C" alpha="false" visible="true" />
 	<tagRef name="Pattern" offset="0x38" visible="true" />
-	<int16 name="Bitmap Index" offset="0x40" visible="true" />
-	<int16 name="Unknown" offset="0x42" visible="false" />
-	<tagRef name="Decal" offset="0x44" visible="true" />
-	<int16 name="Bitmap Index" offset="0x4C" visible="true" />
-	<int16 name="Unknown" offset="0x4E" visible="false" />
-	<undefined name="Unknown" offset="0x50" visible="false" />
-	<undefined name="Unknown" offset="0x54" visible="false" />
-	<undefined name="Unknown" offset="0x58" visible="false" />
-	<undefined name="Unknown" offset="0x5C" visible="false" />
+	<int16 name="Bitmap Index" offset="0x48" visible="true" />
+	<int16 name="Unknown" offset="0x4A" visible="false" />
+	<tagRef name="Decal" offset="0x4C" visible="true" />
+	<int16 name="Bitmap Index" offset="0x5C" visible="true" />
+	<int16 name="Unknown" offset="0x5E" visible="false" />
 	<undefined name="Unknown" offset="0x60" visible="false" />
 	<undefined name="Unknown" offset="0x64" visible="false" />
 	<undefined name="Unknown" offset="0x68" visible="false" />
@@ -208,4 +208,8 @@
 	<undefined name="Unknown" offset="0x364" visible="false" />
 	<undefined name="Unknown" offset="0x368" visible="false" />
 	<undefined name="Unknown" offset="0x36C" visible="false" />
+	<undefined name="Unknown" offset="0x370" visible="false" />
+	<undefined name="Unknown" offset="0x374" visible="false" />
+	<undefined name="Unknown" offset="0x378" visible="false" />
+	<undefined name="Unknown" offset="0x37C" visible="false" />
 </plugin>

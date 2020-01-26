@@ -1,40 +1,44 @@
-<plugin>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo1" baseSize="0x17C">
+	<revisions>
+		<revision author="Lord Zedd" version="1">ayy lmao</revision>
+	</revisions>
 	<tagRef name="Child Hud" offset="0x0" visible="true" />
 	<comment title="Flash Cutoffs" />
-	<flags16 name="Flags" offset="0x8" visible="true">
+	<flags16 name="Flags" offset="0x10" visible="true">
 		<bit name="Use Parent Hud Flashing Parameters" index="0" />
 	</flags16>
-	<int16 name="Unknown" offset="0xA" visible="false" />
-	<int16 name="Total Ammo Cutoff" offset="0xC" visible="true" />
-	<int16 name="Loaded Ammo Cutoff" offset="0xE" visible="true" />
-	<int16 name="Heat Cutoff" offset="0x10" visible="true" />
-	<int16 name="Age Cutoff" offset="0x12" visible="true" />
-	<undefined name="Unknown" offset="0x14" visible="false" />
-	<undefined name="Unknown" offset="0x18" visible="false" />
+	<int16 name="Unknown" offset="0x12" visible="false" />
+	<int16 name="Total Ammo Cutoff" offset="0x14" visible="true" />
+	<int16 name="Loaded Ammo Cutoff" offset="0x16" visible="true" />
+	<int16 name="Heat Cutoff" offset="0x18" visible="true" />
+	<int16 name="Age Cutoff" offset="0x1A" visible="true" />
 	<undefined name="Unknown" offset="0x1C" visible="false" />
 	<undefined name="Unknown" offset="0x20" visible="false" />
 	<undefined name="Unknown" offset="0x24" visible="false" />
 	<undefined name="Unknown" offset="0x28" visible="false" />
 	<undefined name="Unknown" offset="0x2C" visible="false" />
 	<undefined name="Unknown" offset="0x30" visible="false" />
+	<undefined name="Unknown" offset="0x34" visible="false" />
+	<undefined name="Unknown" offset="0x38" visible="false" />
 	<comment title="Weapon Hud Screen Alignment" />
-	<enum16 name="Anchor" offset="0x34" visible="true">
+	<enum16 name="Anchor" offset="0x3C" visible="true">
 		<option name="Top Left" value="0x0" />
 		<option name="Top Right" value="0x1" />
 		<option name="Bottom Left" value="0x2" />
 		<option name="Bottom Right" value="0x3" />
 		<option name="Center" value="0x4" />
 	</enum16>
-	<int16 name="Unknown" offset="0x36" visible="false" />
-	<undefined name="Unknown" offset="0x38" visible="false" />
-	<undefined name="Unknown" offset="0x3C" visible="false" />
+	<int16 name="Unknown" offset="0x3E" visible="false" />
 	<undefined name="Unknown" offset="0x40" visible="false" />
 	<undefined name="Unknown" offset="0x44" visible="false" />
 	<undefined name="Unknown" offset="0x48" visible="false" />
 	<undefined name="Unknown" offset="0x4C" visible="false" />
 	<undefined name="Unknown" offset="0x50" visible="false" />
 	<undefined name="Unknown" offset="0x54" visible="false" />
-	<tagblock name="Static Elements" offset="0x58" visible="true" elementSize="0xA8">
+	<undefined name="Unknown" offset="0x58" visible="false" />
+	<undefined name="Unknown" offset="0x5C" visible="false" />
+	<tagblock name="Static Elements" offset="0x60" visible="true" elementSize="0xB4">
 		<enum16 name="State Attached To" offset="0x0" visible="true">
 			<option name="Total Ammo" value="0x0" />
 			<option name="Loaded Ammo" value="0x1" />
@@ -74,20 +78,20 @@
 		<undefined name="Unknown" offset="0x40" visible="false" />
 		<undefined name="Unknown" offset="0x44" visible="false" />
 		<tagRef name="Interface Bitmap" offset="0x48" visible="true" />
-		<color32 name="Default Color" offset="0x50" alpha="true" visible="true" />
-		<color32 name="Flashing Color" offset="0x54" alpha="true" visible="true" />
-		<float32 name="Flash Period" offset="0x58" visible="true" />
-		<float32 name="Flash Delay" offset="0x5C" visible="true" />
-		<int16 name="Number Of Flashes" offset="0x60" visible="true" />
-		<flags16 name="Flash Flags" offset="0x62" visible="true">
+		<color32 name="Default Color" offset="0x58" alpha="true" visible="true" />
+		<color32 name="Flashing Color" offset="0x5C" alpha="true" visible="true" />
+		<float32 name="Flash Period" offset="0x60" visible="true" />
+		<float32 name="Flash Delay" offset="0x64" visible="true" />
+		<int16 name="Number Of Flashes" offset="0x68" visible="true" />
+		<flags16 name="Flash Flags" offset="0x6A" visible="true">
 			<bit name="Reverse Default/Flashing Colors" index="0" />
 		</flags16>
-		<float32 name="Flash Length" offset="0x64" visible="true" />
-		<color32 name="Disabled Color" offset="0x68" alpha="true" visible="true" />
-		<undefined name="Unknown" offset="0x6C" visible="false" />
-		<int16 name="Sequence Index" offset="0x70" visible="true" />
-		<int16 name="Unknown" offset="0x72" visible="false" />
-		<tagblock name="Multitex Overlay" offset="0x74" visible="true" elementSize="0x1C4">
+		<float32 name="Flash Length" offset="0x6C" visible="true" />
+		<color32 name="Disabled Color" offset="0x70" alpha="true" visible="true" />
+		<undefined name="Unknown" offset="0x74" visible="false" />
+		<int16 name="Sequence Index" offset="0x78" visible="true" />
+		<int16 name="Unknown" offset="0x7A" visible="false" />
+		<tagblock name="Multitex Overlay" offset="0x7C" visible="true" elementSize="0x1E0">
 			<int16 name="Unknown" offset="0x0" visible="false" />
 			<int16 name="Type" offset="0x2" visible="true" />
 			<enum16 name="Framebuffer Blend Func" offset="0x4" visible="true">
@@ -150,27 +154,21 @@
 			<point2 name="Tertiary Offset" offset="0x5C" visible="true" />
 			<comment title="Map">which maps to use</comment>
 			<tagRef name="Primary" offset="0x64" visible="true" />
-			<tagRef name="Secondary" offset="0x6C" visible="true" />
-			<tagRef name="Tertiary" offset="0x74" visible="true" />
-			<enum16 name="Primary Wrap Mode" offset="0x7C" visible="true">
+			<tagRef name="Secondary" offset="0x74" visible="true" />
+			<tagRef name="Tertiary" offset="0x84" visible="true" />
+			<enum16 name="Primary Wrap Mode" offset="0x94" visible="true">
 				<option name="Clamp" value="0x0" />
 				<option name="Wrap" value="0x1" />
 			</enum16>
-			<enum16 name="Secondary Wrap Mode" offset="0x7E" visible="true">
+			<enum16 name="Secondary Wrap Mode" offset="0x96" visible="true">
 				<option name="Clamp" value="0x0" />
 				<option name="Wrap" value="0x1" />
 			</enum16>
-			<enum16 name="Tertiary Wrap Mode" offset="0x80" visible="true">
+			<enum16 name="Tertiary Wrap Mode" offset="0x98" visible="true">
 				<option name="Clamp" value="0x0" />
 				<option name="Wrap" value="0x1" />
 			</enum16>
-			<int16 name="Unknown" offset="0x82" visible="false" />
-			<undefined name="Unknown" offset="0x84" visible="false" />
-			<undefined name="Unknown" offset="0x88" visible="false" />
-			<undefined name="Unknown" offset="0x8C" visible="false" />
-			<undefined name="Unknown" offset="0x90" visible="false" />
-			<undefined name="Unknown" offset="0x94" visible="false" />
-			<undefined name="Unknown" offset="0x98" visible="false" />
+			<int16 name="Unknown" offset="0x9A" visible="false" />
 			<undefined name="Unknown" offset="0x9C" visible="false" />
 			<undefined name="Unknown" offset="0xA0" visible="false" />
 			<undefined name="Unknown" offset="0xA4" visible="false" />
@@ -211,7 +209,13 @@
 			<undefined name="Unknown" offset="0x130" visible="false" />
 			<undefined name="Unknown" offset="0x134" visible="false" />
 			<undefined name="Unknown" offset="0x138" visible="false" />
-			<tagblock name="Effectors" offset="0x13C" visible="true" elementSize="0xDC">
+			<undefined name="Unknown" offset="0x13C" visible="false" />
+			<undefined name="Unknown" offset="0x140" visible="false" />
+			<undefined name="Unknown" offset="0x144" visible="false" />
+			<undefined name="Unknown" offset="0x148" visible="false" />
+			<undefined name="Unknown" offset="0x14C" visible="false" />
+			<undefined name="Unknown" offset="0x150" visible="false" />
+			<tagblock name="Effectors" offset="0x154" visible="true" elementSize="0xDC">
 				<undefined name="Unknown" offset="0x0" visible="false" />
 				<undefined name="Unknown" offset="0x4" visible="false" />
 				<undefined name="Unknown" offset="0x8" visible="false" />
@@ -304,13 +308,6 @@
 				<undefined name="Unknown" offset="0xD4" visible="false" />
 				<undefined name="Unknown" offset="0xD8" visible="false" />
 			</tagblock>
-			<undefined name="Unknown" offset="0x144" visible="false" />
-			<undefined name="Unknown" offset="0x148" visible="false" />
-			<undefined name="Unknown" offset="0x14C" visible="false" />
-			<undefined name="Unknown" offset="0x150" visible="false" />
-			<undefined name="Unknown" offset="0x154" visible="false" />
-			<undefined name="Unknown" offset="0x158" visible="false" />
-			<undefined name="Unknown" offset="0x15C" visible="false" />
 			<undefined name="Unknown" offset="0x160" visible="false" />
 			<undefined name="Unknown" offset="0x164" visible="false" />
 			<undefined name="Unknown" offset="0x168" visible="false" />
@@ -336,10 +333,14 @@
 			<undefined name="Unknown" offset="0x1B8" visible="false" />
 			<undefined name="Unknown" offset="0x1BC" visible="false" />
 			<undefined name="Unknown" offset="0x1C0" visible="false" />
+			<undefined name="Unknown" offset="0x1C4" visible="false" />
+			<undefined name="Unknown" offset="0x1C8" visible="false" />
+			<undefined name="Unknown" offset="0x1CC" visible="false" />
+			<undefined name="Unknown" offset="0x1D0" visible="false" />
+			<undefined name="Unknown" offset="0x1D4" visible="false" />
+			<undefined name="Unknown" offset="0x1D8" visible="false" />
+			<undefined name="Unknown" offset="0x1DC" visible="false" />
 		</tagblock>
-		<undefined name="Unknown" offset="0x7C" visible="false" />
-		<undefined name="Unknown" offset="0x80" visible="false" />
-		<undefined name="Unknown" offset="0x84" visible="false" />
 		<undefined name="Unknown" offset="0x88" visible="false" />
 		<undefined name="Unknown" offset="0x8C" visible="false" />
 		<undefined name="Unknown" offset="0x90" visible="false" />
@@ -348,8 +349,11 @@
 		<undefined name="Unknown" offset="0x9C" visible="false" />
 		<undefined name="Unknown" offset="0xA0" visible="false" />
 		<undefined name="Unknown" offset="0xA4" visible="false" />
+		<undefined name="Unknown" offset="0xA8" visible="false" />
+		<undefined name="Unknown" offset="0xAC" visible="false" />
+		<undefined name="Unknown" offset="0xB0" visible="false" />
 	</tagblock>
-	<tagblock name="Meter Elements" offset="0x60" visible="true" elementSize="0xAC">
+	<tagblock name="Meter Elements" offset="0x6C" visible="true" elementSize="0xB4">
 		<enum16 name="State Attached To" offset="0x0" visible="true">
 			<option name="Total Ammo" value="0x0" />
 			<option name="Loaded Ammo" value="0x1" />
@@ -389,27 +393,25 @@
 		<undefined name="Unknown" offset="0x40" visible="false" />
 		<undefined name="Unknown" offset="0x44" visible="false" />
 		<tagRef name="Meter Bitmap" offset="0x48" visible="true" />
-		<color32 name="Color At Meter Minimum" offset="0x50" alpha="false" visible="true" />
-		<color32 name="Color At Meter Maximum" offset="0x54" alpha="false" visible="true" />
-		<color32 name="Flash Color" offset="0x58" alpha="false" visible="true" />
-		<color32 name="Empty Color" offset="0x5C" alpha="true" visible="true" />
-		<flags8 name="Flags" offset="0x60" visible="true">
+		<color32 name="Color At Meter Minimum" offset="0x58" alpha="false" visible="true" />
+		<color32 name="Color At Meter Maximum" offset="0x5C" alpha="false" visible="true" />
+		<color32 name="Flash Color" offset="0x60" alpha="false" visible="true" />
+		<color32 name="Empty Color" offset="0x64" alpha="true" visible="true" />
+		<flags8 name="Flags" offset="0x68" visible="true">
 			<bit name="Use Min/Max For State Changes" index="0" />
 			<bit name="Interpolate Between Min/Max Flash Colors As State Changes" index="1" />
 			<bit name="Interpolate Color Along Hsv Space" index="2" />
 			<bit name="...More Colors For Hsv Interpolation" index="3" />
 			<bit name="Invert Interpolation" index="4" />
 		</flags8>
-		<int8 name="Minumum Meter Value" offset="0x61" visible="true" />
-		<int16 name="Sequence Index" offset="0x62" visible="true" />
-		<int8 name="Alpha Multiplier" offset="0x64" visible="true" />
-		<int8 name="Alpha Bias" offset="0x65" visible="true" />
-		<int16 name="Value Scale" offset="0x66" visible="true" tooltip="used for non-integral values, i.e. health and shields" />
-		<float32 name="Opacity" offset="0x68" visible="true" />
-		<float32 name="Translucency" offset="0x6C" visible="true" />
-		<color32 name="Disabled Color" offset="0x70" alpha="true" visible="true" />
-		<undefined name="Unknown" offset="0x74" visible="false" />
-		<undefined name="Unknown" offset="0x78" visible="false" />
+		<int8 name="Minumum Meter Value" offset="0x69" visible="true" />
+		<int16 name="Sequence Index" offset="0x6A" visible="true" />
+		<int8 name="Alpha Multiplier" offset="0x6C" visible="true" />
+		<int8 name="Alpha Bias" offset="0x6D" visible="true" />
+		<int16 name="Value Scale" offset="0x6E" visible="true" tooltip="used for non-integral values, i.e. health and shields" />
+		<float32 name="Opacity" offset="0x70" visible="true" />
+		<float32 name="Translucency" offset="0x74" visible="true" />
+		<color32 name="Disabled Color" offset="0x78" alpha="true" visible="true" />
 		<undefined name="Unknown" offset="0x7C" visible="false" />
 		<undefined name="Unknown" offset="0x80" visible="false" />
 		<undefined name="Unknown" offset="0x84" visible="false" />
@@ -422,8 +424,10 @@
 		<undefined name="Unknown" offset="0xA0" visible="false" />
 		<undefined name="Unknown" offset="0xA4" visible="false" />
 		<undefined name="Unknown" offset="0xA8" visible="false" />
+		<undefined name="Unknown" offset="0xAC" visible="false" />
+		<undefined name="Unknown" offset="0xB0" visible="false" />
 	</tagblock>
-	<tagblock name="Number Elements" offset="0x68" visible="true" elementSize="0xA0">
+	<tagblock name="Number Elements" offset="0x78" visible="true" elementSize="0xA0">
 		<enum16 name="State Attached To" offset="0x0" visible="true">
 			<option name="Total Ammo" value="0x0" />
 			<option name="Loaded Ammo" value="0x1" />
@@ -506,7 +510,7 @@ Crosshairs can be attached to one of four different states:
 * Charge: Charging overlay. If you wish to display an animation for charging, put it here.
 * Flash: Similar to charging, but for low ammo/batter/heat states
 * Reload/Overheat: Similar to charging, but for reloading/overheating</comment>
-	<tagblock name="Crosshairs" offset="0x70" visible="true" elementSize="0x5C">
+	<tagblock name="Crosshairs" offset="0x84" visible="true" elementSize="0x68">
 		<enum16 name="Crosshair Type" offset="0x0" visible="true">
 			<option name="Aim" value="0x0" />
 			<option name="Zoom" value="0x1" />
@@ -543,7 +547,7 @@ Crosshairs can be attached to one of four different states:
 		<undefined name="Unknown" offset="0x1C" visible="false" />
 		<undefined name="Unknown" offset="0x20" visible="false" />
 		<tagRef name="Crosshair Bitmap" offset="0x24" visible="true" />
-		<tagblock name="Crosshair Overlays" offset="0x2C" visible="true" elementSize="0x6C">
+		<tagblock name="Crosshair Overlays" offset="0x34" visible="true" elementSize="0x6C">
 			<point16 name="Anchor Offset" offset="0x0" visible="true" />
 			<float32 name="Width Scale" offset="0x4" visible="true" />
 			<float32 name="Height Scale" offset="0x8" visible="true" />
@@ -589,9 +593,6 @@ Crosshairs can be attached to one of four different states:
 			<undefined name="Unknown" offset="0x64" visible="false" />
 			<undefined name="Unknown" offset="0x68" visible="false" />
 		</tagblock>
-		<undefined name="Unknown" offset="0x34" visible="false" />
-		<undefined name="Unknown" offset="0x38" visible="false" />
-		<undefined name="Unknown" offset="0x3C" visible="false" />
 		<undefined name="Unknown" offset="0x40" visible="false" />
 		<undefined name="Unknown" offset="0x44" visible="false" />
 		<undefined name="Unknown" offset="0x48" visible="false" />
@@ -599,8 +600,11 @@ Crosshairs can be attached to one of four different states:
 		<undefined name="Unknown" offset="0x50" visible="false" />
 		<undefined name="Unknown" offset="0x54" visible="false" />
 		<undefined name="Unknown" offset="0x58" visible="false" />
+		<undefined name="Unknown" offset="0x5C" visible="false" />
+		<undefined name="Unknown" offset="0x60" visible="false" />
+		<undefined name="Unknown" offset="0x64" visible="false" />
 	</tagblock>
-	<tagblock name="Overlay Elements" offset="0x78" visible="true" elementSize="0x5C">
+	<tagblock name="Overlay Elements" offset="0x90" visible="true" elementSize="0x68">
 		<enum16 name="State Attached To" offset="0x0" visible="true">
 			<option name="Total Ammo" value="0x0" />
 			<option name="Loaded Ammo" value="0x1" />
@@ -626,7 +630,7 @@ Crosshairs can be attached to one of four different states:
 		<undefined name="Unknown" offset="0x1C" visible="false" />
 		<undefined name="Unknown" offset="0x20" visible="false" />
 		<tagRef name="Overlay Bitmap" offset="0x24" visible="true" />
-		<tagblock name="Overlays" offset="0x2C" visible="true" elementSize="0x88">
+		<tagblock name="Overlays" offset="0x34" visible="true" elementSize="0x88">
 			<point16 name="Anchor Offset" offset="0x0" visible="true" />
 			<float32 name="Width Scale" offset="0x4" visible="true" />
 			<float32 name="Height Scale" offset="0x8" visible="true" />
@@ -680,9 +684,6 @@ Crosshairs can be attached to one of four different states:
 			<undefined name="Unknown" offset="0x80" visible="false" />
 			<undefined name="Unknown" offset="0x84" visible="false" />
 		</tagblock>
-		<undefined name="Unknown" offset="0x34" visible="false" />
-		<undefined name="Unknown" offset="0x38" visible="false" />
-		<undefined name="Unknown" offset="0x3C" visible="false" />
 		<undefined name="Unknown" offset="0x40" visible="false" />
 		<undefined name="Unknown" offset="0x44" visible="false" />
 		<undefined name="Unknown" offset="0x48" visible="false" />
@@ -690,12 +691,15 @@ Crosshairs can be attached to one of four different states:
 		<undefined name="Unknown" offset="0x50" visible="false" />
 		<undefined name="Unknown" offset="0x54" visible="false" />
 		<undefined name="Unknown" offset="0x58" visible="false" />
+		<undefined name="Unknown" offset="0x5C" visible="false" />
+		<undefined name="Unknown" offset="0x60" visible="false" />
+		<undefined name="Unknown" offset="0x64" visible="false" />
 	</tagblock>
-	<undefined name="Unknown" offset="0x80" visible="false" />
-	<undefined name="Unknown" offset="0x84" visible="false" />
-	<undefined name="Unknown" offset="0x88" visible="false" />
-	<undefined name="Unknown" offset="0x8C" visible="false" />
-	<tagblock name="Screen Effect" offset="0x90" visible="true" elementSize="0xA8">
+	<undefined name="Unknown" offset="0x9C" visible="false" />
+	<undefined name="Unknown" offset="0xA0" visible="false" />
+	<undefined name="Unknown" offset="0xA4" visible="false" />
+	<undefined name="Unknown" offset="0xA8" visible="false" />
+	<tagblock name="Screen Effect" offset="0xAC" visible="true" elementSize="0xB8">
 		<undefined name="Unknown" offset="0x0" visible="false" />
 		<comment title="Mask">Mask bitmap overlay. Use either a 2D bitmap or an interface bitmap.</comment>
 		<flags16 name="Flags" offset="0x4" visible="true">
@@ -707,61 +711,53 @@ Crosshairs can be attached to one of four different states:
 		<undefined name="Unknown" offset="0x10" visible="false" />
 		<undefined name="Unknown" offset="0x14" visible="false" />
 		<tagRef name="Mask (Fullscreen)" offset="0x18" visible="true" />
-		<tagRef name="Mask (Splitscreen)" offset="0x20" visible="true" />
-		<undefined name="Unknown" offset="0x28" visible="false" />
-		<undefined name="Unknown" offset="0x2C" visible="false" />
+		<tagRef name="Mask (Splitscreen)" offset="0x28" visible="true" />
+		<undefined name="Unknown" offset="0x38" visible="false" />
+		<undefined name="Unknown" offset="0x3C" visible="false" />
 		<comment title="Convolution">Warp effect like in 'Pitch-Black', sort of.</comment>
-		<flags16 name="Flags" offset="0x30" visible="true">
+		<flags16 name="Flags" offset="0x40" visible="true">
 			<bit name="Only When Zoomed" index="0" />
 		</flags16>
-		<int16 name="Unknown" offset="0x32" visible="false" />
-		<ranged name="FOV In Bounds" offset="0x34" visible="true" />
-		<rangef name="Radius Out Bounds" offset="0x3C" visible="true" />
-		<undefined name="Unknown" offset="0x44" visible="false" />
-		<undefined name="Unknown" offset="0x48" visible="false" />
-		<undefined name="Unknown" offset="0x4C" visible="false" />
-		<undefined name="Unknown" offset="0x50" visible="false" />
+		<int16 name="Unknown" offset="0x42" visible="false" />
+		<ranged name="FOV In Bounds" offset="0x44" visible="true" />
+		<rangef name="Radius Out Bounds" offset="0x4C" visible="true" />
 		<undefined name="Unknown" offset="0x54" visible="false" />
 		<undefined name="Unknown" offset="0x58" visible="false" />
+		<undefined name="Unknown" offset="0x5C" visible="false" />
+		<undefined name="Unknown" offset="0x60" visible="false" />
+		<undefined name="Unknown" offset="0x64" visible="false" />
+		<undefined name="Unknown" offset="0x68" visible="false" />
 		<comment title="Night-Vision">Real-time gamma correction to make dark objects appear brighter.</comment>
-		<flags16 name="Flags" offset="0x5C" visible="true">
+		<flags16 name="Flags" offset="0x6C" visible="true">
 			<bit name="Only When Zoomed" index="0" />
 			<bit name="Connect To Flashlight" index="1" />
 			<bit name="Masked" index="2" />
 		</flags16>
-		<int16 name="Script Source" offset="0x5E" visible="true" />
-		<float32 name="Intensity" offset="0x60" visible="true" />
-		<undefined name="Unknown" offset="0x64" visible="false" />
-		<undefined name="Unknown" offset="0x68" visible="false" />
-		<undefined name="Unknown" offset="0x6C" visible="false" />
-		<undefined name="Unknown" offset="0x70" visible="false" />
+		<int16 name="Script Source" offset="0x6E" visible="true" />
+		<float32 name="Intensity" offset="0x70" visible="true" />
 		<undefined name="Unknown" offset="0x74" visible="false" />
 		<undefined name="Unknown" offset="0x78" visible="false" />
+		<undefined name="Unknown" offset="0x7C" visible="false" />
+		<undefined name="Unknown" offset="0x80" visible="false" />
+		<undefined name="Unknown" offset="0x84" visible="false" />
+		<undefined name="Unknown" offset="0x88" visible="false" />
 		<comment title="Desaturation">Real-time monochromatic color filter.</comment>
-		<flags16 name="Flags" offset="0x7C" visible="true">
+		<flags16 name="Flags" offset="0x8C" visible="true">
 			<bit name="Only When Zoomed" index="0" />
 			<bit name="Connect To Flashlight" index="1" />
 			<bit name="Additive" index="2" />
 			<bit name="Masked" index="3" />
 		</flags16>
-		<int16 name="Script Source" offset="0x7E" visible="true" />
-		<float32 name="Intensity" offset="0x80" visible="true" />
-		<colorf name="Tint" offset="0x84" alpha="false" visible="true" />
-		<undefined name="Unknown" offset="0x90" visible="false" />
-		<undefined name="Unknown" offset="0x94" visible="false" />
-		<undefined name="Unknown" offset="0x98" visible="false" />
-		<undefined name="Unknown" offset="0x9C" visible="false" />
+		<int16 name="Script Source" offset="0x8E" visible="true" />
+		<float32 name="Intensity" offset="0x90" visible="true" />
+		<colorf name="Tint" offset="0x94" alpha="false" visible="true" />
 		<undefined name="Unknown" offset="0xA0" visible="false" />
 		<undefined name="Unknown" offset="0xA4" visible="false" />
+		<undefined name="Unknown" offset="0xA8" visible="false" />
+		<undefined name="Unknown" offset="0xAC" visible="false" />
+		<undefined name="Unknown" offset="0xB0" visible="false" />
+		<undefined name="Unknown" offset="0xB4" visible="false" />
 	</tagblock>
-	<undefined name="Unknown" offset="0x98" visible="false" />
-	<undefined name="Unknown" offset="0x9C" visible="false" />
-	<undefined name="Unknown" offset="0xA0" visible="false" />
-	<undefined name="Unknown" offset="0xA4" visible="false" />
-	<undefined name="Unknown" offset="0xA8" visible="false" />
-	<undefined name="Unknown" offset="0xAC" visible="false" />
-	<undefined name="Unknown" offset="0xB0" visible="false" />
-	<undefined name="Unknown" offset="0xB4" visible="false" />
 	<undefined name="Unknown" offset="0xB8" visible="false" />
 	<undefined name="Unknown" offset="0xBC" visible="false" />
 	<undefined name="Unknown" offset="0xC0" visible="false" />
@@ -787,28 +783,36 @@ Crosshairs can be attached to one of four different states:
 	<undefined name="Unknown" offset="0x110" visible="false" />
 	<undefined name="Unknown" offset="0x114" visible="false" />
 	<undefined name="Unknown" offset="0x118" visible="false" />
-	<comment title="Messaging Information" />
-	<int16 name="Sequence Index" offset="0x11C" visible="true" tooltip="sequence index into the global hud icon bitmap" />
-	<int16 name="Width Offset" offset="0x11E" visible="true" tooltip="extra spacing beyond bitmap width for text alignment" />
-	<point16 name="Offset From Reference Corner" offset="0x120" visible="true" />
-	<color32 name="Override Icon Color" offset="0x124" alpha="true" visible="true" />
-	<int8 name="Frame Rate [0,30]" offset="0x128" visible="true" />
-	<flags8 name="Flags" offset="0x129" visible="true">
-		<bit name="Use Text From String List Instead" index="0" />
-		<bit name="Override Default Color" index="1" />
-		<bit name="Width Offset Is Absolute Icon Width" index="2" />
-	</flags8>
-	<int16 name="Text Index" offset="0x12A" visible="true" />
+	<undefined name="Unknown" offset="0x11C" visible="false" />
+	<undefined name="Unknown" offset="0x120" visible="false" />
+	<undefined name="Unknown" offset="0x124" visible="false" />
+	<undefined name="Unknown" offset="0x128" visible="false" />
 	<undefined name="Unknown" offset="0x12C" visible="false" />
 	<undefined name="Unknown" offset="0x130" visible="false" />
 	<undefined name="Unknown" offset="0x134" visible="false" />
 	<undefined name="Unknown" offset="0x138" visible="false" />
-	<undefined name="Unknown" offset="0x13C" visible="false" />
-	<undefined name="Unknown" offset="0x140" visible="false" />
-	<undefined name="Unknown" offset="0x144" visible="false" />
-	<undefined name="Unknown" offset="0x148" visible="false" />
+	<comment title="Messaging Information" />
+	<int16 name="Sequence Index" offset="0x13C" visible="true" tooltip="sequence index into the global hud icon bitmap" />
+	<int16 name="Width Offset" offset="0x13E" visible="true" tooltip="extra spacing beyond bitmap width for text alignment" />
+	<point16 name="Offset From Reference Corner" offset="0x140" visible="true" />
+	<color32 name="Override Icon Color" offset="0x144" alpha="true" visible="true" />
+	<int8 name="Frame Rate [0,30]" offset="0x148" visible="true" />
+	<flags8 name="Flags" offset="0x149" visible="true">
+		<bit name="Use Text From String List Instead" index="0" />
+		<bit name="Override Default Color" index="1" />
+		<bit name="Width Offset Is Absolute Icon Width" index="2" />
+	</flags8>
+	<int16 name="Text Index" offset="0x14A" visible="true" />
 	<undefined name="Unknown" offset="0x14C" visible="false" />
 	<undefined name="Unknown" offset="0x150" visible="false" />
 	<undefined name="Unknown" offset="0x154" visible="false" />
 	<undefined name="Unknown" offset="0x158" visible="false" />
+	<undefined name="Unknown" offset="0x15C" visible="false" />
+	<undefined name="Unknown" offset="0x160" visible="false" />
+	<undefined name="Unknown" offset="0x164" visible="false" />
+	<undefined name="Unknown" offset="0x168" visible="false" />
+	<undefined name="Unknown" offset="0x16C" visible="false" />
+	<undefined name="Unknown" offset="0x170" visible="false" />
+	<undefined name="Unknown" offset="0x174" visible="false" />
+	<undefined name="Unknown" offset="0x178" visible="false" />
 </plugin>

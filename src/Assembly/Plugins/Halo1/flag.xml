@@ -1,4 +1,8 @@
-<plugin>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo1" baseSize="0x60">
+	<revisions>
+		<revision author="Lord Zedd" version="1">ayy lmao</revision>
+	</revisions>
 	<flags32 name="Flags" offset="0x0" visible="true">
 	</flags32>
 	<enum16 name="Trailing Edge Shape" offset="0x4" visible="true">
@@ -19,12 +23,12 @@
 	<float32 name="Cell Width" offset="0x10" visible="true" tooltip="width of the cell between each pair of vertices" />
 	<float32 name="Cell Height" offset="0x14" visible="true" tooltip="height of the cell between each pair of vertices" />
 	<tagRef name="Red Flag Shader" offset="0x18" visible="true" />
-	<tagRef name="Physics" offset="0x20" visible="true" />
-	<float32 name="Wind Noise" offset="0x28" visible="true" />
-	<undefined name="Unknown" offset="0x2C" visible="false" />
-	<undefined name="Unknown" offset="0x30" visible="false" />
-	<tagRef name="Blue Flag Shader" offset="0x34" visible="true" />
-	<tagblock name="Attachment Points" offset="0x3C" visible="true" elementSize="0x34" tooltip="attachment points determine where the flag is attached">
+	<tagRef name="Physics" offset="0x28" visible="true" />
+	<float32 name="Wind Noise" offset="0x38" visible="true" />
+	<undefined name="Unknown" offset="0x3C" visible="false" />
+	<undefined name="Unknown" offset="0x40" visible="false" />
+	<tagRef name="Blue Flag Shader" offset="0x44" visible="true" />
+	<tagblock name="Attachment Points" offset="0x54" visible="true" elementSize="0x34" tooltip="attachment points determine where the flag is attached">
 		<int16 name="Height To Next Attachment" offset="0x0" visible="true" tooltip="flag vertices between this attachment point and the next" />
 		<int16 name="Unknown" offset="0x2" visible="false" />
 		<undefined name="Unknown" offset="0x4" visible="false" />

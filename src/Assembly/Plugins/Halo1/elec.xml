@@ -1,4 +1,8 @@
-<plugin>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo1" baseSize="0x108">
+	<revisions>
+		<revision author="Lord Zedd" version="1">ayy lmao</revision>
+	</revisions>
 	<comment title="Lightning" />
 	<int16 name="Unknown" offset="0x0" visible="false" />
 	<int16 name="Count" offset="0x2" visible="true" tooltip="number of overlapping lightning effects to render; 0 defaults to 1" />
@@ -41,8 +45,6 @@
 		<option name="D Out" value="0x4" />
 	</enum16>
 	<tagRef name="Bitmap" offset="0x34" visible="true" />
-	<undefined name="Unknown" offset="0x3C" visible="false" />
-	<undefined name="Unknown" offset="0x40" visible="false" />
 	<undefined name="Unknown" offset="0x44" visible="false" />
 	<undefined name="Unknown" offset="0x48" visible="false" />
 	<undefined name="Unknown" offset="0x4C" visible="false" />
@@ -62,7 +64,9 @@
 	<undefined name="Unknown" offset="0x84" visible="false" />
 	<undefined name="Unknown" offset="0x88" visible="false" />
 	<undefined name="Unknown" offset="0x8C" visible="false" />
-	<tagblock name="Markers" offset="0x90" visible="true" elementSize="0xE4">
+	<undefined name="Unknown" offset="0x90" visible="false" />
+	<undefined name="Unknown" offset="0x94" visible="false" />
+	<tagblock name="Markers" offset="0x98" visible="true" elementSize="0xE4">
 		<ascii name="Attachment Marker" offset="0x0" length="0x20" visible="true" />
 		<flags16 name="Flags" offset="0x20" visible="true">
 			<bit name="Not Connected To Next Marker" index="0" />
@@ -113,7 +117,7 @@
 		<undefined name="Unknown" offset="0xDC" visible="false" />
 		<undefined name="Unknown" offset="0xE0" visible="false" />
 	</tagblock>
-	<tagblock name="Shader" offset="0x98" visible="true" elementSize="0xB4">
+	<tagblock name="Shader" offset="0xA4" visible="true" elementSize="0xB4">
 		<undefined name="Unknown" offset="0x0" visible="false" />
 		<undefined name="Unknown" offset="0x4" visible="false" />
 		<undefined name="Unknown" offset="0x8" visible="false" />
@@ -182,10 +186,6 @@
 		<undefined name="Unknown" offset="0xAC" visible="false" />
 		<undefined name="Unknown" offset="0xB0" visible="false" />
 	</tagblock>
-	<undefined name="Unknown" offset="0xA0" visible="false" />
-	<undefined name="Unknown" offset="0xA4" visible="false" />
-	<undefined name="Unknown" offset="0xA8" visible="false" />
-	<undefined name="Unknown" offset="0xAC" visible="false" />
 	<undefined name="Unknown" offset="0xB0" visible="false" />
 	<undefined name="Unknown" offset="0xB4" visible="false" />
 	<undefined name="Unknown" offset="0xB8" visible="false" />
@@ -204,4 +204,8 @@
 	<undefined name="Unknown" offset="0xEC" visible="false" />
 	<undefined name="Unknown" offset="0xF0" visible="false" />
 	<undefined name="Unknown" offset="0xF4" visible="false" />
+	<undefined name="Unknown" offset="0xF8" visible="false" />
+	<undefined name="Unknown" offset="0xFC" visible="false" />
+	<undefined name="Unknown" offset="0x100" visible="false" />
+	<undefined name="Unknown" offset="0x104" visible="false" />
 </plugin>

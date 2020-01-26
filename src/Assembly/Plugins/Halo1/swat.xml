@@ -1,4 +1,8 @@
-<plugin>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo1" baseSize="0x140">
+	<revisions>
+		<revision author="Lord Zedd" version="1">ayy lmao</revision>
+	</revisions>
 	<comment title="Radiosity Properties" />
 	<flags16 name="Flags" offset="0x0" visible="true">
 		<bit name="Simple Parameterization" index="0" tooltip="lightmap texture parametrization should correspond to diffuse texture parametrization" />
@@ -71,37 +75,31 @@
 	<undefined name="Unknown" offset="0x44" visible="false" />
 	<undefined name="Unknown" offset="0x48" visible="false" />
 	<tagRef name="Base Map" offset="0x4C" visible="true" tooltip="controls reflection brightness and background tint" />
-	<undefined name="Unknown" offset="0x54" visible="false" />
-	<undefined name="Unknown" offset="0x58" visible="false" />
 	<undefined name="Unknown" offset="0x5C" visible="false" />
 	<undefined name="Unknown" offset="0x60" visible="false" />
-	<float32 name="View Perpendicular Brightness" offset="0x64" visible="true" />
-	<colorf name="View Perpendicular Tint Color" offset="0x68" alpha="false" visible="true" />
-	<float32 name="View Parallel Brightness" offset="0x74" visible="true" tooltip="0 defaults to 1" />
-	<colorf name="View Parallel Tint Color" offset="0x78" alpha="false" visible="true" />
-	<undefined name="Unknown" offset="0x84" visible="false" />
-	<undefined name="Unknown" offset="0x88" visible="false" />
+	<undefined name="Unknown" offset="0x64" visible="false" />
+	<undefined name="Unknown" offset="0x68" visible="false" />
+	<float32 name="View Perpendicular Brightness" offset="0x6C" visible="true" />
+	<colorf name="View Perpendicular Tint Color" offset="0x70" alpha="false" visible="true" />
+	<float32 name="View Parallel Brightness" offset="0x7C" visible="true" tooltip="0 defaults to 1" />
+	<colorf name="View Parallel Tint Color" offset="0x80" alpha="false" visible="true" />
 	<undefined name="Unknown" offset="0x8C" visible="false" />
 	<undefined name="Unknown" offset="0x90" visible="false" />
-	<tagRef name="Reflection Map" offset="0x94" visible="true" />
-	<undefined name="Unknown" offset="0x9C" visible="false" />
-	<undefined name="Unknown" offset="0xA0" visible="false" />
-	<undefined name="Unknown" offset="0xA4" visible="false" />
-	<undefined name="Unknown" offset="0xA8" visible="false" />
-	<degree name="Ripple Animation Angle" offset="0xAC" visible="true" />
-	<float32 name="Ripple Animation Velocity" offset="0xB0" visible="true" />
-	<float32 name="Ripple Scale" offset="0xB4" visible="true" tooltip="0 defaults to 1" />
-	<tagRef name="Ripple Maps" offset="0xB8" visible="true" />
-	<int16 name="Ripple Mipmap Levels" offset="0xC0" visible="true" tooltip="0 defaults to 1" />
-	<int16 name="Unknown" offset="0xC2" visible="false" />
-	<float32 name="Ripple Mipmap Fade Factor" offset="0xC4" visible="true" tooltip="flatness of last mipmap" />
-	<float32 name="Ripple Mipmap Detail Bias" offset="0xC8" visible="true" />
-	<undefined name="Unknown" offset="0xCC" visible="false" />
-	<undefined name="Unknown" offset="0xD0" visible="false" />
-	<undefined name="Unknown" offset="0xD4" visible="false" />
-	<undefined name="Unknown" offset="0xD8" visible="false" />
-	<undefined name="Unknown" offset="0xDC" visible="false" />
-	<undefined name="Unknown" offset="0xE0" visible="false" />
+	<undefined name="Unknown" offset="0x94" visible="false" />
+	<undefined name="Unknown" offset="0x98" visible="false" />
+	<tagRef name="Reflection Map" offset="0x9C" visible="true" />
+	<undefined name="Unknown" offset="0xAC" visible="false" />
+	<undefined name="Unknown" offset="0xB0" visible="false" />
+	<undefined name="Unknown" offset="0xB4" visible="false" />
+	<undefined name="Unknown" offset="0xB8" visible="false" />
+	<degree name="Ripple Animation Angle" offset="0xBC" visible="true" />
+	<float32 name="Ripple Animation Velocity" offset="0xC0" visible="true" />
+	<float32 name="Ripple Scale" offset="0xC4" visible="true" tooltip="0 defaults to 1" />
+	<tagRef name="Ripple Maps" offset="0xC8" visible="true" />
+	<int16 name="Ripple Mipmap Levels" offset="0xD8" visible="true" tooltip="0 defaults to 1" />
+	<int16 name="Unknown" offset="0xDA" visible="false" />
+	<float32 name="Ripple Mipmap Fade Factor" offset="0xDC" visible="true" tooltip="flatness of last mipmap" />
+	<float32 name="Ripple Mipmap Detail Bias" offset="0xE0" visible="true" />
 	<undefined name="Unknown" offset="0xE4" visible="false" />
 	<undefined name="Unknown" offset="0xE8" visible="false" />
 	<undefined name="Unknown" offset="0xEC" visible="false" />
@@ -112,7 +110,13 @@
 	<undefined name="Unknown" offset="0x100" visible="false" />
 	<undefined name="Unknown" offset="0x104" visible="false" />
 	<undefined name="Unknown" offset="0x108" visible="false" />
-	<tagblock name="Ripples" offset="0x10C" visible="true" elementSize="0x4C">
+	<undefined name="Unknown" offset="0x10C" visible="false" />
+	<undefined name="Unknown" offset="0x110" visible="false" />
+	<undefined name="Unknown" offset="0x114" visible="false" />
+	<undefined name="Unknown" offset="0x118" visible="false" />
+	<undefined name="Unknown" offset="0x11C" visible="false" />
+	<undefined name="Unknown" offset="0x120" visible="false" />
+	<tagblock name="Ripples" offset="0x124" visible="true" elementSize="0x4C">
 		<int16 name="Unknown" offset="0x0" visible="false" />
 		<int16 name="Unknown" offset="0x2" visible="false" />
 		<float32 name="Contribution Factor" offset="0x4" visible="true" tooltip="0 defaults to 1" />
@@ -134,8 +138,8 @@
 		<undefined name="Unknown" offset="0x44" visible="false" />
 		<undefined name="Unknown" offset="0x48" visible="false" />
 	</tagblock>
-	<undefined name="Unknown" offset="0x114" visible="false" />
-	<undefined name="Unknown" offset="0x118" visible="false" />
-	<undefined name="Unknown" offset="0x11C" visible="false" />
-	<undefined name="Unknown" offset="0x120" visible="false" />
+	<undefined name="Unknown" offset="0x130" visible="false" />
+	<undefined name="Unknown" offset="0x134" visible="false" />
+	<undefined name="Unknown" offset="0x138" visible="false" />
+	<undefined name="Unknown" offset="0x13C" visible="false" />
 </plugin>

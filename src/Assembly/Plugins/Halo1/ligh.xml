@@ -1,4 +1,8 @@
-<plugin>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo1" baseSize="0x160">
+	<revisions>
+		<revision author="Lord Zedd" version="1">ayy lmao</revision>
+	</revisions>
 	<flags32 name="Flags" offset="0x0" visible="true">
 		<bit name="Dynamic" index="0" tooltip="dynamically illuminate interiors" />
 		<bit name="No Specular" index="1" tooltip="for dynamic lights, cast only diffuse light." />
@@ -31,8 +35,8 @@
 	<undefined name="Unknown" offset="0x60" visible="false" />
 	<comment title="GEL">the gel map tints the light per-pixel of cube map</comment>
 	<tagRef name="Primary Cube Map" offset="0x64" visible="true" tooltip="used for diffuse and specular light" />
-	<int16 name="Unknown" offset="0x6C" visible="false" />
-	<enum16 name="Texture Animation Function" offset="0x6E" visible="true" tooltip="a function to control texture animation">
+	<int16 name="Unknown" offset="0x74" visible="false" />
+	<enum16 name="Texture Animation Function" offset="0x76" visible="true" tooltip="a function to control texture animation">
 		<option name="One" value="0x0" />
 		<option name="Zero" value="0x1" />
 		<option name="Cosine" value="0x2" />
@@ -46,42 +50,10 @@
 		<option name="Wander" value="0xA" />
 		<option name="Spark" value="0xB" />
 	</enum16>
-	<float32 name="Texture Animation Period" offset="0x70" visible="true" tooltip="time between repeats" />
-	<tagRef name="Secondary Cube Map" offset="0x74" visible="true" tooltip="used for specular light" />
-	<int16 name="Unknown" offset="0x7C" visible="false" />
-	<enum16 name="Yaw Function" offset="0x7E" visible="true" tooltip="a function to control rotation of the gel in yaw">
-		<option name="One" value="0x0" />
-		<option name="Zero" value="0x1" />
-		<option name="Cosine" value="0x2" />
-		<option name="Cosine (Variable Period)" value="0x3" />
-		<option name="Diagonal Wave" value="0x4" />
-		<option name="Diagonal Wave (Variable Period)" value="0x5" />
-		<option name="Slide" value="0x6" />
-		<option name="Slide (Variable Period)" value="0x7" />
-		<option name="Noise" value="0x8" />
-		<option name="Jitter" value="0x9" />
-		<option name="Wander" value="0xA" />
-		<option name="Spark" value="0xB" />
-	</enum16>
-	<float32 name="Yaw Period" offset="0x80" visible="true" tooltip="time between repeats" />
-	<int16 name="Unknown" offset="0x84" visible="false" />
-	<enum16 name="Roll Function" offset="0x86" visible="true" tooltip="a function to control rotation of the gel in roll">
-		<option name="One" value="0x0" />
-		<option name="Zero" value="0x1" />
-		<option name="Cosine" value="0x2" />
-		<option name="Cosine (Variable Period)" value="0x3" />
-		<option name="Diagonal Wave" value="0x4" />
-		<option name="Diagonal Wave (Variable Period)" value="0x5" />
-		<option name="Slide" value="0x6" />
-		<option name="Slide (Variable Period)" value="0x7" />
-		<option name="Noise" value="0x8" />
-		<option name="Jitter" value="0x9" />
-		<option name="Wander" value="0xA" />
-		<option name="Spark" value="0xB" />
-	</enum16>
-	<float32 name="Roll Period" offset="0x88" visible="true" tooltip="time between repeats" />
+	<float32 name="Texture Animation Period" offset="0x78" visible="true" tooltip="time between repeats" />
+	<tagRef name="Secondary Cube Map" offset="0x7C" visible="true" tooltip="used for specular light" />
 	<int16 name="Unknown" offset="0x8C" visible="false" />
-	<enum16 name="Pitch Function" offset="0x8E" visible="true" tooltip="a function to control rotation of the gel in pitch">
+	<enum16 name="Yaw Function" offset="0x8E" visible="true" tooltip="a function to control rotation of the gel in yaw">
 		<option name="One" value="0x0" />
 		<option name="Zero" value="0x1" />
 		<option name="Cosine" value="0x2" />
@@ -95,28 +67,60 @@
 		<option name="Wander" value="0xA" />
 		<option name="Spark" value="0xB" />
 	</enum16>
-	<float32 name="Pitch Period" offset="0x90" visible="true" tooltip="time between repeats" />
-	<undefined name="Unknown" offset="0x94" visible="false" />
-	<undefined name="Unknown" offset="0x98" visible="false" />
-	<comment title="LENS FLARE">optional lens flare associated with this light</comment>
-	<tagRef name="Lens Flare" offset="0x9C" visible="true" />
+	<float32 name="Yaw Period" offset="0x90" visible="true" tooltip="time between repeats" />
+	<int16 name="Unknown" offset="0x94" visible="false" />
+	<enum16 name="Roll Function" offset="0x96" visible="true" tooltip="a function to control rotation of the gel in roll">
+		<option name="One" value="0x0" />
+		<option name="Zero" value="0x1" />
+		<option name="Cosine" value="0x2" />
+		<option name="Cosine (Variable Period)" value="0x3" />
+		<option name="Diagonal Wave" value="0x4" />
+		<option name="Diagonal Wave (Variable Period)" value="0x5" />
+		<option name="Slide" value="0x6" />
+		<option name="Slide (Variable Period)" value="0x7" />
+		<option name="Noise" value="0x8" />
+		<option name="Jitter" value="0x9" />
+		<option name="Wander" value="0xA" />
+		<option name="Spark" value="0xB" />
+	</enum16>
+	<float32 name="Roll Period" offset="0x98" visible="true" tooltip="time between repeats" />
+	<int16 name="Unknown" offset="0x9C" visible="false" />
+	<enum16 name="Pitch Function" offset="0x9E" visible="true" tooltip="a function to control rotation of the gel in pitch">
+		<option name="One" value="0x0" />
+		<option name="Zero" value="0x1" />
+		<option name="Cosine" value="0x2" />
+		<option name="Cosine (Variable Period)" value="0x3" />
+		<option name="Diagonal Wave" value="0x4" />
+		<option name="Diagonal Wave (Variable Period)" value="0x5" />
+		<option name="Slide" value="0x6" />
+		<option name="Slide (Variable Period)" value="0x7" />
+		<option name="Noise" value="0x8" />
+		<option name="Jitter" value="0x9" />
+		<option name="Wander" value="0xA" />
+		<option name="Spark" value="0xB" />
+	</enum16>
+	<float32 name="Pitch Period" offset="0xA0" visible="true" tooltip="time between repeats" />
 	<undefined name="Unknown" offset="0xA4" visible="false" />
 	<undefined name="Unknown" offset="0xA8" visible="false" />
-	<undefined name="Unknown" offset="0xAC" visible="false" />
-	<undefined name="Unknown" offset="0xB0" visible="false" />
-	<undefined name="Unknown" offset="0xB4" visible="false" />
-	<undefined name="Unknown" offset="0xB8" visible="false" />
-	<comment title="RADIOSITY">how the light affects the lightmaps (ignored for dynamic lights)</comment>
-	<float32 name="Intensity" offset="0xBC" visible="true" />
-	<colorf name="Color" offset="0xC0" alpha="false" visible="true" />
+	<comment title="LENS FLARE">optional lens flare associated with this light</comment>
+	<tagRef name="Lens Flare" offset="0xAC" visible="true" />
+	<undefined name="Unknown" offset="0xBC" visible="false" />
+	<undefined name="Unknown" offset="0xC0" visible="false" />
+	<undefined name="Unknown" offset="0xC4" visible="false" />
+	<undefined name="Unknown" offset="0xC8" visible="false" />
 	<undefined name="Unknown" offset="0xCC" visible="false" />
 	<undefined name="Unknown" offset="0xD0" visible="false" />
-	<undefined name="Unknown" offset="0xD4" visible="false" />
-	<undefined name="Unknown" offset="0xD8" visible="false" />
+	<comment title="RADIOSITY">how the light affects the lightmaps (ignored for dynamic lights)</comment>
+	<float32 name="Intensity" offset="0xD4" visible="true" />
+	<colorf name="Color" offset="0xD8" alpha="false" visible="true" />
+	<undefined name="Unknown" offset="0xE4" visible="false" />
+	<undefined name="Unknown" offset="0xE8" visible="false" />
+	<undefined name="Unknown" offset="0xEC" visible="false" />
+	<undefined name="Unknown" offset="0xF0" visible="false" />
 	<comment title="EFFECT PARAMETERS">if the light is created by an effect, it will animate itself as follows</comment>
-	<float32 name="Duration" offset="0xDC" visible="true" tooltip="the light will last this long when created by an effect" />
-	<int16 name="Unknown" offset="0xE0" visible="false" />
-	<enum16 name="Falloff Function" offset="0xE2" visible="true" tooltip="the scale of the light will diminish over time according to this function">
+	<float32 name="Duration" offset="0xF4" visible="true" tooltip="the light will last this long when created by an effect" />
+	<int16 name="Unknown" offset="0xF8" visible="false" />
+	<enum16 name="Falloff Function" offset="0xFA" visible="true" tooltip="the scale of the light will diminish over time according to this function">
 		<option name="Linear" value="0x0" />
 		<option name="Early" value="0x1" />
 		<option name="Very Early" value="0x2" />
@@ -124,12 +128,6 @@
 		<option name="Very Late" value="0x4" />
 		<option name="Cosine" value="0x5" />
 	</enum16>
-	<undefined name="Unknown" offset="0xE4" visible="false" />
-	<undefined name="Unknown" offset="0xE8" visible="false" />
-	<undefined name="Unknown" offset="0xEC" visible="false" />
-	<undefined name="Unknown" offset="0xF0" visible="false" />
-	<undefined name="Unknown" offset="0xF4" visible="false" />
-	<undefined name="Unknown" offset="0xF8" visible="false" />
 	<undefined name="Unknown" offset="0xFC" visible="false" />
 	<undefined name="Unknown" offset="0x100" visible="false" />
 	<undefined name="Unknown" offset="0x104" visible="false" />
@@ -149,4 +147,10 @@
 	<undefined name="Unknown" offset="0x13C" visible="false" />
 	<undefined name="Unknown" offset="0x140" visible="false" />
 	<undefined name="Unknown" offset="0x144" visible="false" />
+	<undefined name="Unknown" offset="0x148" visible="false" />
+	<undefined name="Unknown" offset="0x14C" visible="false" />
+	<undefined name="Unknown" offset="0x150" visible="false" />
+	<undefined name="Unknown" offset="0x154" visible="false" />
+	<undefined name="Unknown" offset="0x158" visible="false" />
+	<undefined name="Unknown" offset="0x15C" visible="false" />
 </plugin>

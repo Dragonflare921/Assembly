@@ -1,4 +1,8 @@
-<plugin>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo1" baseSize="0x48">
+	<revisions>
+		<revision author="Lord Zedd" version="1">ayy lmao</revision>
+	</revisions>
 	<undefined name="Unknown" offset="0x0" visible="false" />
 	<int16 name="Priority" offset="0x4" visible="true" tooltip="when multiple listeners are in different sound environments in split screen, the combined environment will be the one with the highest priority." />
 	<int16 name="Unknown" offset="0x6" visible="false" />

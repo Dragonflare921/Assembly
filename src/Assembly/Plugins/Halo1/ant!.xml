@@ -1,11 +1,11 @@
-<plugin>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo1" baseSize="0xD0">
+	<revisions>
+		<revision author="Lord Zedd" version="1">ayy lmao</revision>
+	</revisions>
 	<ascii name="Attachment Marker Name" offset="0x0" length="0x20" visible="true" tooltip="the marker name where the antenna should be attached" />
 	<tagRef name="Bitmaps" offset="0x20" visible="true" />
-	<tagRef name="Physics" offset="0x28" visible="true" />
-	<undefined name="Unknown" offset="0x30" visible="false" />
-	<undefined name="Unknown" offset="0x34" visible="false" />
-	<undefined name="Unknown" offset="0x38" visible="false" />
-	<undefined name="Unknown" offset="0x3C" visible="false" />
+	<tagRef name="Physics" offset="0x30" visible="true" />
 	<undefined name="Unknown" offset="0x40" visible="false" />
 	<undefined name="Unknown" offset="0x44" visible="false" />
 	<undefined name="Unknown" offset="0x48" visible="false" />
@@ -22,20 +22,24 @@
 	<undefined name="Unknown" offset="0x74" visible="false" />
 	<undefined name="Unknown" offset="0x78" visible="false" />
 	<undefined name="Unknown" offset="0x7C" visible="false" />
-	<float32 name="Spring Strength Coefficient" offset="0x80" visible="true" tooltip="strength of the spring (larger values make the spring stronger)" />
-	<float32 name="Falloff Pixels" offset="0x84" visible="true" />
-	<float32 name="Cutoff Pixels" offset="0x88" visible="true" />
+	<undefined name="Unknown" offset="0x80" visible="false" />
+	<undefined name="Unknown" offset="0x84" visible="false" />
+	<undefined name="Unknown" offset="0x88" visible="false" />
 	<undefined name="Unknown" offset="0x8C" visible="false" />
-	<undefined name="Unknown" offset="0x90" visible="false" />
-	<undefined name="Unknown" offset="0x94" visible="false" />
-	<undefined name="Unknown" offset="0x98" visible="false" />
+	<float32 name="Spring Strength Coefficient" offset="0x90" visible="true" tooltip="strength of the spring (larger values make the spring stronger)" />
+	<float32 name="Falloff Pixels" offset="0x94" visible="true" />
+	<float32 name="Cutoff Pixels" offset="0x98" visible="true" />
 	<undefined name="Unknown" offset="0x9C" visible="false" />
 	<undefined name="Unknown" offset="0xA0" visible="false" />
 	<undefined name="Unknown" offset="0xA4" visible="false" />
 	<undefined name="Unknown" offset="0xA8" visible="false" />
 	<undefined name="Unknown" offset="0xAC" visible="false" />
 	<undefined name="Unknown" offset="0xB0" visible="false" />
-	<tagblock name="Vertices" offset="0xB4" visible="true" elementSize="0x80">
+	<undefined name="Unknown" offset="0xB4" visible="false" />
+	<undefined name="Unknown" offset="0xB8" visible="false" />
+	<undefined name="Unknown" offset="0xBC" visible="false" />
+	<undefined name="Unknown" offset="0xC0" visible="false" />
+	<tagblock name="Vertices" offset="0xC4" visible="true" elementSize="0x80">
 		<float32 name="Spring Strength Coefficient" offset="0x0" visible="true" tooltip="strength of the spring (larger values make the spring stronger)" />
 		<undefined name="Unknown" offset="0x4" visible="false" />
 		<undefined name="Unknown" offset="0x8" visible="false" />

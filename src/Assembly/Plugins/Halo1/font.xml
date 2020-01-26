@@ -1,4 +1,8 @@
-<plugin>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo1" baseSize="0x9C">
+	<revisions>
+		<revision author="Lord Zedd" version="1">ayy lmao</revision>
+	</revisions>
 	<int32 name="Flags" offset="0x0" visible="true" />
 	<int16 name="Ascending Height" offset="0x4" visible="true" />
 	<int16 name="Decending Height" offset="0x6" visible="true" />
@@ -13,16 +17,16 @@
 	<undefined name="Unknown" offset="0x24" visible="false" />
 	<undefined name="Unknown" offset="0x28" visible="false" />
 	<undefined name="Unknown" offset="0x2C" visible="false" />
-	<tagblock name="Character Tables" offset="0x30" visible="true" elementSize="0x8">
+	<tagblock name="Character Tables" offset="0x30" visible="true" elementSize="0xC">
 		<tagblock name="Character Table" offset="0x0" visible="true" elementSize="0x2">
 			<int16 name="Character Index index" offset="0x0" visible="true" />
 		</tagblock>
 	</tagblock>
-	<tagRef name="Bold" offset="0x38" visible="true" />
-	<tagRef name="Italic" offset="0x40" visible="true" />
-	<tagRef name="Condense" offset="0x48" visible="true" />
-	<tagRef name="Underline" offset="0x50" visible="true" />
-	<tagblock name="Characters" offset="0x58" visible="true" elementSize="0x14">
+	<tagRef name="Bold" offset="0x3C" visible="true" />
+	<tagRef name="Italic" offset="0x4C" visible="true" />
+	<tagRef name="Condense" offset="0x5C" visible="true" />
+	<tagRef name="Underline" offset="0x6C" visible="true" />
+	<tagblock name="Characters" offset="0x7C" visible="true" elementSize="0x14">
 		<int16 name="Character" offset="0x0" visible="true" />
 		<int16 name="Character Width" offset="0x2" visible="true" />
 		<int16 name="Bitmap Width" offset="0x4" visible="true" />
@@ -33,5 +37,5 @@
 		<int16 name="Unknown" offset="0xE" visible="false" />
 		<int32 name="Pixels Offset" offset="0x10" visible="true" />
 	</tagblock>
-	<dataref name="Pixels" offset="0x60" visible="true" />
+	<dataref name="Pixels" offset="0x88" visible="true" />
 </plugin>

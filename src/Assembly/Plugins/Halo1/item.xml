@@ -1,4 +1,8 @@
-<plugin>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo1" baseSize="0x308">
+	<revisions>
+		<revision author="Lord Zedd" version="1">ayy lmao</revision>
+	</revisions>
 	<int16 name="Unknown" offset="0x0" visible="false" />
 	<flags16 name="Flags" offset="0x2" visible="true">
 		<bit name="Does Not Cast Shadow" index="0" />
@@ -12,33 +16,21 @@
 	<float32 name="Acceleration Scale" offset="0x20" visible="true" tooltip="marine 1.0, grunt 1.4, elite 0.9, hunter 0.5, etc." />
 	<undefined name="Unknown" offset="0x24" visible="false" />
 	<tagRef name="Model" offset="0x28" visible="true" />
-	<tagRef name="Animation Graph" offset="0x30" visible="true" />
-	<undefined name="Unknown" offset="0x38" visible="false" />
-	<undefined name="Unknown" offset="0x3C" visible="false" />
-	<undefined name="Unknown" offset="0x40" visible="false" />
-	<undefined name="Unknown" offset="0x44" visible="false" />
+	<tagRef name="Animation Graph" offset="0x38" visible="true" />
 	<undefined name="Unknown" offset="0x48" visible="false" />
 	<undefined name="Unknown" offset="0x4C" visible="false" />
 	<undefined name="Unknown" offset="0x50" visible="false" />
 	<undefined name="Unknown" offset="0x54" visible="false" />
 	<undefined name="Unknown" offset="0x58" visible="false" />
 	<undefined name="Unknown" offset="0x5C" visible="false" />
-	<tagRef name="Collision Model" offset="0x60" visible="true" />
-	<tagRef name="Physics" offset="0x68" visible="true" />
-	<tagRef name="Modifier Shader" offset="0x70" visible="true" />
-	<tagRef name="Creation Effect" offset="0x78" visible="true" />
-	<undefined name="Unknown" offset="0x80" visible="false" />
-	<undefined name="Unknown" offset="0x84" visible="false" />
-	<undefined name="Unknown" offset="0x88" visible="false" />
-	<undefined name="Unknown" offset="0x8C" visible="false" />
-	<undefined name="Unknown" offset="0x90" visible="false" />
-	<undefined name="Unknown" offset="0x94" visible="false" />
-	<undefined name="Unknown" offset="0x98" visible="false" />
-	<undefined name="Unknown" offset="0x9C" visible="false" />
-	<undefined name="Unknown" offset="0xA0" visible="false" />
-	<undefined name="Unknown" offset="0xA4" visible="false" />
-	<undefined name="Unknown" offset="0xA8" visible="false" />
-	<undefined name="Unknown" offset="0xAC" visible="false" />
+	<undefined name="Unknown" offset="0x60" visible="false" />
+	<undefined name="Unknown" offset="0x64" visible="false" />
+	<undefined name="Unknown" offset="0x68" visible="false" />
+	<undefined name="Unknown" offset="0x6C" visible="false" />
+	<tagRef name="Collision Model" offset="0x70" visible="true" />
+	<tagRef name="Physics" offset="0x80" visible="true" />
+	<tagRef name="Modifier Shader" offset="0x90" visible="true" />
+	<tagRef name="Creation Effect" offset="0xA0" visible="true" />
 	<undefined name="Unknown" offset="0xB0" visible="false" />
 	<undefined name="Unknown" offset="0xB4" visible="false" />
 	<undefined name="Unknown" offset="0xB8" visible="false" />
@@ -48,96 +40,9 @@
 	<undefined name="Unknown" offset="0xC8" visible="false" />
 	<undefined name="Unknown" offset="0xCC" visible="false" />
 	<undefined name="Unknown" offset="0xD0" visible="false" />
-	<float32 name="Render Bounding Radius" offset="0xD4" visible="true" tooltip="if set, this radius is used to determine if the object is visible. set it for the pelican." />
-	<comment title="Export To Functions" />
-	<enum16 name="A In" offset="0xD8" visible="true">
-		<option name="None" value="0x0" />
-		<option name="Body Vitality" value="0x1" />
-		<option name="Shield Vitality" value="0x2" />
-		<option name="Recent Body Damage" value="0x3" />
-		<option name="Recent Shield Damage" value="0x4" />
-		<option name="Random Constant" value="0x5" />
-		<option name="Umbrella Shield Vitality" value="0x6" />
-		<option name="Shield Stun" value="0x7" />
-		<option name="Recent Umbrella Shield Vitality" value="0x8" />
-		<option name="Umbrella Shield Stun" value="0x9" />
-		<option name="Region" value="0xA" tooltip="00 damage" />
-		<option name="Region" value="0xB" tooltip="01 damage" />
-		<option name="Region" value="0xC" tooltip="02 damage" />
-		<option name="Region" value="0xD" tooltip="03 damage" />
-		<option name="Region" value="0xE" tooltip="04 damage" />
-		<option name="Region" value="0xF" tooltip="05 damage" />
-		<option name="Region" value="0x10" tooltip="06 damage" />
-		<option name="Region" value="0x11" tooltip="07 damage" />
-		<option name="Alive" value="0x12" />
-		<option name="Compass" value="0x13" />
-	</enum16>
-	<enum16 name="B In" offset="0xDA" visible="true">
-		<option name="None" value="0x0" />
-		<option name="Body Vitality" value="0x1" />
-		<option name="Shield Vitality" value="0x2" />
-		<option name="Recent Body Damage" value="0x3" />
-		<option name="Recent Shield Damage" value="0x4" />
-		<option name="Random Constant" value="0x5" />
-		<option name="Umbrella Shield Vitality" value="0x6" />
-		<option name="Shield Stun" value="0x7" />
-		<option name="Recent Umbrella Shield Vitality" value="0x8" />
-		<option name="Umbrella Shield Stun" value="0x9" />
-		<option name="Region" value="0xA" tooltip="00 damage" />
-		<option name="Region" value="0xB" tooltip="01 damage" />
-		<option name="Region" value="0xC" tooltip="02 damage" />
-		<option name="Region" value="0xD" tooltip="03 damage" />
-		<option name="Region" value="0xE" tooltip="04 damage" />
-		<option name="Region" value="0xF" tooltip="05 damage" />
-		<option name="Region" value="0x10" tooltip="06 damage" />
-		<option name="Region" value="0x11" tooltip="07 damage" />
-		<option name="Alive" value="0x12" />
-		<option name="Compass" value="0x13" />
-	</enum16>
-	<enum16 name="C In" offset="0xDC" visible="true">
-		<option name="None" value="0x0" />
-		<option name="Body Vitality" value="0x1" />
-		<option name="Shield Vitality" value="0x2" />
-		<option name="Recent Body Damage" value="0x3" />
-		<option name="Recent Shield Damage" value="0x4" />
-		<option name="Random Constant" value="0x5" />
-		<option name="Umbrella Shield Vitality" value="0x6" />
-		<option name="Shield Stun" value="0x7" />
-		<option name="Recent Umbrella Shield Vitality" value="0x8" />
-		<option name="Umbrella Shield Stun" value="0x9" />
-		<option name="Region" value="0xA" tooltip="00 damage" />
-		<option name="Region" value="0xB" tooltip="01 damage" />
-		<option name="Region" value="0xC" tooltip="02 damage" />
-		<option name="Region" value="0xD" tooltip="03 damage" />
-		<option name="Region" value="0xE" tooltip="04 damage" />
-		<option name="Region" value="0xF" tooltip="05 damage" />
-		<option name="Region" value="0x10" tooltip="06 damage" />
-		<option name="Region" value="0x11" tooltip="07 damage" />
-		<option name="Alive" value="0x12" />
-		<option name="Compass" value="0x13" />
-	</enum16>
-	<enum16 name="D In" offset="0xDE" visible="true">
-		<option name="None" value="0x0" />
-		<option name="Body Vitality" value="0x1" />
-		<option name="Shield Vitality" value="0x2" />
-		<option name="Recent Body Damage" value="0x3" />
-		<option name="Recent Shield Damage" value="0x4" />
-		<option name="Random Constant" value="0x5" />
-		<option name="Umbrella Shield Vitality" value="0x6" />
-		<option name="Shield Stun" value="0x7" />
-		<option name="Recent Umbrella Shield Vitality" value="0x8" />
-		<option name="Umbrella Shield Stun" value="0x9" />
-		<option name="Region" value="0xA" tooltip="00 damage" />
-		<option name="Region" value="0xB" tooltip="01 damage" />
-		<option name="Region" value="0xC" tooltip="02 damage" />
-		<option name="Region" value="0xD" tooltip="03 damage" />
-		<option name="Region" value="0xE" tooltip="04 damage" />
-		<option name="Region" value="0xF" tooltip="05 damage" />
-		<option name="Region" value="0x10" tooltip="06 damage" />
-		<option name="Region" value="0x11" tooltip="07 damage" />
-		<option name="Alive" value="0x12" />
-		<option name="Compass" value="0x13" />
-	</enum16>
+	<undefined name="Unknown" offset="0xD4" visible="false" />
+	<undefined name="Unknown" offset="0xD8" visible="false" />
+	<undefined name="Unknown" offset="0xDC" visible="false" />
 	<undefined name="Unknown" offset="0xE0" visible="false" />
 	<undefined name="Unknown" offset="0xE4" visible="false" />
 	<undefined name="Unknown" offset="0xE8" visible="false" />
@@ -147,48 +52,147 @@
 	<undefined name="Unknown" offset="0xF8" visible="false" />
 	<undefined name="Unknown" offset="0xFC" visible="false" />
 	<undefined name="Unknown" offset="0x100" visible="false" />
-	<undefined name="Unknown" offset="0x104" visible="false" />
-	<undefined name="Unknown" offset="0x108" visible="false" />
-	<int16 name="Hud Text Message Index" offset="0x10C" visible="true" />
-	<int16 name="Forced Shader Permuation Index" offset="0x10E" visible="true" />
-	<tagblock name="Attachments" offset="0x110" visible="true" elementSize="0x40">
+	<float32 name="Render Bounding Radius" offset="0x104" visible="true" tooltip="if set, this radius is used to determine if the object is visible. set it for the pelican." />
+	<comment title="Export To Functions" />
+	<enum16 name="A In" offset="0x108" visible="true">
+		<option name="None" value="0x0" />
+		<option name="Body Vitality" value="0x1" />
+		<option name="Shield Vitality" value="0x2" />
+		<option name="Recent Body Damage" value="0x3" />
+		<option name="Recent Shield Damage" value="0x4" />
+		<option name="Random Constant" value="0x5" />
+		<option name="Umbrella Shield Vitality" value="0x6" />
+		<option name="Shield Stun" value="0x7" />
+		<option name="Recent Umbrella Shield Vitality" value="0x8" />
+		<option name="Umbrella Shield Stun" value="0x9" />
+		<option name="Region" value="0xA" tooltip="00 damage" />
+		<option name="Region" value="0xB" tooltip="01 damage" />
+		<option name="Region" value="0xC" tooltip="02 damage" />
+		<option name="Region" value="0xD" tooltip="03 damage" />
+		<option name="Region" value="0xE" tooltip="04 damage" />
+		<option name="Region" value="0xF" tooltip="05 damage" />
+		<option name="Region" value="0x10" tooltip="06 damage" />
+		<option name="Region" value="0x11" tooltip="07 damage" />
+		<option name="Alive" value="0x12" />
+		<option name="Compass" value="0x13" />
+	</enum16>
+	<enum16 name="B In" offset="0x10A" visible="true">
+		<option name="None" value="0x0" />
+		<option name="Body Vitality" value="0x1" />
+		<option name="Shield Vitality" value="0x2" />
+		<option name="Recent Body Damage" value="0x3" />
+		<option name="Recent Shield Damage" value="0x4" />
+		<option name="Random Constant" value="0x5" />
+		<option name="Umbrella Shield Vitality" value="0x6" />
+		<option name="Shield Stun" value="0x7" />
+		<option name="Recent Umbrella Shield Vitality" value="0x8" />
+		<option name="Umbrella Shield Stun" value="0x9" />
+		<option name="Region" value="0xA" tooltip="00 damage" />
+		<option name="Region" value="0xB" tooltip="01 damage" />
+		<option name="Region" value="0xC" tooltip="02 damage" />
+		<option name="Region" value="0xD" tooltip="03 damage" />
+		<option name="Region" value="0xE" tooltip="04 damage" />
+		<option name="Region" value="0xF" tooltip="05 damage" />
+		<option name="Region" value="0x10" tooltip="06 damage" />
+		<option name="Region" value="0x11" tooltip="07 damage" />
+		<option name="Alive" value="0x12" />
+		<option name="Compass" value="0x13" />
+	</enum16>
+	<enum16 name="C In" offset="0x10C" visible="true">
+		<option name="None" value="0x0" />
+		<option name="Body Vitality" value="0x1" />
+		<option name="Shield Vitality" value="0x2" />
+		<option name="Recent Body Damage" value="0x3" />
+		<option name="Recent Shield Damage" value="0x4" />
+		<option name="Random Constant" value="0x5" />
+		<option name="Umbrella Shield Vitality" value="0x6" />
+		<option name="Shield Stun" value="0x7" />
+		<option name="Recent Umbrella Shield Vitality" value="0x8" />
+		<option name="Umbrella Shield Stun" value="0x9" />
+		<option name="Region" value="0xA" tooltip="00 damage" />
+		<option name="Region" value="0xB" tooltip="01 damage" />
+		<option name="Region" value="0xC" tooltip="02 damage" />
+		<option name="Region" value="0xD" tooltip="03 damage" />
+		<option name="Region" value="0xE" tooltip="04 damage" />
+		<option name="Region" value="0xF" tooltip="05 damage" />
+		<option name="Region" value="0x10" tooltip="06 damage" />
+		<option name="Region" value="0x11" tooltip="07 damage" />
+		<option name="Alive" value="0x12" />
+		<option name="Compass" value="0x13" />
+	</enum16>
+	<enum16 name="D In" offset="0x10E" visible="true">
+		<option name="None" value="0x0" />
+		<option name="Body Vitality" value="0x1" />
+		<option name="Shield Vitality" value="0x2" />
+		<option name="Recent Body Damage" value="0x3" />
+		<option name="Recent Shield Damage" value="0x4" />
+		<option name="Random Constant" value="0x5" />
+		<option name="Umbrella Shield Vitality" value="0x6" />
+		<option name="Shield Stun" value="0x7" />
+		<option name="Recent Umbrella Shield Vitality" value="0x8" />
+		<option name="Umbrella Shield Stun" value="0x9" />
+		<option name="Region" value="0xA" tooltip="00 damage" />
+		<option name="Region" value="0xB" tooltip="01 damage" />
+		<option name="Region" value="0xC" tooltip="02 damage" />
+		<option name="Region" value="0xD" tooltip="03 damage" />
+		<option name="Region" value="0xE" tooltip="04 damage" />
+		<option name="Region" value="0xF" tooltip="05 damage" />
+		<option name="Region" value="0x10" tooltip="06 damage" />
+		<option name="Region" value="0x11" tooltip="07 damage" />
+		<option name="Alive" value="0x12" />
+		<option name="Compass" value="0x13" />
+	</enum16>
+	<undefined name="Unknown" offset="0x110" visible="false" />
+	<undefined name="Unknown" offset="0x114" visible="false" />
+	<undefined name="Unknown" offset="0x118" visible="false" />
+	<undefined name="Unknown" offset="0x11C" visible="false" />
+	<undefined name="Unknown" offset="0x120" visible="false" />
+	<undefined name="Unknown" offset="0x124" visible="false" />
+	<undefined name="Unknown" offset="0x128" visible="false" />
+	<undefined name="Unknown" offset="0x12C" visible="false" />
+	<undefined name="Unknown" offset="0x130" visible="false" />
+	<undefined name="Unknown" offset="0x134" visible="false" />
+	<undefined name="Unknown" offset="0x138" visible="false" />
+	<int16 name="Hud Text Message Index" offset="0x13C" visible="true" />
+	<int16 name="Forced Shader Permuation Index" offset="0x13E" visible="true" />
+	<tagblock name="Attachments" offset="0x140" visible="true" elementSize="0x48">
 		<tagRef name="Type" offset="0x0" visible="true" />
-		<ascii name="Marker" offset="0x8" length="0x20" visible="true" />
-		<enum16 name="Primary Scale" offset="0x28" visible="true">
+		<ascii name="Marker" offset="0x10" length="0x20" visible="true" />
+		<enum16 name="Primary Scale" offset="0x30" visible="true">
 			<option name="None" value="0x0" />
 			<option name="A Out" value="0x1" />
 			<option name="B Out" value="0x2" />
 			<option name="C Out" value="0x3" />
 			<option name="D Out" value="0x4" />
 		</enum16>
-		<enum16 name="Secondary Scale" offset="0x2A" visible="true">
+		<enum16 name="Secondary Scale" offset="0x32" visible="true">
 			<option name="None" value="0x0" />
 			<option name="A Out" value="0x1" />
 			<option name="B Out" value="0x2" />
 			<option name="C Out" value="0x3" />
 			<option name="D Out" value="0x4" />
 		</enum16>
-		<enum16 name="Change Color" offset="0x2C" visible="true">
+		<enum16 name="Change Color" offset="0x34" visible="true">
 			<option name="None" value="0x0" />
 			<option name="A" value="0x1" />
 			<option name="B" value="0x2" />
 			<option name="C" value="0x3" />
 			<option name="D" value="0x4" />
 		</enum16>
-		<int16 name="Unknown" offset="0x2E" visible="false" />
-		<undefined name="Unknown" offset="0x30" visible="false" />
-		<undefined name="Unknown" offset="0x34" visible="false" />
+		<int16 name="Unknown" offset="0x36" visible="false" />
 		<undefined name="Unknown" offset="0x38" visible="false" />
 		<undefined name="Unknown" offset="0x3C" visible="false" />
+		<undefined name="Unknown" offset="0x40" visible="false" />
+		<undefined name="Unknown" offset="0x44" visible="false" />
 	</tagblock>
-	<tagblock name="Widgets" offset="0x118" visible="true" elementSize="0x18">
+	<tagblock name="Widgets" offset="0x14C" visible="true" elementSize="0x20">
 		<tagRef name="Reference" offset="0x0" visible="true" />
-		<undefined name="Unknown" offset="0x8" visible="false" />
-		<undefined name="Unknown" offset="0xC" visible="false" />
 		<undefined name="Unknown" offset="0x10" visible="false" />
 		<undefined name="Unknown" offset="0x14" visible="false" />
+		<undefined name="Unknown" offset="0x18" visible="false" />
+		<undefined name="Unknown" offset="0x1C" visible="false" />
 	</tagblock>
-	<tagblock name="Functions" offset="0x120" visible="true" elementSize="0x168">
+	<tagblock name="Functions" offset="0x158" visible="true" elementSize="0x168">
 		<flags32 name="Flags" offset="0x0" visible="true">
 			<bit name="Invert" index="0" tooltip="result of function is one minus actual result" />
 			<bit name="Additive" index="1" />
@@ -359,7 +363,7 @@
 		<undefined name="Unknown" offset="0x144" visible="false" />
 		<ascii name="Usage" offset="0x148" length="0x20" visible="true" />
 	</tagblock>
-	<tagblock name="Change Colors" offset="0x128" visible="true" elementSize="0x28">
+	<tagblock name="Change Colors" offset="0x164" visible="true" elementSize="0x2C">
 		<enum16 name="Darken By" offset="0x0" visible="true">
 			<option name="None" value="0x0" />
 			<option name="A In" value="0x1" />
@@ -394,7 +398,7 @@
 			<colorf name="Color Upper Bound" offset="0x10" alpha="false" visible="true" />
 		</tagblock>
 	</tagblock>
-	<tagblock name="Predicted Resources" offset="0x130" visible="true" elementSize="0x8">
+	<tagblock name="Predicted Resources" offset="0x170" visible="true" elementSize="0x8">
 		<enum16 name="Type" offset="0x0" visible="true">
 			<option name="Bitmap" value="0x0" />
 			<option name="Sound" value="0x1" />
@@ -403,50 +407,33 @@
 		<int32 name="Tag Index" offset="0x4" visible="true" />
 	</tagblock>
 	<comment title="$$$ ITEM $$$" />
-	<flags32 name="Flags" offset="0x138" visible="true">
+	<flags32 name="Flags" offset="0x17C" visible="true">
 		<bit name="Always Maintains Z Up" index="0" />
 		<bit name="Destroyed By Explosions" index="1" />
 		<bit name="Unaffected By Gravity" index="2" />
 	</flags32>
 	<comment title="Message-Index">This sets which string from tags\ui\hud\hud_item_messages.unicode_string_list to display.</comment>
-	<int16 name="Message Index" offset="0x13C" visible="true" />
-	<int16 name="Sort Order" offset="0x13E" visible="true" />
-	<float32 name="Scale" offset="0x140" visible="true" />
-	<int16 name="Hud Message Value Scale" offset="0x144" visible="true" />
-	<int16 name="Unknown" offset="0x146" visible="false" />
-	<undefined name="Unknown" offset="0x148" visible="false" />
-	<undefined name="Unknown" offset="0x14C" visible="false" />
-	<undefined name="Unknown" offset="0x150" visible="false" />
-	<undefined name="Unknown" offset="0x154" visible="false" />
-	<enum16 name="A In" offset="0x158" visible="true">
-		<option name="None" value="0x0" />
-	</enum16>
-	<enum16 name="B In" offset="0x15A" visible="true">
-		<option name="None" value="0x0" />
-	</enum16>
-	<enum16 name="C In" offset="0x15C" visible="true">
-		<option name="None" value="0x0" />
-	</enum16>
-	<enum16 name="D In" offset="0x15E" visible="true">
-		<option name="None" value="0x0" />
-	</enum16>
-	<undefined name="Unknown" offset="0x160" visible="false" />
-	<undefined name="Unknown" offset="0x164" visible="false" />
-	<undefined name="Unknown" offset="0x168" visible="false" />
-	<undefined name="Unknown" offset="0x16C" visible="false" />
-	<undefined name="Unknown" offset="0x170" visible="false" />
-	<undefined name="Unknown" offset="0x174" visible="false" />
-	<undefined name="Unknown" offset="0x178" visible="false" />
-	<undefined name="Unknown" offset="0x17C" visible="false" />
-	<undefined name="Unknown" offset="0x180" visible="false" />
-	<undefined name="Unknown" offset="0x184" visible="false" />
-	<undefined name="Unknown" offset="0x188" visible="false" />
+	<int16 name="Message Index" offset="0x180" visible="true" />
+	<int16 name="Sort Order" offset="0x182" visible="true" />
+	<float32 name="Scale" offset="0x184" visible="true" />
+	<int16 name="Hud Message Value Scale" offset="0x188" visible="true" />
+	<int16 name="Unknown" offset="0x18A" visible="false" />
 	<undefined name="Unknown" offset="0x18C" visible="false" />
 	<undefined name="Unknown" offset="0x190" visible="false" />
 	<undefined name="Unknown" offset="0x194" visible="false" />
 	<undefined name="Unknown" offset="0x198" visible="false" />
-	<undefined name="Unknown" offset="0x19C" visible="false" />
-	<undefined name="Unknown" offset="0x1A0" visible="false" />
+	<enum16 name="A In" offset="0x19C" visible="true">
+		<option name="None" value="0x0" />
+	</enum16>
+	<enum16 name="B In" offset="0x19E" visible="true">
+		<option name="None" value="0x0" />
+	</enum16>
+	<enum16 name="C In" offset="0x1A0" visible="true">
+		<option name="None" value="0x0" />
+	</enum16>
+	<enum16 name="D In" offset="0x1A2" visible="true">
+		<option name="None" value="0x0" />
+	</enum16>
 	<undefined name="Unknown" offset="0x1A4" visible="false" />
 	<undefined name="Unknown" offset="0x1A8" visible="false" />
 	<undefined name="Unknown" offset="0x1AC" visible="false" />
@@ -471,8 +458,10 @@
 	<undefined name="Unknown" offset="0x1F8" visible="false" />
 	<undefined name="Unknown" offset="0x1FC" visible="false" />
 	<undefined name="Unknown" offset="0x200" visible="false" />
-	<tagRef name="Material Effects" offset="0x204" visible="true" />
-	<tagRef name="Collision Sound" offset="0x20C" visible="true" />
+	<undefined name="Unknown" offset="0x204" visible="false" />
+	<undefined name="Unknown" offset="0x208" visible="false" />
+	<undefined name="Unknown" offset="0x20C" visible="false" />
+	<undefined name="Unknown" offset="0x210" visible="false" />
 	<undefined name="Unknown" offset="0x214" visible="false" />
 	<undefined name="Unknown" offset="0x218" visible="false" />
 	<undefined name="Unknown" offset="0x21C" visible="false" />
@@ -486,14 +475,8 @@
 	<undefined name="Unknown" offset="0x23C" visible="false" />
 	<undefined name="Unknown" offset="0x240" visible="false" />
 	<undefined name="Unknown" offset="0x244" visible="false" />
-	<undefined name="Unknown" offset="0x248" visible="false" />
-	<undefined name="Unknown" offset="0x24C" visible="false" />
-	<undefined name="Unknown" offset="0x250" visible="false" />
-	<undefined name="Unknown" offset="0x254" visible="false" />
-	<undefined name="Unknown" offset="0x258" visible="false" />
-	<undefined name="Unknown" offset="0x25C" visible="false" />
-	<undefined name="Unknown" offset="0x260" visible="false" />
-	<undefined name="Unknown" offset="0x264" visible="false" />
+	<tagRef name="Material Effects" offset="0x248" visible="true" />
+	<tagRef name="Collision Sound" offset="0x258" visible="true" />
 	<undefined name="Unknown" offset="0x268" visible="false" />
 	<undefined name="Unknown" offset="0x26C" visible="false" />
 	<undefined name="Unknown" offset="0x270" visible="false" />
@@ -503,7 +486,28 @@
 	<undefined name="Unknown" offset="0x280" visible="false" />
 	<undefined name="Unknown" offset="0x284" visible="false" />
 	<undefined name="Unknown" offset="0x288" visible="false" />
-	<rangef name="Detonation Delay" offset="0x28C" visible="true" />
-	<tagRef name="Detonating Effect" offset="0x294" visible="true" />
-	<tagRef name="Detonation Effect" offset="0x29C" visible="true" />
+	<undefined name="Unknown" offset="0x28C" visible="false" />
+	<undefined name="Unknown" offset="0x290" visible="false" />
+	<undefined name="Unknown" offset="0x294" visible="false" />
+	<undefined name="Unknown" offset="0x298" visible="false" />
+	<undefined name="Unknown" offset="0x29C" visible="false" />
+	<undefined name="Unknown" offset="0x2A0" visible="false" />
+	<undefined name="Unknown" offset="0x2A4" visible="false" />
+	<undefined name="Unknown" offset="0x2A8" visible="false" />
+	<undefined name="Unknown" offset="0x2AC" visible="false" />
+	<undefined name="Unknown" offset="0x2B0" visible="false" />
+	<undefined name="Unknown" offset="0x2B4" visible="false" />
+	<undefined name="Unknown" offset="0x2B8" visible="false" />
+	<undefined name="Unknown" offset="0x2BC" visible="false" />
+	<undefined name="Unknown" offset="0x2C0" visible="false" />
+	<undefined name="Unknown" offset="0x2C4" visible="false" />
+	<undefined name="Unknown" offset="0x2C8" visible="false" />
+	<undefined name="Unknown" offset="0x2CC" visible="false" />
+	<undefined name="Unknown" offset="0x2D0" visible="false" />
+	<undefined name="Unknown" offset="0x2D4" visible="false" />
+	<undefined name="Unknown" offset="0x2D8" visible="false" />
+	<undefined name="Unknown" offset="0x2DC" visible="false" />
+	<rangef name="Detonation Delay" offset="0x2E0" visible="true" />
+	<tagRef name="Detonating Effect" offset="0x2E8" visible="true" />
+	<tagRef name="Detonation Effect" offset="0x2F8" visible="true" />
 </plugin>

@@ -1,8 +1,12 @@
-<plugin>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo1" baseSize="0x3C">
+	<revisions>
+		<revision author="Lord Zedd" version="1">ayy lmao</revision>
+	</revisions>
 	<tagRef name="Display Font" offset="0x0" visible="true" />
-	<tagRef name="Background Bitmap" offset="0x8" visible="true" />
-	<tagRef name="Special Key Labels String List" offset="0x10" visible="true" />
-	<tagblock name="Virtual Keys" offset="0x18" visible="true" elementSize="0x30">
+	<tagRef name="Background Bitmap" offset="0x10" visible="true" />
+	<tagRef name="Special Key Labels String List" offset="0x20" visible="true" />
+	<tagblock name="Virtual Keys" offset="0x30" visible="true" elementSize="0x50">
 		<enum16 name="Keyboard Key" offset="0x0" visible="true">
 			<option name="1" value="0x0" />
 			<option name="2" value="0x1" />
@@ -58,8 +62,8 @@
 		<int16 name="Shift+Symbols Character" offset="0xC" visible="true" />
 		<int16 name="Caps+Symbols Character" offset="0xE" visible="true" />
 		<tagRef name="Unselected Background Bitmap" offset="0x10" visible="true" />
-		<tagRef name="Selected Background Bitmap" offset="0x18" visible="true" />
-		<tagRef name="Active Background Bitmap" offset="0x20" visible="true" />
-		<tagRef name="Sticky Background Bitmap" offset="0x28" visible="true" />
+		<tagRef name="Selected Background Bitmap" offset="0x20" visible="true" />
+		<tagRef name="Active Background Bitmap" offset="0x30" visible="true" />
+		<tagRef name="Sticky Background Bitmap" offset="0x40" visible="true" />
 	</tagblock>
 </plugin>

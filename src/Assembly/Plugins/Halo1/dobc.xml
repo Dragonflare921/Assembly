@@ -1,4 +1,8 @@
-<plugin>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo1" baseSize="0x80">
+	<revisions>
+		<revision author="Lord Zedd" version="1">ayy lmao</revision>
+	</revisions>
 	<enum16 name="Collection Type" offset="0x0" visible="true">
 		<option name="Screen-Facing" value="0x0" />
 		<option name="Viewer-Facing" value="0x1" />
@@ -17,7 +21,7 @@
 	<undefined name="Unknown" offset="0x2C" visible="false" />
 	<undefined name="Unknown" offset="0x30" visible="false" />
 	<tagRef name="Sprite Plate" offset="0x34" visible="true" />
-	<tagblock name="Types" offset="0x3C" visible="true" elementSize="0x60">
+	<tagblock name="Types" offset="0x44" visible="true" elementSize="0x60">
 		<ascii name="Name" offset="0x0" length="0x20" visible="true" />
 		<int8 name="Sequence Index" offset="0x20" visible="true" />
 		<flags8 name="Type Flags" offset="0x21" visible="true">
@@ -39,9 +43,6 @@
 		<color32 name="Ambient Color" offset="0x58" alpha="true" visible="true" />
 		<undefined name="Unknown" offset="0x5C" visible="false" />
 	</tagblock>
-	<undefined name="Unknown" offset="0x44" visible="false" />
-	<undefined name="Unknown" offset="0x48" visible="false" />
-	<undefined name="Unknown" offset="0x4C" visible="false" />
 	<undefined name="Unknown" offset="0x50" visible="false" />
 	<undefined name="Unknown" offset="0x54" visible="false" />
 	<undefined name="Unknown" offset="0x58" visible="false" />
@@ -51,4 +52,7 @@
 	<undefined name="Unknown" offset="0x68" visible="false" />
 	<undefined name="Unknown" offset="0x6C" visible="false" />
 	<undefined name="Unknown" offset="0x70" visible="false" />
+	<undefined name="Unknown" offset="0x74" visible="false" />
+	<undefined name="Unknown" offset="0x78" visible="false" />
+	<undefined name="Unknown" offset="0x7C" visible="false" />
 </plugin>

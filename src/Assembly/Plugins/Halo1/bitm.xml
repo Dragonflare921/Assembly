@@ -1,4 +1,8 @@
-<plugin>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo1" baseSize="0x6C">
+	<revisions>
+		<revision author="Lord Zedd" version="1">ayy lmao</revision>
+	</revisions>
 	<comment title="Type">Type controls bitmap 'geometry'. All dimensions must be a power of two except for SPRITES and INTERFACE BITMAPS:
 
 * 2D TEXTURES: Ordinary, 2D textures will be generated.
@@ -71,20 +75,20 @@ Note: Height maps (a.k.a. bump maps) should use 32-bit color; this is internally
 	<int16 name="Color Plate Height" offset="0x1A" visible="true" />
 	<dataref name="Compressed Color Plate Data" offset="0x1C" visible="true" />
 	<comment title="Processed Pixel Data">Pixel data after being processed by the tool.</comment>
-	<dataref name="Processed Pixel Data" offset="0x24" visible="true" />
+	<dataref name="Processed Pixel Data" offset="0x30" visible="true" />
 	<comment title="Miscellaneous" />
-	<float32 name="Blur Filter Size" offset="0x2C" visible="true" tooltip="blurs the bitmap before generating mipmaps" />
-	<float32 name="Alpha Bias" offset="0x30" visible="true" tooltip="affects alpha mipmap generation" />
-	<int16 name="Mipmap Count" offset="0x34" visible="true" tooltip="0 defaults to all levels" />
+	<float32 name="Blur Filter Size" offset="0x44" visible="true" tooltip="blurs the bitmap before generating mipmaps" />
+	<float32 name="Alpha Bias" offset="0x48" visible="true" tooltip="affects alpha mipmap generation" />
+	<int16 name="Mipmap Count" offset="0x4C" visible="true" tooltip="0 defaults to all levels" />
 	<comment title="...More Sprite Processing">Sprite usage controls the background color of sprite plates.</comment>
-	<enum16 name="Sprite Usage" offset="0x36" visible="true">
+	<enum16 name="Sprite Usage" offset="0x4E" visible="true">
 		<option name="Blend/Add/Subtract/Max" value="0x0" />
 		<option name="Multiply/Min" value="0x1" />
 		<option name="Double Multiply" value="0x2" />
 	</enum16>
-	<int16 name="Sprite Spacing" offset="0x38" visible="true" />
-	<int16 name="Unknown" offset="0x3A" visible="false" />
-	<tagblock name="Sequences" offset="0x3C" visible="true" elementSize="0x3C">
+	<int16 name="Sprite Spacing" offset="0x50" visible="true" />
+	<int16 name="Unknown" offset="0x52" visible="false" />
+	<tagblock name="Sequences" offset="0x54" visible="true" elementSize="0x40">
 		<ascii name="Name" offset="0x0" length="0x20" visible="true" />
 		<int16 name="First Bitmap Index" offset="0x20" visible="true" />
 		<int16 name="Bitmap Count" offset="0x22" visible="true" />
@@ -103,7 +107,7 @@ Note: Height maps (a.k.a. bump maps) should use 32-bit color; this is internally
 			<point2 name="Registration Point" offset="0x18" visible="true" />
 		</tagblock>
 	</tagblock>
-	<tagblock name="Bitmaps" offset="0x44" visible="true" elementSize="0x30">
+	<tagblock name="Bitmaps" offset="0x60" visible="true" elementSize="0x30">
 		<ascii name="Signature" offset="0x0" length="0x4" />
 		<int16 name="Width" offset="0x4" visible="true" />
 		<int16 name="Height" offset="0x6" visible="true" />

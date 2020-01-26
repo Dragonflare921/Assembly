@@ -1,4 +1,8 @@
-<plugin>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo1" baseSize="0x200">
+	<revisions>
+		<revision author="Lord Zedd" version="1">ayy lmao</revision>
+	</revisions>
 	<rangef name="Radius" offset="0x0" visible="true" />
 	<float32 name="Cutoff Scale" offset="0x8" visible="true" />
 	<undefined name="Unknown" offset="0xC" visible="false" />

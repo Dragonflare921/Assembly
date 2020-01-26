@@ -1,4 +1,8 @@
-<plugin>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo1" baseSize="0x450">
+	<revisions>
+		<revision author="Lord Zedd" version="1">ayy lmao</revision>
+	</revisions>
 	<comment title="Messaging Parameters" />
 	<enum16 name="Anchor" offset="0x0" visible="true">
 		<option name="Top Left" value="0x0" />
@@ -31,16 +35,16 @@
 	<undefined name="Unknown" offset="0x40" visible="false" />
 	<undefined name="Unknown" offset="0x44" visible="false" />
 	<tagRef name="Single Player Font" offset="0x48" visible="true" />
-	<tagRef name="Multi Player Font" offset="0x50" visible="true" />
-	<float32 name="Up Time" offset="0x58" visible="true" />
-	<float32 name="Fade Time" offset="0x5C" visible="true" />
-	<colorf name="Icon Color" offset="0x60" alpha="true" visible="true" />
-	<colorf name="Text Color" offset="0x70" alpha="true" visible="true" />
-	<float32 name="Text Spacing" offset="0x80" visible="true" />
-	<tagRef name="Item Message Text" offset="0x84" visible="true" />
-	<tagRef name="Icon Bitmap" offset="0x8C" visible="true" />
-	<tagRef name="Alternate Icon Text" offset="0x94" visible="true" />
-	<tagblock name="Button Icons" offset="0x9C" visible="true" elementSize="0x10">
+	<tagRef name="Multi Player Font" offset="0x58" visible="true" />
+	<float32 name="Up Time" offset="0x68" visible="true" />
+	<float32 name="Fade Time" offset="0x6C" visible="true" />
+	<colorf name="Icon Color" offset="0x70" alpha="true" visible="true" />
+	<colorf name="Text Color" offset="0x80" alpha="true" visible="true" />
+	<float32 name="Text Spacing" offset="0x90" visible="true" />
+	<tagRef name="Item Message Text" offset="0x94" visible="true" />
+	<tagRef name="Icon Bitmap" offset="0xA4" visible="true" />
+	<tagRef name="Alternate Icon Text" offset="0xB4" visible="true" />
+	<tagblock name="Button Icons" offset="0xC4" visible="true" elementSize="0x10">
 		<int16 name="Sequence Index" offset="0x0" visible="true" tooltip="sequence index into the global hud icon bitmap" />
 		<int16 name="Width Offset" offset="0x2" visible="true" tooltip="extra spacing beyond bitmap width for text alignment" />
 		<point16 name="Offset From Reference Corner" offset="0x4" visible="true" />
@@ -54,47 +58,47 @@
 		<int16 name="Text Index" offset="0xE" visible="true" />
 	</tagblock>
 	<comment title="HUD HELP TEXT COLOR" />
-	<color32 name="Default Color" offset="0xA4" alpha="true" visible="true" />
-	<color32 name="Flashing Color" offset="0xA8" alpha="true" visible="true" />
-	<float32 name="Flash Period" offset="0xAC" visible="true" />
-	<float32 name="Flash Delay" offset="0xB0" visible="true" />
-	<int16 name="Number Of Flashes" offset="0xB4" visible="true" />
-	<flags16 name="Flash Flags" offset="0xB6" visible="true">
+	<color32 name="Default Color" offset="0xD0" alpha="true" visible="true" />
+	<color32 name="Flashing Color" offset="0xD4" alpha="true" visible="true" />
+	<float32 name="Flash Period" offset="0xD8" visible="true" />
+	<float32 name="Flash Delay" offset="0xDC" visible="true" />
+	<int16 name="Number Of Flashes" offset="0xE0" visible="true" />
+	<flags16 name="Flash Flags" offset="0xE2" visible="true">
 		<bit name="Reverse Default/Flashing Colors" index="0" />
 	</flags16>
-	<float32 name="Flash Length" offset="0xB8" visible="true" />
-	<color32 name="Disabled Color" offset="0xBC" alpha="true" visible="true" />
-	<undefined name="Unknown" offset="0xC0" visible="false" />
+	<float32 name="Flash Length" offset="0xE4" visible="true" />
+	<color32 name="Disabled Color" offset="0xE8" alpha="true" visible="true" />
+	<undefined name="Unknown" offset="0xEC" visible="false" />
 	<comment title="Other Hud Messaging Data" />
-	<tagRef name="Hud Messages" offset="0xC4" visible="true" />
+	<tagRef name="Hud Messages" offset="0xF0" visible="true" />
 	<comment title="Objective Colors" />
-	<color32 name="Default Color" offset="0xCC" alpha="true" visible="true" />
-	<color32 name="Flashing Color" offset="0xD0" alpha="true" visible="true" />
-	<float32 name="Flash Period" offset="0xD4" visible="true" />
-	<float32 name="Flash Delay" offset="0xD8" visible="true" />
-	<int16 name="Number Of Flashes" offset="0xDC" visible="true" />
-	<flags16 name="Flash Flags" offset="0xDE" visible="true">
+	<color32 name="Default Color" offset="0x100" alpha="true" visible="true" />
+	<color32 name="Flashing Color" offset="0x104" alpha="true" visible="true" />
+	<float32 name="Flash Period" offset="0x108" visible="true" />
+	<float32 name="Flash Delay" offset="0x10C" visible="true" />
+	<int16 name="Number Of Flashes" offset="0x110" visible="true" />
+	<flags16 name="Flash Flags" offset="0x112" visible="true">
 		<bit name="Reverse Default/Flashing Colors" index="0" />
 	</flags16>
-	<float32 name="Flash Length" offset="0xE0" visible="true" />
-	<color32 name="Disabled Color" offset="0xE4" alpha="true" visible="true" />
-	<int16 name="Uptime Ticks" offset="0xE8" visible="true" />
-	<int16 name="Fade Ticks" offset="0xEA" visible="true" />
+	<float32 name="Flash Length" offset="0x114" visible="true" />
+	<color32 name="Disabled Color" offset="0x118" alpha="true" visible="true" />
+	<int16 name="Uptime Ticks" offset="0x11C" visible="true" />
+	<int16 name="Fade Ticks" offset="0x11E" visible="true" />
 	<comment title="Waypoint Parameters">The offset values are how much the waypoint rectangle border is offset from the safe camera bounds</comment>
-	<float32 name="Top Offset" offset="0xEC" visible="true" />
-	<float32 name="Bottom Offset" offset="0xF0" visible="true" />
-	<float32 name="Left Offset" offset="0xF4" visible="true" />
-	<float32 name="Right Offset" offset="0xF8" visible="true" />
-	<undefined name="Unknown" offset="0xFC" visible="false" />
-	<undefined name="Unknown" offset="0x100" visible="false" />
-	<undefined name="Unknown" offset="0x104" visible="false" />
-	<undefined name="Unknown" offset="0x108" visible="false" />
-	<undefined name="Unknown" offset="0x10C" visible="false" />
-	<undefined name="Unknown" offset="0x110" visible="false" />
-	<undefined name="Unknown" offset="0x114" visible="false" />
-	<undefined name="Unknown" offset="0x118" visible="false" />
-	<tagRef name="Arrow Bitmap" offset="0x11C" visible="true" />
-	<tagblock name="Waypoint Arrows" offset="0x124" visible="true" elementSize="0x68">
+	<float32 name="Top Offset" offset="0x120" visible="true" />
+	<float32 name="Bottom Offset" offset="0x124" visible="true" />
+	<float32 name="Left Offset" offset="0x128" visible="true" />
+	<float32 name="Right Offset" offset="0x12C" visible="true" />
+	<undefined name="Unknown" offset="0x130" visible="false" />
+	<undefined name="Unknown" offset="0x134" visible="false" />
+	<undefined name="Unknown" offset="0x138" visible="false" />
+	<undefined name="Unknown" offset="0x13C" visible="false" />
+	<undefined name="Unknown" offset="0x140" visible="false" />
+	<undefined name="Unknown" offset="0x144" visible="false" />
+	<undefined name="Unknown" offset="0x148" visible="false" />
+	<undefined name="Unknown" offset="0x14C" visible="false" />
+	<tagRef name="Arrow Bitmap" offset="0x150" visible="true" />
+	<tagblock name="Waypoint Arrows" offset="0x160" visible="true" elementSize="0x68">
 		<ascii name="Name" offset="0x0" length="0x20" visible="true" />
 		<undefined name="Unknown" offset="0x20" visible="false" />
 		<undefined name="Unknown" offset="0x24" visible="false" />
@@ -119,28 +123,11 @@
 		<undefined name="Unknown" offset="0x60" visible="false" />
 		<undefined name="Unknown" offset="0x64" visible="false" />
 	</tagblock>
-	<undefined name="Unknown" offset="0x12C" visible="false" />
-	<undefined name="Unknown" offset="0x130" visible="false" />
-	<undefined name="Unknown" offset="0x134" visible="false" />
-	<undefined name="Unknown" offset="0x138" visible="false" />
-	<undefined name="Unknown" offset="0x13C" visible="false" />
-	<undefined name="Unknown" offset="0x140" visible="false" />
-	<undefined name="Unknown" offset="0x144" visible="false" />
-	<undefined name="Unknown" offset="0x148" visible="false" />
-	<undefined name="Unknown" offset="0x14C" visible="false" />
-	<undefined name="Unknown" offset="0x150" visible="false" />
-	<undefined name="Unknown" offset="0x154" visible="false" />
-	<undefined name="Unknown" offset="0x158" visible="false" />
-	<undefined name="Unknown" offset="0x15C" visible="false" />
-	<undefined name="Unknown" offset="0x160" visible="false" />
-	<undefined name="Unknown" offset="0x164" visible="false" />
-	<undefined name="Unknown" offset="0x168" visible="false" />
 	<undefined name="Unknown" offset="0x16C" visible="false" />
 	<undefined name="Unknown" offset="0x170" visible="false" />
 	<undefined name="Unknown" offset="0x174" visible="false" />
 	<undefined name="Unknown" offset="0x178" visible="false" />
-	<comment title="Multiplayer Parameters" />
-	<float32 name="Hud Scale In Multiplayer" offset="0x17C" visible="true" />
+	<undefined name="Unknown" offset="0x17C" visible="false" />
 	<undefined name="Unknown" offset="0x180" visible="false" />
 	<undefined name="Unknown" offset="0x184" visible="false" />
 	<undefined name="Unknown" offset="0x188" visible="false" />
@@ -156,7 +143,8 @@
 	<undefined name="Unknown" offset="0x1B0" visible="false" />
 	<undefined name="Unknown" offset="0x1B4" visible="false" />
 	<undefined name="Unknown" offset="0x1B8" visible="false" />
-	<undefined name="Unknown" offset="0x1BC" visible="false" />
+	<comment title="Multiplayer Parameters" />
+	<float32 name="Hud Scale In Multiplayer" offset="0x1BC" visible="true" />
 	<undefined name="Unknown" offset="0x1C0" visible="false" />
 	<undefined name="Unknown" offset="0x1C4" visible="false" />
 	<undefined name="Unknown" offset="0x1C8" visible="false" />
@@ -205,12 +193,13 @@
 	<undefined name="Unknown" offset="0x274" visible="false" />
 	<undefined name="Unknown" offset="0x278" visible="false" />
 	<undefined name="Unknown" offset="0x27C" visible="false" />
-	<comment title="Hud Globals" />
-	<tagRef name="Default Weapon Hud" offset="0x280" visible="true" />
-	<float32 name="Motion Sensor Range" offset="0x288" visible="true" />
-	<float32 name="Motion Sensor Velocity Sensitivity" offset="0x28C" visible="true" tooltip="how fast something moves to show up on the motion sensor" />
-	<float32 name="Motion Sensor Scale [DON't TOUCH EVER]" offset="0x290" visible="true" />
-	<rect16 name="Default Chapter Title Bounds" offset="0x294" visible="true" />
+	<undefined name="Unknown" offset="0x280" visible="false" />
+	<undefined name="Unknown" offset="0x284" visible="false" />
+	<undefined name="Unknown" offset="0x288" visible="false" />
+	<undefined name="Unknown" offset="0x28C" visible="false" />
+	<undefined name="Unknown" offset="0x290" visible="false" />
+	<undefined name="Unknown" offset="0x294" visible="false" />
+	<undefined name="Unknown" offset="0x298" visible="false" />
 	<undefined name="Unknown" offset="0x29C" visible="false" />
 	<undefined name="Unknown" offset="0x2A0" visible="false" />
 	<undefined name="Unknown" offset="0x2A4" visible="false" />
@@ -220,74 +209,68 @@
 	<undefined name="Unknown" offset="0x2B4" visible="false" />
 	<undefined name="Unknown" offset="0x2B8" visible="false" />
 	<undefined name="Unknown" offset="0x2BC" visible="false" />
-	<undefined name="Unknown" offset="0x2C0" visible="false" />
-	<undefined name="Unknown" offset="0x2C4" visible="false" />
-	<comment title="Hud Damage Indicators" />
-	<int16 name="Top Offset" offset="0x2C8" visible="true" />
-	<int16 name="Bottom Offset" offset="0x2CA" visible="true" />
-	<int16 name="Left Offset" offset="0x2CC" visible="true" />
-	<int16 name="Right Offset" offset="0x2CE" visible="true" />
-	<undefined name="Unknown" offset="0x2D0" visible="false" />
-	<undefined name="Unknown" offset="0x2D4" visible="false" />
-	<undefined name="Unknown" offset="0x2D8" visible="false" />
-	<undefined name="Unknown" offset="0x2DC" visible="false" />
-	<undefined name="Unknown" offset="0x2E0" visible="false" />
+	<comment title="Hud Globals" />
+	<tagRef name="Default Weapon Hud" offset="0x2C0" visible="true" />
+	<float32 name="Motion Sensor Range" offset="0x2D0" visible="true" />
+	<float32 name="Motion Sensor Velocity Sensitivity" offset="0x2D4" visible="true" tooltip="how fast something moves to show up on the motion sensor" />
+	<float32 name="Motion Sensor Scale [DON't TOUCH EVER]" offset="0x2D8" visible="true" />
+	<rect16 name="Default Chapter Title Bounds" offset="0x2DC" visible="true" />
 	<undefined name="Unknown" offset="0x2E4" visible="false" />
 	<undefined name="Unknown" offset="0x2E8" visible="false" />
 	<undefined name="Unknown" offset="0x2EC" visible="false" />
-	<tagRef name="Indicator Bitmap" offset="0x2F0" visible="true" />
-	<int16 name="Sequence Index" offset="0x2F8" visible="true" />
-	<int16 name="Multiplayer Sequence Index" offset="0x2FA" visible="true" />
-	<color32 name="Color" offset="0x2FC" alpha="true" visible="true" />
+	<undefined name="Unknown" offset="0x2F0" visible="false" />
+	<undefined name="Unknown" offset="0x2F4" visible="false" />
+	<undefined name="Unknown" offset="0x2F8" visible="false" />
+	<undefined name="Unknown" offset="0x2FC" visible="false" />
 	<undefined name="Unknown" offset="0x300" visible="false" />
 	<undefined name="Unknown" offset="0x304" visible="false" />
 	<undefined name="Unknown" offset="0x308" visible="false" />
 	<undefined name="Unknown" offset="0x30C" visible="false" />
-	<comment title="Hud Timer Definitions" />
-	<comment title="Not Much Time Left Flash Color" />
-	<color32 name="Default Color" offset="0x310" alpha="true" visible="true" />
-	<color32 name="Flashing Color" offset="0x314" alpha="true" visible="true" />
-	<float32 name="Flash Period" offset="0x318" visible="true" />
-	<float32 name="Flash Delay" offset="0x31C" visible="true" />
-	<int16 name="Number Of Flashes" offset="0x320" visible="true" />
-	<flags16 name="Flash Flags" offset="0x322" visible="true">
-		<bit name="Reverse Default/Flashing Colors" index="0" />
-	</flags16>
-	<float32 name="Flash Length" offset="0x324" visible="true" />
-	<color32 name="Disabled Color" offset="0x328" alpha="true" visible="true" />
+	<comment title="Hud Damage Indicators" />
+	<int16 name="Top Offset" offset="0x310" visible="true" />
+	<int16 name="Bottom Offset" offset="0x312" visible="true" />
+	<int16 name="Left Offset" offset="0x314" visible="true" />
+	<int16 name="Right Offset" offset="0x316" visible="true" />
+	<undefined name="Unknown" offset="0x318" visible="false" />
+	<undefined name="Unknown" offset="0x31C" visible="false" />
+	<undefined name="Unknown" offset="0x320" visible="false" />
+	<undefined name="Unknown" offset="0x324" visible="false" />
+	<undefined name="Unknown" offset="0x328" visible="false" />
 	<undefined name="Unknown" offset="0x32C" visible="false" />
-	<comment title="Time Out Flash Color" />
-	<color32 name="Default Color" offset="0x330" alpha="true" visible="true" />
-	<color32 name="Flashing Color" offset="0x334" alpha="true" visible="true" />
-	<float32 name="Flash Period" offset="0x338" visible="true" />
-	<float32 name="Flash Delay" offset="0x33C" visible="true" />
-	<int16 name="Number Of Flashes" offset="0x340" visible="true" />
-	<flags16 name="Flash Flags" offset="0x342" visible="true">
-		<bit name="Reverse Default/Flashing Colors" index="0" />
-	</flags16>
-	<float32 name="Flash Length" offset="0x344" visible="true" />
-	<color32 name="Disabled Color" offset="0x348" alpha="true" visible="true" />
-	<undefined name="Unknown" offset="0x34C" visible="false" />
+	<undefined name="Unknown" offset="0x330" visible="false" />
+	<undefined name="Unknown" offset="0x334" visible="false" />
+	<tagRef name="Indicator Bitmap" offset="0x338" visible="true" />
+	<int16 name="Sequence Index" offset="0x348" visible="true" />
+	<int16 name="Multiplayer Sequence Index" offset="0x34A" visible="true" />
+	<color32 name="Color" offset="0x34C" alpha="true" visible="true" />
 	<undefined name="Unknown" offset="0x350" visible="false" />
 	<undefined name="Unknown" offset="0x354" visible="false" />
 	<undefined name="Unknown" offset="0x358" visible="false" />
 	<undefined name="Unknown" offset="0x35C" visible="false" />
-	<undefined name="Unknown" offset="0x360" visible="false" />
-	<undefined name="Unknown" offset="0x364" visible="false" />
-	<undefined name="Unknown" offset="0x368" visible="false" />
-	<undefined name="Unknown" offset="0x36C" visible="false" />
-	<undefined name="Unknown" offset="0x370" visible="false" />
-	<undefined name="Unknown" offset="0x374" visible="false" />
-	<tagRef name="Carnage Report Bitmap" offset="0x378" visible="true" />
-	<comment title="Hud Crap That Wouldn't Fit Anywhere Else" />
-	<int16 name="Loading Begin Text" offset="0x380" visible="true" />
-	<int16 name="Loading End Text" offset="0x382" visible="true" />
-	<int16 name="Checkpoint Begin Text" offset="0x384" visible="true" />
-	<int16 name="Checkpoint End Text" offset="0x386" visible="true" />
-	<tagRef name="Checkpoint Sound" offset="0x388" visible="true" />
-	<undefined name="Unknown" offset="0x390" visible="false" />
-	<undefined name="Unknown" offset="0x394" visible="false" />
-	<undefined name="Unknown" offset="0x398" visible="false" />
+	<comment title="Hud Timer Definitions" />
+	<comment title="Not Much Time Left Flash Color" />
+	<color32 name="Default Color" offset="0x360" alpha="true" visible="true" />
+	<color32 name="Flashing Color" offset="0x364" alpha="true" visible="true" />
+	<float32 name="Flash Period" offset="0x368" visible="true" />
+	<float32 name="Flash Delay" offset="0x36C" visible="true" />
+	<int16 name="Number Of Flashes" offset="0x370" visible="true" />
+	<flags16 name="Flash Flags" offset="0x372" visible="true">
+		<bit name="Reverse Default/Flashing Colors" index="0" />
+	</flags16>
+	<float32 name="Flash Length" offset="0x374" visible="true" />
+	<color32 name="Disabled Color" offset="0x378" alpha="true" visible="true" />
+	<undefined name="Unknown" offset="0x37C" visible="false" />
+	<comment title="Time Out Flash Color" />
+	<color32 name="Default Color" offset="0x380" alpha="true" visible="true" />
+	<color32 name="Flashing Color" offset="0x384" alpha="true" visible="true" />
+	<float32 name="Flash Period" offset="0x388" visible="true" />
+	<float32 name="Flash Delay" offset="0x38C" visible="true" />
+	<int16 name="Number Of Flashes" offset="0x390" visible="true" />
+	<flags16 name="Flash Flags" offset="0x392" visible="true">
+		<bit name="Reverse Default/Flashing Colors" index="0" />
+	</flags16>
+	<float32 name="Flash Length" offset="0x394" visible="true" />
+	<color32 name="Disabled Color" offset="0x398" alpha="true" visible="true" />
 	<undefined name="Unknown" offset="0x39C" visible="false" />
 	<undefined name="Unknown" offset="0x3A0" visible="false" />
 	<undefined name="Unknown" offset="0x3A4" visible="false" />
@@ -299,14 +282,35 @@
 	<undefined name="Unknown" offset="0x3BC" visible="false" />
 	<undefined name="Unknown" offset="0x3C0" visible="false" />
 	<undefined name="Unknown" offset="0x3C4" visible="false" />
-	<undefined name="Unknown" offset="0x3C8" visible="false" />
-	<undefined name="Unknown" offset="0x3CC" visible="false" />
-	<undefined name="Unknown" offset="0x3D0" visible="false" />
-	<undefined name="Unknown" offset="0x3D4" visible="false" />
-	<undefined name="Unknown" offset="0x3D8" visible="false" />
-	<undefined name="Unknown" offset="0x3DC" visible="false" />
-	<undefined name="Unknown" offset="0x3E0" visible="false" />
-	<undefined name="Unknown" offset="0x3E4" visible="false" />
-	<undefined name="Unknown" offset="0x3E8" visible="false" />
-	<undefined name="Unknown" offset="0x3EC" visible="false" />
+	<tagRef name="Carnage Report Bitmap" offset="0x3C8" visible="true" />
+	<comment title="Hud Crap That Wouldn't Fit Anywhere Else" />
+	<int16 name="Loading Begin Text" offset="0x3D8" visible="true" />
+	<int16 name="Loading End Text" offset="0x3DA" visible="true" />
+	<int16 name="Checkpoint Begin Text" offset="0x3DC" visible="true" />
+	<int16 name="Checkpoint End Text" offset="0x3DE" visible="true" />
+	<tagRef name="Checkpoint Sound" offset="0x3E0" visible="true" />
+	<undefined name="Unknown" offset="0x3F0" visible="false" />
+	<undefined name="Unknown" offset="0x3F4" visible="false" />
+	<undefined name="Unknown" offset="0x3F8" visible="false" />
+	<undefined name="Unknown" offset="0x3FC" visible="false" />
+	<undefined name="Unknown" offset="0x400" visible="false" />
+	<undefined name="Unknown" offset="0x404" visible="false" />
+	<undefined name="Unknown" offset="0x408" visible="false" />
+	<undefined name="Unknown" offset="0x40C" visible="false" />
+	<undefined name="Unknown" offset="0x410" visible="false" />
+	<undefined name="Unknown" offset="0x414" visible="false" />
+	<undefined name="Unknown" offset="0x418" visible="false" />
+	<undefined name="Unknown" offset="0x41C" visible="false" />
+	<undefined name="Unknown" offset="0x420" visible="false" />
+	<undefined name="Unknown" offset="0x424" visible="false" />
+	<undefined name="Unknown" offset="0x428" visible="false" />
+	<undefined name="Unknown" offset="0x42C" visible="false" />
+	<undefined name="Unknown" offset="0x430" visible="false" />
+	<undefined name="Unknown" offset="0x434" visible="false" />
+	<undefined name="Unknown" offset="0x438" visible="false" />
+	<undefined name="Unknown" offset="0x43C" visible="false" />
+	<undefined name="Unknown" offset="0x440" visible="false" />
+	<undefined name="Unknown" offset="0x444" visible="false" />
+	<undefined name="Unknown" offset="0x448" visible="false" />
+	<undefined name="Unknown" offset="0x44C" visible="false" />
 </plugin>

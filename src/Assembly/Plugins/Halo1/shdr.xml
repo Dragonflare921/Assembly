@@ -1,4 +1,8 @@
-<plugin>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo1" baseSize="0x28">
+	<revisions>
+		<revision author="Lord Zedd" version="1">ayy lmao</revision>
+	</revisions>
 	<comment title="Radiosity Properties" />
 	<flags16 name="Flags" offset="0x0" visible="true">
 		<bit name="Simple Parameterization" index="0" tooltip="lightmap texture parametrization should correspond to diffuse texture parametrization" />

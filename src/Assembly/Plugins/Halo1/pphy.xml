@@ -1,4 +1,8 @@
-<plugin>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo1" baseSize="0x40">
+	<revisions>
+		<revision author="Lord Zedd" version="1">ayy lmao</revision>
+	</revisions>
 	<flags32 name="Flags" offset="0x0" visible="true">
 		<bit name="Flamethrower Particle Collision" index="0" />
 		<bit name="Collides With Structures" index="1" />

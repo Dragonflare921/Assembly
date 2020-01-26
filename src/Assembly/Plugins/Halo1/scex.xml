@@ -1,4 +1,8 @@
-<plugin>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo1" baseSize="0x78">
+	<revisions>
+		<revision author="Lord Zedd" version="1">ayy lmao</revision>
+	</revisions>
 	<comment title="Radiosity Properties" />
 	<flags16 name="Flags" offset="0x0" visible="true">
 		<bit name="Simple Parameterization" index="0" tooltip="lightmap texture parametrization should correspond to diffuse texture parametrization" />
@@ -98,10 +102,10 @@
 	<comment title="Lens Flares" />
 	<float32 name="Lens Flare Spacing" offset="0x34" visible="true" tooltip="0 places a single lens flare" />
 	<tagRef name="Lens Flare" offset="0x38" visible="true" />
-	<tagblock name="Extra Layers" offset="0x40" visible="true" elementSize="0x8">
+	<tagblock name="Extra Layers" offset="0x48" visible="true" elementSize="0x10">
 		<tagRef name="Shader" offset="0x0" visible="true" />
 	</tagblock>
-	<tagblock name="4 Stage Maps" offset="0x48" visible="true" elementSize="0xD4">
+	<tagblock name="4 Stage Maps" offset="0x54" visible="true" elementSize="0xDC">
 		<flags16 name="Flags" offset="0x0" visible="true">
 			<bit name="Unfiltered" index="0" />
 			<bit name="Alpha Replicate" index="1" />
@@ -165,8 +169,6 @@
 		<float32 name="Map Rotation" offset="0x64" visible="true" />
 		<float32 name="Mipmap Bias" offset="0x68" visible="true" />
 		<tagRef name="Map" offset="0x6C" visible="true" />
-		<undefined name="Unknown" offset="0x74" visible="false" />
-		<undefined name="Unknown" offset="0x78" visible="false" />
 		<undefined name="Unknown" offset="0x7C" visible="false" />
 		<undefined name="Unknown" offset="0x80" visible="false" />
 		<undefined name="Unknown" offset="0x84" visible="false" />
@@ -175,15 +177,17 @@
 		<undefined name="Unknown" offset="0x90" visible="false" />
 		<undefined name="Unknown" offset="0x94" visible="false" />
 		<undefined name="Unknown" offset="0x98" visible="false" />
+		<undefined name="Unknown" offset="0x9C" visible="false" />
+		<undefined name="Unknown" offset="0xA0" visible="false" />
 		<comment title="2D Texture Animation" />
-		<enum16 name="U-Animation Source" offset="0x9C" visible="true">
+		<enum16 name="U-Animation Source" offset="0xA4" visible="true">
 			<option name="None" value="0x0" />
 			<option name="A Out" value="0x1" />
 			<option name="B Out" value="0x2" />
 			<option name="C Out" value="0x3" />
 			<option name="D Out" value="0x4" />
 		</enum16>
-		<enum16 name="U-Animation Function" offset="0x9E" visible="true">
+		<enum16 name="U-Animation Function" offset="0xA6" visible="true">
 			<option name="One" value="0x0" />
 			<option name="Zero" value="0x1" />
 			<option name="Cosine" value="0x2" />
@@ -197,17 +201,17 @@
 			<option name="Wander" value="0xA" />
 			<option name="Spark" value="0xB" />
 		</enum16>
-		<float32 name="U-Animation Period" offset="0xA0" visible="true" tooltip="0 defaults to 1" />
-		<float32 name="U-Animation Phase" offset="0xA4" visible="true" />
-		<float32 name="U-Animation Scale" offset="0xA8" visible="true" tooltip="0 defaults to 1" />
-		<enum16 name="V-Animation Source" offset="0xAC" visible="true">
+		<float32 name="U-Animation Period" offset="0xA8" visible="true" tooltip="0 defaults to 1" />
+		<float32 name="U-Animation Phase" offset="0xAC" visible="true" />
+		<float32 name="U-Animation Scale" offset="0xB0" visible="true" tooltip="0 defaults to 1" />
+		<enum16 name="V-Animation Source" offset="0xB4" visible="true">
 			<option name="None" value="0x0" />
 			<option name="A Out" value="0x1" />
 			<option name="B Out" value="0x2" />
 			<option name="C Out" value="0x3" />
 			<option name="D Out" value="0x4" />
 		</enum16>
-		<enum16 name="V-Animation Function" offset="0xAE" visible="true">
+		<enum16 name="V-Animation Function" offset="0xB6" visible="true">
 			<option name="One" value="0x0" />
 			<option name="Zero" value="0x1" />
 			<option name="Cosine" value="0x2" />
@@ -221,17 +225,17 @@
 			<option name="Wander" value="0xA" />
 			<option name="Spark" value="0xB" />
 		</enum16>
-		<float32 name="V-Animation Period" offset="0xB0" visible="true" tooltip="0 defaults to 1" />
-		<float32 name="V-Animation Phase" offset="0xB4" visible="true" />
-		<float32 name="V-Animation Scale" offset="0xB8" visible="true" tooltip="0 defaults to 1" />
-		<enum16 name="Rotation-Animation Source" offset="0xBC" visible="true">
+		<float32 name="V-Animation Period" offset="0xB8" visible="true" tooltip="0 defaults to 1" />
+		<float32 name="V-Animation Phase" offset="0xBC" visible="true" />
+		<float32 name="V-Animation Scale" offset="0xC0" visible="true" tooltip="0 defaults to 1" />
+		<enum16 name="Rotation-Animation Source" offset="0xC4" visible="true">
 			<option name="None" value="0x0" />
 			<option name="A Out" value="0x1" />
 			<option name="B Out" value="0x2" />
 			<option name="C Out" value="0x3" />
 			<option name="D Out" value="0x4" />
 		</enum16>
-		<enum16 name="Rotation-Animation Function" offset="0xBE" visible="true">
+		<enum16 name="Rotation-Animation Function" offset="0xC6" visible="true">
 			<option name="One" value="0x0" />
 			<option name="Zero" value="0x1" />
 			<option name="Cosine" value="0x2" />
@@ -245,12 +249,12 @@
 			<option name="Wander" value="0xA" />
 			<option name="Spark" value="0xB" />
 		</enum16>
-		<float32 name="Rotation-Animation Period" offset="0xC0" visible="true" tooltip="0 defaults to 1" />
-		<float32 name="Rotation-Animation Phase" offset="0xC4" visible="true" />
-		<float32 name="Rotation-Animation Scale" offset="0xC8" visible="true" tooltip="0 defaults to 360" />
-		<point2 name="Rotation-Animation Center" offset="0xCC" visible="true" />
+		<float32 name="Rotation-Animation Period" offset="0xC8" visible="true" tooltip="0 defaults to 1" />
+		<float32 name="Rotation-Animation Phase" offset="0xCC" visible="true" />
+		<float32 name="Rotation-Animation Scale" offset="0xD0" visible="true" tooltip="0 defaults to 360" />
+		<point2 name="Rotation-Animation Center" offset="0xD4" visible="true" />
 	</tagblock>
-	<tagblock name="2 Stage Maps" offset="0x50" visible="true" elementSize="0xD4">
+	<tagblock name="2 Stage Maps" offset="0x60" visible="true" elementSize="0xDC">
 		<flags16 name="Flags" offset="0x0" visible="true">
 			<bit name="Unfiltered" index="0" />
 			<bit name="Alpha Replicate" index="1" />
@@ -314,8 +318,6 @@
 		<float32 name="Map Rotation" offset="0x64" visible="true" />
 		<float32 name="Mipmap Bias" offset="0x68" visible="true" />
 		<tagRef name="Map" offset="0x6C" visible="true" />
-		<undefined name="Unknown" offset="0x74" visible="false" />
-		<undefined name="Unknown" offset="0x78" visible="false" />
 		<undefined name="Unknown" offset="0x7C" visible="false" />
 		<undefined name="Unknown" offset="0x80" visible="false" />
 		<undefined name="Unknown" offset="0x84" visible="false" />
@@ -324,15 +326,17 @@
 		<undefined name="Unknown" offset="0x90" visible="false" />
 		<undefined name="Unknown" offset="0x94" visible="false" />
 		<undefined name="Unknown" offset="0x98" visible="false" />
+		<undefined name="Unknown" offset="0x9C" visible="false" />
+		<undefined name="Unknown" offset="0xA0" visible="false" />
 		<comment title="2D Texture Animation" />
-		<enum16 name="U-Animation Source" offset="0x9C" visible="true">
+		<enum16 name="U-Animation Source" offset="0xA4" visible="true">
 			<option name="None" value="0x0" />
 			<option name="A Out" value="0x1" />
 			<option name="B Out" value="0x2" />
 			<option name="C Out" value="0x3" />
 			<option name="D Out" value="0x4" />
 		</enum16>
-		<enum16 name="U-Animation Function" offset="0x9E" visible="true">
+		<enum16 name="U-Animation Function" offset="0xA6" visible="true">
 			<option name="One" value="0x0" />
 			<option name="Zero" value="0x1" />
 			<option name="Cosine" value="0x2" />
@@ -346,17 +350,17 @@
 			<option name="Wander" value="0xA" />
 			<option name="Spark" value="0xB" />
 		</enum16>
-		<float32 name="U-Animation Period" offset="0xA0" visible="true" tooltip="0 defaults to 1" />
-		<float32 name="U-Animation Phase" offset="0xA4" visible="true" />
-		<float32 name="U-Animation Scale" offset="0xA8" visible="true" tooltip="0 defaults to 1" />
-		<enum16 name="V-Animation Source" offset="0xAC" visible="true">
+		<float32 name="U-Animation Period" offset="0xA8" visible="true" tooltip="0 defaults to 1" />
+		<float32 name="U-Animation Phase" offset="0xAC" visible="true" />
+		<float32 name="U-Animation Scale" offset="0xB0" visible="true" tooltip="0 defaults to 1" />
+		<enum16 name="V-Animation Source" offset="0xB4" visible="true">
 			<option name="None" value="0x0" />
 			<option name="A Out" value="0x1" />
 			<option name="B Out" value="0x2" />
 			<option name="C Out" value="0x3" />
 			<option name="D Out" value="0x4" />
 		</enum16>
-		<enum16 name="V-Animation Function" offset="0xAE" visible="true">
+		<enum16 name="V-Animation Function" offset="0xB6" visible="true">
 			<option name="One" value="0x0" />
 			<option name="Zero" value="0x1" />
 			<option name="Cosine" value="0x2" />
@@ -370,17 +374,17 @@
 			<option name="Wander" value="0xA" />
 			<option name="Spark" value="0xB" />
 		</enum16>
-		<float32 name="V-Animation Period" offset="0xB0" visible="true" tooltip="0 defaults to 1" />
-		<float32 name="V-Animation Phase" offset="0xB4" visible="true" />
-		<float32 name="V-Animation Scale" offset="0xB8" visible="true" tooltip="0 defaults to 1" />
-		<enum16 name="Rotation-Animation Source" offset="0xBC" visible="true">
+		<float32 name="V-Animation Period" offset="0xB8" visible="true" tooltip="0 defaults to 1" />
+		<float32 name="V-Animation Phase" offset="0xBC" visible="true" />
+		<float32 name="V-Animation Scale" offset="0xC0" visible="true" tooltip="0 defaults to 1" />
+		<enum16 name="Rotation-Animation Source" offset="0xC4" visible="true">
 			<option name="None" value="0x0" />
 			<option name="A Out" value="0x1" />
 			<option name="B Out" value="0x2" />
 			<option name="C Out" value="0x3" />
 			<option name="D Out" value="0x4" />
 		</enum16>
-		<enum16 name="Rotation-Animation Function" offset="0xBE" visible="true">
+		<enum16 name="Rotation-Animation Function" offset="0xC6" visible="true">
 			<option name="One" value="0x0" />
 			<option name="Zero" value="0x1" />
 			<option name="Cosine" value="0x2" />
@@ -394,15 +398,15 @@
 			<option name="Wander" value="0xA" />
 			<option name="Spark" value="0xB" />
 		</enum16>
-		<float32 name="Rotation-Animation Period" offset="0xC0" visible="true" tooltip="0 defaults to 1" />
-		<float32 name="Rotation-Animation Phase" offset="0xC4" visible="true" />
-		<float32 name="Rotation-Animation Scale" offset="0xC8" visible="true" tooltip="0 defaults to 360" />
-		<point2 name="Rotation-Animation Center" offset="0xCC" visible="true" />
+		<float32 name="Rotation-Animation Period" offset="0xC8" visible="true" tooltip="0 defaults to 1" />
+		<float32 name="Rotation-Animation Phase" offset="0xCC" visible="true" />
+		<float32 name="Rotation-Animation Scale" offset="0xD0" visible="true" tooltip="0 defaults to 360" />
+		<point2 name="Rotation-Animation Center" offset="0xD4" visible="true" />
 	</tagblock>
-	<flags32 name="Extra Flags" offset="0x58" visible="true">
+	<flags32 name="Extra Flags" offset="0x6C" visible="true">
 		<bit name="Don't Fade Active-Camouflage" index="0" />
 		<bit name="Numeric Countdown Timer" index="1" />
 	</flags32>
-	<undefined name="Unknown" offset="0x5C" visible="false" />
-	<undefined name="Unknown" offset="0x60" visible="false" />
+	<undefined name="Unknown" offset="0x70" visible="false" />
+	<undefined name="Unknown" offset="0x74" visible="false" />
 </plugin>

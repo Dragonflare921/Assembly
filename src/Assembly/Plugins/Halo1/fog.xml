@@ -1,4 +1,8 @@
-<plugin>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo1" baseSize="0x18C">
+	<revisions>
+		<revision author="Lord Zedd" version="1">ayy lmao</revision>
+	</revisions>
 	<comment title="FLAGS">Setting &lt;atmosphere dominant&gt; prevents polygon popping when the atmospheric fog maximum density (in the sky tag) is 1 and the atmospheric fog opaque distance is less than the diameter of the map. However, this flag will cause artifacts when the camera goes below the fog plane - so it should only be used when the fog plane is close to the ground.</comment>
 	<flags32 name="Flags" offset="0x0" visible="true">
 		<bit name="Is Water" index="0" />
@@ -57,23 +61,17 @@
 	<float32 name="Map Scale" offset="0xB8" visible="true" tooltip="0 defaults to 1" />
 	<tagRef name="Map" offset="0xBC" visible="true" />
 	<comment title="SCREEN LAYER ANIMATION" />
-	<float32 name="Animation Period" offset="0xC4" visible="true" />
-	<undefined name="Unknown" offset="0xC8" visible="false" />
-	<rangef name="Wind Velocity" offset="0xCC" visible="true" />
-	<rangef name="Wind Period" offset="0xD4" visible="true" tooltip="0 defaults to 1" />
-	<float32 name="Wind Acceleration Weight" offset="0xDC" visible="true" />
-	<float32 name="Wind Perpendicular Weight" offset="0xE0" visible="true" />
-	<undefined name="Unknown" offset="0xE4" visible="false" />
-	<undefined name="Unknown" offset="0xE8" visible="false" />
+	<float32 name="Animation Period" offset="0xCC" visible="true" />
+	<undefined name="Unknown" offset="0xD0" visible="false" />
+	<rangef name="Wind Velocity" offset="0xD4" visible="true" />
+	<rangef name="Wind Period" offset="0xDC" visible="true" tooltip="0 defaults to 1" />
+	<float32 name="Wind Acceleration Weight" offset="0xE4" visible="true" />
+	<float32 name="Wind Perpendicular Weight" offset="0xE8" visible="true" />
+	<undefined name="Unknown" offset="0xEC" visible="false" />
+	<undefined name="Unknown" offset="0xF0" visible="false" />
 	<comment title="SOUND" />
-	<tagRef name="Background Sound" offset="0xEC" visible="true" />
-	<tagRef name="Sound Environment" offset="0xF4" visible="true" />
-	<undefined name="Unknown" offset="0xFC" visible="false" />
-	<undefined name="Unknown" offset="0x100" visible="false" />
-	<undefined name="Unknown" offset="0x104" visible="false" />
-	<undefined name="Unknown" offset="0x108" visible="false" />
-	<undefined name="Unknown" offset="0x10C" visible="false" />
-	<undefined name="Unknown" offset="0x110" visible="false" />
+	<tagRef name="Background Sound" offset="0xF4" visible="true" />
+	<tagRef name="Sound Environment" offset="0x104" visible="true" />
 	<undefined name="Unknown" offset="0x114" visible="false" />
 	<undefined name="Unknown" offset="0x118" visible="false" />
 	<undefined name="Unknown" offset="0x11C" visible="false" />
@@ -98,4 +96,10 @@
 	<undefined name="Unknown" offset="0x168" visible="false" />
 	<undefined name="Unknown" offset="0x16C" visible="false" />
 	<undefined name="Unknown" offset="0x170" visible="false" />
+	<undefined name="Unknown" offset="0x174" visible="false" />
+	<undefined name="Unknown" offset="0x178" visible="false" />
+	<undefined name="Unknown" offset="0x17C" visible="false" />
+	<undefined name="Unknown" offset="0x180" visible="false" />
+	<undefined name="Unknown" offset="0x184" visible="false" />
+	<undefined name="Unknown" offset="0x188" visible="false" />
 </plugin>

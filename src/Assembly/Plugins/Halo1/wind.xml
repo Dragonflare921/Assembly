@@ -1,4 +1,8 @@
-<plugin>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo1" baseSize="0x40">
+	<revisions>
+		<revision author="Lord Zedd" version="1">ayy lmao</revision>
+	</revisions>
 	<rangef name="Velocity" offset="0x0" visible="true" tooltip="the wind magnitude in the weather region scales the wind between these bounds" />
 	<degree2 name="Variation Area" offset="0x8" visible="true" tooltip="the wind direction varies inside a box defined by these angles on either side of the direction from the weather region." />
 	<float32 name="Local Variation Weight" offset="0x10" visible="true" />
