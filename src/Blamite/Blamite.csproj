@@ -375,6 +375,9 @@
     <Content Include="Formats\Engines.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Formats\Halo1\H1CE_Poking.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Formats\Halo1\H1_GroupNames.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

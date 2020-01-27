@@ -35,14 +35,27 @@ namespace Blamite.Blam.FirstGen.Structures
 
             Index = new DatumIndex(values.GetInteger("datum index"));
 
-            // TODO (Dragon): see about splitting the filenames into their own segment
+            // NOTE: cant really split filenames into a segment
+            //       because offset is relative to the meta header
             uint nameOffset = (uint)values.GetInteger("name offset");
             if (nameOffset > 0)
                 FileNameOffset = SegmentPointer.FromPointer(nameOffset, metaArea);
 
             uint offset = (uint)values.GetInteger("offset");
-            if (offset > 0)
+
+            // checking the meta area contains the offset
+            // and that the tag element is not pointing to a data file
+            if (offset > 0 && metaArea.ContainsPointer(offset) 
+                && (values.GetInteger("is in data file") != 1))
                 MetaLocation = SegmentPointer.FromPointer(offset, metaArea);
+            // TODO (Dragon): the offset can actually be 0 when used
+            //                as a data file table index
+            //else if (offset > 0 && !metaArea.ContainsPointer(offset))
+                // TODO (Dragon): load the tag from a data file
+                //                bitm: bitmaps.map
+                //                font: loc.map
+                //                ustr: loc.map
+                //                hmt : loc.map
 
         }
     }

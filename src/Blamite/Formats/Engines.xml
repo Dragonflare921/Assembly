@@ -9,6 +9,7 @@
         <plugins>Halo1</plugins>
         <engineInfo>
             <headerSize>0x800</headerSize>
+            <!-- TODO: this might not be accurate since theres no real "segments" -->
             <segmentAlignment>0x4</segmentAlignment>
             <gameExecutable>halo</gameExecutable>
         </engineInfo>
@@ -18,6 +19,26 @@
             <poking type="poking" path="Formats/Halo1/H1_Poking.xml" />
         </databases>
     </engine>
+
+    <engine name="Halo 1 PC" version="01.00.10.0621" inherits="Halo 1 PC" />
+
+    <engine name="Halo 1 Custom Edition" version="01.00.00.0609">
+        <shortName>H1CE</shortName>
+        <plugins>Halo1</plugins>
+        <engineInfo>
+            <headerSize>0x800</headerSize>
+            <!-- NOTE: custom edition apparently doesnt care if things are aligned at ALL -->
+            <segmentAlignment>0x1</segmentAlignment>
+            <gameExecutable>haloce</gameExecutable>
+        </engineInfo>
+        <databases>
+            <layouts type="layouts" path="Formats/Halo1/Layouts" />
+            <groupNames type="groupNames" path="Formats/Halo1/H1_GroupNames.xml" />
+            <poking type="poking" path="Formats/Halo1/H1CE_Poking.xml" />
+        </databases>
+    </engine>
+
+    <engine name="Halo 1 Custom Edition" version="01.00.10.0621" inherits="Halo 1 Custom Edition" />
     
 	<!-- Halo 2 Builds -->
 	<engine name="Halo 2 Vista" version="11081.07.04.30.0934.main">
