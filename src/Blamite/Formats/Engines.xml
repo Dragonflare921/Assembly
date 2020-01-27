@@ -39,6 +39,20 @@
     </engine>
 
     <engine name="Halo 1 Custom Edition" version="01.00.10.0621" inherits="Halo 1 Custom Edition" />
+
+    <engine name="Halo 1 Anniversary" version="01.00.01.0563">
+        <shortName>H1A</shortName>
+        <plugins>Halo1</plugins>
+        <engineInfo>
+            <headerSize>0x800</headerSize>
+            <!-- TODO: this might not be accurate since theres no real "segments" -->
+            <segmentAlignment>0x4</segmentAlignment>
+        </engineInfo>
+        <databases>
+            <layouts type="layouts" path="Formats/Halo1/Layouts" />
+            <groupNames type="groupNames" path="Formats/Halo1/H1_GroupNames.xml" />
+        </databases>
+    </engine>
     
 	<!-- Halo 2 Builds -->
 	<engine name="Halo 2 Vista" version="11081.07.04.30.0934.main">
