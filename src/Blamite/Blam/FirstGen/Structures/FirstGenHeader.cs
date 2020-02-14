@@ -96,8 +96,14 @@ namespace Blamite.Blam.FirstGen.Structures
 
             Checksum = (uint)values.GetInteger("checksum");
 
+            // dummy partition
             Partitions = new Partition[1];
             Partitions[0] = new Partition(SegmentPointer.FromOffset(MetaArea.Offset, MetaArea), (uint)MetaArea.Size);
+
+            // dummy stringids
+            StringIDCount = 0;
+            StringIDData = _eofSegment;
+            StringIDIndexTable = _eofSegment;
         }
     }
 }

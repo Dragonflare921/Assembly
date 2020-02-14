@@ -205,7 +205,7 @@ namespace Blamite.Blam.FirstGen
             _fileNames = LoadFileNames(reader, buildInfo);
             
             // firstgen has no StringIDs
-            //_stringIDs = LoadStringIDs(reader, buildInfo);
+            _stringIDs = LoadStringIDs(reader, buildInfo);
 
             // hack to get scenario name
             reader.SeekTo(MetaArea.Offset);
