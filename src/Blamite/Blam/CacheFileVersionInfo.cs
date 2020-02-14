@@ -13,7 +13,9 @@ namespace Blamite.Blam
         private const int FirstGenPCVersion = 7;// also CEA
         private const int FirstGenCustomEditionVersion = 609;
 
+        // second gen needs more checks to find the platform
 		private const int SecondGenVersion = 8;
+
 		private const int ThirdGenVersion = 9;
 
 		public CacheFileVersionInfo(IReader reader)
@@ -47,16 +49,24 @@ namespace Blamite.Blam
             }
 			else if (Version == SecondGenVersion)
 			{
-				Engine = EngineType.SecondGeneration;
+                Engine = EngineType.SecondGeneration;
 
-                // TODO: need to check if this is an xbox cache or PC cache
-                //       second gen uses the same version but different layout
-                //       which makes it a lil more annoying but still workable
+                // turns out H2X doesnt use the meta offset mask
+                // but neither do vista campaign maps
+                // thankfully vista sets some U32 to 0xFFFFFFFF
+                reader.SeekTo(0x20);
+                uint metaOffsetMask = reader.ReadUInt32();
+                uint unkNull = reader.ReadUInt32();
 
-				// Read second-generation build string
-				reader.SeekTo(0x12C);
-				BuildString = reader.ReadAscii();
-			}
+                // Read second-generation build string
+                // are we loading an xbox cache?
+                if (metaOffsetMask == 0 && unkNull != 0xFFFFFFFF)
+                    reader.SeekTo(0x120);
+                else  // probably a vista cache
+                    reader.SeekTo(0x12C);
+
+                BuildString = reader.ReadAscii();
+            }
 			else if (Version >= ThirdGenVersion)
 			{
 				Engine = EngineType.ThirdGeneration;

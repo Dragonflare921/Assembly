@@ -20,11 +20,13 @@ namespace Blamite.Blam.SecondGen.Structures
 		private void Load(StructureValueCollection values, FileSegmentGroup metaArea, Dictionary<int, ITagGroup> groupsById)
 		{
 			uint offset = (uint)values.GetInteger("offset");
-			if (offset > 0)
-				MetaLocation = SegmentPointer.FromPointer(offset, metaArea);
 
-			// Load the tag group by looking up the magic value that's stored
-			var groupMagic = (int) values.GetInteger("tag group magic");
+			if (offset > 0)
+                MetaLocation = SegmentPointer.FromPointer(offset, metaArea);
+                //MetaLocation = SegmentPointer.FromOffset((int)offset, metaArea);
+
+            // Load the tag group by looking up the magic value that's stored
+            var groupMagic = (int) values.GetInteger("tag group magic");
 			if (groupMagic != -1)
 				Group = groupsById[groupMagic];
 

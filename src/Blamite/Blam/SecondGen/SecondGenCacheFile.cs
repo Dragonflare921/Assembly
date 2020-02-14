@@ -233,13 +233,45 @@ namespace Blamite.Blam.SecondGen
 		{
 			reader.SeekTo(0);
 			StructureValueCollection values = StructureReader.ReadStructure(reader, buildInfo.Layouts.GetLayout("header"));
-			return new SecondGenHeader(values, buildInfo, buildString, _segmenter);
+
+            // TODO: this is really gross even for a hack
+            // hack to pack meta header size for metaOffsetMask calculation on xbox
+            if (buildString == "02.09.27.09809")
+            {
+                var oldReadPos = reader.Position;
+                reader.SeekTo((long)values.GetInteger("meta offset"));
+                uint metaMask = (uint)reader.ReadUInt32() - (uint)buildInfo.Layouts.GetLayout("meta header").Size;
+                reader.SeekTo((long)values.GetInteger("meta offset") + 8);
+                var tagTableOffset = reader.ReadUInt32() - metaMask + (long)values.GetInteger("meta offset");
+                
+                values.SetInteger("meta header size", (uint)buildInfo.Layouts.GetLayout("meta header").Size);
+                values.SetInteger("tag table offset", (uint)tagTableOffset);
+                
+                reader.SeekTo(tagTableOffset + 8);
+                uint firstTagAddress = reader.ReadUInt32();
+                values.SetInteger("first tag address", firstTagAddress);
+                //values.SetInteger("meta header mask", metaMask);
+                //reader.SeekTo(oldReadPos);
+                reader.SeekTo(tagTableOffset);
+            }
+
+            return new SecondGenHeader(values, buildInfo, buildString, _segmenter);
 		}
 
 		private SecondGenTagTable LoadTagTable(IReader reader, EngineDescription buildInfo)
 		{
 			reader.SeekTo(MetaArea.Offset);
 			StructureValueCollection values = StructureReader.ReadStructure(reader, buildInfo.Layouts.GetLayout("meta header"));
+
+            if (buildInfo.Version == "02.09.27.09809")
+            {
+                var oldReadPos = reader.Position;
+                reader.SeekTo(MetaArea.Offset);
+                var metaMask = reader.ReadUInt32() - (uint)buildInfo.Layouts.GetLayout("meta header").Size;
+                values.SetInteger("meta header mask", metaMask);
+                reader.SeekTo(oldReadPos);
+            }
+
 			return new SecondGenTagTable(reader, values, MetaArea, buildInfo);
 		}
 

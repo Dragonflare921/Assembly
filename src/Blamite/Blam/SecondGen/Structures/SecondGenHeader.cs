@@ -80,11 +80,52 @@ namespace Blamite.Blam.SecondGen.Structures
 			_eofSegment = segmenter.WrapEOF((int) values.GetInteger("file size"));
 
 			var metaOffset = (int) values.GetInteger("meta offset");
-			var metaSize = (int) values.GetInteger("meta size");
-			uint metaOffsetMask = (uint)values.GetInteger("meta offset mask");
+            int metaSize;
 
-			var metaSegment = new FileSegment(
-				segmenter.DefineSegment(metaOffset, metaSize, 0x200, SegmentResizeOrigin.Beginning), segmenter);
+            // TODO: uh
+            int tagDataSize = (int)values.GetInteger("tag data size");
+
+            // hack to set meta size on xbox
+            if (BuildString == "02.09.27.09809")
+            {
+                metaSize = (int)values.GetInteger("tag data offset") + (int)values.GetInteger("tag data size");
+            }
+            else
+            {
+                metaSize = (int)values.GetInteger("meta size");
+            }
+            
+            uint metaOffsetMask;
+
+            // hack to set meta offset mask on xbox
+            if (BuildString == "02.09.27.09809")
+            {
+                // we hacked in a meta header size into the values earlier in the cache load
+                //metaOffsetMask = (uint)(values.GetInteger("tag table offset") - values.GetInteger("meta header size"));
+                // TODO: were hacking in the first tag's address to adjust the offset mask
+                //metaOffsetMask = (uint)((uint)values.GetInteger("first tag address") - (metaOffset + tagDataSize));
+                metaOffsetMask = (uint)values.GetInteger("first tag address");
+            }
+            else
+            {
+                metaOffsetMask = (uint)values.GetInteger("meta offset mask");
+            }
+			 
+
+            FileSegment metaSegment = null;
+
+            // hack to set segment alignment on xbox
+            if (BuildString == "02.09.27.09809")
+            {
+                metaSegment = new FileSegment(
+                    segmenter.DefineSegment(metaOffset, metaSize, 0x4, SegmentResizeOrigin.Beginning), segmenter);
+            }
+            else
+            {
+                metaSegment = new FileSegment(
+                    segmenter.DefineSegment(metaOffset, metaSize, 0x200, SegmentResizeOrigin.Beginning), segmenter);
+            }
+			
 			MetaArea = new FileSegmentGroup(new MetaOffsetConverter(metaSegment, metaOffsetMask));
 			IndexHeaderLocation = MetaArea.AddSegment(metaSegment);
 
@@ -125,12 +166,17 @@ namespace Blamite.Blam.SecondGen.Structures
 
 			LocaleArea = new FileSegmentGroup();
 
-			var rawTableOffset = (int) values.GetInteger("raw table offset");
-			var rawTableSize = (int) values.GetInteger("raw table size");
-
-			// It is apparently possible to create a cache without a raw table, but -1 gets written as the offset
-			if (rawTableOffset != -1)
-				RawTable = segmenter.WrapSegment(rawTableOffset, rawTableSize, 1, SegmentResizeOrigin.End);
+            int rawTableOffset;
+            int rawTableSize;
+            // TODO: h2x has no raw table offset. if we spoof one itll be a gnarly linear search
+            if (BuildString != "02.09.27.09809")
+            {
+                rawTableOffset = (int)values.GetInteger("raw table offset");
+                rawTableSize = (int)values.GetInteger("raw table size");
+                // It is apparently possible to create a cache without a raw table, but -1 gets written as the offset
+                if (rawTableOffset != -1)
+                    RawTable = segmenter.WrapSegment(rawTableOffset, rawTableSize, 1, SegmentResizeOrigin.End);
+            }
 
 			Checksum = (uint)values.GetInteger("checksum");
 

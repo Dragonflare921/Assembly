@@ -51,16 +51,38 @@ namespace Blamite.Blam.SecondGen.Structures
 
 			// Groups
 			var numGroups = (int) headerValues.GetInteger("number of tag groups");
-			var groupTableOffset = (uint) (metaArea.Offset + (uint)headerValues.GetInteger("tag group table offset"));
-			// Offset is relative to the header
+            uint groupTableOffset;
+
+            // hack to set group table offset for xbox
+            if (buildInfo.Version == "02.09.27.09809")
+            {
+                groupTableOffset = (uint)headerValues.GetInteger("tag group table offset") - (uint)headerValues.GetInteger("meta header mask") + (uint)metaArea.Offset;
+            }
+            else
+            {
+                groupTableOffset = (uint)(metaArea.Offset + (uint)headerValues.GetInteger("tag group table offset"));
+            }
+
+            // Offset is relative to the header
 			_groups = ReadGroups(reader, groupTableOffset, numGroups, buildInfo);
 			_groupsById = BuildGroupLookup(_groups);
 
 			// Tags
 			var numTags = (int) headerValues.GetInteger("number of tags");
-			var tagTableOffset = (uint) (metaArea.Offset + (uint)headerValues.GetInteger("tag table offset"));
-			// Offset is relative to the header
-			_tags = ReadTags(reader, tagTableOffset, numTags, buildInfo, metaArea);
+            uint tagTableOffset;
+			
+            // hack to set tag table offset for xbox
+            if (buildInfo.Version == "02.09.27.09809")
+            {
+                tagTableOffset = (uint)(metaArea.Offset + (uint)headerValues.GetInteger("tag table offset")) - (uint)headerValues.GetInteger("meta header mask");
+            }
+            else
+            {
+                tagTableOffset = (uint)(metaArea.Offset + (uint)headerValues.GetInteger("tag table offset"));
+            }
+
+            // Offset is relative to the header
+            _tags = ReadTags(reader, tagTableOffset, numTags, buildInfo, metaArea);
 		}
 
 		private static List<ITagGroup> ReadGroups(IReader reader, uint groupTableOffset, int numGroups,
