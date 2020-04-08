@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="176">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <tagblock name="Particle System" offset="0" elementSize="140" maxelements="1" label="Sprites" visible="True">
+    <tagRef name="Sprites" offset="0" visible="True" />
+    <float32 name="View Box Width" offset="8" visible="True" />
+    <float32 name="View Box Height" offset="12" visible="True" />
+    <float32 name="View Box Depth" offset="16" visible="True" />
+    <float32 name="Exclusion Radius" offset="20" visible="True" />
+    <float32 name="Max Velocity" offset="24" visible="True" />
+    <float32 name="Min Mass" offset="28" visible="True" />
+    <float32 name="Max Mass" offset="32" visible="True" />
+    <float32 name="Min Size" offset="36" visible="True" />
+    <float32 name="Max Size" offset="40" visible="True" />
+    <int32 name="Maximum Number Of Particles" offset="44" visible="True" />
+    <float32 name="Initial Velocity X" offset="48" visible="True" />
+    <float32 name="Initial Velocity Y" offset="52" visible="True" />
+    <float32 name="Initial Velocity Z" offset="56" visible="True" />
+    <float32 name="Bitmap Animation Speed" offset="60" visible="True" />
+    <uint32 name="Resource Data Offset" offset="64" visible="True" />
+    <uint32 name="Resource Data Size" offset="66" visible="True" />
+    <int32 name="Section Data Size" offset="72" visible="True" />
+    <int32 name="Resource Data Size" offset="76" visible="True" />
+    <tagblock name="Resources" offset="80" elementSize="16" maxelements="1024" label="" visible="True">
+      <enum8 name="Type" offset="0" visible="True">
+        <option name="Tag Block" value="0" />
+        <option name="Tag Data" value="1" />
+        <option name="Vertex Buffer" value="2" />
+      </enum8>
+      <undefined size="3" name="_Unnamed0" offset="1" visible="True" />
+      <int16 name="Primary Locator" offset="4" visible="True" />
+      <int16 name="Secondary Locator" offset="6" visible="True" />
+      <int32 name="Resource Data Size" offset="8" visible="True" />
+      <int32 name="Resource Data Offset" offset="12" visible="True" />
+    </tagblock>
+    <undefined size="4" name="Geometry Self Reference" offset="88" visible="True" />
+    <int16 name="Owner Tag Section Offset" offset="92" visible="True" />
+    <undefined size="2" name="_Unnamed0" offset="94" visible="True" />
+    <undefined size="4" name="_Unnamed1" offset="96" visible="True" />
+    <tagblock name="Particle System Data" offset="100" elementSize="48" maxelements="1" label="" visible="True">
+      <tagblock name="Particles Render Data" offset="0" elementSize="20" maxelements="4096" label="" visible="True">
+        <float32 name="Positionx" offset="0" visible="True" />
+        <float32 name="Positiony" offset="4" visible="True" />
+        <float32 name="Positionz" offset="8" visible="True" />
+        <float32 name="Size" offset="12" visible="True" />
+        <undefined size="1" offset="16" visible="True" />
+        <int8 name="Color R" offset="20" visible="True" />
+        <int8 name="Color G" offset="24" visible="True" />
+        <int8 name="Color B" offset="28" visible="True" />
+      </tagblock>
+      <tagblock name="Particles Other Data" offset="8" elementSize="32" maxelements="4096" label="" visible="True">
+        <float32 name="Velocityx" offset="0" visible="True" />
+        <float32 name="Velocityy" offset="4" visible="True" />
+        <float32 name="Velocityz" offset="8" visible="True" />
+        <undefined size="12" name="_Unnamed0" offset="12" visible="True" />
+        <float32 name="Mass" offset="24" visible="True" />
+        <float32 name="Creation Time Stamp" offset="28" visible="True" />
+      </tagblock>
+      <undefined size="32" name="_Unnamed0" offset="16" visible="True" />
+    </tagblock>
+    <enum16 name="Type" offset="108" visible="True">
+      <option name="Generic" value="0" />
+      <option name="Snow" value="1" />
+      <option name="Rain" value="2" />
+      <option name="Rain Splash" value="3" />
+      <option name="Bugs" value="4" />
+      <option name="Sand Storm" value="5" />
+      <option name="Debris" value="6" />
+      <option name="Bubbles" value="7" />
+    </enum16>
+    <undefined size="2" name="_Unnamed2" offset="110" visible="True" />
+    <float32 name="Mininum Opacity" offset="112" visible="True" />
+    <float32 name="Maxinum Opacity" offset="116" visible="True" />
+    <float32 name="Rain Streak Scale" offset="120" visible="True" />
+    <float32 name="Rain Line Width" offset="124" visible="True" />
+    <undefined size="4" name="_Unnamed3" offset="128" visible="True" />
+    <undefined size="4" name="_Unnamed4" offset="132" visible="True" />
+    <undefined size="4" name="_Unnamed5" offset="136" visible="True" />
+  </tagblock>
+  <tagblock name="Background Plates" offset="8" elementSize="936" maxelements="3" label="Texture 0" visible="True">
+    <tagRef name="Texture 0" offset="0" visible="True" />
+    <tagRef name="Texture 1" offset="8" visible="True" />
+    <tagRef name="Texture 2" offset="16" visible="True" />
+    <float32 name="Plate Positions 0" offset="24" visible="True" />
+    <float32 name="Plate Positions 1" offset="28" visible="True" />
+    <float32 name="Plate Positions 2" offset="32" visible="True" />
+    <float32 name="Move Speed 0 X" offset="36" visible="True" />
+    <float32 name="Move Speed 0 Y" offset="40" visible="True" />
+    <float32 name="Move Speed 0 Z" offset="44" visible="True" />
+    <float32 name="Move Speed 1 X" offset="48" visible="True" />
+    <float32 name="Move Speed 1 Y" offset="52" visible="True" />
+    <float32 name="Move Speed 1 Z" offset="56" visible="True" />
+    <float32 name="Move Speed 2 X" offset="60" visible="True" />
+    <float32 name="Move Speed 2 Y" offset="64" visible="True" />
+    <float32 name="Move Speed 2 Z" offset="68" visible="True" />
+    <float32 name="Texture Scale 0" offset="72" visible="True" />
+    <float32 name="Texture Scale 1" offset="76" visible="True" />
+    <float32 name="Texture Scale 2" offset="80" visible="True" />
+    <float32 name="Jitter 0 X" offset="84" visible="True" />
+    <float32 name="Jitter 0 Y" offset="88" visible="True" />
+    <float32 name="Jitter 0 Z" offset="92" visible="True" />
+    <float32 name="Jitter 1 X" offset="96" visible="True" />
+    <float32 name="Jitter 1 Y" offset="100" visible="True" />
+    <float32 name="Jitter 1 Z" offset="104" visible="True" />
+    <float32 name="Jitter 2 X" offset="108" visible="True" />
+    <float32 name="Jitter 2 Y" offset="112" visible="True" />
+    <float32 name="Jitter 2 Z" offset="116" visible="True" />
+    <float32 name="Plate Z Near" offset="120" visible="True" />
+    <float32 name="Plate Z Far" offset="124" visible="True" />
+    <float32 name="Depth Blend Z Near" offset="128" visible="True" />
+    <float32 name="Depth Blend Z Far" offset="132" visible="True" />
+    <float32 name="Opacity 0" offset="136" visible="True" />
+    <float32 name="Opacity 1" offset="140" visible="True" />
+    <float32 name="Opacity 2" offset="144" visible="True" />
+    <flags32 name="Flags" offset="148" visible="True">
+      <bit name="Forward Motion" index="0" />
+      <bit name="Auto Position Planes" index="1" />
+      <bit name="Auto Scale Planesauto Update Speed" index="2" />
+    </flags32>
+    <float32 name="Tint Color0 R" offset="152" visible="True" />
+    <float32 name="Tint Color0 G" offset="156" visible="True" />
+    <float32 name="Tint Color0 B" offset="160" visible="True" />
+    <float32 name="Tint Color1 R" offset="164" visible="True" />
+    <float32 name="Tint Color1 G" offset="168" visible="True" />
+    <float32 name="Tint Color1 B" offset="172" visible="True" />
+    <float32 name="Tint Color2 R" offset="176" visible="True" />
+    <float32 name="Tint Color2 G" offset="180" visible="True" />
+    <float32 name="Tint Color2 B" offset="184" visible="True" />
+    <float32 name="Mass 1" offset="188" visible="True" />
+    <float32 name="Mass 2" offset="192" visible="True" />
+    <float32 name="Mass 3" offset="196" visible="True" />
+    <undefined size="736" name="_Unnamed0" offset="200" visible="True" />
+  </tagblock>
+  <float32 name="Wind Tiling Scale" offset="16" visible="True" />
+  <float32 name="Wind Primary Headingpitchstrength X" offset="20" visible="True" />
+  <float32 name="Wind Primary Headingpitchstrength Y" offset="24" visible="True" />
+  <float32 name="Wind Primary Headingpitchstrength Z" offset="28" visible="True" />
+  <float32 name="Primary Rate Of Change" offset="32" visible="True" />
+  <float32 name="Primary Min Strength" offset="36" visible="True" />
+  <undefined size="4" name="_Unnamed0" offset="40" visible="True" />
+  <undefined size="4" name="_Unnamed1" offset="44" visible="True" />
+  <undefined size="12" name="_Unnamed2" offset="48" visible="True" />
+  <float32 name="Wind Gusting Headingpitchstrength X" offset="60" visible="True" />
+  <float32 name="Wind Gusting Headingpitchstrength Y" offset="64" visible="True" />
+  <float32 name="Wind Gusting Headingpitchstrength Z" offset="68" visible="True" />
+  <float32 name="Gust Diretional Rate Of Change" offset="72" visible="True" />
+  <float32 name="Gust Strength Rate Of Change" offset="76" visible="True" />
+  <float32 name="Gust Cone Angle" offset="80" visible="True" />
+  <undefined size="4" name="_Unnamed3" offset="84" visible="True" />
+  <undefined size="4" name="_Unnamed4" offset="88" visible="True" />
+  <undefined size="12" name="_Unnamed5" offset="92" visible="True" />
+  <undefined size="12" name="_Unnamed6" offset="104" visible="True" />
+  <undefined size="12" name="_Unnamed7" offset="116" visible="True" />
+  <undefined size="12" name="_Unnamed8" offset="128" visible="True" />
+  <float32 name="Turbulance Rate Of Change" offset="140" visible="True" />
+  <float32 name="Turbulence_Scale X Y Z X" offset="144" visible="True" />
+  <float32 name="Turbulence_Scale X Y Z Y" offset="148" visible="True" />
+  <float32 name="Turbulence_Scale X Y Z Z" offset="152" visible="True" />
+  <float32 name="Gravity Constant" offset="156" visible="True" />
+  <tagblock name="Wind_Pirmitives" offset="160" elementSize="24" maxelements="128" label="" visible="True">
+    <float32 name="Position X" offset="0" visible="True" />
+    <float32 name="Position Y" offset="4" visible="True" />
+    <float32 name="Position Z" offset="8" visible="True" />
+    <float32 name="Radius" offset="12" visible="True" />
+    <float32 name="Strength" offset="16" visible="True" />
+    <enum16 name="Wind Primitive Type" offset="20" visible="True">
+      <option name="Vortex" value="0" />
+      <option name="Gust" value="1" />
+      <option name="Implosion" value="2" />
+      <option name="Explosion" value="3" />
+    </enum16>
+    <undefined size="2" name="_Unnamed0" offset="22" visible="True" />
+  </tagblock>
+  <undefined size="4" name="_Unnamed9" offset="168" visible="True" />
+  <float32 name="Fade Radius" offset="172" visible="True" />
+</plugin>

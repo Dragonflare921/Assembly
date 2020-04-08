@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="52">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <tagblock name="Import Info" offset="0" elementSize="592" maxelements="1" label="" visible="True">
+    <int32 name="Build" offset="0" visible="True" />
+    <ascii name="Version" offset="4" visible="True" />
+    <ascii name="Import Date" offset="260" visible="True" />
+    <ascii name="Culprit" offset="292" visible="True" />
+    <undefined size="96" name="_Unnamed0" offset="324" visible="True" />
+    <ascii name="Import Time" offset="420" visible="True" />
+    <undefined size="4" name="_Unnamed1" offset="452" visible="True" />
+    <tagblock name="Files" offset="456" elementSize="528" maxelements="1024" label="" visible="True">
+      <ascii name="Path" offset="0" visible="True" />
+      <ascii name="Modification Date" offset="256" visible="True" />
+      <undefined size="8" name="_Unnamed0" offset="288" visible="True" />
+      <undefined size="88" name="_Unnamed1" offset="296" visible="True" />
+      <int32 name="Checksum" offset="384" visible="True" />
+      <int32 name="Size" offset="388" visible="True" />
+      <undefined size="8" name="Zipped Data" offset="392" visible="True" />
+      <undefined size="128" name="_Unnamed2" offset="400" visible="True" />
+    </tagblock>
+    <undefined size="128" name="_Unnamed2" offset="464" visible="True" />
+  </tagblock>
+  <tagblock name="Errors" offset="8" elementSize="676" maxelements="64" label="Name" visible="True">
+    <ascii name="Name" offset="0" visible="True" />
+    <enum16 name="Report Type" offset="256" visible="True">
+      <option name="Silent" value="0" />
+      <option name="Comment" value="1" />
+      <option name="Warning" value="2" />
+      <option name="Error" value="3" />
+    </enum16>
+    <flags16 name="Flags" offset="258" visible="True">
+      <bit name="Rendered" index="0" />
+      <bit name="Tangent Space" index="1" />
+      <bit name="Noncritical" index="2" />
+      <bit name="Lightmap Light" index="3" />
+      <bit name="Report Key Is Valid." index="4" />
+    </flags16>
+    <undefined size="2" name="_Unnamed0" offset="260" visible="True" />
+    <undefined size="2" name="_Unnamed1" offset="262" visible="True" />
+    <undefined size="404" name="_Unnamed2" offset="264" visible="True" />
+    <tagblock name="Reports" offset="668" elementSize="608" maxelements="1024" label="" visible="True">
+      <enum16 name="Type" offset="0" visible="True">
+        <option name="Silent" value="0" />
+        <option name="Comment" value="1" />
+        <option name="Warning" value="2" />
+        <option name="Error" value="3" />
+      </enum16>
+      <flags16 name="Flags" offset="2" visible="True">
+        <bit name="Rendered" index="0" />
+        <bit name="Tangent Space" index="1" />
+        <bit name="Noncritical" index="2" />
+        <bit name="Lightmap Light" index="3" />
+        <bit name="Report Key Is Valid." index="4" />
+      </flags16>
+      <undefined size="8" name="Text" offset="4" visible="True" />
+      <ascii name="Source Filename" offset="12" visible="True" />
+      <int32 name="Source Line Number" offset="44" visible="True" />
+      <tagblock name="Vertices" offset="48" elementSize="52" maxelements="1024" label="" visible="True">
+        <float32 name="Position X" offset="0" visible="True" />
+        <float32 name="Position Y" offset="4" visible="True" />
+        <float32 name="Position Z" offset="8" visible="True" />
+        <int8 name="Node Index" offset="12" visible="True" />
+        <int8 name="Node Index2" offset="13" visible="True" />
+        <int8 name="Node Index3" offset="14" visible="True" />
+        <int8 name="Node Index4" offset="15" visible="True" />
+        <float32 name="Node Weight" offset="16" visible="True" />
+        <float32 name="Node Weight2" offset="20" visible="True" />
+        <float32 name="Node Weight3" offset="24" visible="True" />
+        <float32 name="Node Weight4" offset="28" visible="True" />
+        <float32 name="Color A" offset="32" visible="True" />
+        <float32 name="Color R" offset="36" visible="True" />
+        <float32 name="Color G" offset="40" visible="True" />
+        <float32 name="Color B" offset="44" visible="True" />
+        <float32 name="Screen Size" offset="48" visible="True" />
+      </tagblock>
+      <tagblock name="Vectors" offset="56" elementSize="64" maxelements="1024" label="" visible="True">
+        <float32 name="Position X" offset="0" visible="True" />
+        <float32 name="Position Y" offset="4" visible="True" />
+        <float32 name="Position Z" offset="8" visible="True" />
+        <int8 name="Node Index" offset="12" visible="True" />
+        <int8 name="Node Index2" offset="13" visible="True" />
+        <int8 name="Node Index3" offset="14" visible="True" />
+        <int8 name="Node Index4" offset="15" visible="True" />
+        <float32 name="Node Weight" offset="16" visible="True" />
+        <float32 name="Node Weight2" offset="20" visible="True" />
+        <float32 name="Node Weight3" offset="24" visible="True" />
+        <float32 name="Node Weight4" offset="28" visible="True" />
+        <float32 name="Color A" offset="32" visible="True" />
+        <float32 name="Color R" offset="36" visible="True" />
+        <float32 name="Color G" offset="40" visible="True" />
+        <float32 name="Color B" offset="44" visible="True" />
+        <float32 name="Normal X" offset="48" visible="True" />
+        <float32 name="Normal Y" offset="52" visible="True" />
+        <float32 name="Normal Z" offset="56" visible="True" />
+        <float32 name="Screen Length" offset="60" visible="True" />
+      </tagblock>
+      <tagblock name="Lines" offset="64" elementSize="64" maxelements="1024" label="" visible="True">
+        <float32 name="Position X" offset="0" visible="True" />
+        <float32 name="Position Y" offset="4" visible="True" />
+        <float32 name="Position Z" offset="8" visible="True" />
+        <int8 name="Node Index" offset="12" visible="True" />
+        <int8 name="Node Index2" offset="13" visible="True" />
+        <int8 name="Node Index3" offset="14" visible="True" />
+        <int8 name="Node Index4" offset="15" visible="True" />
+        <float32 name="Position2 X" offset="16" visible="True" />
+        <float32 name="Position2 Y" offset="20" visible="True" />
+        <float32 name="Position2 Z" offset="24" visible="True" />
+        <int8 name="Node Index5" offset="28" visible="True" />
+        <int8 name="Node Index6" offset="29" visible="True" />
+        <int8 name="Node Index7" offset="30" visible="True" />
+        <int8 name="Node Index8" offset="31" visible="True" />
+        <float32 name="Node Weight" offset="32" visible="True" />
+        <float32 name="Node Weight2" offset="36" visible="True" />
+        <float32 name="Node Weight3" offset="40" visible="True" />
+        <float32 name="Node Weight4" offset="44" visible="True" />
+        <float32 name="Color A" offset="48" visible="True" />
+        <float32 name="Color R" offset="52" visible="True" />
+        <float32 name="Color G" offset="56" visible="True" />
+        <float32 name="Color B" offset="60" visible="True" />
+      </tagblock>
+      <tagblock name="Triangles" offset="72" elementSize="80" maxelements="1024" label="" visible="True">
+        <float32 name="Position X" offset="0" visible="True" />
+        <float32 name="Position Y" offset="4" visible="True" />
+        <float32 name="Position Z" offset="8" visible="True" />
+        <int8 name="Node Index" offset="12" visible="True" />
+        <int8 name="Node Index2" offset="13" visible="True" />
+        <int8 name="Node Index3" offset="14" visible="True" />
+        <int8 name="Node Index4" offset="15" visible="True" />
+        <float32 name="Position2 X" offset="16" visible="True" />
+        <float32 name="Position2 Y" offset="20" visible="True" />
+        <float32 name="Position2 Z" offset="24" visible="True" />
+        <int8 name="Node Index5" offset="28" visible="True" />
+        <int8 name="Node Index6" offset="29" visible="True" />
+        <int8 name="Node Index7" offset="30" visible="True" />
+        <int8 name="Node Index8" offset="31" visible="True" />
+        <float32 name="Position3 X" offset="32" visible="True" />
+        <float32 name="Position3 Y" offset="36" visible="True" />
+        <float32 name="Position3 Z" offset="40" visible="True" />
+        <int8 name="Node Index9" offset="44" visible="True" />
+        <int8 name="Node Index10" offset="45" visible="True" />
+        <int8 name="Node Index11" offset="46" visible="True" />
+        <int8 name="Node Index12" offset="47" visible="True" />
+        <float32 name="Node Weight" offset="48" visible="True" />
+        <float32 name="Node Weight2" offset="52" visible="True" />
+        <float32 name="Node Weight3" offset="56" visible="True" />
+        <float32 name="Node Weight4" offset="60" visible="True" />
+        <float32 name="Color A" offset="64" visible="True" />
+        <float32 name="Color R" offset="68" visible="True" />
+        <float32 name="Color G" offset="72" visible="True" />
+        <float32 name="Color B" offset="76" visible="True" />
+      </tagblock>
+      <tagblock name="Quads" offset="80" elementSize="96" maxelements="1024" label="" visible="True">
+        <float32 name="Position X" offset="0" visible="True" />
+        <float32 name="Position Y" offset="4" visible="True" />
+        <float32 name="Position Z" offset="8" visible="True" />
+        <int8 name="Node Index" offset="12" visible="True" />
+        <int8 name="Node Index2" offset="13" visible="True" />
+        <int8 name="Node Index3" offset="14" visible="True" />
+        <int8 name="Node Index4" offset="15" visible="True" />
+        <float32 name="Position2 X" offset="16" visible="True" />
+        <float32 name="Position2 Y" offset="20" visible="True" />
+        <float32 name="Position2 Z" offset="24" visible="True" />
+        <int8 name="Node Index5" offset="28" visible="True" />
+        <int8 name="Node Index6" offset="29" visible="True" />
+        <int8 name="Node Index7" offset="30" visible="True" />
+        <int8 name="Node Index8" offset="31" visible="True" />
+        <float32 name="Position3 X" offset="32" visible="True" />
+        <float32 name="Position3 Y" offset="36" visible="True" />
+        <float32 name="Position3 Z" offset="40" visible="True" />
+        <int8 name="Node Index9" offset="44" visible="True" />
+        <int8 name="Node Index10" offset="45" visible="True" />
+        <int8 name="Node Index11" offset="46" visible="True" />
+        <int8 name="Node Index12" offset="47" visible="True" />
+        <float32 name="Position4 X" offset="48" visible="True" />
+        <float32 name="Position4 Y" offset="52" visible="True" />
+        <float32 name="Position4 Z" offset="56" visible="True" />
+        <int8 name="Node Index13" offset="60" visible="True" />
+        <int8 name="Node Index14" offset="61" visible="True" />
+        <int8 name="Node Index15" offset="62" visible="True" />
+        <int8 name="Node Index16" offset="63" visible="True" />
+        <float32 name="Node Weight" offset="64" visible="True" />
+        <float32 name="Node Weight2" offset="68" visible="True" />
+        <float32 name="Node Weight3" offset="72" visible="True" />
+        <float32 name="Node Weight4" offset="76" visible="True" />
+        <float32 name="Color A" offset="80" visible="True" />
+        <float32 name="Color R" offset="84" visible="True" />
+        <float32 name="Color G" offset="88" visible="True" />
+        <float32 name="Color B" offset="92" visible="True" />
+      </tagblock>
+      <tagblock name="Comments" offset="88" elementSize="56" maxelements="1024" label="" visible="True">
+        <undefined size="8" name="Text" offset="0" visible="True" />
+        <float32 name="Position X" offset="8" visible="True" />
+        <float32 name="Position Y" offset="12" visible="True" />
+        <float32 name="Position Z" offset="16" visible="True" />
+        <int8 name="Node Index" offset="20" visible="True" />
+        <int8 name="Node Index2" offset="21" visible="True" />
+        <int8 name="Node Index3" offset="22" visible="True" />
+        <int8 name="Node Index4" offset="23" visible="True" />
+        <float32 name="Node Weight" offset="24" visible="True" />
+        <float32 name="Node Weight2" offset="28" visible="True" />
+        <float32 name="Node Weight3" offset="32" visible="True" />
+        <float32 name="Node Weight4" offset="36" visible="True" />
+        <float32 name="Color A" offset="40" visible="True" />
+        <float32 name="Color R" offset="44" visible="True" />
+        <float32 name="Color G" offset="48" visible="True" />
+        <float32 name="Color B" offset="52" visible="True" />
+      </tagblock>
+      <undefined size="380" name="_Unnamed0" offset="96" visible="True" />
+      <int32 name="Report Key" offset="476" visible="True" />
+      <int32 name="Node Index" offset="480" visible="True" />
+      <float32 name="Bounds X From" offset="484" visible="True" />
+      <float32 name="Bounds X To" offset="488" visible="True" />
+      <float32 name="Bounds Y From" offset="492" visible="True" />
+      <float32 name="Bounds Y To" offset="496" visible="True" />
+      <float32 name="Bounds Z From" offset="500" visible="True" />
+      <float32 name="Bounds Z To" offset="504" visible="True" />
+      <float32 name="Color A" offset="508" visible="True" />
+      <float32 name="Color R" offset="512" visible="True" />
+      <float32 name="Color G" offset="516" visible="True" />
+      <float32 name="Color B" offset="520" visible="True" />
+      <undefined size="84" name="_Unnamed1" offset="524" visible="True" />
+    </tagblock>
+  </tagblock>
+  <flags32 name="Flags" offset="16" visible="True">
+    <bit name="Contains Open Edges" index="0" />
+  </flags32>
+  <tagblock name="Materials" offset="20" elementSize="4" maxelements="32" label="Name" visible="True">
+    <stringid name="Name" offset="0" visible="True" />
+  </tagblock>
+  <tagblock name="Regions" offset="28" elementSize="12" maxelements="16" label="Name" visible="True">
+    <stringid name="Name" offset="0" visible="True" />
+    <tagblock name="Permutations" offset="4" elementSize="20" maxelements="32" label="Name" visible="True">
+      <stringid name="Name" offset="0" visible="True" />
+      <tagblock name="Bsps" offset="4" elementSize="68" maxelements="64" label="" visible="True">
+        <int16 name="Node Index" offset="0" visible="True" />
+        <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+        <tagblock name="BSP 3D Nodes" offset="4" elementSize="8" maxelements="131072" label="" visible="True">
+          <undefined size="8" name="_Unnamed0" offset="0" visible="True" />
+        </tagblock>
+        <tagblock name="Planes" offset="12" elementSize="16" maxelements="65536" label="" visible="True">
+          <float32 name="Plane i" offset="0" visible="True" />
+          <float32 name="Plane j" offset="4" visible="True" />
+          <float32 name="Plane k" offset="8" visible="True" />
+          <float32 name="Plane d" offset="12" visible="True" />
+        </tagblock>
+        <tagblock name="Leaves" offset="20" elementSize="4" maxelements="65536" label="" visible="True">
+          <flags8 name="Flags" offset="0" visible="True">
+            <bit name="Contains Double-Sided Surfaces" index="0" />
+          </flags8>
+          <int8 name="BSP 2D Reference Count" offset="1" visible="True" />
+          <int16 name="First BSP 2D Reference" offset="2" visible="True" />
+        </tagblock>
+        <tagblock name="BSP 2D References" offset="28" elementSize="4" maxelements="131072" label="" visible="True">
+          <int16 name="Plane" offset="0" visible="True" />
+          <int16 name="BSP 2D Node" offset="2" visible="True" />
+        </tagblock>
+        <tagblock name="BSP 2D Nodes" offset="36" elementSize="16" maxelements="131072" label="" visible="True">
+          <float32 name="Plane i" offset="0" visible="True" />
+          <float32 name="Plane j" offset="4" visible="True" />
+          <float32 name="Plane d" offset="8" visible="True" />
+          <int16 name="Left Child" offset="12" visible="True" />
+          <int16 name="Right Child" offset="14" visible="True" />
+        </tagblock>
+        <tagblock name="Surfaces" offset="44" elementSize="8" maxelements="131072" label="" visible="True">
+          <int16 name="Plane" offset="0" visible="True" />
+          <int16 name="First Edge" offset="2" visible="True" />
+          <flags8 name="Flags" offset="4" visible="True">
+            <bit name="Two-Sided" index="0" />
+            <bit name="Invisible" index="1" />
+            <bit name="Climbable" index="2" />
+            <bit name="Breakable" index="3" />
+            <bit name="Invalid" index="4" />
+            <bit name="Conveyor" index="5" />
+          </flags8>
+          <int8 name="Breakable Surface" offset="5" visible="True" />
+          <int16 name="Material" offset="6" visible="True" />
+        </tagblock>
+        <tagblock name="Edges" offset="52" elementSize="12" maxelements="262144" label="" visible="True">
+          <int16 name="Start Vertex" offset="0" visible="True" />
+          <int16 name="End Vertex" offset="2" visible="True" />
+          <int16 name="Forward Edge" offset="4" visible="True" />
+          <int16 name="Reverse Edge" offset="6" visible="True" />
+          <int16 name="Left Surface" offset="8" visible="True" />
+          <int16 name="Right Surface" offset="10" visible="True" />
+        </tagblock>
+        <tagblock name="Vertices" offset="60" elementSize="16" maxelements="131072" label="" visible="True">
+          <float32 name="Point X" offset="0" visible="True" />
+          <float32 name="Point Y" offset="4" visible="True" />
+          <float32 name="Point Z" offset="8" visible="True" />
+          <int16 name="First Edge" offset="12" visible="True" />
+          <undefined size="2" name="_Unnamed0" offset="14" visible="True" />
+        </tagblock>
+      </tagblock>
+      <tagblock name="Bsp_Physics" offset="12" elementSize="112" maxelements="1024" label="" visible="True">
+        <undefined size="4" name="_Unnamed0" offset="0" visible="True" />
+        <int16 name="Size" offset="4" visible="True" />
+        <int16 name="Count" offset="6" visible="True" />
+        <undefined size="4" name="_Unnamed1" offset="8" visible="True" />
+        <undefined size="4" name="_Unnamed2" offset="12" visible="True" />
+        <undefined size="32" name="_Unnamed3" offset="16" visible="True" />
+        <undefined size="16" name="_Unnamed4" offset="48" visible="True" />
+        <undefined size="4" name="_Unnamed5" offset="64" visible="True" />
+        <int16 name="Size2" offset="68" visible="True" />
+        <int16 name="Count2" offset="70" visible="True" />
+        <undefined size="4" name="_Unnamed6" offset="72" visible="True" />
+        <undefined size="4" name="_Unnamed7" offset="76" visible="True" />
+        <undefined size="4" name="_Unnamed8" offset="80" visible="True" />
+        <int16 name="Size3" offset="84" visible="True" />
+        <int16 name="Count3" offset="86" visible="True" />
+        <undefined size="4" name="_Unnamed9" offset="88" visible="True" />
+        <undefined size="8" name="_Unnamed10" offset="92" visible="True" />
+        <undefined size="8" name="Mopp Code Data" offset="100" visible="True" />
+        <undefined size="4" name="_Unnamed11" offset="108" visible="True" />
+      </tagblock>
+    </tagblock>
+  </tagblock>
+  <tagblock name="Pathfinding Spheres" offset="36" elementSize="20" maxelements="32" label="" visible="True">
+    <int16 name="Node" offset="0" visible="True" reflexiveoffset="44" reflexivesize="12" itemoffset="0" itemtype="stringid" layer="root" />
+    <flags16 name="Flags" offset="2" visible="True">
+      <bit name="Remains When Open" index="0" />
+      <bit name="Vehicle Only" index="1" />
+      <bit name="With Sectors" index="2" />
+    </flags16>
+    <float32 name="Center X" offset="4" visible="True" />
+    <float32 name="Center Y" offset="8" visible="True" />
+    <float32 name="Center Z" offset="12" visible="True" />
+    <float32 name="Radius" offset="16" visible="True" />
+  </tagblock>
+  <tagblock name="Nodes" offset="44" elementSize="12" maxelements="255" label="Name" visible="True">
+    <stringid name="Name" offset="0" visible="True" />
+    <undefined size="2" name="_Unnamed0" offset="4" visible="True" />
+    <int16 name="Parent Node" offset="6" visible="True" reflexiveoffset="44" reflexivesize="12" itemoffset="0" itemtype="stringid" layer="root" />
+    <int16 name="Next Sibling Node" offset="8" visible="True" reflexiveoffset="44" reflexivesize="12" itemoffset="0" itemtype="stringid" layer="root" />
+    <int16 name="First Child Node" offset="10" visible="True" reflexiveoffset="44" reflexivesize="12" itemoffset="0" itemtype="stringid" layer="root" />
+  </tagblock>
+</plugin>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="228">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <flags32 name="Flags" offset="0" visible="True">
+    <bit name="No Illumination" index="0" />
+    <bit name="No Specular" index="1" />
+    <bit name="Force Cast Environment Shadows Through Portals" index="2" />
+    <bit name="No Shadow" index="3" />
+    <bit name="Force Frustum Visibility On Small Light" index="4" />
+    <bit name="Only Render In First Person" index="5" />
+    <bit name="Only Render In Third Person" index="6" />
+    <bit name="Don't Fade When Invisible?" index="7" />
+    <bit name="Multiplayer Override" index="8" />
+    <bit name="Animated Gel" index="9" />
+    <bit name="Only In Dynamic Envmap?" index="10" />
+    <bit name="Ignore Parent Object" index="11" />
+    <bit name="Don't Shadow Parent" index="12" />
+    <bit name="Ignore All Parents" index="13" />
+    <bit name="March Milestone Hack" index="14" />
+    <bit name="Force Light Inside World" index="15" />
+    <bit name="Environment Doesnt Cast Stencil Shadows" index="16" />
+    <bit name="Objects Don't Cast Stencil Shadows" index="17" />
+    <bit name="First Person From Camera" index="18" />
+    <bit name="Texture Camera Gel" index="19" />
+    <bit name="Light Framerate Killer" index="20" />
+    <bit name="Allowed In Split Screen" index="21" />
+    <bit name="Only On Parent Bipeds" index="22" />
+  </flags32>
+  <enum16 name="Type" offset="4" visible="True">
+    <option name="Sphere" value="0" />
+    <option name="Orthogonal" value="1" />
+    <option name="Projective" value="2" />
+    <option name="Pyramid" value="3" />
+  </enum16>
+  <undefined size="2" name="_Unnamed0" offset="6" visible="True" />
+  <float32 name="Size Modifer From" offset="8" visible="True" />
+  <float32 name="Size Modifer To" offset="12" visible="True" />
+  <float32 name="Shadow Quality Bias" offset="16" visible="True" />
+  <enum16 name="Shadow Tap Bias" offset="20" visible="True">
+    <option name="3 Tap" value="0" />
+    <option name="UNUSED" value="1" />
+    <option name="1 Tap" value="2" />
+  </enum16>
+  <undefined size="2" name="_Unnamed1" offset="22" visible="True" />
+  <float32 name="Radius" offset="24" visible="True" />
+  <float32 name="Specular Radius" offset="28" visible="True" />
+  <float32 name="Near Width" offset="32" visible="True" />
+  <float32 name="Height Stretch" offset="36" visible="True" />
+  <float32 name="Field Of View" offset="40" visible="True" />
+  <float32 name="Falloff Distance" offset="44" visible="True" />
+  <float32 name="Cutoff Distance" offset="48" visible="True" />
+  <flags32 name="Interpolation Flags" offset="52" visible="True">
+    <bit name="Blend In Hsv" index="0" />
+    <bit name="...More Colors" index="1" />
+  </flags32>
+  <float32 name="Bloom Bounds From" offset="56" visible="True" />
+  <float32 name="Bloom Bounds To" offset="60" visible="True" />
+  <float32 name="Specular Lower Bound R" offset="64" visible="True" />
+  <float32 name="Specular Lower Bound G" offset="68" visible="True" />
+  <float32 name="Specular Lower Bound B" offset="72" visible="True" />
+  <float32 name="Specular Upper Bound R" offset="76" visible="True" />
+  <float32 name="Specular Upper Bound G" offset="80" visible="True" />
+  <float32 name="Specular Upper Bound B" offset="84" visible="True" />
+  <float32 name="Diffuse Lower Bound R" offset="88" visible="True" />
+  <float32 name="Diffuse Lower Bound G" offset="92" visible="True" />
+  <float32 name="Diffuse Lower Bound B" offset="96" visible="True" />
+  <float32 name="Diffuse Upper Bound R" offset="100" visible="True" />
+  <float32 name="Diffuse Upper Bound G" offset="104" visible="True" />
+  <float32 name="Diffuse Upper Bound B" offset="108" visible="True" />
+  <float32 name="Brightness Bounds From" offset="112" visible="True" />
+  <float32 name="Brightness Bounds To" offset="116" visible="True" />
+  <tagRef name="Gel Map" offset="120" visible="True" />
+  <enum16 name="Specular Mask" offset="128" visible="True">
+    <option name="Default" value="0" />
+    <option name="None (No Mask)" value="1" />
+    <option name="Gel Alpha" value="2" />
+    <option name="Gel Color" value="3" />
+  </enum16>
+  <undefined size="2" name="_Unnamed2" offset="130" visible="True" />
+  <undefined size="4" name="_Unnamed3" offset="132" visible="True" />
+  <enum16 name="Falloff Function" offset="136" visible="True">
+    <option name="Default" value="0" />
+    <option name="Narrow" value="1" />
+    <option name="Broad" value="2" />
+    <option name="Very Broad" value="3" />
+  </enum16>
+  <enum16 name="Diffuse Contrast" offset="138" visible="True">
+    <option name="Default (Linear)" value="0" />
+    <option name="High" value="1" />
+    <option name="Low" value="2" />
+    <option name="Very Low" value="3" />
+  </enum16>
+  <enum16 name="Specular Contrast" offset="140" visible="True">
+    <option name="Default (One)" value="0" />
+    <option name="High (Linear)" value="1" />
+    <option name="Low" value="2" />
+    <option name="Very Low" value="3" />
+  </enum16>
+  <enum16 name="Falloff Geometry" offset="142" visible="True">
+    <option name="Default" value="0" />
+    <option name="Directional" value="1" />
+    <option name="Spherical" value="2" />
+  </enum16>
+  <tagRef name="Lens Flare" offset="144" visible="True" />
+  <float32 name="Bounding Radius" offset="152" visible="True" />
+  <tagRef name="Light Volume" offset="156" visible="True" />
+  <enum16 name="Default Lightmap Setting" offset="164" visible="True">
+    <option name="Dynamic Only" value="0" />
+    <option name="Dynamic With Lightmaps" value="1" />
+    <option name="Lightmaps Only" value="2" />
+  </enum16>
+  <undefined size="2" name="_Unnamed4" offset="166" visible="True" />
+  <float32 name="Lightmap Half Life" offset="168" visible="True" />
+  <float32 name="Lightmap Light Scale" offset="172" visible="True" />
+  <float32 name="Duration" offset="176" visible="True" />
+  <undefined size="2" name="_Unnamed5" offset="180" visible="True" />
+  <enum16 name="Falloff Function2" offset="182" visible="True">
+    <option name="Linear" value="0" />
+    <option name="Late" value="1" />
+    <option name="Very Late" value="2" />
+    <option name="Early" value="3" />
+    <option name="Very Early" value="4" />
+    <option name="Cosine" value="5" />
+    <option name="Zero" value="6" />
+    <option name="One" value="7" />
+  </enum16>
+  <enum16 name="Illumination Fade" offset="184" visible="True">
+    <option name="Fade Very Far" value="0" />
+    <option name="Fade Far" value="1" />
+    <option name="Fade Medium" value="2" />
+    <option name="Fade Close" value="3" />
+    <option name="Fade Very Close" value="4" />
+  </enum16>
+  <enum16 name="Shadow Fade" offset="186" visible="True">
+    <option name="Fade Very Far" value="0" />
+    <option name="Fade Far" value="1" />
+    <option name="Fade Medium" value="2" />
+    <option name="Fade Close" value="3" />
+    <option name="Fade Very Close" value="4" />
+  </enum16>
+  <enum16 name="Specular Fade" offset="188" visible="True">
+    <option name="Fade Very Far" value="0" />
+    <option name="Fade Far" value="1" />
+    <option name="Fade Medium" value="2" />
+    <option name="Fade Close" value="3" />
+    <option name="Fade Very Close" value="4" />
+  </enum16>
+  <undefined size="2" name="_Unnamed6" offset="190" visible="True" />
+  <flags32 name="Flags2" offset="192" visible="True">
+    <bit name="Synchronized" index="0" />
+  </flags32>
+  <tagblock name="Brightness Animation" offset="196" elementSize="8" maxelements="1" label="" visible="True">
+    <tagblock name="Data" offset="0" elementSize="1" maxelements="1024" label="" visible="True">
+      <int8 name="Value" offset="0" visible="True" />
+    </tagblock>
+  </tagblock>
+  <tagblock name="Color Animation" offset="204" elementSize="8" maxelements="1" label="" visible="True">
+    <tagblock name="Data" offset="0" elementSize="1" maxelements="1024" label="" visible="True">
+      <int8 name="Value" offset="0" visible="True" />
+    </tagblock>
+  </tagblock>
+  <tagblock name="Gel Animation" offset="212" elementSize="16" maxelements="1" label="" visible="True">
+    <tagblock name="Data" offset="0" elementSize="1" maxelements="1024" label="" visible="True">
+      <int8 name="Value" offset="0" visible="True" />
+    </tagblock>
+    <tagblock name="Data2" offset="8" elementSize="1" maxelements="1024" label="" visible="True">
+      <int8 name="Value" offset="0" visible="True" />
+    </tagblock>
+  </tagblock>
+  <tagRef name="Shader" offset="220" visible="True" />
+</plugin>

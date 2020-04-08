@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="172">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <flags16 name="Flags" offset="0" visible="True">
+    <bit name="Geometry Inherited By Next Decal In Chain" index="0" />
+    <bit name="Interpolate Color In Hsv" index="1" />
+    <bit name="...More Colors" index="2" />
+    <bit name="No Random Rotation" index="3" />
+    <bit name="UNUSED" index="4" />
+    <bit name="SAPIEN- Snap To Axis" index="5" />
+    <bit name="SAPIEN- Incremental Counter" index="6" />
+    <bit name="UNUSED" index="7" />
+    <bit name="Preserve Aspect" index="8" />
+    <bit name="UNUSED" index="9" />
+  </flags16>
+  <enum16 name="Type" offset="2" visible="True">
+    <option name="Scratch" value="0" />
+    <option name="Splatter" value="1" />
+    <option name="Burn" value="2" />
+    <option name="Painted Sign" value="3" />
+  </enum16>
+  <enum16 name="Layer" offset="4" visible="True">
+    <option name="Lit Alpha-Blend Prelight" value="0" />
+    <option name="Lit Alpha-Blend" value="1" />
+    <option name="Double Multiply" value="2" />
+    <option name="Multiply" value="3" />
+    <option name="Max" value="4" />
+    <option name="Add" value="5" />
+    <option name="Error" value="6" />
+  </enum16>
+  <int16 name="Max Overlapping Count" offset="6" visible="True" />
+  <tagRef name="Next Decal In Chain" offset="8" visible="True" />
+  <float32 name="Radius From" offset="16" visible="True" />
+  <float32 name="Radius To" offset="20" visible="True" />
+  <float32 name="Radius Overlap Rejection" offset="24" visible="True" />
+  <float32 name="Color Lower Bounds R" offset="28" visible="True" />
+  <float32 name="Color Lower Bounds G" offset="32" visible="True" />
+  <float32 name="Color Lower Bounds B" offset="36" visible="True" />
+  <float32 name="Color Upper Bounds R" offset="40" visible="True" />
+  <float32 name="Color Upper Bounds G" offset="44" visible="True" />
+  <float32 name="Color Upper Bounds B" offset="48" visible="True" />
+  <float32 name="Lifetime From" offset="52" visible="True" />
+  <float32 name="Lifetime To" offset="56" visible="True" />
+  <float32 name="Decay Time From" offset="60" visible="True" />
+  <float32 name="Decay Time To" offset="64" visible="True" />
+  <undefined size="40" name="_Unnamed0" offset="68" visible="True" />
+  <undefined size="2" name="_Unnamed1" offset="108" visible="True" />
+  <undefined size="2" name="_Unnamed2" offset="110" visible="True" />
+  <undefined size="2" name="_Unnamed3" offset="112" visible="True" />
+  <undefined size="2" name="_Unnamed4" offset="114" visible="True" />
+  <undefined size="20" name="_Unnamed5" offset="116" visible="True" />
+  <tagRef name="Bitmap" offset="136" visible="True" />
+  <undefined size="20" name="_Unnamed6" offset="144" visible="True" />
+  <float32 name="Maximum Sprite Extent" offset="164" visible="True" />
+  <undefined size="4" name="_Unnamed7" offset="168" visible="True" />
+</plugin>

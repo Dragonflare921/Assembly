@@ -1,0 +1,922 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="16">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <tagblock name="Universal" offset="0" elementSize="32" maxelements="1" label="Random Player Names" visible="True">
+    <tagRef name="Random Player Names" offset="0" visible="True" />
+    <tagRef name="Team Names" offset="8" visible="True" />
+    <tagblock name="Team Colors" offset="16" elementSize="12" maxelements="32" label="" visible="True">
+      <float32 name="Color R" offset="0" visible="True" />
+      <float32 name="Color G" offset="4" visible="True" />
+      <float32 name="Color B" offset="8" visible="True" />
+    </tagblock>
+    <tagRef name="Multiplayer Text" offset="24" visible="True" />
+  </tagblock>
+  <tagblock name="Runtime" offset="8" elementSize="1384" maxelements="1" label="Flag" visible="True">
+    <tagRef name="Flag" offset="0" visible="True" />
+    <tagRef name="Ball" offset="8" visible="True" />
+    <tagRef name="Unit" offset="16" visible="True" />
+    <tagRef name="Flag Shader" offset="24" visible="True" />
+    <tagRef name="Hill Shader" offset="32" visible="True" />
+    <tagRef name="Head" offset="40" visible="True" />
+    <tagRef name="Juggernaut Powerup" offset="48" visible="True" />
+    <tagRef name="Da Bomb" offset="56" visible="True" />
+    <tagRef name="_Unnamed0" offset="64" visible="True" />
+    <tagRef name="_Unnamed1" offset="72" visible="True" />
+    <tagRef name="_Unnamed2" offset="80" visible="True" />
+    <tagRef name="_Unnamed3" offset="88" visible="True" />
+    <tagRef name="_Unnamed4" offset="96" visible="True" />
+    <tagblock name="Weapons" offset="104" elementSize="8" maxelements="20" label="Weapon" visible="True">
+      <tagRef name="Weapon" offset="0" visible="True" />
+    </tagblock>
+    <tagblock name="Vehicles" offset="112" elementSize="8" maxelements="20" label="Vehicle" visible="True">
+      <tagRef name="Vehicle" offset="0" visible="True" />
+    </tagblock>
+    <tagblock name="Grenades" offset="120" elementSize="8" maxelements="20" label="Weapon" visible="True">
+      <tagRef name="Weapon" offset="0" visible="True" />
+    </tagblock>
+    <tagblock name="Powerups" offset="128" elementSize="8" maxelements="20" label="Weapon" visible="True">
+      <tagRef name="Weapon" offset="0" visible="True" />
+    </tagblock>
+    <tagRef name="In Game Text" offset="136" visible="True" />
+    <tagblock name="Sounds" offset="144" elementSize="8" maxelements="60" label="Sound" visible="True">
+      <tagRef name="Sound" offset="0" visible="True" />
+    </tagblock>
+    <tagblock name="General Events" offset="152" elementSize="168" maxelements="128" label="Event" visible="True">
+      <flags16 name="Flags" offset="0" visible="True">
+        <bit name="Quantity Message" index="0" />
+      </flags16>
+      <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+      <enum16 name="Event" offset="4" visible="True">
+        <option name="Kill" value="0" />
+        <option name="Suicide" value="1" />
+        <option name="Kill Teammate" value="2" />
+        <option name="Victory" value="3" />
+        <option name="Team Victory" value="4" />
+        <option name="Unused1" value="5" />
+        <option name="Unused2" value="6" />
+        <option name="1 Min To Win" value="7" />
+        <option name="Team 1 Min To Win" value="8" />
+        <option name="30 Secs To Win" value="9" />
+        <option name="Team 30 Secs To Win" value="10" />
+        <option name="Player Quit" value="11" />
+        <option name="Player Joined" value="12" />
+        <option name="Killed By Unknown" value="13" />
+        <option name="30 Minutes Left" value="14" />
+        <option name="15 Minutes Left" value="15" />
+        <option name="5 Minutes Left" value="16" />
+        <option name="1 Minute Left" value="17" />
+        <option name="Time Expired" value="18" />
+        <option name="Game Over" value="19" />
+        <option name="Respawn Tick" value="20" />
+        <option name="Last Respawn Tick" value="21" />
+        <option name="Teleporter Used" value="22" />
+        <option name="Player Changed Team" value="23" />
+        <option name="Player Rejoined" value="24" />
+        <option name="Gained Lead" value="25" />
+        <option name="Gained Team Lead" value="26" />
+        <option name="Lost Lead" value="27" />
+        <option name="Lost Team Lead" value="28" />
+        <option name="Tied Leader" value="29" />
+        <option name="Tied Team Leader" value="30" />
+        <option name="Round Over" value="31" />
+        <option name="30 Seconds Left" value="32" />
+        <option name="10 Seconds Left" value="33" />
+        <option name="Kill (Falling)" value="34" />
+        <option name="Kill (Collision)" value="35" />
+        <option name="Kill (Melee)" value="36" />
+        <option name="Sudden Death" value="37" />
+        <option name="Player Booted Player" value="38" />
+        <option name="Kill (Flag Carrier)" value="39" />
+        <option name="Kill (Bomb Carrier)" value="40" />
+        <option name="Kill (Sticky Grenade)" value="41" />
+        <option name="Kill (Sniper)" value="42" />
+        <option name="Kill (St. Melee)" value="43" />
+        <option name="Boarded Vehicle" value="44" />
+        <option name="Start Team Noti." value="45" />
+        <option name="Telefrag" value="46" />
+        <option name="10 Secs To Win" value="47" />
+        <option name="Team 10 Secs To Win" value="48" />
+      </enum16>
+      <enum16 name="Audience" offset="6" visible="True">
+        <option name="Cause Player" value="0" />
+        <option name="Cause Team" value="1" />
+        <option name="Effect Player" value="2" />
+        <option name="Effect Team" value="3" />
+        <option name="All" value="4" />
+      </enum16>
+      <undefined size="2" name="_Unnamed1" offset="8" visible="True" />
+      <undefined size="2" name="_Unnamed2" offset="10" visible="True" />
+      <stringid name="Display String" offset="12" visible="True" />
+      <enum16 name="Required Field" offset="16" visible="True">
+        <option name="NONE" value="0" />
+        <option name="Cause Player" value="1" />
+        <option name="Cause Team" value="2" />
+        <option name="Effect Player" value="3" />
+        <option name="Effect Team" value="4" />
+      </enum16>
+      <enum16 name="Excluded Audience" offset="18" visible="True">
+        <option name="NONE" value="0" />
+        <option name="Cause Player" value="1" />
+        <option name="Cause Team" value="2" />
+        <option name="Effect Player" value="3" />
+        <option name="Effect Team" value="4" />
+      </enum16>
+      <stringid name="Primary String" offset="20" visible="True" />
+      <int32 name="Primary String Duration" offset="24" visible="True" />
+      <stringid name="Plural Display String" offset="28" visible="True" />
+      <undefined size="28" name="_Unnamed3" offset="32" visible="True" />
+      <float32 name="Sound Delay Announcer Only" offset="60" visible="True" />
+      <flags16 name="Sound Flags" offset="64" visible="True">
+        <bit name="Announcer Sound" index="0" />
+      </flags16>
+      <undefined size="2" name="_Unnamed4" offset="66" visible="True" />
+      <tagRef name="Sound" offset="68" visible="True" />
+      <tagRef name="Japanese Sound" offset="76" visible="True" />
+      <tagRef name="German Sound" offset="84" visible="True" />
+      <tagRef name="French Sound" offset="92" visible="True" />
+      <tagRef name="Spanish Sound" offset="100" visible="True" />
+      <tagRef name="Italian Sound" offset="108" visible="True" />
+      <tagRef name="Korean Sound" offset="116" visible="True" />
+      <tagRef name="Chinese Sound" offset="124" visible="True" />
+      <tagRef name="Portuguese Sound" offset="132" visible="True" />
+      <undefined size="4" name="_Unnamed5" offset="140" visible="True" />
+      <undefined size="16" name="_Unnamed6" offset="144" visible="True" />
+      <tagblock name="Sound Permutations" offset="160" elementSize="80" maxelements="10" label="English Sound" visible="True">
+        <flags16 name="Sound Flags" offset="0" visible="True">
+          <bit name="Announcer Sound" index="0" />
+        </flags16>
+        <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+        <tagRef name="English Sound" offset="4" visible="True" />
+        <tagRef name="Japanese Sound" offset="12" visible="True" />
+        <tagRef name="German Sound" offset="20" visible="True" />
+        <tagRef name="French Sound" offset="28" visible="True" />
+        <tagRef name="Spanish Sound" offset="36" visible="True" />
+        <tagRef name="Italian Sound" offset="44" visible="True" />
+        <tagRef name="Korean Sound" offset="52" visible="True" />
+        <tagRef name="Chinese Sound" offset="60" visible="True" />
+        <tagRef name="Portuguese Sound" offset="68" visible="True" />
+        <float32 name="Probability" offset="76" visible="True" />
+      </tagblock>
+    </tagblock>
+    <tagblock name="Flavor Events" offset="160" elementSize="168" maxelements="128" label="Event" visible="True">
+      <flags16 name="Flags" offset="0" visible="True">
+        <bit name="Quantity Message" index="0" />
+      </flags16>
+      <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+      <enum16 name="Event" offset="4" visible="True">
+        <option name="Double Kill" value="0" />
+        <option name="Triple Kill" value="1" />
+        <option name="Killtacular" value="2" />
+        <option name="Killing Spree" value="3" />
+        <option name="Running Riot" value="4" />
+        <option name="Well Placed Kill" value="5" />
+        <option name="Broke Killing Spree" value="6" />
+        <option name="Kill Frenzy" value="7" />
+        <option name="Killtrocity" value="8" />
+        <option name="Killimajaro" value="9" />
+        <option name="15 In A Row" value="10" />
+        <option name="20 In A Row" value="11" />
+        <option name="25 In A Row" value="12" />
+      </enum16>
+      <enum16 name="Audience" offset="6" visible="True">
+        <option name="Cause Player" value="0" />
+        <option name="Cause Team" value="1" />
+        <option name="Effect Player" value="2" />
+        <option name="Effect Team" value="3" />
+        <option name="All" value="4" />
+      </enum16>
+      <undefined size="2" name="_Unnamed1" offset="8" visible="True" />
+      <undefined size="2" name="_Unnamed2" offset="10" visible="True" />
+      <stringid name="Display String" offset="12" visible="True" />
+      <enum16 name="Required Field" offset="16" visible="True">
+        <option name="NONE" value="0" />
+        <option name="Cause Player" value="1" />
+        <option name="Cause Team" value="2" />
+        <option name="Effect Player" value="3" />
+        <option name="Effect Team" value="4" />
+      </enum16>
+      <enum16 name="Excluded Audience" offset="18" visible="True">
+        <option name="NONE" value="0" />
+        <option name="Cause Player" value="1" />
+        <option name="Cause Team" value="2" />
+        <option name="Effect Player" value="3" />
+        <option name="Effect Team" value="4" />
+      </enum16>
+      <stringid name="Primary String" offset="20" visible="True" />
+      <int32 name="Primary String Duration" offset="24" visible="True" />
+      <stringid name="Plural Display String" offset="28" visible="True" />
+      <undefined size="28" name="_Unnamed3" offset="32" visible="True" />
+      <float32 name="Sound Delay Announcer Only" offset="60" visible="True" />
+      <flags16 name="Sound Flags" offset="64" visible="True">
+        <bit name="Announcer Sound" index="0" />
+      </flags16>
+      <undefined size="2" name="_Unnamed4" offset="66" visible="True" />
+      <tagRef name="Sound" offset="68" visible="True" />
+      <tagRef name="Japanese Sound" offset="76" visible="True" />
+      <tagRef name="German Sound" offset="84" visible="True" />
+      <tagRef name="French Sound" offset="92" visible="True" />
+      <tagRef name="Spanish Sound" offset="100" visible="True" />
+      <tagRef name="Italian Sound" offset="108" visible="True" />
+      <tagRef name="Korean Sound" offset="116" visible="True" />
+      <tagRef name="Chinese Sound" offset="124" visible="True" />
+      <tagRef name="Portuguese Sound" offset="132" visible="True" />
+      <undefined size="4" name="_Unnamed5" offset="140" visible="True" />
+      <undefined size="16" name="_Unnamed6" offset="144" visible="True" />
+      <tagblock name="Sound Permutations" offset="160" elementSize="80" maxelements="10" label="English Sound" visible="True">
+        <flags16 name="Sound Flags" offset="0" visible="True">
+          <bit name="Announcer Sound" index="0" />
+        </flags16>
+        <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+        <tagRef name="English Sound" offset="4" visible="True" />
+        <tagRef name="Japanese Sound" offset="12" visible="True" />
+        <tagRef name="German Sound" offset="20" visible="True" />
+        <tagRef name="French Sound" offset="28" visible="True" />
+        <tagRef name="Spanish Sound" offset="36" visible="True" />
+        <tagRef name="Italian Sound" offset="44" visible="True" />
+        <tagRef name="Korean Sound" offset="52" visible="True" />
+        <tagRef name="Chinese Sound" offset="60" visible="True" />
+        <tagRef name="Portuguese Sound" offset="68" visible="True" />
+        <float32 name="Probability" offset="76" visible="True" />
+      </tagblock>
+    </tagblock>
+    <tagblock name="Slayer Events" offset="168" elementSize="168" maxelements="128" label="Event" visible="True">
+      <flags16 name="Flags" offset="0" visible="True">
+        <bit name="Quantity Message" index="0" />
+      </flags16>
+      <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+      <enum16 name="Event" offset="4" visible="True">
+        <option name="Game Start" value="0" />
+        <option name="New Target" value="1" />
+      </enum16>
+      <enum16 name="Audience" offset="6" visible="True">
+        <option name="Cause Player" value="0" />
+        <option name="Cause Team" value="1" />
+        <option name="Effect Player" value="2" />
+        <option name="Effect Team" value="3" />
+        <option name="All" value="4" />
+      </enum16>
+      <undefined size="2" name="_Unnamed1" offset="8" visible="True" />
+      <undefined size="2" name="_Unnamed2" offset="10" visible="True" />
+      <stringid name="Display String" offset="12" visible="True" />
+      <enum16 name="Required Field" offset="16" visible="True">
+        <option name="NONE" value="0" />
+        <option name="Cause Player" value="1" />
+        <option name="Cause Team" value="2" />
+        <option name="Effect Player" value="3" />
+        <option name="Effect Team" value="4" />
+      </enum16>
+      <enum16 name="Excluded Audience" offset="18" visible="True">
+        <option name="NONE" value="0" />
+        <option name="Cause Player" value="1" />
+        <option name="Cause Team" value="2" />
+        <option name="Effect Player" value="3" />
+        <option name="Effect Team" value="4" />
+      </enum16>
+      <stringid name="Primary String" offset="20" visible="True" />
+      <int32 name="Primary String Duration" offset="24" visible="True" />
+      <stringid name="Plural Display String" offset="28" visible="True" />
+      <undefined size="28" name="_Unnamed3" offset="32" visible="True" />
+      <float32 name="Sound Delay Announcer Only" offset="60" visible="True" />
+      <flags16 name="Sound Flags" offset="64" visible="True">
+        <bit name="Announcer Sound" index="0" />
+      </flags16>
+      <undefined size="2" name="_Unnamed4" offset="66" visible="True" />
+      <tagRef name="Sound" offset="68" visible="True" />
+      <tagRef name="Japanese Sound" offset="76" visible="True" />
+      <tagRef name="German Sound" offset="84" visible="True" />
+      <tagRef name="French Sound" offset="92" visible="True" />
+      <tagRef name="Spanish Sound" offset="100" visible="True" />
+      <tagRef name="Italian Sound" offset="108" visible="True" />
+      <tagRef name="Korean Sound" offset="116" visible="True" />
+      <tagRef name="Chinese Sound" offset="124" visible="True" />
+      <tagRef name="Portuguese Sound" offset="132" visible="True" />
+      <undefined size="4" name="_Unnamed5" offset="140" visible="True" />
+      <undefined size="16" name="_Unnamed6" offset="144" visible="True" />
+      <tagblock name="Sound Permutations" offset="160" elementSize="80" maxelements="10" label="English Sound" visible="True">
+        <flags16 name="Sound Flags" offset="0" visible="True">
+          <bit name="Announcer Sound" index="0" />
+        </flags16>
+        <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+        <tagRef name="English Sound" offset="4" visible="True" />
+        <tagRef name="Japanese Sound" offset="12" visible="True" />
+        <tagRef name="German Sound" offset="20" visible="True" />
+        <tagRef name="French Sound" offset="28" visible="True" />
+        <tagRef name="Spanish Sound" offset="36" visible="True" />
+        <tagRef name="Italian Sound" offset="44" visible="True" />
+        <tagRef name="Korean Sound" offset="52" visible="True" />
+        <tagRef name="Chinese Sound" offset="60" visible="True" />
+        <tagRef name="Portuguese Sound" offset="68" visible="True" />
+        <float32 name="Probability" offset="76" visible="True" />
+      </tagblock>
+    </tagblock>
+    <tagblock name="Ctf Events" offset="176" elementSize="168" maxelements="128" label="Event" visible="True">
+      <flags16 name="Flags" offset="0" visible="True">
+        <bit name="Quantity Message" index="0" />
+      </flags16>
+      <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+      <enum16 name="Event" offset="4" visible="True">
+        <option name="Game Start" value="0" />
+        <option name="Flag Taken" value="1" />
+        <option name="Flag Dropped" value="2" />
+        <option name="Flag Returned By Player" value="3" />
+        <option name="Flag Returned By Timeout" value="4" />
+        <option name="Flag Captured" value="5" />
+        <option name="Flag New Defensive Team" value="6" />
+        <option name="Flag Return Faliure" value="7" />
+        <option name="Side Switch Tick" value="8" />
+        <option name="Side Switch Final Tick" value="9" />
+        <option name="Side Switch 30 Seconds" value="10" />
+        <option name="Side Switch 10 Seconds" value="11" />
+        <option name="Flag Contested" value="12" />
+        <option name="Flag Capture Faliure" value="13" />
+      </enum16>
+      <enum16 name="Audience" offset="6" visible="True">
+        <option name="Cause Player" value="0" />
+        <option name="Cause Team" value="1" />
+        <option name="Effect Player" value="2" />
+        <option name="Effect Team" value="3" />
+        <option name="All" value="4" />
+      </enum16>
+      <undefined size="2" name="_Unnamed1" offset="8" visible="True" />
+      <undefined size="2" name="_Unnamed2" offset="10" visible="True" />
+      <stringid name="Display String" offset="12" visible="True" />
+      <enum16 name="Required Field" offset="16" visible="True">
+        <option name="NONE" value="0" />
+        <option name="Cause Player" value="1" />
+        <option name="Cause Team" value="2" />
+        <option name="Effect Player" value="3" />
+        <option name="Effect Team" value="4" />
+      </enum16>
+      <enum16 name="Excluded Audience" offset="18" visible="True">
+        <option name="NONE" value="0" />
+        <option name="Cause Player" value="1" />
+        <option name="Cause Team" value="2" />
+        <option name="Effect Player" value="3" />
+        <option name="Effect Team" value="4" />
+      </enum16>
+      <stringid name="Primary String" offset="20" visible="True" />
+      <int32 name="Primary String Duration" offset="24" visible="True" />
+      <stringid name="Plural Display String" offset="28" visible="True" />
+      <undefined size="28" name="_Unnamed3" offset="32" visible="True" />
+      <float32 name="Sound Delay Announcer Only" offset="60" visible="True" />
+      <flags16 name="Sound Flags" offset="64" visible="True">
+        <bit name="Announcer Sound" index="0" />
+      </flags16>
+      <undefined size="2" name="_Unnamed4" offset="66" visible="True" />
+      <tagRef name="Sound" offset="68" visible="True" />
+      <tagRef name="Japanese Sound" offset="76" visible="True" />
+      <tagRef name="German Sound" offset="84" visible="True" />
+      <tagRef name="French Sound" offset="92" visible="True" />
+      <tagRef name="Spanish Sound" offset="100" visible="True" />
+      <tagRef name="Italian Sound" offset="108" visible="True" />
+      <tagRef name="Korean Sound" offset="116" visible="True" />
+      <tagRef name="Chinese Sound" offset="124" visible="True" />
+      <tagRef name="Portuguese Sound" offset="132" visible="True" />
+      <undefined size="4" name="_Unnamed5" offset="140" visible="True" />
+      <undefined size="16" name="_Unnamed6" offset="144" visible="True" />
+      <tagblock name="Sound Permutations" offset="160" elementSize="80" maxelements="10" label="English Sound" visible="True">
+        <flags16 name="Sound Flags" offset="0" visible="True">
+          <bit name="Announcer Sound" index="0" />
+        </flags16>
+        <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+        <tagRef name="English Sound" offset="4" visible="True" />
+        <tagRef name="Japanese Sound" offset="12" visible="True" />
+        <tagRef name="German Sound" offset="20" visible="True" />
+        <tagRef name="French Sound" offset="28" visible="True" />
+        <tagRef name="Spanish Sound" offset="36" visible="True" />
+        <tagRef name="Italian Sound" offset="44" visible="True" />
+        <tagRef name="Korean Sound" offset="52" visible="True" />
+        <tagRef name="Chinese Sound" offset="60" visible="True" />
+        <tagRef name="Portuguese Sound" offset="68" visible="True" />
+        <float32 name="Probability" offset="76" visible="True" />
+      </tagblock>
+    </tagblock>
+    <tagblock name="Oddball Events" offset="184" elementSize="168" maxelements="128" label="Event" visible="True">
+      <flags16 name="Flags" offset="0" visible="True">
+        <bit name="Quantity Message" index="0" />
+      </flags16>
+      <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+      <enum16 name="Event" offset="4" visible="True">
+        <option name="Game Start" value="0" />
+        <option name="Ball Spawned" value="1" />
+        <option name="Ball Picked Up" value="2" />
+        <option name="Ball Dropped" value="3" />
+        <option name="Ball Reset" value="4" />
+        <option name="Ball Tick" value="5" />
+      </enum16>
+      <enum16 name="Audience" offset="6" visible="True">
+        <option name="Cause Player" value="0" />
+        <option name="Cause Team" value="1" />
+        <option name="Effect Player" value="2" />
+        <option name="Effect Team" value="3" />
+        <option name="All" value="4" />
+      </enum16>
+      <undefined size="2" name="_Unnamed1" offset="8" visible="True" />
+      <undefined size="2" name="_Unnamed2" offset="10" visible="True" />
+      <stringid name="Display String" offset="12" visible="True" />
+      <enum16 name="Required Field" offset="16" visible="True">
+        <option name="NONE" value="0" />
+        <option name="Cause Player" value="1" />
+        <option name="Cause Team" value="2" />
+        <option name="Effect Player" value="3" />
+        <option name="Effect Team" value="4" />
+      </enum16>
+      <enum16 name="Excluded Audience" offset="18" visible="True">
+        <option name="NONE" value="0" />
+        <option name="Cause Player" value="1" />
+        <option name="Cause Team" value="2" />
+        <option name="Effect Player" value="3" />
+        <option name="Effect Team" value="4" />
+      </enum16>
+      <stringid name="Primary String" offset="20" visible="True" />
+      <int32 name="Primary String Duration" offset="24" visible="True" />
+      <stringid name="Plural Display String" offset="28" visible="True" />
+      <undefined size="28" name="_Unnamed3" offset="32" visible="True" />
+      <float32 name="Sound Delay Announcer Only" offset="60" visible="True" />
+      <flags16 name="Sound Flags" offset="64" visible="True">
+        <bit name="Announcer Sound" index="0" />
+      </flags16>
+      <undefined size="2" name="_Unnamed4" offset="66" visible="True" />
+      <tagRef name="Sound" offset="68" visible="True" />
+      <tagRef name="Japanese Sound" offset="76" visible="True" />
+      <tagRef name="German Sound" offset="84" visible="True" />
+      <tagRef name="French Sound" offset="92" visible="True" />
+      <tagRef name="Spanish Sound" offset="100" visible="True" />
+      <tagRef name="Italian Sound" offset="108" visible="True" />
+      <tagRef name="Korean Sound" offset="116" visible="True" />
+      <tagRef name="Chinese Sound" offset="124" visible="True" />
+      <tagRef name="Portuguese Sound" offset="132" visible="True" />
+      <undefined size="4" name="_Unnamed5" offset="140" visible="True" />
+      <undefined size="16" name="_Unnamed6" offset="144" visible="True" />
+      <tagblock name="Sound Permutations" offset="160" elementSize="80" maxelements="10" label="English Sound" visible="True">
+        <flags16 name="Sound Flags" offset="0" visible="True">
+          <bit name="Announcer Sound" index="0" />
+        </flags16>
+        <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+        <tagRef name="English Sound" offset="4" visible="True" />
+        <tagRef name="Japanese Sound" offset="12" visible="True" />
+        <tagRef name="German Sound" offset="20" visible="True" />
+        <tagRef name="French Sound" offset="28" visible="True" />
+        <tagRef name="Spanish Sound" offset="36" visible="True" />
+        <tagRef name="Italian Sound" offset="44" visible="True" />
+        <tagRef name="Korean Sound" offset="52" visible="True" />
+        <tagRef name="Chinese Sound" offset="60" visible="True" />
+        <tagRef name="Portuguese Sound" offset="68" visible="True" />
+        <float32 name="Probability" offset="76" visible="True" />
+      </tagblock>
+    </tagblock>
+    <tagblock name="_Unnamed5" offset="192" elementSize="0" maxelements="0" label="" visible="True">
+    </tagblock>
+    <tagblock name="King Events" offset="200" elementSize="168" maxelements="128" label="Event" visible="True">
+      <flags16 name="Flags" offset="0" visible="True">
+        <bit name="Quantity Message" index="0" />
+      </flags16>
+      <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+      <enum16 name="Event" offset="4" visible="True">
+        <option name="Game Start" value="0" />
+        <option name="Hill Controlled" value="1" />
+        <option name="Hill Contested" value="2" />
+        <option name="Hill Tick" value="3" />
+        <option name="Hill Move" value="4" />
+        <option name="Hill Controlled Team" value="5" />
+        <option name="Hill Contested Team" value="6" />
+      </enum16>
+      <enum16 name="Audience" offset="6" visible="True">
+        <option name="Cause Player" value="0" />
+        <option name="Cause Team" value="1" />
+        <option name="Effect Player" value="2" />
+        <option name="Effect Team" value="3" />
+        <option name="All" value="4" />
+      </enum16>
+      <undefined size="2" name="_Unnamed1" offset="8" visible="True" />
+      <undefined size="2" name="_Unnamed2" offset="10" visible="True" />
+      <stringid name="Display String" offset="12" visible="True" />
+      <enum16 name="Required Field" offset="16" visible="True">
+        <option name="NONE" value="0" />
+        <option name="Cause Player" value="1" />
+        <option name="Cause Team" value="2" />
+        <option name="Effect Player" value="3" />
+        <option name="Effect Team" value="4" />
+      </enum16>
+      <enum16 name="Excluded Audience" offset="18" visible="True">
+        <option name="NONE" value="0" />
+        <option name="Cause Player" value="1" />
+        <option name="Cause Team" value="2" />
+        <option name="Effect Player" value="3" />
+        <option name="Effect Team" value="4" />
+      </enum16>
+      <stringid name="Primary String" offset="20" visible="True" />
+      <int32 name="Primary String Duration" offset="24" visible="True" />
+      <stringid name="Plural Display String" offset="28" visible="True" />
+      <undefined size="28" name="_Unnamed3" offset="32" visible="True" />
+      <float32 name="Sound Delay Announcer Only" offset="60" visible="True" />
+      <flags16 name="Sound Flags" offset="64" visible="True">
+        <bit name="Announcer Sound" index="0" />
+      </flags16>
+      <undefined size="2" name="_Unnamed4" offset="66" visible="True" />
+      <tagRef name="Sound" offset="68" visible="True" />
+      <tagRef name="Japanese Sound" offset="76" visible="True" />
+      <tagRef name="German Sound" offset="84" visible="True" />
+      <tagRef name="French Sound" offset="92" visible="True" />
+      <tagRef name="Spanish Sound" offset="100" visible="True" />
+      <tagRef name="Italian Sound" offset="108" visible="True" />
+      <tagRef name="Korean Sound" offset="116" visible="True" />
+      <tagRef name="Chinese Sound" offset="124" visible="True" />
+      <tagRef name="Portuguese Sound" offset="132" visible="True" />
+      <undefined size="4" name="_Unnamed5" offset="140" visible="True" />
+      <undefined size="16" name="_Unnamed6" offset="144" visible="True" />
+      <tagblock name="Sound Permutations" offset="160" elementSize="80" maxelements="10" label="English Sound" visible="True">
+        <flags16 name="Sound Flags" offset="0" visible="True">
+          <bit name="Announcer Sound" index="0" />
+        </flags16>
+        <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+        <tagRef name="English Sound" offset="4" visible="True" />
+        <tagRef name="Japanese Sound" offset="12" visible="True" />
+        <tagRef name="German Sound" offset="20" visible="True" />
+        <tagRef name="French Sound" offset="28" visible="True" />
+        <tagRef name="Spanish Sound" offset="36" visible="True" />
+        <tagRef name="Italian Sound" offset="44" visible="True" />
+        <tagRef name="Korean Sound" offset="52" visible="True" />
+        <tagRef name="Chinese Sound" offset="60" visible="True" />
+        <tagRef name="Portuguese Sound" offset="68" visible="True" />
+        <float32 name="Probability" offset="76" visible="True" />
+      </tagblock>
+    </tagblock>
+    <tagblock name="_Unnamed6" offset="208" elementSize="0" maxelements="0" label="" visible="True">
+    </tagblock>
+    <tagblock name="Juggernaut Events" offset="216" elementSize="168" maxelements="128" label="Event" visible="True">
+      <flags16 name="Flags" offset="0" visible="True">
+        <bit name="Quantity Message" index="0" />
+      </flags16>
+      <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+      <enum16 name="Event" offset="4" visible="True">
+        <option name="Game Start" value="0" />
+        <option name="New Juggernaut" value="1" />
+        <option name="Juggernaut Killed" value="2" />
+      </enum16>
+      <enum16 name="Audience" offset="6" visible="True">
+        <option name="Cause Player" value="0" />
+        <option name="Cause Team" value="1" />
+        <option name="Effect Player" value="2" />
+        <option name="Effect Team" value="3" />
+        <option name="All" value="4" />
+      </enum16>
+      <undefined size="2" name="_Unnamed1" offset="8" visible="True" />
+      <undefined size="2" name="_Unnamed2" offset="10" visible="True" />
+      <stringid name="Display String" offset="12" visible="True" />
+      <enum16 name="Required Field" offset="16" visible="True">
+        <option name="NONE" value="0" />
+        <option name="Cause Player" value="1" />
+        <option name="Cause Team" value="2" />
+        <option name="Effect Player" value="3" />
+        <option name="Effect Team" value="4" />
+      </enum16>
+      <enum16 name="Excluded Audience" offset="18" visible="True">
+        <option name="NONE" value="0" />
+        <option name="Cause Player" value="1" />
+        <option name="Cause Team" value="2" />
+        <option name="Effect Player" value="3" />
+        <option name="Effect Team" value="4" />
+      </enum16>
+      <stringid name="Primary String" offset="20" visible="True" />
+      <int32 name="Primary String Duration" offset="24" visible="True" />
+      <stringid name="Plural Display String" offset="28" visible="True" />
+      <undefined size="28" name="_Unnamed3" offset="32" visible="True" />
+      <float32 name="Sound Delay Announcer Only" offset="60" visible="True" />
+      <flags16 name="Sound Flags" offset="64" visible="True">
+        <bit name="Announcer Sound" index="0" />
+      </flags16>
+      <undefined size="2" name="_Unnamed4" offset="66" visible="True" />
+      <tagRef name="Sound" offset="68" visible="True" />
+      <tagRef name="Japanese Sound" offset="76" visible="True" />
+      <tagRef name="German Sound" offset="84" visible="True" />
+      <tagRef name="French Sound" offset="92" visible="True" />
+      <tagRef name="Spanish Sound" offset="100" visible="True" />
+      <tagRef name="Italian Sound" offset="108" visible="True" />
+      <tagRef name="Korean Sound" offset="116" visible="True" />
+      <tagRef name="Chinese Sound" offset="124" visible="True" />
+      <tagRef name="Portuguese Sound" offset="132" visible="True" />
+      <undefined size="4" name="_Unnamed5" offset="140" visible="True" />
+      <undefined size="16" name="_Unnamed6" offset="144" visible="True" />
+      <tagblock name="Sound Permutations" offset="160" elementSize="80" maxelements="10" label="English Sound" visible="True">
+        <flags16 name="Sound Flags" offset="0" visible="True">
+          <bit name="Announcer Sound" index="0" />
+        </flags16>
+        <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+        <tagRef name="English Sound" offset="4" visible="True" />
+        <tagRef name="Japanese Sound" offset="12" visible="True" />
+        <tagRef name="German Sound" offset="20" visible="True" />
+        <tagRef name="French Sound" offset="28" visible="True" />
+        <tagRef name="Spanish Sound" offset="36" visible="True" />
+        <tagRef name="Italian Sound" offset="44" visible="True" />
+        <tagRef name="Korean Sound" offset="52" visible="True" />
+        <tagRef name="Chinese Sound" offset="60" visible="True" />
+        <tagRef name="Portuguese Sound" offset="68" visible="True" />
+        <float32 name="Probability" offset="76" visible="True" />
+      </tagblock>
+    </tagblock>
+    <tagblock name="Territories Events" offset="224" elementSize="168" maxelements="128" label="Event" visible="True">
+      <flags16 name="Flags" offset="0" visible="True">
+        <bit name="Quantity Message" index="0" />
+      </flags16>
+      <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+      <enum16 name="Event" offset="4" visible="True">
+        <option name="Game Start" value="0" />
+        <option name="Territory Control Gained" value="1" />
+        <option name="Territory Contest Lost" value="2" />
+        <option name="All Territories Cntrld" value="3" />
+        <option name="Team Territory Ctrl Gained" value="4" />
+        <option name="Team Territory Ctrl Lost" value="5" />
+        <option name="Team All Territories Cntrld" value="6" />
+      </enum16>
+      <enum16 name="Audience" offset="6" visible="True">
+        <option name="Cause Player" value="0" />
+        <option name="Cause Team" value="1" />
+        <option name="Effect Player" value="2" />
+        <option name="Effect Team" value="3" />
+        <option name="All" value="4" />
+      </enum16>
+      <undefined size="2" name="_Unnamed1" offset="8" visible="True" />
+      <undefined size="2" name="_Unnamed2" offset="10" visible="True" />
+      <stringid name="Display String" offset="12" visible="True" />
+      <enum16 name="Required Field" offset="16" visible="True">
+        <option name="NONE" value="0" />
+        <option name="Cause Player" value="1" />
+        <option name="Cause Team" value="2" />
+        <option name="Effect Player" value="3" />
+        <option name="Effect Team" value="4" />
+      </enum16>
+      <enum16 name="Excluded Audience" offset="18" visible="True">
+        <option name="NONE" value="0" />
+        <option name="Cause Player" value="1" />
+        <option name="Cause Team" value="2" />
+        <option name="Effect Player" value="3" />
+        <option name="Effect Team" value="4" />
+      </enum16>
+      <stringid name="Primary String" offset="20" visible="True" />
+      <int32 name="Primary String Duration" offset="24" visible="True" />
+      <stringid name="Plural Display String" offset="28" visible="True" />
+      <undefined size="28" name="_Unnamed3" offset="32" visible="True" />
+      <float32 name="Sound Delay Announcer Only" offset="60" visible="True" />
+      <flags16 name="Sound Flags" offset="64" visible="True">
+        <bit name="Announcer Sound" index="0" />
+      </flags16>
+      <undefined size="2" name="_Unnamed4" offset="66" visible="True" />
+      <tagRef name="Sound" offset="68" visible="True" />
+      <tagRef name="Japanese Sound" offset="76" visible="True" />
+      <tagRef name="German Sound" offset="84" visible="True" />
+      <tagRef name="French Sound" offset="92" visible="True" />
+      <tagRef name="Spanish Sound" offset="100" visible="True" />
+      <tagRef name="Italian Sound" offset="108" visible="True" />
+      <tagRef name="Korean Sound" offset="116" visible="True" />
+      <tagRef name="Chinese Sound" offset="124" visible="True" />
+      <tagRef name="Portuguese Sound" offset="132" visible="True" />
+      <undefined size="4" name="_Unnamed5" offset="140" visible="True" />
+      <undefined size="16" name="_Unnamed6" offset="144" visible="True" />
+      <tagblock name="Sound Permutations" offset="160" elementSize="80" maxelements="10" label="English Sound" visible="True">
+        <flags16 name="Sound Flags" offset="0" visible="True">
+          <bit name="Announcer Sound" index="0" />
+        </flags16>
+        <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+        <tagRef name="English Sound" offset="4" visible="True" />
+        <tagRef name="Japanese Sound" offset="12" visible="True" />
+        <tagRef name="German Sound" offset="20" visible="True" />
+        <tagRef name="French Sound" offset="28" visible="True" />
+        <tagRef name="Spanish Sound" offset="36" visible="True" />
+        <tagRef name="Italian Sound" offset="44" visible="True" />
+        <tagRef name="Korean Sound" offset="52" visible="True" />
+        <tagRef name="Chinese Sound" offset="60" visible="True" />
+        <tagRef name="Portuguese Sound" offset="68" visible="True" />
+        <float32 name="Probability" offset="76" visible="True" />
+      </tagblock>
+    </tagblock>
+    <tagblock name="Invasion Events" offset="232" elementSize="168" maxelements="128" label="Event" visible="True">
+      <flags16 name="Flags" offset="0" visible="True">
+        <bit name="Quantity Message" index="0" />
+      </flags16>
+      <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+      <enum16 name="Event" offset="4" visible="True">
+        <option name="Game Start" value="0" />
+        <option name="Bomb Taken" value="1" />
+        <option name="Bomb Dropped" value="2" />
+        <option name="Bomb Returned By Player" value="3" />
+        <option name="Bomb Returned By Timeout" value="4" />
+        <option name="Bomb Captured" value="5" />
+        <option name="Bomb New Defensive Team" value="6" />
+        <option name="Bomb Return Faliure" value="7" />
+        <option name="Side Switch Tick" value="8" />
+        <option name="Side Switch Final Tick" value="9" />
+        <option name="Side Switch 30 Seconds" value="10" />
+        <option name="Side Switch 10 Seconds" value="11" />
+        <option name="Bomb Returned By Defusing" value="12" />
+        <option name="Bomb Placed On Enemy Post" value="13" />
+        <option name="Bomb Arming Started" value="14" />
+        <option name="Bomb Arming Completed" value="15" />
+        <option name="Bomb Contested" value="16" />
+      </enum16>
+      <enum16 name="Audience" offset="6" visible="True">
+        <option name="Cause Player" value="0" />
+        <option name="Cause Team" value="1" />
+        <option name="Effect Player" value="2" />
+        <option name="Effect Team" value="3" />
+        <option name="All" value="4" />
+      </enum16>
+      <undefined size="2" name="_Unnamed1" offset="8" visible="True" />
+      <undefined size="2" name="_Unnamed2" offset="10" visible="True" />
+      <stringid name="Display String" offset="12" visible="True" />
+      <enum16 name="Required Field" offset="16" visible="True">
+        <option name="NONE" value="0" />
+        <option name="Cause Player" value="1" />
+        <option name="Cause Team" value="2" />
+        <option name="Effect Player" value="3" />
+        <option name="Effect Team" value="4" />
+      </enum16>
+      <enum16 name="Excluded Audience" offset="18" visible="True">
+        <option name="NONE" value="0" />
+        <option name="Cause Player" value="1" />
+        <option name="Cause Team" value="2" />
+        <option name="Effect Player" value="3" />
+        <option name="Effect Team" value="4" />
+      </enum16>
+      <stringid name="Primary String" offset="20" visible="True" />
+      <int32 name="Primary String Duration" offset="24" visible="True" />
+      <stringid name="Plural Display String" offset="28" visible="True" />
+      <undefined size="28" name="_Unnamed3" offset="32" visible="True" />
+      <float32 name="Sound Delay Announcer Only" offset="60" visible="True" />
+      <flags16 name="Sound Flags" offset="64" visible="True">
+        <bit name="Announcer Sound" index="0" />
+      </flags16>
+      <undefined size="2" name="_Unnamed4" offset="66" visible="True" />
+      <tagRef name="Sound" offset="68" visible="True" />
+      <tagRef name="Japanese Sound" offset="76" visible="True" />
+      <tagRef name="German Sound" offset="84" visible="True" />
+      <tagRef name="French Sound" offset="92" visible="True" />
+      <tagRef name="Spanish Sound" offset="100" visible="True" />
+      <tagRef name="Italian Sound" offset="108" visible="True" />
+      <tagRef name="Korean Sound" offset="116" visible="True" />
+      <tagRef name="Chinese Sound" offset="124" visible="True" />
+      <tagRef name="Portuguese Sound" offset="132" visible="True" />
+      <undefined size="4" name="_Unnamed5" offset="140" visible="True" />
+      <undefined size="16" name="_Unnamed6" offset="144" visible="True" />
+      <tagblock name="Sound Permutations" offset="160" elementSize="80" maxelements="10" label="English Sound" visible="True">
+        <flags16 name="Sound Flags" offset="0" visible="True">
+          <bit name="Announcer Sound" index="0" />
+        </flags16>
+        <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+        <tagRef name="English Sound" offset="4" visible="True" />
+        <tagRef name="Japanese Sound" offset="12" visible="True" />
+        <tagRef name="German Sound" offset="20" visible="True" />
+        <tagRef name="French Sound" offset="28" visible="True" />
+        <tagRef name="Spanish Sound" offset="36" visible="True" />
+        <tagRef name="Italian Sound" offset="44" visible="True" />
+        <tagRef name="Korean Sound" offset="52" visible="True" />
+        <tagRef name="Chinese Sound" offset="60" visible="True" />
+        <tagRef name="Portuguese Sound" offset="68" visible="True" />
+        <float32 name="Probability" offset="76" visible="True" />
+      </tagblock>
+    </tagblock>
+    <tagblock name="_Unnamed7" offset="240" elementSize="0" maxelements="0" label="" visible="True">
+    </tagblock>
+    <tagblock name="_Unnamed8" offset="248" elementSize="0" maxelements="0" label="" visible="True">
+    </tagblock>
+    <tagblock name="_Unnamed9" offset="256" elementSize="0" maxelements="0" label="" visible="True">
+    </tagblock>
+    <tagblock name="_Unnamed10" offset="264" elementSize="0" maxelements="0" label="" visible="True">
+    </tagblock>
+    <tagRef name="Default Item Collection 1" offset="272" visible="True" />
+    <tagRef name="Default Item Collection 2" offset="280" visible="True" />
+    <int32 name="Default Frag Grenade Count" offset="288" visible="True" />
+    <int32 name="Default Plasma Grenade Count" offset="292" visible="True" />
+    <undefined size="40" name="_Unnamed11" offset="296" visible="True" />
+    <float32 name="Dynamic Zone Upper Height" offset="336" visible="True" />
+    <float32 name="Dynamic Zone Lower Height" offset="340" visible="True" />
+    <undefined size="40" name="_Unnamed12" offset="344" visible="True" />
+    <float32 name="Enemy Inner Radius" offset="384" visible="True" />
+    <float32 name="Enemy Outer Radius" offset="388" visible="True" />
+    <float32 name="Enemy Weight" offset="392" visible="True" />
+    <undefined size="16" name="_Unnamed13" offset="396" visible="True" />
+    <float32 name="Friend Inner Radius" offset="412" visible="True" />
+    <float32 name="Friend Outer Radius" offset="416" visible="True" />
+    <float32 name="Friend Weight" offset="420" visible="True" />
+    <undefined size="16" name="_Unnamed14" offset="424" visible="True" />
+    <float32 name="Enemy Vehicle Inner Radius" offset="440" visible="True" />
+    <float32 name="Enemy Vehicle Outer Radius" offset="444" visible="True" />
+    <float32 name="Enemy Vehicle Weight" offset="448" visible="True" />
+    <undefined size="16" name="_Unnamed15" offset="452" visible="True" />
+    <float32 name="Friendly Vehicle Inner Radius" offset="468" visible="True" />
+    <float32 name="Friendly Vehicle Outer Radius" offset="472" visible="True" />
+    <float32 name="Friendly Vehicle Weight" offset="476" visible="True" />
+    <undefined size="16" name="_Unnamed16" offset="480" visible="True" />
+    <float32 name="Empty Vehicle Inner Radius" offset="496" visible="True" />
+    <float32 name="Empty Vehicle Outer Radius" offset="500" visible="True" />
+    <float32 name="Empty Vehicle Weight" offset="504" visible="True" />
+    <undefined size="16" name="_Unnamed17" offset="508" visible="True" />
+    <float32 name="Oddball Inclusion Inner Radius" offset="524" visible="True" />
+    <float32 name="Oddball Inclusion Outer Radius" offset="528" visible="True" />
+    <float32 name="Oddball Inclusion Weight" offset="532" visible="True" />
+    <undefined size="16" name="_Unnamed18" offset="536" visible="True" />
+    <float32 name="Oddball Exclusion Inner Radius" offset="552" visible="True" />
+    <float32 name="Oddball Exclusion Outer Radius" offset="556" visible="True" />
+    <float32 name="Oddball Exclusion Weight" offset="560" visible="True" />
+    <undefined size="16" name="_Unnamed19" offset="564" visible="True" />
+    <float32 name="Hill Inclusion Inner Radius" offset="580" visible="True" />
+    <float32 name="Hill Inclusion Outer Radius" offset="584" visible="True" />
+    <float32 name="Hill Inclusion Weight" offset="588" visible="True" />
+    <undefined size="16" name="_Unnamed20" offset="592" visible="True" />
+    <float32 name="Hill Exclusion Inner Radius" offset="608" visible="True" />
+    <float32 name="Hill Exclusion Outer Radius" offset="612" visible="True" />
+    <float32 name="Hill Exclusion Weight" offset="616" visible="True" />
+    <undefined size="16" name="_Unnamed21" offset="620" visible="True" />
+    <float32 name="Last Race Flag Inner Radius" offset="636" visible="True" />
+    <float32 name="Last Race Flag Outer Radius" offset="640" visible="True" />
+    <float32 name="Last Race Flag Weight" offset="644" visible="True" />
+    <undefined size="16" name="_Unnamed22" offset="648" visible="True" />
+    <float32 name="Dead Ally Inner Radius" offset="664" visible="True" />
+    <float32 name="Dead Ally Outer Radius" offset="668" visible="True" />
+    <float32 name="Dead Ally Weight" offset="672" visible="True" />
+    <undefined size="16" name="_Unnamed23" offset="676" visible="True" />
+    <float32 name="Controlled Territory Inner Radius" offset="692" visible="True" />
+    <float32 name="Controlled Territory Outer Radius" offset="696" visible="True" />
+    <float32 name="Controlled Territory Weight" offset="700" visible="True" />
+    <undefined size="16" name="_Unnamed24" offset="704" visible="True" />
+    <undefined size="560" name="_Unnamed25" offset="720" visible="True" />
+    <undefined size="48" name="_Unnamed26" offset="1280" visible="True" />
+    <tagblock name="Multiplayer Constants" offset="1328" elementSize="352" maxelements="1" label="Hill Shader" visible="True">
+      <float32 name="Maximum Random Spawn Bias" offset="0" visible="True" />
+      <float32 name="Teleporter Recharge Time" offset="4" visible="True" />
+      <float32 name="Grenade Danger Weight" offset="8" visible="True" />
+      <float32 name="Grenade Danger Inner Radius" offset="12" visible="True" />
+      <float32 name="Grenade Danger Outer Radius" offset="16" visible="True" />
+      <float32 name="Grenade Danger Lead Time" offset="20" visible="True" />
+      <float32 name="Vehicle Danger Min Speed" offset="24" visible="True" />
+      <float32 name="Vehicle Danger Weight" offset="28" visible="True" />
+      <float32 name="Vehicle Danger Radius" offset="32" visible="True" />
+      <float32 name="Vehicle Danger Lead Time" offset="36" visible="True" />
+      <float32 name="Vehicle Nearby Player Dist" offset="40" visible="True" />
+      <undefined size="84" name="_Unnamed0" offset="44" visible="True" />
+      <undefined size="32" name="_Unnamed1" offset="128" visible="True" />
+      <undefined size="32" name="_Unnamed2" offset="160" visible="True" />
+      <tagRef name="Hill Shader" offset="192" visible="True" />
+      <undefined size="16" name="_Unnamed3" offset="200" visible="True" />
+      <float32 name="Flag Reset Stop Distance" offset="216" visible="True" />
+      <tagRef name="Bomb Explode Effect" offset="220" visible="True" />
+      <tagRef name="Bomb Explode Dmg Effect" offset="228" visible="True" />
+      <tagRef name="Bomb Defuse Effect" offset="236" visible="True" />
+      <stringid name="Bomb Defusal String" offset="244" visible="True" />
+      <stringid name="Blocked Teleporter String" offset="248" visible="True" />
+      <undefined size="4" name="_Unnamed4" offset="252" visible="True" />
+      <undefined size="32" name="_Unnamed5" offset="256" visible="True" />
+      <undefined size="32" name="_Unnamed6" offset="288" visible="True" />
+      <undefined size="32" name="_Unnamed7" offset="320" visible="True" />
+    </tagblock>
+    <tagblock name="State Responses" offset="1336" elementSize="28" maxelements="32" label="State" visible="True">
+      <flags16 name="Flags" offset="0" visible="True">
+        <bit name="Unused" index="0" />
+      </flags16>
+      <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+      <enum16 name="State" offset="4" visible="True">
+        <option name="Waiting For Space To Clear" value="0" />
+        <option name="Observing" value="1" />
+        <option name="Respawning Soon" value="2" />
+        <option name="Sitting Out" value="3" />
+        <option name="Out Of Lives" value="4" />
+        <option name="Playing (Winning)" value="5" />
+        <option name="Playing (Tied)" value="6" />
+        <option name="Playing (Losing)" value="7" />
+        <option name="Game Over (Won)" value="8" />
+        <option name="Game Over (Tied)" value="9" />
+        <option name="Game Over (Lost)" value="10" />
+        <option name="You Have Flag" value="11" />
+        <option name="Enemy Has Flag" value="12" />
+        <option name="Flag Not Home" value="13" />
+        <option name="Carrying Oddball" value="14" />
+        <option name="You Are Juggy" value="15" />
+        <option name="You Control Hill" value="16" />
+        <option name="Switching Sides Soon" value="17" />
+        <option name="Player Recently Started" value="18" />
+        <option name="You Have Bomb" value="19" />
+        <option name="Flag Contested" value="20" />
+        <option name="Bomb Contested" value="21" />
+        <option name="Limited Lives Left (Multiple)" value="22" />
+        <option name="Limited Lives Left (Single)" value="23" />
+        <option name="Limited Lives Left (Final)" value="24" />
+        <option name="Playing (Winning, Unlimited)" value="25" />
+        <option name="Playing (Tied, Unlimited)" value="26" />
+        <option name="Playing (Losing, Unlimited)" value="27" />
+      </enum16>
+      <undefined size="2" name="_Unnamed1" offset="6" visible="True" />
+      <stringid name="Ffa Message" offset="8" visible="True" />
+      <stringid name="Team Message" offset="12" visible="True" />
+      <tagRef name="_Unnamed2" offset="16" visible="True" />
+      <undefined size="4" name="_Unnamed3" offset="24" visible="True" />
+    </tagblock>
+    <tagRef name="Scoreboard Hud Definition" offset="1344" visible="True" />
+    <tagRef name="Scoreboard Emblem Shader" offset="1352" visible="True" />
+    <tagRef name="Scoreboard Emblem Bitmap" offset="1360" visible="True" />
+    <tagRef name="Scoreboard Dead Emblem Shader" offset="1368" visible="True" />
+    <tagRef name="Scoreboard Dead Emblem Bitmap" offset="1376" visible="True" />
+  </tagblock>
+</plugin>

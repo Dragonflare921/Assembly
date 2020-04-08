@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="8">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <tagblock name="Colors" offset="0" elementSize="48" maxelements="512" label="Name" visible="True">
+    <ascii name="Name" offset="0" visible="True" />
+    <float32 name="Color A" offset="32" visible="True" />
+    <float32 name="Color R" offset="36" visible="True" />
+    <float32 name="Color G" offset="40" visible="True" />
+    <float32 name="Color B" offset="44" visible="True" />
+  </tagblock>
+</plugin>

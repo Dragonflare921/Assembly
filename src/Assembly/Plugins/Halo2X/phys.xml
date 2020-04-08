@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="116">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <float32 name="Radius" offset="0" visible="True" />
+  <float32 name="Moment Scale" offset="4" visible="True" />
+  <float32 name="Mass" offset="8" visible="True" />
+  <float32 name="Center Of Mass X" offset="12" visible="True" />
+  <float32 name="Center Of Mass Y" offset="16" visible="True" />
+  <float32 name="Center Of Mass Z" offset="20" visible="True" />
+  <float32 name="Density" offset="24" visible="True" />
+  <float32 name="Gravity Scale" offset="28" visible="True" />
+  <float32 name="Ground Friction" offset="32" visible="True" />
+  <float32 name="Ground Depth" offset="36" visible="True" />
+  <float32 name="Ground Damp Fraction" offset="40" visible="True" />
+  <float32 name="Ground Normal K1" offset="44" visible="True" />
+  <float32 name="Ground Normal K0" offset="48" visible="True" />
+  <undefined size="4" name="_Unnamed0" offset="52" visible="True" />
+  <float32 name="Water Friction" offset="56" visible="True" />
+  <float32 name="Water Depth" offset="60" visible="True" />
+  <float32 name="Water Density" offset="64" visible="True" />
+  <undefined size="4" name="_Unnamed1" offset="68" visible="True" />
+  <float32 name="Air Friction" offset="72" visible="True" />
+  <undefined size="4" name="_Unnamed2" offset="76" visible="True" />
+  <float32 name="Xx Moment" offset="80" visible="True" />
+  <float32 name="Yy Moment" offset="84" visible="True" />
+  <float32 name="Zz Moment" offset="88" visible="True" />
+  <tagblock name="Inertial Matrix And Inverse" offset="92" elementSize="36" maxelements="2" label="" visible="True">
+    <float32 name="Yy+Zz    -Xy     -Zx X" offset="0" visible="True" />
+    <float32 name="Yy+Zz    -Xy     -Zx Y" offset="4" visible="True" />
+    <float32 name="Yy+Zz    -Xy     -Zx Z" offset="8" visible="True" />
+    <float32 name=" -Xy    Zz+Xx    -Yz X" offset="12" visible="True" />
+    <float32 name=" -Xy    Zz+Xx    -Yz Y" offset="16" visible="True" />
+    <float32 name=" -Xy    Zz+Xx    -Yz Z" offset="20" visible="True" />
+    <float32 name=" -Zx     -Yz    Xx+Yy X" offset="24" visible="True" />
+    <float32 name=" -Zx     -Yz    Xx+Yy Y" offset="28" visible="True" />
+    <float32 name=" -Zx     -Yz    Xx+Yy Z" offset="32" visible="True" />
+  </tagblock>
+  <tagblock name="Powered Mass Points" offset="100" elementSize="128" maxelements="32" label="Name" visible="True">
+    <ascii name="Name" offset="0" visible="True" />
+    <flags32 name="Flags" offset="32" visible="True">
+      <bit name="Ground Friction" index="0" />
+      <bit name="Water Friction" index="1" />
+      <bit name="Air Friction" index="2" />
+      <bit name="Water Lift" index="3" />
+      <bit name="Air Lift" index="4" />
+      <bit name="Thrust" index="5" />
+      <bit name="Antigrav" index="6" />
+      <bit name="Gets Damage From Region" index="7" />
+    </flags32>
+    <float32 name="Antigrav Strength" offset="36" visible="True" />
+    <float32 name="Antigrav Offset" offset="40" visible="True" />
+    <float32 name="Antigrav Height" offset="44" visible="True" />
+    <float32 name="Antigrav Damp Fraction" offset="48" visible="True" />
+    <float32 name="Antigrav Normal K1" offset="52" visible="True" />
+    <float32 name="Antigrav Normal K0" offset="56" visible="True" />
+    <stringid name="Damage Source Region Name" offset="60" visible="True" />
+    <undefined size="64" name="_Unnamed0" offset="64" visible="True" />
+  </tagblock>
+  <tagblock name="Mass Points" offset="108" elementSize="128" maxelements="32" label="Name" visible="True">
+    <ascii name="Name" offset="0" visible="True" />
+    <int16 name="Powered Mass Point" offset="32" visible="True" reflexiveoffset="100" reflexivesize="128" itemoffset="0" itemtype="string32" layer="root" />
+    <int16 name="Model Node" offset="34" visible="True" />
+    <flags32 name="Flags" offset="36" visible="True">
+      <bit name="Metallic" index="0" />
+    </flags32>
+    <float32 name="Relative Mass" offset="40" visible="True" />
+    <float32 name="Mass" offset="44" visible="True" />
+    <float32 name="Relative Density" offset="48" visible="True" />
+    <float32 name="Density" offset="52" visible="True" />
+    <float32 name="Position X" offset="56" visible="True" />
+    <float32 name="Position Y" offset="60" visible="True" />
+    <float32 name="Position Z" offset="64" visible="True" />
+    <float32 name="Forward X" offset="68" visible="True" />
+    <float32 name="Forward Y" offset="72" visible="True" />
+    <float32 name="Forward Z" offset="76" visible="True" />
+    <float32 name="Up X" offset="80" visible="True" />
+    <float32 name="Up Y" offset="84" visible="True" />
+    <float32 name="Up Z" offset="88" visible="True" />
+    <enum16 name="Friction Type" offset="92" visible="True">
+      <option name="Point" value="0" />
+      <option name="Forward" value="1" />
+      <option name="Left" value="2" />
+      <option name="Up" value="3" />
+    </enum16>
+    <undefined size="2" name="_Unnamed0" offset="94" visible="True" />
+    <float32 name="Friction Parallel Scale" offset="96" visible="True" />
+    <float32 name="Friction Perpendicular Scale" offset="100" visible="True" />
+    <float32 name="Radius" offset="104" visible="True" />
+    <undefined size="20" name="_Unnamed1" offset="108" visible="True" />
+  </tagblock>
+</plugin>

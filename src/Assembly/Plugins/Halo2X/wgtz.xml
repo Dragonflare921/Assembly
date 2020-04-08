@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="32">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <tagRef name="Shared Globals" offset="0" visible="True" />
+  <tagblock name="Screen Widgets" offset="8" elementSize="8" maxelements="256" label="Widget Tag" visible="True">
+    <tagRef name="Widget Tag" offset="0" visible="True" />
+  </tagblock>
+  <tagRef name="Mp Variant Settings Ui" offset="16" visible="True" />
+  <tagRef name="Game Hopper Descriptions" offset="24" visible="True" />
+</plugin>

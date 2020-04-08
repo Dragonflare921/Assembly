@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="52">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <undefined size="16" name="" offset="0" visible="True" />
+  <uint16 name="English String Offset" offset="16" visible="True" />
+  <uint16 name="English String Count" offset="18" visible="True" />
+  <uint16 name="Japanese String Offset" offset="20" visible="True" />
+  <uint16 name="Japanese String Count" offset="22" visible="True" />
+  <uint16 name="German String Offset" offset="24" visible="True" />
+  <uint16 name="German String Count" offset="26" visible="True" />
+  <uint16 name="French String Offset" offset="28" visible="True" />
+  <uint16 name="French String Count" offset="30" visible="True" />
+  <uint16 name="Spanish String Offset" offset="32" visible="True" />
+  <uint16 name="Spanish String Count" offset="34" visible="True" />
+  <uint16 name="Italian String Offset" offset="36" visible="True" />
+  <uint16 name="Italian String Count" offset="38" visible="True" />
+  <uint16 name="Korean String Offset" offset="40" visible="True" />
+  <uint16 name="Korean String Count" offset="42" visible="True" />
+  <uint16 name="Chinese String Offset" offset="44" visible="True" />
+  <uint16 name="Chinese String Count" offset="46" visible="True" />
+  <uint16 name="Portuguese String Offset" offset="48" visible="True" />
+  <uint16 name="Portuguese String Count" offset="50" visible="True" />
+</plugin>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="548">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <int16 name="Updates Per Second" offset="0" visible="True" />
+  <int16 name="X Width" offset="2" visible="True" />
+  <int16 name="Y Depth" offset="4" visible="True" />
+  <int16 name="Z Height" offset="6" visible="True" />
+  <float32 name="X Width2" offset="8" visible="True" />
+  <float32 name="Y Depth2" offset="12" visible="True" />
+  <float32 name="Z Height2" offset="16" visible="True" />
+  <undefined size="32" name="_Unnamed0" offset="20" visible="True" />
+  <stringid name="Marker" offset="52" visible="True" />
+  <float32 name="Cell Birth Chance" offset="56" visible="True" />
+  <undefined size="32" name="_Unnamed1" offset="60" visible="True" />
+  <int32 name="Cell Gene Mutates 1 In" offset="92" visible="True" />
+  <int32 name="Virus Gene Mutations 1 In" offset="96" visible="True" />
+  <undefined size="32" name="_Unnamed2" offset="100" visible="True" />
+  <int16 name="Infected Cell Lifespan From" offset="132" visible="True" />
+  <int16 name="Infected Cell Lifespan To" offset="134" visible="True" />
+  <int16 name="Minimum Infection Age" offset="136" visible="True" />
+  <undefined size="2" name="_Unnamed3" offset="138" visible="True" />
+  <float32 name="Cell Infection Chance" offset="140" visible="True" />
+  <float32 name="Infection Threshold" offset="144" visible="True" />
+  <undefined size="32" name="_Unnamed4" offset="148" visible="True" />
+  <float32 name="New Cell Filled Chance" offset="180" visible="True" />
+  <float32 name="New Cell Infected Chance" offset="184" visible="True" />
+  <undefined size="32" name="_Unnamed5" offset="188" visible="True" />
+  <float32 name="Detail Texture Change Chance" offset="220" visible="True" />
+  <undefined size="32" name="_Unnamed6" offset="224" visible="True" />
+  <int16 name="Detail Texture Width" offset="256" visible="True" />
+  <undefined size="2" name="_Unnamed7" offset="258" visible="True" />
+  <tagRef name="Detail Texture" offset="260" visible="True" />
+  <undefined size="32" name="_Unnamed8" offset="268" visible="True" />
+  <tagRef name="Mask Bitmap" offset="300" visible="True" />
+  <undefined size="240" name="_Unnamed9" offset="308" visible="True" />
+</plugin>

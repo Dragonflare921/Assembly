@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="112">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <undefined size="2" name="_Unnamed0" offset="0" visible="True" />
+  <enum16 name="Type" offset="2" visible="True">
+    <option name="Standard" value="0" />
+    <option name="Weapon To Projectile" value="1" />
+    <option name="Projectile From Weapon" value="2" />
+  </enum16>
+  <stringid name="Attachment Marker Name" offset="4" visible="True" />
+  <undefined size="56" name="_Unnamed1" offset="8" visible="True" />
+  <float32 name="Falloff Distance From Camera" offset="64" visible="True" />
+  <float32 name="Cutoff Distance From Camera" offset="68" visible="True" />
+  <undefined size="32" name="_Unnamed2" offset="72" visible="True" />
+  <tagblock name="Arcs" offset="104" elementSize="236" maxelements="3" label="Material Effects" visible="True">
+    <flags16 name="Flags" offset="0" visible="True">
+      <bit name="Basis Marker-Relative" index="0" />
+      <bit name="Spread By External Input" index="1" />
+      <bit name="Collide With Stuff" index="2" />
+      <bit name="No Perspective Midpoints" index="3" />
+    </flags16>
+    <enum16 name="Sprite Count" offset="2" visible="True">
+      <option name="4 Sprites" value="0" />
+      <option name="8 Sprites" value="1" />
+      <option name="16 Sprites" value="2" />
+      <option name="32 Sprites" value="3" />
+      <option name="64 Sprites" value="4" />
+      <option name="128 Sprites" value="5" />
+      <option name="256 Sprites" value="6" />
+    </enum16>
+    <float32 name="Natural Length" offset="4" visible="True" />
+    <int16 name="Instances" offset="8" visible="True" />
+    <undefined size="2" name="_Unnamed0" offset="10" visible="True" />
+    <float32 name="Instance Spread Angle" offset="12" visible="True" />
+    <float32 name="Instance Rotation Period" offset="16" visible="True" />
+    <undefined size="8" name="_Unnamed1" offset="20" visible="True" />
+    <tagRef name="Material Effects" offset="28" visible="True" />
+    <tagRef name="Bitmap" offset="36" visible="True" />
+    <undefined size="8" name="_Unnamed2" offset="44" visible="True" />
+    <tagblock name="Horizontal Range" offset="52" elementSize="1" maxelements="1024" label="" visible="True">
+      <int8 name="Value" offset="0" visible="True" />
+    </tagblock>
+    <tagblock name="Vertical Range" offset="60" elementSize="1" maxelements="1024" label="" visible="True">
+      <int8 name="Value" offset="0" visible="True" />
+    </tagblock>
+    <float32 name="Vertical Negative Scale" offset="68" visible="True" />
+    <tagblock name="Roughness" offset="72" elementSize="1" maxelements="1024" label="" visible="True">
+      <int8 name="Value" offset="0" visible="True" />
+    </tagblock>
+    <undefined size="64" name="_Unnamed3" offset="80" visible="True" />
+    <float32 name="Octave 1 Frequency" offset="144" visible="True" />
+    <float32 name="Octave 2 Frequency" offset="148" visible="True" />
+    <float32 name="Octave 3 Frequency" offset="152" visible="True" />
+    <float32 name="Octave 4 Frequency" offset="156" visible="True" />
+    <float32 name="Octave 5 Frequency" offset="160" visible="True" />
+    <float32 name="Octave 6 Frequency" offset="164" visible="True" />
+    <float32 name="Octave 7 Frequency" offset="168" visible="True" />
+    <float32 name="Octave 8 Frequency" offset="172" visible="True" />
+    <float32 name="Octave 9 Frequency" offset="176" visible="True" />
+    <undefined size="28" name="_Unnamed4" offset="180" visible="True" />
+    <flags16 name="Octave Flags" offset="208" visible="True">
+      <bit name="Octave 1" index="0" />
+      <bit name="Octave 2" index="1" />
+      <bit name="Octave 3" index="2" />
+      <bit name="Octave 4" index="3" />
+      <bit name="Octave 5" index="4" />
+      <bit name="Octave 6" index="5" />
+      <bit name="Octave 7" index="6" />
+      <bit name="Octave 8" index="7" />
+      <bit name="Octave 9" index="8" />
+    </flags16>
+    <undefined size="2" name="_Unnamed5" offset="210" visible="True" />
+    <tagblock name="Cores" offset="212" elementSize="56" maxelements="4" label="" visible="True">
+      <undefined size="12" name="_Unnamed0" offset="0" visible="True" />
+      <int16 name="Bitmap Index" offset="12" visible="True" />
+      <undefined size="2" name="_Unnamed1" offset="14" visible="True" />
+      <tagblock name="Thickness" offset="16" elementSize="1" maxelements="1024" label="" visible="True">
+        <int8 name="Value" offset="0" visible="True" />
+      </tagblock>
+      <tagblock name="Color" offset="24" elementSize="1" maxelements="1024" label="" visible="True">
+        <int8 name="Value" offset="0" visible="True" />
+      </tagblock>
+      <tagblock name="Brightness/Time" offset="32" elementSize="1" maxelements="1024" label="" visible="True">
+        <int8 name="Value" offset="0" visible="True" />
+      </tagblock>
+      <tagblock name="Brightness/Facing" offset="40" elementSize="1" maxelements="1024" label="" visible="True">
+        <int8 name="Value" offset="0" visible="True" />
+      </tagblock>
+      <tagblock name="Along-Axis Scale" offset="48" elementSize="1" maxelements="1024" label="" visible="True">
+        <int8 name="Value" offset="0" visible="True" />
+      </tagblock>
+    </tagblock>
+    <tagblock name="Range-Collision Scale" offset="220" elementSize="1" maxelements="1024" label="" visible="True">
+      <int8 name="Value" offset="0" visible="True" />
+    </tagblock>
+    <tagblock name="Brightness-Collision Scale" offset="228" elementSize="1" maxelements="1024" label="" visible="True">
+      <int8 name="Value" offset="0" visible="True" />
+    </tagblock>
+  </tagblock>
+</plugin>

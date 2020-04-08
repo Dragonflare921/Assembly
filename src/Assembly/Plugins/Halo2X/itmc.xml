@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="12">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <tagblock name="Item Permutations" offset="0" elementSize="16" maxelements="32" label="Item" visible="True">
+    <float32 name="Weight" offset="0" visible="True" />
+    <tagRef name="Item" offset="4" visible="True" />
+    <stringid name="Variant Name" offset="12" visible="True" />
+  </tagblock>
+  <int16 name="Spawn Time In Seconds 0  Default" offset="8" visible="True" />
+  <undefined size="2" name="_Unnamed0" offset="10" visible="True" />
+</plugin>

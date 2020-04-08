@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="96">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <undefined size="8" name="Documentation" offset="0" visible="True" />
+  <stringid name="Default Material Name" offset="8" visible="True" />
+  <undefined size="2" name="_Unnamed0" offset="12" visible="True" />
+  <flags16 name="Flags" offset="14" visible="True">
+    <bit name="Force Active Camo" index="0" />
+    <bit name="Water" index="1" />
+    <bit name="Foliage" index="2" />
+    <bit name="Hide Standard Parameters" index="3" />
+  </flags16>
+  <tagblock name="Properties" offset="16" elementSize="8" maxelements="14" label="Property" visible="True">
+    <enum16 name="Property" offset="0" visible="True">
+      <option name="Unused" value="0" />
+      <option name="Diffuse Map" value="1" />
+      <option name="Lightmap Emissive Map" value="2" />
+      <option name="Lightmap Emissive Color" value="3" />
+      <option name="Lightmap Emissive Power" value="4" />
+      <option name="Lightmap Resolution Scale" value="5" />
+      <option name="Lightmap Half Life" value="6" />
+      <option name="Lightmap Diffuse Scale" value="7" />
+      <option name="Lightmap Alpha Test Map" value="8" />
+      <option name="Lightmap Translucent Map" value="9" />
+      <option name="Lightmap Translucent Color" value="10" />
+      <option name="Lightmap Translucent Alpha" value="11" />
+      <option name="Active Camo Map" value="12" />
+      <option name="Lightmap Foliage Scale" value="13" />
+    </enum16>
+    <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+    <stringid name="Parameter Name" offset="4" visible="True" />
+  </tagblock>
+  <tagblock name="Categories" offset="24" elementSize="12" maxelements="16" label="Name" visible="True">
+    <stringid name="Name" offset="0" visible="True" />
+    <tagblock name="Parameters" offset="4" elementSize="52" maxelements="64" label="Name" visible="True">
+      <stringid name="Name" offset="0" visible="True" />
+      <undefined size="8" name="Explanation" offset="4" visible="True" />
+      <enum16 name="Type" offset="12" visible="True">
+        <option name="Bitmap" value="0" />
+        <option name="Value" value="1" />
+        <option name="Color" value="2" />
+        <option name="Switch" value="3" />
+      </enum16>
+      <flags16 name="Flags" offset="14" visible="True">
+        <bit name="Animated" index="0" />
+        <bit name="Hide Bitmap Reference" index="1" />
+      </flags16>
+      <tagRef name="Default Bitmap" offset="16" visible="True" />
+      <float32 name="Default Const Value" offset="24" visible="True" />
+      <float32 name="Default Const Color R" offset="28" visible="True" />
+      <float32 name="Default Const Color G" offset="32" visible="True" />
+      <float32 name="Default Const Color B" offset="36" visible="True" />
+      <enum16 name="Bitmap Type" offset="40" visible="True">
+        <option name="2D" value="0" />
+        <option name="3D" value="1" />
+        <option name="Cube Map" value="2" />
+      </enum16>
+      <undefined size="2" name="_Unnamed0" offset="42" visible="True" />
+      <flags16 name="Bitmap Animation Flags" offset="44" visible="True">
+        <bit name="Scale Uniform" index="0" />
+        <bit name="Scale" index="1" />
+        <bit name="Translation" index="2" />
+        <bit name="Rotation" index="3" />
+        <bit name="Index" index="4" />
+      </flags16>
+      <undefined size="2" name="_Unnamed1" offset="46" visible="True" />
+      <float32 name="Bitmap Scale" offset="48" visible="True" />
+    </tagblock>
+  </tagblock>
+  <tagRef name="Light Response" offset="32" visible="True" />
+  <tagblock name="Lods" offset="40" elementSize="12" maxelements="8" label="" visible="True">
+    <float32 name="Projected Diameter" offset="0" visible="True" />
+    <tagblock name="Pass" offset="4" elementSize="24" maxelements="16" label="Pass" visible="True">
+      <enum16 name="Layer" offset="0" visible="True">
+        <option name="Texaccum" value="0" />
+        <option name="Environment Map" value="1" />
+        <option name="Self-Illumination" value="2" />
+        <option name="Overlay" value="3" />
+        <option name="Transparent" value="4" />
+        <option name="Lightmap (Indirect)" value="5" />
+        <option name="Diffuse" value="6" />
+        <option name="Specular" value="7" />
+        <option name="Shadow Generate" value="8" />
+        <option name="Shadow Apply" value="9" />
+        <option name="Boom" value="10" />
+        <option name="Fog" value="11" />
+        <option name="Sh Prt" value="12" />
+        <option name="Active Camo" value="13" />
+        <option name="Water Edge Blend" value="14" />
+        <option name="Decal" value="15" />
+        <option name="Active Camo Stencil Modulate" value="16" />
+        <option name="Hologram" value="17" />
+        <option name="Light Albedo" value="18" />
+      </enum16>
+      <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+      <tagRef name="Pass" offset="4" visible="True" />
+      <undefined size="12" name="_Unnamed1" offset="12" visible="True" />
+    </tagblock>
+  </tagblock>
+  <tagblock name="_Unnamed1" offset="48" elementSize="4" maxelements="65535" label="" visible="True">
+    <int32 name="_Unnamed0" offset="0" visible="True" />
+  </tagblock>
+  <tagblock name="_Unnamed2" offset="56" elementSize="4" maxelements="65535" label="" visible="True">
+    <int32 name="_Unnamed0" offset="0" visible="True" />
+  </tagblock>
+  <tagRef name="Aux 1 Shader" offset="64" visible="True" />
+  <enum16 name="Aux 1 Layer" offset="72" visible="True">
+    <option name="Texaccum" value="0" />
+    <option name="Environment Map" value="1" />
+    <option name="Self-Illumination" value="2" />
+    <option name="Overlay" value="3" />
+    <option name="Transparent" value="4" />
+    <option name="Lightmap (Indirect)" value="5" />
+    <option name="Diffuse" value="6" />
+    <option name="Specular" value="7" />
+    <option name="Shadow Generate" value="8" />
+    <option name="Shadow Apply" value="9" />
+    <option name="Boom" value="10" />
+    <option name="Fog" value="11" />
+    <option name="Sh Prt" value="12" />
+    <option name="Active Camo" value="13" />
+    <option name="Water Edge Blend" value="14" />
+    <option name="Decal" value="15" />
+    <option name="Active Camo Stencil Modulate" value="16" />
+    <option name="Hologram" value="17" />
+    <option name="Light Albedo" value="18" />
+  </enum16>
+  <undefined size="2" name="_Unnamed3" offset="74" visible="True" />
+  <tagRef name="Aux 2 Shader" offset="76" visible="True" />
+  <enum16 name="Aux 2 Layer" offset="84" visible="True">
+    <option name="Texaccum" value="0" />
+    <option name="Environment Map" value="1" />
+    <option name="Self-Illumination" value="2" />
+    <option name="Overlay" value="3" />
+    <option name="Transparent" value="4" />
+    <option name="Lightmap (Indirect)" value="5" />
+    <option name="Diffuse" value="6" />
+    <option name="Specular" value="7" />
+    <option name="Shadow Generate" value="8" />
+    <option name="Shadow Apply" value="9" />
+    <option name="Boom" value="10" />
+    <option name="Fog" value="11" />
+    <option name="Sh Prt" value="12" />
+    <option name="Active Camo" value="13" />
+    <option name="Water Edge Blend" value="14" />
+    <option name="Decal" value="15" />
+    <option name="Active Camo Stencil Modulate" value="16" />
+    <option name="Hologram" value="17" />
+    <option name="Light Albedo" value="18" />
+  </enum16>
+  <undefined size="2" name="_Unnamed4" offset="86" visible="True" />
+  <tagblock name="Postprocess Definition" offset="88" elementSize="40" maxelements="1" label="" visible="True">
+    <tagblock name="Levels Of Detail" offset="0" elementSize="10" maxelements="1024" label="" visible="True">
+      <int16 name="Block Index Data" offset="0" visible="True" />
+      <int32 name="Available Layers" offset="2" visible="True" />
+      <float32 name="Projected Height Percentage" offset="6" visible="True" />
+    </tagblock>
+    <tagblock name="Layers" offset="8" elementSize="2" maxelements="1024" label="" visible="True">
+      <int16 name="Block Index Data" offset="0" visible="True" />
+    </tagblock>
+    <tagblock name="Passes" offset="16" elementSize="10" maxelements="1024" label="Pass" visible="True">
+      <tagRef name="Pass" offset="0" visible="True" />
+      <int16 name="Block Index Data" offset="8" visible="True" />
+    </tagblock>
+    <tagblock name="Implementations" offset="24" elementSize="6" maxelements="1024" label="" visible="True">
+      <int16 name="Block Index Data" offset="0" visible="True" />
+      <int16 name="Block Index Data2" offset="2" visible="True" />
+      <int16 name="Block Index Data3" offset="4" visible="True" />
+    </tagblock>
+    <tagblock name="Remappings" offset="32" elementSize="4" maxelements="1024" label="" visible="True">
+      <undefined size="3" name="_Unnamed0" offset="0" visible="True" />
+      <int8 name="Source Index" offset="3" visible="True" />
+    </tagblock>
+  </tagblock>
+</plugin>

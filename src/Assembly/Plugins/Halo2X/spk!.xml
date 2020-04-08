@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="40">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <float32 name="Almost Never" offset="0" visible="True" />
+  <float32 name="Rarely" offset="4" visible="True" />
+  <float32 name="Somewhat" offset="8" visible="True" />
+  <float32 name="Often" offset="12" visible="True" />
+  <undefined size="24" name="_Unnamed0" offset="16" visible="True" />
+</plugin>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="76">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <enum16 name="Type" offset="0" visible="True">
+    <option name="2D Textures" value="0" />
+    <option name="3D Textures" value="1" />
+    <option name="Cube Maps" value="2" />
+    <option name="Sprites" value="3" />
+    <option name="Interface Bitmaps" value="4" />
+  </enum16>
+  <enum16 name="Format" offset="2" visible="True">
+    <option name="Compressed With Color-Key Transparency" value="0" />
+    <option name="Compressed With Explicit Alpha" value="1" />
+    <option name="Compressed With Interpolated Alpha" value="2" />
+    <option name="16-Bit Color" value="3" />
+    <option name="32-Bit Color" value="4" />
+    <option name="Monochrome" value="5" />
+  </enum16>
+  <enum16 name="Usage" offset="4" visible="True">
+    <option name="Alpha Blend" value="0" />
+    <option name="Default" value="1" />
+    <option name="Height Map" value="2" />
+    <option name="Detail Map" value="3" />
+    <option name="Light Map" value="4" />
+    <option name="Vector Map" value="5" />
+    <option name="Height Map BLUE 255" value="6" />
+    <option name="Embm" value="7" />
+    <option name="Height Map A8L8" value="8" />
+    <option name="Height Map G8B8" value="9" />
+    <option name="Height Map G8B8 W/ Alpha" value="10" />
+  </enum16>
+  <flags16 name="Flags" offset="6" visible="True">
+    <bit name="Enable Diffusion Dithering" index="0" />
+    <bit name="Disable Height Map Compression" index="1" />
+    <bit name="Uniform Sprite Sequences" index="2" />
+    <bit name="Filthy Sprite Bug Fix" index="3" />
+    <bit name="Use Sharp Bump Filter" index="4" />
+    <bit name="UNUSED" index="5" />
+    <bit name="Use Clamped/Mirrored Bump Filter" index="6" />
+    <bit name="Invert Detail Fade" index="7" />
+    <bit name="Swap X-Y Vector Components" index="8" />
+    <bit name="Convert From Signed" index="9" />
+    <bit name="Convert To Signed" index="10" />
+    <bit name="Import Mipmap Chains" index="11" />
+    <bit name="Intentionally True Color" index="12" />
+  </flags16>
+  <float32 name="Detail Fade Factor" offset="8" visible="True" />
+  <float32 name="Sharpen Amount" offset="12" visible="True" />
+  <float32 name="Bump Height" offset="16" visible="True" />
+  <enum16 name="_Unnamed0" offset="20" visible="True">
+    <option name="32 X 32" value="0" />
+    <option name="64 X 64" value="1" />
+    <option name="128 X 128" value="2" />
+    <option name="256 X 256" value="3" />
+    <option name="512 X 512" value="4" />
+    <option name="1024 X 1024" value="5" />
+  </enum16>
+  <int16 name="_Unnamed1" offset="22" visible="True" />
+  <int16 name="Color Plate Width" offset="24" visible="True" />
+  <int16 name="Color Plate Height" offset="26" visible="True" />
+  <undefined size="8" name="_Unnamed2" offset="28" visible="True" />
+  <undefined size="8" name="Processed Pixel Data" offset="36" visible="True" />
+  <float32 name="Blur Filter Size" offset="44" visible="True" />
+  <float32 name="Alpha Bias" offset="48" visible="True" />
+  <int16 name="Mipmap Count" offset="52" visible="True" />
+  <enum16 name="Sprite Usage" offset="54" visible="True">
+    <option name="Blend/Add/Subtract/Max" value="0" />
+    <option name="Multiply/Min" value="1" />
+    <option name="Double Multiply" value="2" />
+  </enum16>
+  <int16 name="Sprite Spacing" offset="56" visible="True" />
+  <enum16 name="Force Format" offset="58" visible="True">
+    <option name="Default" value="0" />
+    <option name="Force G8B8" value="1" />
+    <option name="Force DXT1" value="2" />
+    <option name="Force DXT3" value="3" />
+    <option name="Force DXT5" value="4" />
+    <option name="Force ALPHA-LUMINANCE8" value="5" />
+    <option name="Force A4R4G4B4" value="6" />
+  </enum16>
+  <tagblock name="Sequences" offset="60" elementSize="60" maxelements="256" label="Name" visible="True">
+    <ascii name="Name" offset="0" visible="True" />
+    <int16 name="First Bitmap Index" offset="32" visible="True" />
+    <int16 name="Bitmap Count" offset="34" visible="True" />
+    <undefined size="16" name="_Unnamed0" offset="36" visible="True" />
+    <tagblock name="Sprites" offset="52" elementSize="32" maxelements="64" label="" visible="True">
+      <int16 name="Bitmap Index" offset="0" visible="True" />
+      <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+      <undefined size="4" name="_Unnamed1" offset="4" visible="True" />
+      <float32 name="Left" offset="8" visible="True" />
+      <float32 name="Right" offset="12" visible="True" />
+      <float32 name="Top" offset="16" visible="True" />
+      <float32 name="Bottom" offset="20" visible="True" />
+      <float32 name="Registration Point X" offset="24" visible="True" />
+      <float32 name="Registration Point Y" offset="28" visible="True" />
+    </tagblock>
+  </tagblock>
+  <tagblock name="Bitmaps" offset="68" elementSize="116" maxelements="65536" label="" visible="True">
+    <tagRef name="Signature" offset="0" visible="True" />
+    <int16 name="Width" offset="4" visible="True" />
+    <int16 name="Height" offset="6" visible="True" />
+    <int8 name="Depth" offset="8" visible="True" />
+    <flags8 name="More Flags" offset="9" visible="True">
+      <bit name="Delete From Cache File" index="0" />
+      <bit name="Bitmap Create Attempted" index="1" />
+      <bit name="" index="2" />
+    </flags8>
+    <enum16 name="Type" offset="10" visible="True">
+      <option name="2D Texture" value="0" />
+      <option name="3D Texture" value="1" />
+      <option name="Cube Map" value="2" />
+    </enum16>
+    <enum16 name="Format" offset="12" visible="True">
+      <option name="A8" value="0" />
+      <option name="Y8" value="1" />
+      <option name="Ay8" value="2" />
+      <option name="A8y8" value="3" />
+      <option name="Unused1" value="4" />
+      <option name="Unused2" value="5" />
+      <option name="R5g6b5" value="6" />
+      <option name="Unused3" value="7" />
+      <option name="A1r5g5b5" value="8" />
+      <option name="A4r4g4b4" value="9" />
+      <option name="X8r8g8b8" value="10" />
+      <option name="A8r8g8b8" value="11" />
+      <option name="Unused4" value="12" />
+      <option name="Unused5" value="13" />
+      <option name="Dxt1" value="14" />
+      <option name="Dxt3" value="15" />
+      <option name="Dxt5" value="16" />
+      <option name="P8-Bump" value="17" />
+      <option name="P8" value="18" />
+      <option name="Argbfp32" value="19" />
+      <option name="Rgbfp32" value="20" />
+      <option name="Rgbfp16" value="21" />
+      <option name="V8u8" value="22" />
+      <option name="G8b8" value="23" />
+    </enum16>
+    <flags16 name="Flags" offset="14" visible="True">
+      <bit name="Power Of Two Dimensions" index="0" />
+      <bit name="Compressed" index="1" />
+      <bit name="Palettized" index="2" />
+      <bit name="Swizzled" index="3" />
+      <bit name="Linear" index="4" />
+      <bit name="V16u16" index="5" />
+      <bit name="MIP Map Debug Level" index="6" />
+      <bit name="Prefer Stutter (Prefer Low Detail)" index="7" />
+    </flags16>
+    <int16 name="Registration Point X" offset="16" visible="True" />
+    <int16 name="Registration Point Y" offset="18" visible="True" />
+    <int16 name="Mipmap Count" offset="20" visible="True" />
+    <int16 name="Low-Detail Mipmap Count" offset="22" visible="True" />
+    <int32 name="Pixels Offset" offset="24" visible="True" />
+    <int32 name="LOD 0 Offset" offset="28" visible="True" />
+    <int32 name="LOD 1 Offset" offset="32" visible="True" />
+    <int32 name="LOD 2 Offset" offset="36" visible="True" />
+    <int32 name="LOD 3 Offset" offset="40" visible="True" />
+    <int32 name="LOD 4 Offset" offset="44" visible="True" />
+    <int32 name="LOD 5 Offset" offset="48" visible="True" />
+    <int32 name="LOD 0 Size" offset="52" visible="True" />
+    <int32 name="LOD 1 Size" offset="56" visible="True" />
+    <int32 name="LOD 2 Size" offset="60" visible="True" />
+    <int32 name="LOD 3 Size" offset="64" visible="True" />
+    <int32 name="LOD 4 Size" offset="68" visible="True" />
+    <int32 name="LOD 5 Size" offset="72" visible="True" />
+    <undefined size="4" name="Bitmap Self Reference" offset="76" visible="True" />
+    <undefined size="4" name="_Unnamed0" offset="80" visible="True" />
+    <undefined size="4" name="_Unnamed1" offset="84" visible="True" />
+    <undefined size="4" name="_Unnamed2" offset="88" visible="True" />
+    <undefined size="20" name="_Unnamed3" offset="92" visible="True" />
+    <undefined size="4" name="_Unnamed4" offset="112" visible="True" />
+  </tagblock>
+</plugin>

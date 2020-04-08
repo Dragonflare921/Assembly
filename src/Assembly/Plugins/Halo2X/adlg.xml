@@ -1,0 +1,1366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="44">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <tagblock name="Vocalizations" offset="0" elementSize="96" maxelements="500" label="Vocalization" visible="True">
+    <stringid name="Vocalization" offset="0" visible="True" />
+    <stringid name="Parent Vocalization" offset="4" visible="True" />
+    <int16 name="Parent Index" offset="8" visible="True" />
+    <enum16 name="Priority" offset="10" visible="True">
+      <option name="None" value="0" />
+      <option name="Recall" value="1" />
+      <option name="Idle" value="2" />
+      <option name="Comment" value="3" />
+      <option name="Idle_Response" value="4" />
+      <option name="Postcombat" value="5" />
+      <option name="Combat" value="6" />
+      <option name="Status" value="7" />
+      <option name="Respond" value="8" />
+      <option name="Warn" value="9" />
+      <option name="Act" value="10" />
+      <option name="React" value="11" />
+      <option name="Involuntary" value="12" />
+      <option name="Scream" value="13" />
+      <option name="Scripted" value="14" />
+      <option name="Death" value="15" />
+    </enum16>
+    <flags32 name="Flags" offset="12" visible="True">
+      <bit name="Immediate" index="0" />
+      <bit name="Interrupt" index="1" />
+      <bit name="Cancel Low Priority" index="2" />
+    </flags32>
+    <enum16 name="Glance Behavior" offset="16" visible="True">
+      <option name="NONE" value="0" />
+      <option name="Glance Subject Short" value="1" />
+      <option name="Glance Subject Long" value="2" />
+      <option name="Glance Cause Short" value="3" />
+      <option name="Glance Cause Long" value="4" />
+      <option name="Glance Friend Short" value="5" />
+      <option name="Glance Friend Long" value="6" />
+    </enum16>
+    <enum16 name="Glance Recipient Behavior" offset="18" visible="True">
+      <option name="NONE" value="0" />
+      <option name="Glance Subject Short" value="1" />
+      <option name="Glance Subject Long" value="2" />
+      <option name="Glance Cause Short" value="3" />
+      <option name="Glance Cause Long" value="4" />
+      <option name="Glance Friend Short" value="5" />
+      <option name="Glance Friend Long" value="6" />
+    </enum16>
+    <enum16 name="Perception Type" offset="20" visible="True">
+      <option name="None" value="0" />
+      <option name="Speaker" value="1" />
+      <option name="Listener" value="2" />
+    </enum16>
+    <enum16 name="Max Combat Status" offset="22" visible="True">
+      <option name="Asleep" value="0" />
+      <option name="Idle" value="1" />
+      <option name="Alert" value="2" />
+      <option name="Active" value="3" />
+      <option name="Uninspected" value="4" />
+      <option name="Definite" value="5" />
+      <option name="Certain" value="6" />
+      <option name="Visible" value="7" />
+      <option name="Clear_Los" value="8" />
+      <option name="Dangerous" value="9" />
+    </enum16>
+    <enum16 name="Animation Impulse" offset="24" visible="True">
+      <option name="None" value="0" />
+      <option name="Shakefist" value="1" />
+      <option name="Cheer" value="2" />
+      <option name="Surprise-Front" value="3" />
+      <option name="Surprise-Back" value="4" />
+      <option name="Taunt" value="5" />
+      <option name="Brace" value="6" />
+      <option name="Point" value="7" />
+      <option name="Hold" value="8" />
+      <option name="Wave" value="9" />
+      <option name="Advance" value="10" />
+      <option name="Fallback" value="11" />
+    </enum16>
+    <enum16 name="Overlap Priority" offset="26" visible="True">
+      <option name="None" value="0" />
+      <option name="Recall" value="1" />
+      <option name="Idle" value="2" />
+      <option name="Comment" value="3" />
+      <option name="Idle_Response" value="4" />
+      <option name="Postcombat" value="5" />
+      <option name="Combat" value="6" />
+      <option name="Status" value="7" />
+      <option name="Respond" value="8" />
+      <option name="Warn" value="9" />
+      <option name="Act" value="10" />
+      <option name="React" value="11" />
+      <option name="Involuntary" value="12" />
+      <option name="Scream" value="13" />
+      <option name="Scripted" value="14" />
+      <option name="Death" value="15" />
+    </enum16>
+    <float32 name="Sound Repetition Delay" offset="28" visible="True" />
+    <float32 name="Allowable Queue Delay" offset="32" visible="True" />
+    <float32 name="Pre Voc Delay" offset="36" visible="True" />
+    <float32 name="Notification Delay" offset="40" visible="True" />
+    <float32 name="Post Voc Delay" offset="44" visible="True" />
+    <float32 name="Repeat Delay" offset="48" visible="True" />
+    <float32 name="Weight" offset="52" visible="True" />
+    <float32 name="Speaker Freeze Time" offset="56" visible="True" />
+    <float32 name="Listener Freeze Time" offset="60" visible="True" />
+    <enum16 name="Speaker Emotion" offset="64" visible="True">
+      <option name="None" value="0" />
+      <option name="Asleep" value="1" />
+      <option name="Amorous" value="2" />
+      <option name="Happy" value="3" />
+      <option name="Inquisitive" value="4" />
+      <option name="Repulsed" value="5" />
+      <option name="Disappointed" value="6" />
+      <option name="Shocked" value="7" />
+      <option name="Scared" value="8" />
+      <option name="Arrogant" value="9" />
+      <option name="Annoyed" value="10" />
+      <option name="Angry" value="11" />
+      <option name="Pensive" value="12" />
+      <option name="Pain" value="13" />
+    </enum16>
+    <enum16 name="Listener Emotion" offset="66" visible="True">
+      <option name="None" value="0" />
+      <option name="Asleep" value="1" />
+      <option name="Amorous" value="2" />
+      <option name="Happy" value="3" />
+      <option name="Inquisitive" value="4" />
+      <option name="Repulsed" value="5" />
+      <option name="Disappointed" value="6" />
+      <option name="Shocked" value="7" />
+      <option name="Scared" value="8" />
+      <option name="Arrogant" value="9" />
+      <option name="Annoyed" value="10" />
+      <option name="Angry" value="11" />
+      <option name="Pensive" value="12" />
+      <option name="Pain" value="13" />
+    </enum16>
+    <float32 name="Player Skip Fraction" offset="68" visible="True" />
+    <float32 name="Skip Fraction" offset="72" visible="True" />
+    <stringid name="Sample Line" offset="76" visible="True" />
+    <tagblock name="Reponses" offset="80" elementSize="12" maxelements="20" label="" visible="True">
+      <stringid name="Vocalization Name" offset="0" visible="True" />
+      <flags16 name="Flags" offset="4" visible="True">
+        <bit name="Nonexclusive" index="0" />
+        <bit name="Trigger Response" index="1" />
+      </flags16>
+      <int16 name="Vocalization Index Post Process" offset="6" visible="True" />
+      <enum16 name="Response Type" offset="8" visible="True">
+        <option name="Friend" value="0" />
+        <option name="Enemy" value="1" />
+        <option name="Listener" value="2" />
+        <option name="Joint" value="3" />
+        <option name="Peer" value="4" />
+      </enum16>
+      <int16 name="Dialogue Index Import" offset="10" visible="True" />
+    </tagblock>
+    <tagblock name="Children" offset="88" elementSize="96" maxelements="500" label="Vocalization" visible="True">
+      <stringid name="Vocalization" offset="0" visible="True" />
+      <stringid name="Parent Vocalization" offset="4" visible="True" />
+      <int16 name="Parent Index" offset="8" visible="True" />
+      <enum16 name="Priority" offset="10" visible="True">
+        <option name="None" value="0" />
+        <option name="Recall" value="1" />
+        <option name="Idle" value="2" />
+        <option name="Comment" value="3" />
+        <option name="Idle_Response" value="4" />
+        <option name="Postcombat" value="5" />
+        <option name="Combat" value="6" />
+        <option name="Status" value="7" />
+        <option name="Respond" value="8" />
+        <option name="Warn" value="9" />
+        <option name="Act" value="10" />
+        <option name="React" value="11" />
+        <option name="Involuntary" value="12" />
+        <option name="Scream" value="13" />
+        <option name="Scripted" value="14" />
+        <option name="Death" value="15" />
+      </enum16>
+      <flags32 name="Flags" offset="12" visible="True">
+        <bit name="Immediate" index="0" />
+        <bit name="Interrupt" index="1" />
+        <bit name="Cancel Low Priority" index="2" />
+      </flags32>
+      <enum16 name="Glance Behavior" offset="16" visible="True">
+        <option name="NONE" value="0" />
+        <option name="Glance Subject Short" value="1" />
+        <option name="Glance Subject Long" value="2" />
+        <option name="Glance Cause Short" value="3" />
+        <option name="Glance Cause Long" value="4" />
+        <option name="Glance Friend Short" value="5" />
+        <option name="Glance Friend Long" value="6" />
+      </enum16>
+      <enum16 name="Glance Recipient Behavior" offset="18" visible="True">
+        <option name="NONE" value="0" />
+        <option name="Glance Subject Short" value="1" />
+        <option name="Glance Subject Long" value="2" />
+        <option name="Glance Cause Short" value="3" />
+        <option name="Glance Cause Long" value="4" />
+        <option name="Glance Friend Short" value="5" />
+        <option name="Glance Friend Long" value="6" />
+      </enum16>
+      <enum16 name="Perception Type" offset="20" visible="True">
+        <option name="None" value="0" />
+        <option name="Speaker" value="1" />
+        <option name="Listener" value="2" />
+      </enum16>
+      <enum16 name="Max Combat Status" offset="22" visible="True">
+        <option name="Asleep" value="0" />
+        <option name="Idle" value="1" />
+        <option name="Alert" value="2" />
+        <option name="Active" value="3" />
+        <option name="Uninspected" value="4" />
+        <option name="Definite" value="5" />
+        <option name="Certain" value="6" />
+        <option name="Visible" value="7" />
+        <option name="Clear_Los" value="8" />
+        <option name="Dangerous" value="9" />
+      </enum16>
+      <enum16 name="Animation Impulse" offset="24" visible="True">
+        <option name="None" value="0" />
+        <option name="Shakefist" value="1" />
+        <option name="Cheer" value="2" />
+        <option name="Surprise-Front" value="3" />
+        <option name="Surprise-Back" value="4" />
+        <option name="Taunt" value="5" />
+        <option name="Brace" value="6" />
+        <option name="Point" value="7" />
+        <option name="Hold" value="8" />
+        <option name="Wave" value="9" />
+        <option name="Advance" value="10" />
+        <option name="Fallback" value="11" />
+      </enum16>
+      <enum16 name="Overlap Priority" offset="26" visible="True">
+        <option name="None" value="0" />
+        <option name="Recall" value="1" />
+        <option name="Idle" value="2" />
+        <option name="Comment" value="3" />
+        <option name="Idle_Response" value="4" />
+        <option name="Postcombat" value="5" />
+        <option name="Combat" value="6" />
+        <option name="Status" value="7" />
+        <option name="Respond" value="8" />
+        <option name="Warn" value="9" />
+        <option name="Act" value="10" />
+        <option name="React" value="11" />
+        <option name="Involuntary" value="12" />
+        <option name="Scream" value="13" />
+        <option name="Scripted" value="14" />
+        <option name="Death" value="15" />
+      </enum16>
+      <float32 name="Sound Repetition Delay" offset="28" visible="True" />
+      <float32 name="Allowable Queue Delay" offset="32" visible="True" />
+      <float32 name="Pre Voc Delay" offset="36" visible="True" />
+      <float32 name="Notification Delay" offset="40" visible="True" />
+      <float32 name="Post Voc Delay" offset="44" visible="True" />
+      <float32 name="Repeat Delay" offset="48" visible="True" />
+      <float32 name="Weight" offset="52" visible="True" />
+      <float32 name="Speaker Freeze Time" offset="56" visible="True" />
+      <float32 name="Listener Freeze Time" offset="60" visible="True" />
+      <enum16 name="Speaker Emotion" offset="64" visible="True">
+        <option name="None" value="0" />
+        <option name="Asleep" value="1" />
+        <option name="Amorous" value="2" />
+        <option name="Happy" value="3" />
+        <option name="Inquisitive" value="4" />
+        <option name="Repulsed" value="5" />
+        <option name="Disappointed" value="6" />
+        <option name="Shocked" value="7" />
+        <option name="Scared" value="8" />
+        <option name="Arrogant" value="9" />
+        <option name="Annoyed" value="10" />
+        <option name="Angry" value="11" />
+        <option name="Pensive" value="12" />
+        <option name="Pain" value="13" />
+      </enum16>
+      <enum16 name="Listener Emotion" offset="66" visible="True">
+        <option name="None" value="0" />
+        <option name="Asleep" value="1" />
+        <option name="Amorous" value="2" />
+        <option name="Happy" value="3" />
+        <option name="Inquisitive" value="4" />
+        <option name="Repulsed" value="5" />
+        <option name="Disappointed" value="6" />
+        <option name="Shocked" value="7" />
+        <option name="Scared" value="8" />
+        <option name="Arrogant" value="9" />
+        <option name="Annoyed" value="10" />
+        <option name="Angry" value="11" />
+        <option name="Pensive" value="12" />
+        <option name="Pain" value="13" />
+      </enum16>
+      <float32 name="Player Skip Fraction" offset="68" visible="True" />
+      <float32 name="Skip Fraction" offset="72" visible="True" />
+      <stringid name="Sample Line" offset="76" visible="True" />
+      <tagblock name="Reponses" offset="80" elementSize="12" maxelements="20" label="" visible="True">
+        <stringid name="Vocalization Name" offset="0" visible="True" />
+        <flags16 name="Flags" offset="4" visible="True">
+          <bit name="Nonexclusive" index="0" />
+          <bit name="Trigger Response" index="1" />
+        </flags16>
+        <int16 name="Vocalization Index Post Process" offset="6" visible="True" />
+        <enum16 name="Response Type" offset="8" visible="True">
+          <option name="Friend" value="0" />
+          <option name="Enemy" value="1" />
+          <option name="Listener" value="2" />
+          <option name="Joint" value="3" />
+          <option name="Peer" value="4" />
+        </enum16>
+        <int16 name="Dialogue Index Import" offset="10" visible="True" />
+      </tagblock>
+      <tagblock name="Children" offset="88" elementSize="96" maxelements="500" label="Vocalization" visible="True">
+        <stringid name="Vocalization" offset="0" visible="True" />
+        <stringid name="Parent Vocalization" offset="4" visible="True" />
+        <int16 name="Parent Index" offset="8" visible="True" />
+        <enum16 name="Priority" offset="10" visible="True">
+          <option name="None" value="0" />
+          <option name="Recall" value="1" />
+          <option name="Idle" value="2" />
+          <option name="Comment" value="3" />
+          <option name="Idle_Response" value="4" />
+          <option name="Postcombat" value="5" />
+          <option name="Combat" value="6" />
+          <option name="Status" value="7" />
+          <option name="Respond" value="8" />
+          <option name="Warn" value="9" />
+          <option name="Act" value="10" />
+          <option name="React" value="11" />
+          <option name="Involuntary" value="12" />
+          <option name="Scream" value="13" />
+          <option name="Scripted" value="14" />
+          <option name="Death" value="15" />
+        </enum16>
+        <flags32 name="Flags" offset="12" visible="True">
+          <bit name="Immediate" index="0" />
+          <bit name="Interrupt" index="1" />
+          <bit name="Cancel Low Priority" index="2" />
+        </flags32>
+        <enum16 name="Glance Behavior" offset="16" visible="True">
+          <option name="NONE" value="0" />
+          <option name="Glance Subject Short" value="1" />
+          <option name="Glance Subject Long" value="2" />
+          <option name="Glance Cause Short" value="3" />
+          <option name="Glance Cause Long" value="4" />
+          <option name="Glance Friend Short" value="5" />
+          <option name="Glance Friend Long" value="6" />
+        </enum16>
+        <enum16 name="Glance Recipient Behavior" offset="18" visible="True">
+          <option name="NONE" value="0" />
+          <option name="Glance Subject Short" value="1" />
+          <option name="Glance Subject Long" value="2" />
+          <option name="Glance Cause Short" value="3" />
+          <option name="Glance Cause Long" value="4" />
+          <option name="Glance Friend Short" value="5" />
+          <option name="Glance Friend Long" value="6" />
+        </enum16>
+        <enum16 name="Perception Type" offset="20" visible="True">
+          <option name="None" value="0" />
+          <option name="Speaker" value="1" />
+          <option name="Listener" value="2" />
+        </enum16>
+        <enum16 name="Max Combat Status" offset="22" visible="True">
+          <option name="Asleep" value="0" />
+          <option name="Idle" value="1" />
+          <option name="Alert" value="2" />
+          <option name="Active" value="3" />
+          <option name="Uninspected" value="4" />
+          <option name="Definite" value="5" />
+          <option name="Certain" value="6" />
+          <option name="Visible" value="7" />
+          <option name="Clear_Los" value="8" />
+          <option name="Dangerous" value="9" />
+        </enum16>
+        <enum16 name="Animation Impulse" offset="24" visible="True">
+          <option name="None" value="0" />
+          <option name="Shakefist" value="1" />
+          <option name="Cheer" value="2" />
+          <option name="Surprise-Front" value="3" />
+          <option name="Surprise-Back" value="4" />
+          <option name="Taunt" value="5" />
+          <option name="Brace" value="6" />
+          <option name="Point" value="7" />
+          <option name="Hold" value="8" />
+          <option name="Wave" value="9" />
+          <option name="Advance" value="10" />
+          <option name="Fallback" value="11" />
+        </enum16>
+        <enum16 name="Overlap Priority" offset="26" visible="True">
+          <option name="None" value="0" />
+          <option name="Recall" value="1" />
+          <option name="Idle" value="2" />
+          <option name="Comment" value="3" />
+          <option name="Idle_Response" value="4" />
+          <option name="Postcombat" value="5" />
+          <option name="Combat" value="6" />
+          <option name="Status" value="7" />
+          <option name="Respond" value="8" />
+          <option name="Warn" value="9" />
+          <option name="Act" value="10" />
+          <option name="React" value="11" />
+          <option name="Involuntary" value="12" />
+          <option name="Scream" value="13" />
+          <option name="Scripted" value="14" />
+          <option name="Death" value="15" />
+        </enum16>
+        <float32 name="Sound Repetition Delay" offset="28" visible="True" />
+        <float32 name="Allowable Queue Delay" offset="32" visible="True" />
+        <float32 name="Pre Voc Delay" offset="36" visible="True" />
+        <float32 name="Notification Delay" offset="40" visible="True" />
+        <float32 name="Post Voc Delay" offset="44" visible="True" />
+        <float32 name="Repeat Delay" offset="48" visible="True" />
+        <float32 name="Weight" offset="52" visible="True" />
+        <float32 name="Speaker Freeze Time" offset="56" visible="True" />
+        <float32 name="Listener Freeze Time" offset="60" visible="True" />
+        <enum16 name="Speaker Emotion" offset="64" visible="True">
+          <option name="None" value="0" />
+          <option name="Asleep" value="1" />
+          <option name="Amorous" value="2" />
+          <option name="Happy" value="3" />
+          <option name="Inquisitive" value="4" />
+          <option name="Repulsed" value="5" />
+          <option name="Disappointed" value="6" />
+          <option name="Shocked" value="7" />
+          <option name="Scared" value="8" />
+          <option name="Arrogant" value="9" />
+          <option name="Annoyed" value="10" />
+          <option name="Angry" value="11" />
+          <option name="Pensive" value="12" />
+          <option name="Pain" value="13" />
+        </enum16>
+        <enum16 name="Listener Emotion" offset="66" visible="True">
+          <option name="None" value="0" />
+          <option name="Asleep" value="1" />
+          <option name="Amorous" value="2" />
+          <option name="Happy" value="3" />
+          <option name="Inquisitive" value="4" />
+          <option name="Repulsed" value="5" />
+          <option name="Disappointed" value="6" />
+          <option name="Shocked" value="7" />
+          <option name="Scared" value="8" />
+          <option name="Arrogant" value="9" />
+          <option name="Annoyed" value="10" />
+          <option name="Angry" value="11" />
+          <option name="Pensive" value="12" />
+          <option name="Pain" value="13" />
+        </enum16>
+        <float32 name="Player Skip Fraction" offset="68" visible="True" />
+        <float32 name="Skip Fraction" offset="72" visible="True" />
+        <stringid name="Sample Line" offset="76" visible="True" />
+        <tagblock name="Reponses" offset="80" elementSize="12" maxelements="20" label="" visible="True">
+          <stringid name="Vocalization Name" offset="0" visible="True" />
+          <flags16 name="Flags" offset="4" visible="True">
+            <bit name="Nonexclusive" index="0" />
+            <bit name="Trigger Response" index="1" />
+          </flags16>
+          <int16 name="Vocalization Index Post Process" offset="6" visible="True" />
+          <enum16 name="Response Type" offset="8" visible="True">
+            <option name="Friend" value="0" />
+            <option name="Enemy" value="1" />
+            <option name="Listener" value="2" />
+            <option name="Joint" value="3" />
+            <option name="Peer" value="4" />
+          </enum16>
+          <int16 name="Dialogue Index Import" offset="10" visible="True" />
+        </tagblock>
+        <tagblock name="Children" offset="88" elementSize="96" maxelements="500" label="Vocalization" visible="True">
+          <stringid name="Vocalization" offset="0" visible="True" />
+          <stringid name="Parent Vocalization" offset="4" visible="True" />
+          <int16 name="Parent Index" offset="8" visible="True" />
+          <enum16 name="Priority" offset="10" visible="True">
+            <option name="None" value="0" />
+            <option name="Recall" value="1" />
+            <option name="Idle" value="2" />
+            <option name="Comment" value="3" />
+            <option name="Idle_Response" value="4" />
+            <option name="Postcombat" value="5" />
+            <option name="Combat" value="6" />
+            <option name="Status" value="7" />
+            <option name="Respond" value="8" />
+            <option name="Warn" value="9" />
+            <option name="Act" value="10" />
+            <option name="React" value="11" />
+            <option name="Involuntary" value="12" />
+            <option name="Scream" value="13" />
+            <option name="Scripted" value="14" />
+            <option name="Death" value="15" />
+          </enum16>
+          <flags32 name="Flags" offset="12" visible="True">
+            <bit name="Immediate" index="0" />
+            <bit name="Interrupt" index="1" />
+            <bit name="Cancel Low Priority" index="2" />
+          </flags32>
+          <enum16 name="Glance Behavior" offset="16" visible="True">
+            <option name="NONE" value="0" />
+            <option name="Glance Subject Short" value="1" />
+            <option name="Glance Subject Long" value="2" />
+            <option name="Glance Cause Short" value="3" />
+            <option name="Glance Cause Long" value="4" />
+            <option name="Glance Friend Short" value="5" />
+            <option name="Glance Friend Long" value="6" />
+          </enum16>
+          <enum16 name="Glance Recipient Behavior" offset="18" visible="True">
+            <option name="NONE" value="0" />
+            <option name="Glance Subject Short" value="1" />
+            <option name="Glance Subject Long" value="2" />
+            <option name="Glance Cause Short" value="3" />
+            <option name="Glance Cause Long" value="4" />
+            <option name="Glance Friend Short" value="5" />
+            <option name="Glance Friend Long" value="6" />
+          </enum16>
+          <enum16 name="Perception Type" offset="20" visible="True">
+            <option name="None" value="0" />
+            <option name="Speaker" value="1" />
+            <option name="Listener" value="2" />
+          </enum16>
+          <enum16 name="Max Combat Status" offset="22" visible="True">
+            <option name="Asleep" value="0" />
+            <option name="Idle" value="1" />
+            <option name="Alert" value="2" />
+            <option name="Active" value="3" />
+            <option name="Uninspected" value="4" />
+            <option name="Definite" value="5" />
+            <option name="Certain" value="6" />
+            <option name="Visible" value="7" />
+            <option name="Clear_Los" value="8" />
+            <option name="Dangerous" value="9" />
+          </enum16>
+          <enum16 name="Animation Impulse" offset="24" visible="True">
+            <option name="None" value="0" />
+            <option name="Shakefist" value="1" />
+            <option name="Cheer" value="2" />
+            <option name="Surprise-Front" value="3" />
+            <option name="Surprise-Back" value="4" />
+            <option name="Taunt" value="5" />
+            <option name="Brace" value="6" />
+            <option name="Point" value="7" />
+            <option name="Hold" value="8" />
+            <option name="Wave" value="9" />
+            <option name="Advance" value="10" />
+            <option name="Fallback" value="11" />
+          </enum16>
+          <enum16 name="Overlap Priority" offset="26" visible="True">
+            <option name="None" value="0" />
+            <option name="Recall" value="1" />
+            <option name="Idle" value="2" />
+            <option name="Comment" value="3" />
+            <option name="Idle_Response" value="4" />
+            <option name="Postcombat" value="5" />
+            <option name="Combat" value="6" />
+            <option name="Status" value="7" />
+            <option name="Respond" value="8" />
+            <option name="Warn" value="9" />
+            <option name="Act" value="10" />
+            <option name="React" value="11" />
+            <option name="Involuntary" value="12" />
+            <option name="Scream" value="13" />
+            <option name="Scripted" value="14" />
+            <option name="Death" value="15" />
+          </enum16>
+          <float32 name="Sound Repetition Delay" offset="28" visible="True" />
+          <float32 name="Allowable Queue Delay" offset="32" visible="True" />
+          <float32 name="Pre Voc Delay" offset="36" visible="True" />
+          <float32 name="Notification Delay" offset="40" visible="True" />
+          <float32 name="Post Voc Delay" offset="44" visible="True" />
+          <float32 name="Repeat Delay" offset="48" visible="True" />
+          <float32 name="Weight" offset="52" visible="True" />
+          <float32 name="Speaker Freeze Time" offset="56" visible="True" />
+          <float32 name="Listener Freeze Time" offset="60" visible="True" />
+          <enum16 name="Speaker Emotion" offset="64" visible="True">
+            <option name="None" value="0" />
+            <option name="Asleep" value="1" />
+            <option name="Amorous" value="2" />
+            <option name="Happy" value="3" />
+            <option name="Inquisitive" value="4" />
+            <option name="Repulsed" value="5" />
+            <option name="Disappointed" value="6" />
+            <option name="Shocked" value="7" />
+            <option name="Scared" value="8" />
+            <option name="Arrogant" value="9" />
+            <option name="Annoyed" value="10" />
+            <option name="Angry" value="11" />
+            <option name="Pensive" value="12" />
+            <option name="Pain" value="13" />
+          </enum16>
+          <enum16 name="Listener Emotion" offset="66" visible="True">
+            <option name="None" value="0" />
+            <option name="Asleep" value="1" />
+            <option name="Amorous" value="2" />
+            <option name="Happy" value="3" />
+            <option name="Inquisitive" value="4" />
+            <option name="Repulsed" value="5" />
+            <option name="Disappointed" value="6" />
+            <option name="Shocked" value="7" />
+            <option name="Scared" value="8" />
+            <option name="Arrogant" value="9" />
+            <option name="Annoyed" value="10" />
+            <option name="Angry" value="11" />
+            <option name="Pensive" value="12" />
+            <option name="Pain" value="13" />
+          </enum16>
+          <float32 name="Player Skip Fraction" offset="68" visible="True" />
+          <float32 name="Skip Fraction" offset="72" visible="True" />
+          <stringid name="Sample Line" offset="76" visible="True" />
+          <tagblock name="Reponses" offset="80" elementSize="12" maxelements="20" label="" visible="True">
+            <stringid name="Vocalization Name" offset="0" visible="True" />
+            <flags16 name="Flags" offset="4" visible="True">
+              <bit name="Nonexclusive" index="0" />
+              <bit name="Trigger Response" index="1" />
+            </flags16>
+            <int16 name="Vocalization Index Post Process" offset="6" visible="True" />
+            <enum16 name="Response Type" offset="8" visible="True">
+              <option name="Friend" value="0" />
+              <option name="Enemy" value="1" />
+              <option name="Listener" value="2" />
+              <option name="Joint" value="3" />
+              <option name="Peer" value="4" />
+            </enum16>
+            <int16 name="Dialogue Index Import" offset="10" visible="True" />
+          </tagblock>
+          <tagblock name="Children" offset="88" elementSize="96" maxelements="500" label="Vocalization" visible="True">
+            <stringid name="Vocalization" offset="0" visible="True" />
+            <stringid name="Parent Vocalization" offset="4" visible="True" />
+            <int16 name="Parent Index" offset="8" visible="True" />
+            <enum16 name="Priority" offset="10" visible="True">
+              <option name="None" value="0" />
+              <option name="Recall" value="1" />
+              <option name="Idle" value="2" />
+              <option name="Comment" value="3" />
+              <option name="Idle_Response" value="4" />
+              <option name="Postcombat" value="5" />
+              <option name="Combat" value="6" />
+              <option name="Status" value="7" />
+              <option name="Respond" value="8" />
+              <option name="Warn" value="9" />
+              <option name="Act" value="10" />
+              <option name="React" value="11" />
+              <option name="Involuntary" value="12" />
+              <option name="Scream" value="13" />
+              <option name="Scripted" value="14" />
+              <option name="Death" value="15" />
+            </enum16>
+            <flags32 name="Flags" offset="12" visible="True">
+              <bit name="Immediate" index="0" />
+              <bit name="Interrupt" index="1" />
+              <bit name="Cancel Low Priority" index="2" />
+            </flags32>
+            <enum16 name="Glance Behavior" offset="16" visible="True">
+              <option name="NONE" value="0" />
+              <option name="Glance Subject Short" value="1" />
+              <option name="Glance Subject Long" value="2" />
+              <option name="Glance Cause Short" value="3" />
+              <option name="Glance Cause Long" value="4" />
+              <option name="Glance Friend Short" value="5" />
+              <option name="Glance Friend Long" value="6" />
+            </enum16>
+            <enum16 name="Glance Recipient Behavior" offset="18" visible="True">
+              <option name="NONE" value="0" />
+              <option name="Glance Subject Short" value="1" />
+              <option name="Glance Subject Long" value="2" />
+              <option name="Glance Cause Short" value="3" />
+              <option name="Glance Cause Long" value="4" />
+              <option name="Glance Friend Short" value="5" />
+              <option name="Glance Friend Long" value="6" />
+            </enum16>
+            <enum16 name="Perception Type" offset="20" visible="True">
+              <option name="None" value="0" />
+              <option name="Speaker" value="1" />
+              <option name="Listener" value="2" />
+            </enum16>
+            <enum16 name="Max Combat Status" offset="22" visible="True">
+              <option name="Asleep" value="0" />
+              <option name="Idle" value="1" />
+              <option name="Alert" value="2" />
+              <option name="Active" value="3" />
+              <option name="Uninspected" value="4" />
+              <option name="Definite" value="5" />
+              <option name="Certain" value="6" />
+              <option name="Visible" value="7" />
+              <option name="Clear_Los" value="8" />
+              <option name="Dangerous" value="9" />
+            </enum16>
+            <enum16 name="Animation Impulse" offset="24" visible="True">
+              <option name="None" value="0" />
+              <option name="Shakefist" value="1" />
+              <option name="Cheer" value="2" />
+              <option name="Surprise-Front" value="3" />
+              <option name="Surprise-Back" value="4" />
+              <option name="Taunt" value="5" />
+              <option name="Brace" value="6" />
+              <option name="Point" value="7" />
+              <option name="Hold" value="8" />
+              <option name="Wave" value="9" />
+              <option name="Advance" value="10" />
+              <option name="Fallback" value="11" />
+            </enum16>
+            <enum16 name="Overlap Priority" offset="26" visible="True">
+              <option name="None" value="0" />
+              <option name="Recall" value="1" />
+              <option name="Idle" value="2" />
+              <option name="Comment" value="3" />
+              <option name="Idle_Response" value="4" />
+              <option name="Postcombat" value="5" />
+              <option name="Combat" value="6" />
+              <option name="Status" value="7" />
+              <option name="Respond" value="8" />
+              <option name="Warn" value="9" />
+              <option name="Act" value="10" />
+              <option name="React" value="11" />
+              <option name="Involuntary" value="12" />
+              <option name="Scream" value="13" />
+              <option name="Scripted" value="14" />
+              <option name="Death" value="15" />
+            </enum16>
+            <float32 name="Sound Repetition Delay" offset="28" visible="True" />
+            <float32 name="Allowable Queue Delay" offset="32" visible="True" />
+            <float32 name="Pre Voc Delay" offset="36" visible="True" />
+            <float32 name="Notification Delay" offset="40" visible="True" />
+            <float32 name="Post Voc Delay" offset="44" visible="True" />
+            <float32 name="Repeat Delay" offset="48" visible="True" />
+            <float32 name="Weight" offset="52" visible="True" />
+            <float32 name="Speaker Freeze Time" offset="56" visible="True" />
+            <float32 name="Listener Freeze Time" offset="60" visible="True" />
+            <enum16 name="Speaker Emotion" offset="64" visible="True">
+              <option name="None" value="0" />
+              <option name="Asleep" value="1" />
+              <option name="Amorous" value="2" />
+              <option name="Happy" value="3" />
+              <option name="Inquisitive" value="4" />
+              <option name="Repulsed" value="5" />
+              <option name="Disappointed" value="6" />
+              <option name="Shocked" value="7" />
+              <option name="Scared" value="8" />
+              <option name="Arrogant" value="9" />
+              <option name="Annoyed" value="10" />
+              <option name="Angry" value="11" />
+              <option name="Pensive" value="12" />
+              <option name="Pain" value="13" />
+            </enum16>
+            <enum16 name="Listener Emotion" offset="66" visible="True">
+              <option name="None" value="0" />
+              <option name="Asleep" value="1" />
+              <option name="Amorous" value="2" />
+              <option name="Happy" value="3" />
+              <option name="Inquisitive" value="4" />
+              <option name="Repulsed" value="5" />
+              <option name="Disappointed" value="6" />
+              <option name="Shocked" value="7" />
+              <option name="Scared" value="8" />
+              <option name="Arrogant" value="9" />
+              <option name="Annoyed" value="10" />
+              <option name="Angry" value="11" />
+              <option name="Pensive" value="12" />
+              <option name="Pain" value="13" />
+            </enum16>
+            <float32 name="Player Skip Fraction" offset="68" visible="True" />
+            <float32 name="Skip Fraction" offset="72" visible="True" />
+            <stringid name="Sample Line" offset="76" visible="True" />
+            <tagblock name="Reponses" offset="80" elementSize="12" maxelements="20" label="" visible="True">
+              <stringid name="Vocalization Name" offset="0" visible="True" />
+              <flags16 name="Flags" offset="4" visible="True">
+                <bit name="Nonexclusive" index="0" />
+                <bit name="Trigger Response" index="1" />
+              </flags16>
+              <int16 name="Vocalization Index Post Process" offset="6" visible="True" />
+              <enum16 name="Response Type" offset="8" visible="True">
+                <option name="Friend" value="0" />
+                <option name="Enemy" value="1" />
+                <option name="Listener" value="2" />
+                <option name="Joint" value="3" />
+                <option name="Peer" value="4" />
+              </enum16>
+              <int16 name="Dialogue Index Import" offset="10" visible="True" />
+            </tagblock>
+            <tagblock name="Children" offset="88" elementSize="96" maxelements="500" label="Vocalization" visible="True">
+              <stringid name="Vocalization" offset="0" visible="True" />
+              <stringid name="Parent Vocalization" offset="4" visible="True" />
+              <int16 name="Parent Index" offset="8" visible="True" />
+              <enum16 name="Priority" offset="10" visible="True">
+                <option name="None" value="0" />
+                <option name="Recall" value="1" />
+                <option name="Idle" value="2" />
+                <option name="Comment" value="3" />
+                <option name="Idle_Response" value="4" />
+                <option name="Postcombat" value="5" />
+                <option name="Combat" value="6" />
+                <option name="Status" value="7" />
+                <option name="Respond" value="8" />
+                <option name="Warn" value="9" />
+                <option name="Act" value="10" />
+                <option name="React" value="11" />
+                <option name="Involuntary" value="12" />
+                <option name="Scream" value="13" />
+                <option name="Scripted" value="14" />
+                <option name="Death" value="15" />
+              </enum16>
+              <flags32 name="Flags" offset="12" visible="True">
+                <bit name="Immediate" index="0" />
+                <bit name="Interrupt" index="1" />
+                <bit name="Cancel Low Priority" index="2" />
+              </flags32>
+              <enum16 name="Glance Behavior" offset="16" visible="True">
+                <option name="NONE" value="0" />
+                <option name="Glance Subject Short" value="1" />
+                <option name="Glance Subject Long" value="2" />
+                <option name="Glance Cause Short" value="3" />
+                <option name="Glance Cause Long" value="4" />
+                <option name="Glance Friend Short" value="5" />
+                <option name="Glance Friend Long" value="6" />
+              </enum16>
+              <enum16 name="Glance Recipient Behavior" offset="18" visible="True">
+                <option name="NONE" value="0" />
+                <option name="Glance Subject Short" value="1" />
+                <option name="Glance Subject Long" value="2" />
+                <option name="Glance Cause Short" value="3" />
+                <option name="Glance Cause Long" value="4" />
+                <option name="Glance Friend Short" value="5" />
+                <option name="Glance Friend Long" value="6" />
+              </enum16>
+              <enum16 name="Perception Type" offset="20" visible="True">
+                <option name="None" value="0" />
+                <option name="Speaker" value="1" />
+                <option name="Listener" value="2" />
+              </enum16>
+              <enum16 name="Max Combat Status" offset="22" visible="True">
+                <option name="Asleep" value="0" />
+                <option name="Idle" value="1" />
+                <option name="Alert" value="2" />
+                <option name="Active" value="3" />
+                <option name="Uninspected" value="4" />
+                <option name="Definite" value="5" />
+                <option name="Certain" value="6" />
+                <option name="Visible" value="7" />
+                <option name="Clear_Los" value="8" />
+                <option name="Dangerous" value="9" />
+              </enum16>
+              <enum16 name="Animation Impulse" offset="24" visible="True">
+                <option name="None" value="0" />
+                <option name="Shakefist" value="1" />
+                <option name="Cheer" value="2" />
+                <option name="Surprise-Front" value="3" />
+                <option name="Surprise-Back" value="4" />
+                <option name="Taunt" value="5" />
+                <option name="Brace" value="6" />
+                <option name="Point" value="7" />
+                <option name="Hold" value="8" />
+                <option name="Wave" value="9" />
+                <option name="Advance" value="10" />
+                <option name="Fallback" value="11" />
+              </enum16>
+              <enum16 name="Overlap Priority" offset="26" visible="True">
+                <option name="None" value="0" />
+                <option name="Recall" value="1" />
+                <option name="Idle" value="2" />
+                <option name="Comment" value="3" />
+                <option name="Idle_Response" value="4" />
+                <option name="Postcombat" value="5" />
+                <option name="Combat" value="6" />
+                <option name="Status" value="7" />
+                <option name="Respond" value="8" />
+                <option name="Warn" value="9" />
+                <option name="Act" value="10" />
+                <option name="React" value="11" />
+                <option name="Involuntary" value="12" />
+                <option name="Scream" value="13" />
+                <option name="Scripted" value="14" />
+                <option name="Death" value="15" />
+              </enum16>
+              <float32 name="Sound Repetition Delay" offset="28" visible="True" />
+              <float32 name="Allowable Queue Delay" offset="32" visible="True" />
+              <float32 name="Pre Voc Delay" offset="36" visible="True" />
+              <float32 name="Notification Delay" offset="40" visible="True" />
+              <float32 name="Post Voc Delay" offset="44" visible="True" />
+              <float32 name="Repeat Delay" offset="48" visible="True" />
+              <float32 name="Weight" offset="52" visible="True" />
+              <float32 name="Speaker Freeze Time" offset="56" visible="True" />
+              <float32 name="Listener Freeze Time" offset="60" visible="True" />
+              <enum16 name="Speaker Emotion" offset="64" visible="True">
+                <option name="None" value="0" />
+                <option name="Asleep" value="1" />
+                <option name="Amorous" value="2" />
+                <option name="Happy" value="3" />
+                <option name="Inquisitive" value="4" />
+                <option name="Repulsed" value="5" />
+                <option name="Disappointed" value="6" />
+                <option name="Shocked" value="7" />
+                <option name="Scared" value="8" />
+                <option name="Arrogant" value="9" />
+                <option name="Annoyed" value="10" />
+                <option name="Angry" value="11" />
+                <option name="Pensive" value="12" />
+                <option name="Pain" value="13" />
+              </enum16>
+              <enum16 name="Listener Emotion" offset="66" visible="True">
+                <option name="None" value="0" />
+                <option name="Asleep" value="1" />
+                <option name="Amorous" value="2" />
+                <option name="Happy" value="3" />
+                <option name="Inquisitive" value="4" />
+                <option name="Repulsed" value="5" />
+                <option name="Disappointed" value="6" />
+                <option name="Shocked" value="7" />
+                <option name="Scared" value="8" />
+                <option name="Arrogant" value="9" />
+                <option name="Annoyed" value="10" />
+                <option name="Angry" value="11" />
+                <option name="Pensive" value="12" />
+                <option name="Pain" value="13" />
+              </enum16>
+              <float32 name="Player Skip Fraction" offset="68" visible="True" />
+              <float32 name="Skip Fraction" offset="72" visible="True" />
+              <stringid name="Sample Line" offset="76" visible="True" />
+              <tagblock name="Reponses" offset="80" elementSize="12" maxelements="20" label="" visible="True">
+                <stringid name="Vocalization Name" offset="0" visible="True" />
+                <flags16 name="Flags" offset="4" visible="True">
+                  <bit name="Nonexclusive" index="0" />
+                  <bit name="Trigger Response" index="1" />
+                </flags16>
+                <int16 name="Vocalization Index Post Process" offset="6" visible="True" />
+                <enum16 name="Response Type" offset="8" visible="True">
+                  <option name="Friend" value="0" />
+                  <option name="Enemy" value="1" />
+                  <option name="Listener" value="2" />
+                  <option name="Joint" value="3" />
+                  <option name="Peer" value="4" />
+                </enum16>
+                <int16 name="Dialogue Index Import" offset="10" visible="True" />
+              </tagblock>
+              <tagblock name="_Unnamed0" offset="88" elementSize="0" maxelements="0" label="" visible="True">
+              </tagblock>
+            </tagblock>
+          </tagblock>
+        </tagblock>
+      </tagblock>
+    </tagblock>
+  </tagblock>
+  <tagblock name="Patterns" offset="8" elementSize="64" maxelements="1000" label="" visible="True">
+    <enum16 name="Dialogue Type" offset="0" visible="True">
+      <option name="Death" value="0" />
+      <option name="Unused" value="1" />
+      <option name="Unused" value="2" />
+      <option name="Damage" value="3" />
+      <option name="Damage Unused 1" value="4" />
+      <option name="Damage Unused 2" value="5" />
+      <option name="Sighted_New" value="6" />
+      <option name="Sighted_New Major" value="7" />
+      <option name="Unused" value="8" />
+      <option name="Sighted_Old" value="9" />
+      <option name="Sighted_First" value="10" />
+      <option name="Sighted_Special" value="11" />
+      <option name="Unused" value="12" />
+      <option name="Heard_New" value="13" />
+      <option name="Unused" value="14" />
+      <option name="Heard_Old" value="15" />
+      <option name="Unused" value="16" />
+      <option name="Unused" value="17" />
+      <option name="Unused" value="18" />
+      <option name="Acknowledge_Multiple" value="19" />
+      <option name="Unused" value="20" />
+      <option name="Unused" value="21" />
+      <option name="Unused" value="22" />
+      <option name="Found_Unit" value="23" />
+      <option name="Found_Unit_Presearch" value="24" />
+      <option name="Found_Unit_Pursuit" value="25" />
+      <option name="Found_Unit_Self_Preserving" value="26" />
+      <option name="Found_Unit_Retreating" value="27" />
+      <option name="Throwing_Grenade" value="28" />
+      <option name="Noticed_Grenade" value="29" />
+      <option name="Fighting" value="30" />
+      <option name="Charging" value="31" />
+      <option name="Suppressing_Fire" value="32" />
+      <option name="Grenade_Uncover" value="33" />
+      <option name="Unused" value="34" />
+      <option name="Unused" value="35" />
+      <option name="Dive" value="36" />
+      <option name="Evade" value="37" />
+      <option name="Avoid" value="38" />
+      <option name="Surprised" value="39" />
+      <option name="Unused" value="40" />
+      <option name="Unused" value="41" />
+      <option name="Presearch" value="42" />
+      <option name="Presearch_Start" value="43" />
+      <option name="Search" value="44" />
+      <option name="Search_Start" value="45" />
+      <option name="Investigate_Failed" value="46" />
+      <option name="Uncover_Failed" value="47" />
+      <option name="Pursuit_Failed" value="48" />
+      <option name="Investigate_Start" value="49" />
+      <option name="Abandoned_Search_Space" value="50" />
+      <option name="Abandoned_Search_Time" value="51" />
+      <option name="Presearch_Failed" value="52" />
+      <option name="Abandoned_Search_Restricted" value="53" />
+      <option name="Investigate_Pursuit_Start" value="54" />
+      <option name="Postcombat_Inspect_Body" value="55" />
+      <option name="Vehicle_Slow_Down" value="56" />
+      <option name="Vehicle_Get_In" value="57" />
+      <option name="Idle" value="58" />
+      <option name="Taunt" value="59" />
+      <option name="Taunt_Reply" value="60" />
+      <option name="Retreat" value="61" />
+      <option name="Retreat_From_Scary_Target" value="62" />
+      <option name="Retreat_From_Dead_Leader" value="63" />
+      <option name="Retreat_From_Proximity" value="64" />
+      <option name="Retreat_From_Low_Shield" value="65" />
+      <option name="Flee" value="66" />
+      <option name="Cowering" value="67" />
+      <option name="Unused" value="68" />
+      <option name="Unused" value="69" />
+      <option name="Unused" value="70" />
+      <option name="Cover" value="71" />
+      <option name="Covered" value="72" />
+      <option name="Unused" value="73" />
+      <option name="Unused" value="74" />
+      <option name="Unused" value="75" />
+      <option name="Pursuit_Start" value="76" />
+      <option name="Pursuit_Sync_Start" value="77" />
+      <option name="Pursuit_Sync_Join" value="78" />
+      <option name="Pursuit_Sync_Quorum" value="79" />
+      <option name="Melee" value="80" />
+      <option name="Unused" value="81" />
+      <option name="Unused" value="82" />
+      <option name="Unused" value="83" />
+      <option name="Vehicle_Falling" value="84" />
+      <option name="Vehicle_Woohoo" value="85" />
+      <option name="Vehicle_Scared" value="86" />
+      <option name="Vehicle_Crazy" value="87" />
+      <option name="Unused" value="88" />
+      <option name="Unused" value="89" />
+      <option name="Leap" value="90" />
+      <option name="Unused" value="91" />
+      <option name="Unused" value="92" />
+      <option name="Postcombat_Win" value="93" />
+      <option name="Postcombat_Lose" value="94" />
+      <option name="Postcombat_Neutral" value="95" />
+      <option name="Shoot_Corpse" value="96" />
+      <option name="Postcombat Start" value="97" />
+      <option name="Inspect_Body_Start" value="98" />
+      <option name="Postcombat_Status" value="99" />
+      <option name="Unused" value="100" />
+      <option name="Vehicle_Entry_Start_Driver" value="101" />
+      <option name="Vehicle_Enter" value="102" />
+      <option name="Vehicle_Entry_Start_Gun" value="103" />
+      <option name="Vehicle_Entry_Start_Passenger" value="104" />
+      <option name="Vehicle_Exit" value="105" />
+      <option name="Evict_Driver" value="106" />
+      <option name="Evict_Gunner" value="107" />
+      <option name="Evict_Passenger" value="108" />
+      <option name="Unused" value="109" />
+      <option name="Unused" value="110" />
+      <option name="New_Order_Advance" value="111" />
+      <option name="New_Order_Charge" value="112" />
+      <option name="New_Order_Fallback" value="113" />
+      <option name="New_Order_Retreat" value="114" />
+      <option name="New_Order_Moveon" value="115" />
+      <option name="New_Order_Arrival" value="116" />
+      <option name="New_Order_Entervcl" value="117" />
+      <option name="New_Order_Exitvcl" value="118" />
+      <option name="New_Order_Fllplr" value="119" />
+      <option name="New_Order_Leaveplr" value="120" />
+      <option name="New_Order_Support" value="121" />
+      <option name="Unused" value="122" />
+      <option name="Unused" value="123" />
+      <option name="Unused" value="124" />
+      <option name="Unused" value="125" />
+      <option name="Unused" value="126" />
+      <option name="Unused" value="127" />
+      <option name="Unused" value="128" />
+      <option name="Unused" value="129" />
+      <option name="Unused" value="130" />
+      <option name="Unused" value="131" />
+      <option name="Unused" value="132" />
+      <option name="Unused" value="133" />
+      <option name="Emerge" value="134" />
+      <option name="Unused" value="135" />
+      <option name="Unused" value="136" />
+      <option name="Unused" value="137" />
+      <option name="Curse" value="138" />
+      <option name="Unused" value="139" />
+      <option name="Unused" value="140" />
+      <option name="Unused" value="141" />
+      <option name="Threaten" value="142" />
+      <option name="Unused" value="143" />
+      <option name="Unused" value="144" />
+      <option name="Unused" value="145" />
+      <option name="Cover_Friend" value="146" />
+      <option name="Unused" value="147" />
+      <option name="Unused" value="148" />
+      <option name="Unused" value="149" />
+      <option name="Strike" value="150" />
+      <option name="Unused" value="151" />
+      <option name="Unused" value="152" />
+      <option name="Unused" value="153" />
+      <option name="Unused" value="154" />
+      <option name="Unused" value="155" />
+      <option name="Unused" value="156" />
+      <option name="Unused" value="157" />
+      <option name="Unused" value="158" />
+      <option name="Gloat" value="159" />
+      <option name="Unused" value="160" />
+      <option name="Unused" value="161" />
+      <option name="Unused" value="162" />
+      <option name="Greet" value="163" />
+      <option name="Unused" value="164" />
+      <option name="Unused" value="165" />
+      <option name="Unused" value="166" />
+      <option name="Unused" value="167" />
+      <option name="Player_Look" value="168" />
+      <option name="Player_Look_Longtime" value="169" />
+      <option name="Unused" value="170" />
+      <option name="Unused" value="171" />
+      <option name="Unused" value="172" />
+      <option name="Unused" value="173" />
+      <option name="Panic_Grenade_Attached" value="174" />
+      <option name="Unused" value="175" />
+      <option name="Unused" value="176" />
+      <option name="Unused" value="177" />
+      <option name="Unused" value="178" />
+      <option name="Help Response" value="179" />
+      <option name="Unused" value="180" />
+      <option name="Unused" value="181" />
+      <option name="Unused" value="182" />
+      <option name="Remind" value="183" />
+      <option name="Unused" value="184" />
+      <option name="Unused" value="185" />
+      <option name="Unused" value="186" />
+      <option name="Unused" value="187" />
+      <option name="Weapon_Trade_Better" value="188" />
+      <option name="Weapon_Trade_Worse" value="189" />
+      <option name="Weapon_Reade_Equal" value="190" />
+      <option name="Unused" value="191" />
+      <option name="Unused" value="192" />
+      <option name="Unused" value="193" />
+      <option name="Betray" value="194" />
+      <option name="Unused" value="195" />
+      <option name="Forgive" value="196" />
+      <option name="Unused" value="197" />
+      <option name="Reanimate" value="198" />
+      <option name="Unused" value="199" />
+    </enum16>
+    <int16 name="Vocalization Index" offset="2" visible="True" />
+    <stringid name="Vocalization Name" offset="4" visible="True" />
+    <enum16 name="Speaker Type" offset="8" visible="True">
+      <option name="Subject" value="0" />
+      <option name="Cause" value="1" />
+      <option name="Friend" value="2" />
+      <option name="Target" value="3" />
+      <option name="Enemy" value="4" />
+      <option name="Vehicle" value="5" />
+      <option name="Joint" value="6" />
+      <option name="Squad" value="7" />
+      <option name="Leader" value="8" />
+      <option name="Joint_Leader" value="9" />
+      <option name="Clump" value="10" />
+      <option name="Peer" value="11" />
+    </enum16>
+    <flags16 name="Flags" offset="10" visible="True">
+      <bit name="Subject Visible" index="0" />
+      <bit name="Cause Visible" index="1" />
+      <bit name="Friends Present" index="2" />
+      <bit name="Subject Is Speaker's Target" index="3" />
+      <bit name="Cause Is Speaker's Target" index="4" />
+      <bit name="Cause Is Player Or Speaker Is Player Ally" index="5" />
+      <bit name="Speaker Is Searching" index="6" />
+      <bit name="Speaker Is Following Player" index="7" />
+      <bit name="Cause Is Primary Player Ally" index="8" />
+    </flags16>
+    <enum16 name="Listenertarget" offset="12" visible="True">
+      <option name="Subject" value="0" />
+      <option name="Cause" value="1" />
+      <option name="Friend" value="2" />
+      <option name="Target" value="3" />
+      <option name="Enemy" value="4" />
+      <option name="Vehicle" value="5" />
+      <option name="Joint" value="6" />
+      <option name="Squad" value="7" />
+      <option name="Leader" value="8" />
+      <option name="Joint_Leader" value="9" />
+      <option name="Clump" value="10" />
+      <option name="Peer" value="11" />
+    </enum16>
+    <undefined size="2" name="_Unnamed0" offset="14" visible="True" />
+    <undefined size="4" name="_Unnamed1" offset="16" visible="True" />
+    <enum16 name="Hostility" offset="20" visible="True">
+      <option name="NONE" value="0" />
+      <option name="Self" value="1" />
+      <option name="Neutral" value="2" />
+      <option name="Friend" value="3" />
+      <option name="Enemy" value="4" />
+      <option name="Traitor" value="5" />
+    </enum16>
+    <enum16 name="Damage Type" offset="22" visible="True">
+      <option name="NONE" value="0" />
+      <option name="Falling" value="1" />
+      <option name="Bullet" value="2" />
+      <option name="Grenade" value="3" />
+      <option name="Explosive" value="4" />
+      <option name="Sniper" value="5" />
+      <option name="Melee" value="6" />
+      <option name="Flame" value="7" />
+      <option name="Mounted Weapon" value="8" />
+      <option name="Vehicle" value="9" />
+      <option name="Plasma" value="10" />
+      <option name="Needle" value="11" />
+      <option name="Shotgun" value="12" />
+    </enum16>
+    <enum16 name="Danger Level" offset="24" visible="True">
+      <option name="NONE" value="0" />
+      <option name="Broadly Facing" value="1" />
+      <option name="Shooting Near" value="2" />
+      <option name="Shooting At" value="3" />
+      <option name="Extremely Close" value="4" />
+      <option name="Shield Damage" value="5" />
+      <option name="Shield Extended Damage" value="6" />
+      <option name="Body Damage" value="7" />
+      <option name="Body Extended Damage" value="8" />
+    </enum16>
+    <enum16 name="Attitude" offset="26" visible="True">
+      <option name="Normal" value="0" />
+      <option name="Timid" value="1" />
+      <option name="Aggressive" value="2" />
+    </enum16>
+    <undefined size="4" name="_Unnamed2" offset="28" visible="True" />
+    <enum16 name="Subject Actor Type" offset="32" visible="True">
+      <option name="NONE" value="0" />
+      <option name="Elite" value="1" />
+      <option name="Jackal" value="2" />
+      <option name="Grunt" value="3" />
+      <option name="Hunter" value="4" />
+      <option name="Engineer" value="5" />
+      <option name="Assassin" value="6" />
+      <option name="Player" value="7" />
+      <option name="Marine" value="8" />
+      <option name="Crew" value="9" />
+      <option name="Combat Form" value="10" />
+      <option name="Infection Form" value="11" />
+      <option name="Carrier Form" value="12" />
+      <option name="Monitor" value="13" />
+      <option name="Sentinel" value="14" />
+      <option name="None" value="15" />
+      <option name="Mounted Weapon" value="16" />
+      <option name="Brute" value="17" />
+      <option name="Prophet" value="18" />
+      <option name="Bugger" value="19" />
+      <option name="Juggernaut" value="20" />
+    </enum16>
+    <enum16 name="Cause Actor Type" offset="34" visible="True">
+      <option name="NONE" value="0" />
+      <option name="Elite" value="1" />
+      <option name="Jackal" value="2" />
+      <option name="Grunt" value="3" />
+      <option name="Hunter" value="4" />
+      <option name="Engineer" value="5" />
+      <option name="Assassin" value="6" />
+      <option name="Player" value="7" />
+      <option name="Marine" value="8" />
+      <option name="Crew" value="9" />
+      <option name="Combat Form" value="10" />
+      <option name="Infection Form" value="11" />
+      <option name="Carrier Form" value="12" />
+      <option name="Monitor" value="13" />
+      <option name="Sentinel" value="14" />
+      <option name="None" value="15" />
+      <option name="Mounted Weapon" value="16" />
+      <option name="Brute" value="17" />
+      <option name="Prophet" value="18" />
+      <option name="Bugger" value="19" />
+      <option name="Juggernaut" value="20" />
+    </enum16>
+    <enum16 name="Cause Type" offset="36" visible="True">
+      <option name="NONE" value="0" />
+      <option name="Player" value="1" />
+      <option name="Actor" value="2" />
+      <option name="Biped" value="3" />
+      <option name="Body" value="4" />
+      <option name="Vehicle" value="5" />
+      <option name="Projectile" value="6" />
+      <option name="Actor Or Player" value="7" />
+      <option name="Turret" value="8" />
+      <option name="Unit In Vehicle" value="9" />
+      <option name="Unit In Turret" value="10" />
+      <option name="Driver" value="11" />
+      <option name="Gunner" value="12" />
+      <option name="Passenger" value="13" />
+      <option name="Postcombat" value="14" />
+      <option name="Postcombat_Won" value="15" />
+      <option name="Postcombat_Lost" value="16" />
+      <option name="Player Masterchief" value="17" />
+      <option name="Player Dervish" value="18" />
+      <option name="Heretic" value="19" />
+      <option name="Majorly Scary" value="20" />
+      <option name="Last Man In Vehicle" value="21" />
+      <option name="Male" value="22" />
+      <option name="Female" value="23" />
+      <option name="Grenade" value="24" />
+    </enum16>
+    <enum16 name="Subject Type" offset="38" visible="True">
+      <option name="NONE" value="0" />
+      <option name="Player" value="1" />
+      <option name="Actor" value="2" />
+      <option name="Biped" value="3" />
+      <option name="Body" value="4" />
+      <option name="Vehicle" value="5" />
+      <option name="Projectile" value="6" />
+      <option name="Actor Or Player" value="7" />
+      <option name="Turret" value="8" />
+      <option name="Unit In Vehicle" value="9" />
+      <option name="Unit In Turret" value="10" />
+      <option name="Driver" value="11" />
+      <option name="Gunner" value="12" />
+      <option name="Passenger" value="13" />
+      <option name="Postcombat" value="14" />
+      <option name="Postcombat_Won" value="15" />
+      <option name="Postcombat_Lost" value="16" />
+      <option name="Player Masterchief" value="17" />
+      <option name="Player Dervish" value="18" />
+      <option name="Heretic" value="19" />
+      <option name="Majorly Scary" value="20" />
+      <option name="Last Man In Vehicle" value="21" />
+      <option name="Male" value="22" />
+      <option name="Female" value="23" />
+      <option name="Grenade" value="24" />
+    </enum16>
+    <stringid name="Cause Ai Type Name" offset="40" visible="True" />
+    <enum16 name="Spatial Relation" offset="44" visible="True">
+      <option name="None" value="0" />
+      <option name="Very Near (&lt;1Wu)" value="1" />
+      <option name="Near (&lt;2.5Wus)" value="2" />
+      <option name="Medium Range (&lt;5Wus)" value="3" />
+      <option name="Far (&lt;10Wus)" value="4" />
+      <option name="Very Far (&gt;10Wus)" value="5" />
+      <option name="In Front Of" value="6" />
+      <option name="Behind" value="7" />
+      <option name="Above (Delta&gt;1 Wu)" value="8" />
+      <option name="Below (Delta&gt;1 Wu)" value="9" />
+    </enum16>
+    <undefined size="2" name="_Unnamed3" offset="46" visible="True" />
+    <stringid name="Subject Ai Type Name" offset="48" visible="True" />
+    <undefined size="8" name="_Unnamed4" offset="52" visible="True" />
+    <flags32 name="Conditions" offset="60" visible="True">
+      <bit name="Asleep" index="0" />
+      <bit name="Idle" index="1" />
+      <bit name="Alert" index="2" />
+      <bit name="Active" index="3" />
+      <bit name="Uninspected Orphan" index="4" />
+      <bit name="Definite Orphan" index="5" />
+      <bit name="Certain Orphan" index="6" />
+      <bit name="Visible Enemy" index="7" />
+      <bit name="Clear Los Enemy" index="8" />
+      <bit name="Dangerous Enemy" index="9" />
+      <bit name="No Vehicle" index="10" />
+      <bit name="Vehicle Driver" index="11" />
+      <bit name="Vehicle Passenger" index="12" />
+    </flags32>
+  </tagblock>
+  <undefined size="12" name="_Unnamed0" offset="16" visible="True" />
+  <tagblock name="Dialogue Data" offset="28" elementSize="4" maxelements="200" label="" visible="True">
+    <int16 name="Start Index Postprocess" offset="0" visible="True" />
+    <int16 name="Length Postprocess" offset="2" visible="True" />
+  </tagblock>
+  <tagblock name="Involuntary Data" offset="36" elementSize="4" maxelements="100" label="" visible="True">
+    <int16 name="Involuntary Vocalization Index" offset="0" visible="True" />
+    <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+  </tagblock>
+</plugin>

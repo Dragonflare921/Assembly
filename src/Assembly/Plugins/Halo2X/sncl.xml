@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="8">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <tagblock name="Sound Classes" offset="0" elementSize="92" maxelements="54" label="" visible="True">
+    <int16 name="Max Sounds Per Tag 116" offset="0" visible="True" />
+    <int16 name="Max Sounds Per Object 116" offset="2" visible="True" />
+    <int32 name="Preemption Time" offset="4" visible="True" />
+    <flags16 name="Internal Flags" offset="8" visible="True">
+      <bit name="Valid" index="0" />
+      <bit name="Is Speech" index="1" />
+      <bit name="Scripted" index="2" />
+      <bit name="Stops With Object" index="3" />
+      <bit name="Unused" index="4" />
+      <bit name="Valid Doppler Factor" index="5" />
+      <bit name="Valid Obstruction Factor" index="6" />
+      <bit name="Multilingual" index="7" />
+    </flags16>
+    <flags16 name="Flags" offset="10" visible="True">
+      <bit name="Plays During Pause" index="0" />
+      <bit name="Dry Stereo Mix" index="1" />
+      <bit name="No Object Obstruction" index="2" />
+      <bit name="Use Center Speaker Unspatialized" index="3" />
+      <bit name="Send (Mono) To Lfe" index="4" />
+      <bit name="Deterministic" index="5" />
+      <bit name="Use Huge Transmission" index="6" />
+      <bit name="Always Use Speakers" index="7" />
+      <bit name="Don't Strip From Main Menu" index="8" />
+      <bit name="Ignore Stereo Headroom" index="9" />
+      <bit name="Loop Fade Out Is Linear" index="10" />
+      <bit name="Stop When Object Dies" index="11" />
+      <bit name="Allow Cache File Editing" index="12" />
+    </flags16>
+    <int16 name="Priority" offset="12" visible="True" />
+    <enum16 name="Cache Miss Mode" offset="14" visible="True">
+      <option name="Discard" value="0" />
+      <option name="Postpone" value="1" />
+    </enum16>
+    <float32 name="Reverb Gain" offset="16" visible="True" />
+    <float32 name="Override Speaker Gain" offset="20" visible="True" />
+    <float32 name="Distance Bounds From" offset="24" visible="True" />
+    <float32 name="Distance Bounds To" offset="28" visible="True" />
+    <float32 name="Gain Bounds From" offset="32" visible="True" />
+    <float32 name="Gain Bounds To" offset="36" visible="True" />
+    <float32 name="Cutscene Ducking" offset="40" visible="True" />
+    <float32 name="Cutscene Ducking Fade In Time" offset="44" visible="True" />
+    <float32 name="Cutscene Ducking Sustain Time" offset="48" visible="True" />
+    <float32 name="Cutscene Ducking Fade Out Time" offset="52" visible="True" />
+    <float32 name="Scripted Dialog Ducking" offset="56" visible="True" />
+    <float32 name="Scripted Dialog Ducking Fade In Time" offset="60" visible="True" />
+    <float32 name="Scripted Dialog Ducking Sustain Time" offset="64" visible="True" />
+    <float32 name="Scripted Dialog Ducking Fade Out Time" offset="68" visible="True" />
+    <float32 name="Doppler Factor" offset="72" visible="True" />
+    <enum8 name="Stereo Playback Type" offset="76" visible="True">
+      <option name="First Person" value="0" />
+      <option name="Ambient" value="1" />
+    </enum8>
+    <undefined size="3" name="_Unnamed0" offset="77" visible="True" />
+    <float32 name="Transmission Multiplier" offset="80" visible="True" />
+    <float32 name="Obstruction Max Bend" offset="84" visible="True" />
+    <float32 name="Occlusion Max Bend" offset="88" visible="True" />
+  </tagblock>
+</plugin>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="20">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <tagblock name="Categories" offset="0" elementSize="12" maxelements="16" label="Name" visible="True">
+    <stringid name="Name" offset="0" visible="True" />
+    <tagblock name="Parameters" offset="4" elementSize="52" maxelements="64" label="Name" visible="True">
+      <stringid name="Name" offset="0" visible="True" />
+      <undefined size="8" name="Explanation" offset="4" visible="True" />
+      <enum16 name="Type" offset="12" visible="True">
+        <option name="Bitmap" value="0" />
+        <option name="Value" value="1" />
+        <option name="Color" value="2" />
+        <option name="Switch" value="3" />
+      </enum16>
+      <flags16 name="Flags" offset="14" visible="True">
+        <bit name="Animated" index="0" />
+        <bit name="Hide Bitmap Reference" index="1" />
+      </flags16>
+      <tagRef name="Default Bitmap" offset="16" visible="True" />
+      <float32 name="Default Const Value" offset="24" visible="True" />
+      <float32 name="Default Const Color R" offset="28" visible="True" />
+      <float32 name="Default Const Color G" offset="32" visible="True" />
+      <float32 name="Default Const Color B" offset="36" visible="True" />
+      <enum16 name="Bitmap Type" offset="40" visible="True">
+        <option name="2D" value="0" />
+        <option name="3D" value="1" />
+        <option name="Cube Map" value="2" />
+      </enum16>
+      <undefined size="2" name="_Unnamed0" offset="42" visible="True" />
+      <flags16 name="Bitmap Animation Flags" offset="44" visible="True">
+        <bit name="Scale Uniform" index="0" />
+        <bit name="Scale" index="1" />
+        <bit name="Translation" index="2" />
+        <bit name="Rotation" index="3" />
+        <bit name="Index" index="4" />
+      </flags16>
+      <undefined size="2" name="_Unnamed1" offset="46" visible="True" />
+      <float32 name="Bitmap Scale" offset="48" visible="True" />
+    </tagblock>
+  </tagblock>
+  <tagblock name="Shader Lods" offset="8" elementSize="12" maxelements="8" label="" visible="True">
+    <float32 name="Projected Diameter" offset="0" visible="True" />
+    <tagblock name="Pass" offset="4" elementSize="24" maxelements="16" label="Pass" visible="True">
+      <enum16 name="Layer" offset="0" visible="True">
+        <option name="Texaccum" value="0" />
+        <option name="Environment Map" value="1" />
+        <option name="Self-Illumination" value="2" />
+        <option name="Overlay" value="3" />
+        <option name="Transparent" value="4" />
+        <option name="Lightmap (Indirect)" value="5" />
+        <option name="Diffuse" value="6" />
+        <option name="Specular" value="7" />
+        <option name="Shadow Generate" value="8" />
+        <option name="Shadow Apply" value="9" />
+        <option name="Boom" value="10" />
+        <option name="Fog" value="11" />
+        <option name="Sh Prt" value="12" />
+        <option name="Active Camo" value="13" />
+        <option name="Water Edge Blend" value="14" />
+        <option name="Decal" value="15" />
+        <option name="Active Camo Stencil Modulate" value="16" />
+        <option name="Hologram" value="17" />
+        <option name="Light Albedo" value="18" />
+      </enum16>
+      <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+      <tagRef name="Pass" offset="4" visible="True" />
+      <undefined size="12" name="_Unnamed1" offset="12" visible="True" />
+    </tagblock>
+  </tagblock>
+  <undefined size="2" name="_Unnamed0" offset="16" visible="True" />
+  <undefined size="2" name="_Unnamed1" offset="18" visible="True" />
+</plugin>

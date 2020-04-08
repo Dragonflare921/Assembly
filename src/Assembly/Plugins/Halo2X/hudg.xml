@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="1160">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <enum16 name="Anchor" offset="0" visible="True">
+    <option name="Top Left" value="0" />
+    <option name="Top Right" value="1" />
+    <option name="Bottom Left" value="2" />
+    <option name="Bottom Right" value="3" />
+    <option name="Center" value="4" />
+    <option name="Crosshair" value="5" />
+  </enum16>
+  <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+  <undefined size="32" name="_Unnamed1" offset="4" visible="True" />
+  <int16 name="Anchor Offset X" offset="36" visible="True" />
+  <int16 name="Anchor Offset Y" offset="38" visible="True" />
+  <float32 name="Width Scale" offset="40" visible="True" />
+  <float32 name="Height Scale" offset="44" visible="True" />
+  <flags16 name="Scaling Flags" offset="48" visible="True">
+    <bit name="Don't Scale Offset" index="0" />
+    <bit name="Don't Scale Size" index="1" />
+  </flags16>
+  <undefined size="2" name="_Unnamed2" offset="50" visible="True" />
+  <undefined size="20" name="_Unnamed3" offset="52" visible="True" />
+  <tagRef name="Obsolete1" offset="72" visible="True" />
+  <tagRef name="Obsolete2" offset="80" visible="True" />
+  <float32 name="Up Time" offset="88" visible="True" />
+  <float32 name="Fade Time" offset="92" visible="True" />
+  <float32 name="Icon Color A" offset="96" visible="True" />
+  <float32 name="Icon Color R" offset="100" visible="True" />
+  <float32 name="Icon Color G" offset="104" visible="True" />
+  <float32 name="Icon Color B" offset="108" visible="True" />
+  <float32 name="Text Color A" offset="112" visible="True" />
+  <float32 name="Text Color R" offset="116" visible="True" />
+  <float32 name="Text Color G" offset="120" visible="True" />
+  <float32 name="Text Color B" offset="124" visible="True" />
+  <float32 name="Text Spacing" offset="128" visible="True" />
+  <tagRef name="Item Message Text" offset="132" visible="True" />
+  <tagRef name="Icon Bitmap" offset="140" visible="True" />
+  <tagRef name="Alternate Icon Text" offset="148" visible="True" />
+  <tagblock name="Button Icons" offset="156" elementSize="16" maxelements="18" label="" visible="True">
+    <int16 name="Sequence Index" offset="0" visible="True" />
+    <int16 name="Width Offset" offset="2" visible="True" />
+    <int16 name="Offset From Reference Corner X" offset="4" visible="True" />
+    <int16 name="Offset From Reference Corner Y" offset="6" visible="True" />
+    <int8 name="Override Icon Color A" offset="8" visible="True" />
+    <int8 name="Override Icon Color R" offset="12" visible="True" />
+    <int8 name="Override Icon Color G" offset="16" visible="True" />
+    <int8 name="Override Icon Color B" offset="20" visible="True" />
+    <int8 name="Frame Rate 030" offset="12" visible="True" />
+    <flags8 name="Flags" offset="13" visible="True">
+      <bit name="Use Text From String_List Instead" index="0" />
+      <bit name="Override Default Color" index="1" />
+      <bit name="Width Offset Is Absolute Icon Width" index="2" />
+    </flags8>
+    <int16 name="Text Index" offset="14" visible="True" />
+  </tagblock>
+  <int8 name="Default Color A" offset="164" visible="True" />
+  <int8 name="Default Color R" offset="168" visible="True" />
+  <int8 name="Default Color G" offset="172" visible="True" />
+  <int8 name="Default Color B" offset="176" visible="True" />
+  <int8 name="Flashing Color A" offset="168" visible="True" />
+  <int8 name="Flashing Color R" offset="172" visible="True" />
+  <int8 name="Flashing Color G" offset="176" visible="True" />
+  <int8 name="Flashing Color B" offset="180" visible="True" />
+  <float32 name="Flash Period" offset="172" visible="True" />
+  <float32 name="Flash Delay" offset="176" visible="True" />
+  <int16 name="Number Of Flashes" offset="180" visible="True" />
+  <flags16 name="Flash Flags" offset="182" visible="True">
+    <bit name="Reverse Default/Flashing Colors" index="0" />
+  </flags16>
+  <float32 name="Flash Length" offset="184" visible="True" />
+  <int8 name="Disabled Color A" offset="188" visible="True" />
+  <int8 name="Disabled Color R" offset="192" visible="True" />
+  <int8 name="Disabled Color G" offset="196" visible="True" />
+  <int8 name="Disabled Color B" offset="200" visible="True" />
+  <undefined size="4" name="_Unnamed4" offset="192" visible="True" />
+  <tagRef name="Hud Messages" offset="196" visible="True" />
+  <int8 name="Default Color2 A" offset="204" visible="True" />
+  <int8 name="Default Color2 R" offset="208" visible="True" />
+  <int8 name="Default Color2 G" offset="212" visible="True" />
+  <int8 name="Default Color2 B" offset="216" visible="True" />
+  <int8 name="Flashing Color2 A" offset="208" visible="True" />
+  <int8 name="Flashing Color2 R" offset="212" visible="True" />
+  <int8 name="Flashing Color2 G" offset="216" visible="True" />
+  <int8 name="Flashing Color2 B" offset="220" visible="True" />
+  <float32 name="Flash Period2" offset="212" visible="True" />
+  <float32 name="Flash Delay2" offset="216" visible="True" />
+  <int16 name="Number Of Flashes2" offset="220" visible="True" />
+  <flags16 name="Flash Flags2" offset="222" visible="True">
+    <bit name="Reverse Default/Flashing Colors" index="0" />
+  </flags16>
+  <float32 name="Flash Length2" offset="224" visible="True" />
+  <int8 name="Disabled Color2 A" offset="228" visible="True" />
+  <int8 name="Disabled Color2 R" offset="232" visible="True" />
+  <int8 name="Disabled Color2 G" offset="236" visible="True" />
+  <int8 name="Disabled Color2 B" offset="240" visible="True" />
+  <int16 name="Uptime Ticks" offset="232" visible="True" />
+  <int16 name="Fade Ticks" offset="234" visible="True" />
+  <float32 name="Top Offset" offset="236" visible="True" />
+  <float32 name="Bottom Offset" offset="240" visible="True" />
+  <float32 name="Left Offset" offset="244" visible="True" />
+  <float32 name="Right Offset" offset="248" visible="True" />
+  <undefined size="32" name="_Unnamed5" offset="252" visible="True" />
+  <tagRef name="Arrow Bitmap" offset="284" visible="True" />
+  <tagblock name="Waypoint Arrows" offset="292" elementSize="104" maxelements="16" label="Name" visible="True">
+    <ascii name="Name" offset="0" visible="True" />
+    <undefined size="8" name="_Unnamed0" offset="32" visible="True" />
+    <undefined size="1" offset="40" visible="True" />
+    <int8 name="Color R" offset="44" visible="True" />
+    <int8 name="Color G" offset="48" visible="True" />
+    <int8 name="Color B" offset="52" visible="True" />
+    <float32 name="Opacity" offset="44" visible="True" />
+    <float32 name="Translucency" offset="48" visible="True" />
+    <int16 name="On Screen Sequence Index" offset="52" visible="True" />
+    <int16 name="Off Screen Sequence Index" offset="54" visible="True" />
+    <int16 name="Occluded Sequence Index" offset="56" visible="True" />
+    <undefined size="2" name="_Unnamed1" offset="58" visible="True" />
+    <undefined size="16" name="_Unnamed2" offset="60" visible="True" />
+    <flags32 name="Flags" offset="76" visible="True">
+      <bit name="Don't Rotate When Pointing Offscreen" index="0" />
+    </flags32>
+    <undefined size="24" name="_Unnamed3" offset="80" visible="True" />
+  </tagblock>
+  <undefined size="80" name="_Unnamed6" offset="300" visible="True" />
+  <float32 name="Hud Scale In Multiplayer" offset="380" visible="True" />
+  <undefined size="256" name="_Unnamed7" offset="384" visible="True" />
+  <undefined size="16" name="_Unnamed8" offset="640" visible="True" />
+  <float32 name="Motion Sensor Range" offset="656" visible="True" />
+  <float32 name="Motion Sensor Velocity Sensitivity" offset="660" visible="True" />
+  <float32 name="Motion Sensor Scale DONT TOUCH EVER" offset="664" visible="True" />
+  <int16 name="Default Chapter Title Bounds Top" offset="668" visible="True" />
+  <int16 name="Default Chapter Title Bounds Left" offset="670" visible="True" />
+  <int16 name="Default Chapter Title Bounds Bottom" offset="672" visible="True" />
+  <int16 name="Default Chapter Title Bounds Right" offset="674" visible="True" />
+  <undefined size="44" name="_Unnamed9" offset="676" visible="True" />
+  <int16 name="Top Offset2" offset="720" visible="True" />
+  <int16 name="Bottom Offset2" offset="722" visible="True" />
+  <int16 name="Left Offset2" offset="724" visible="True" />
+  <int16 name="Right Offset2" offset="726" visible="True" />
+  <undefined size="32" name="_Unnamed10" offset="728" visible="True" />
+  <tagRef name="Indicator Bitmap" offset="760" visible="True" />
+  <int16 name="Sequence Index" offset="768" visible="True" />
+  <int16 name="Multiplayer Sequence Index" offset="770" visible="True" />
+  <int8 name="Color A" offset="772" visible="True" />
+  <int8 name="Color R" offset="776" visible="True" />
+  <int8 name="Color G" offset="780" visible="True" />
+  <int8 name="Color B" offset="784" visible="True" />
+  <undefined size="16" name="_Unnamed11" offset="776" visible="True" />
+  <int8 name="Default Color3 A" offset="792" visible="True" />
+  <int8 name="Default Color3 R" offset="796" visible="True" />
+  <int8 name="Default Color3 G" offset="800" visible="True" />
+  <int8 name="Default Color3 B" offset="804" visible="True" />
+  <int8 name="Flashing Color3 A" offset="796" visible="True" />
+  <int8 name="Flashing Color3 R" offset="800" visible="True" />
+  <int8 name="Flashing Color3 G" offset="804" visible="True" />
+  <int8 name="Flashing Color3 B" offset="808" visible="True" />
+  <float32 name="Flash Period3" offset="800" visible="True" />
+  <float32 name="Flash Delay3" offset="804" visible="True" />
+  <int16 name="Number Of Flashes3" offset="808" visible="True" />
+  <flags16 name="Flash Flags3" offset="810" visible="True">
+    <bit name="Reverse Default/Flashing Colors" index="0" />
+  </flags16>
+  <float32 name="Flash Length3" offset="812" visible="True" />
+  <int8 name="Disabled Color3 A" offset="816" visible="True" />
+  <int8 name="Disabled Color3 R" offset="820" visible="True" />
+  <int8 name="Disabled Color3 G" offset="824" visible="True" />
+  <int8 name="Disabled Color3 B" offset="828" visible="True" />
+  <undefined size="4" name="_Unnamed12" offset="820" visible="True" />
+  <int8 name="Default Color4 A" offset="824" visible="True" />
+  <int8 name="Default Color4 R" offset="828" visible="True" />
+  <int8 name="Default Color4 G" offset="832" visible="True" />
+  <int8 name="Default Color4 B" offset="836" visible="True" />
+  <int8 name="Flashing Color4 A" offset="828" visible="True" />
+  <int8 name="Flashing Color4 R" offset="832" visible="True" />
+  <int8 name="Flashing Color4 G" offset="836" visible="True" />
+  <int8 name="Flashing Color4 B" offset="840" visible="True" />
+  <float32 name="Flash Period4" offset="832" visible="True" />
+  <float32 name="Flash Delay4" offset="836" visible="True" />
+  <int16 name="Number Of Flashes4" offset="840" visible="True" />
+  <flags16 name="Flash Flags4" offset="842" visible="True">
+    <bit name="Reverse Default/Flashing Colors" index="0" />
+  </flags16>
+  <float32 name="Flash Length4" offset="844" visible="True" />
+  <int8 name="Disabled Color4 A" offset="848" visible="True" />
+  <int8 name="Disabled Color4 R" offset="852" visible="True" />
+  <int8 name="Disabled Color4 G" offset="856" visible="True" />
+  <int8 name="Disabled Color4 B" offset="860" visible="True" />
+  <undefined size="4" name="_Unnamed13" offset="852" visible="True" />
+  <undefined size="40" name="_Unnamed14" offset="856" visible="True" />
+  <tagRef name="Carnage Report Bitmap" offset="896" visible="True" />
+  <int16 name="Loading Begin Text" offset="904" visible="True" />
+  <int16 name="Loading End Text" offset="906" visible="True" />
+  <int16 name="Checkpoint Begin Text" offset="908" visible="True" />
+  <int16 name="Checkpoint End Text" offset="910" visible="True" />
+  <tagRef name="Checkpoint Sound" offset="912" visible="True" />
+  <undefined size="96" name="_Unnamed15" offset="920" visible="True" />
+  <tagRef name="Hud Text" offset="1016" visible="True" />
+  <tagblock name="Dashlights" offset="1024" elementSize="28" maxelements="9" label="Bitmap" visible="True">
+    <tagRef name="Bitmap" offset="0" visible="True" />
+    <tagRef name="Shader" offset="8" visible="True" />
+    <int16 name="Sequence Index" offset="16" visible="True" />
+    <flags16 name="Flags" offset="18" visible="True">
+      <bit name="Don't Scale When Pulsing" index="0" />
+    </flags16>
+    <tagRef name="Sound" offset="20" visible="True" />
+  </tagblock>
+  <tagblock name="Waypoint Arrows2" offset="1032" elementSize="36" maxelements="4" label="Bitmap" visible="True">
+    <tagRef name="Bitmap" offset="0" visible="True" />
+    <tagRef name="Shader" offset="8" visible="True" />
+    <float32 name="Sequence Index" offset="16" visible="True" />
+    <float32 name="Smallest Size" offset="20" visible="True" />
+    <float32 name="Smallest Distance" offset="24" visible="True" />
+    <tagRef name="Border Bitmap" offset="28" visible="True" />
+  </tagblock>
+  <tagblock name="Waypoints" offset="1040" elementSize="24" maxelements="8" label="Bitmap" visible="True">
+    <tagRef name="Bitmap" offset="0" visible="True" />
+    <tagRef name="Shader" offset="8" visible="True" />
+    <int16 name="Onscreen Sequence Index" offset="16" visible="True" />
+    <int16 name="Occluded Sequence Index" offset="18" visible="True" />
+    <int16 name="Offscreen Sequence Index" offset="20" visible="True" />
+    <undefined size="2" name="_Unnamed0" offset="22" visible="True" />
+  </tagblock>
+  <tagblock name="Hud Sounds" offset="1048" elementSize="24" maxelements="6" label="Chief Sound" visible="True">
+    <tagRef name="Chief Sound" offset="0" visible="True" />
+    <flags32 name="Latched To" offset="8" visible="True">
+      <bit name="Shield Recharging" index="0" />
+      <bit name="Shield Damaged" index="1" />
+      <bit name="Shield Low" index="2" />
+      <bit name="Shield Empty" index="3" />
+      <bit name="Health Low" index="4" />
+      <bit name="Health Empty" index="5" />
+      <bit name="Health Minor Damage" index="6" />
+      <bit name="Health Major Damage" index="7" />
+      <bit name="Rocket Locking" index="8" />
+      <bit name="Rocket Locked" index="9" />
+    </flags32>
+    <float32 name="Scale" offset="12" visible="True" />
+    <tagRef name="Dervish Sound" offset="16" visible="True" />
+  </tagblock>
+  <tagblock name="Player Training Data" offset="1056" elementSize="20" maxelements="32" label="" visible="True">
+    <stringid name="Display String" offset="0" visible="True" />
+    <int16 name="Max Display Time" offset="4" visible="True" />
+    <int16 name="Display Count" offset="6" visible="True" />
+    <int16 name="Dissapear Delay" offset="8" visible="True" />
+    <int16 name="Redisplay Delay" offset="10" visible="True" />
+    <float32 name="Display Delay S" offset="12" visible="True" />
+    <flags16 name="Flags" offset="16" visible="True">
+      <bit name="Not In Multiplayer" index="0" />
+    </flags16>
+    <undefined size="2" name="_Unnamed0" offset="18" visible="True" />
+  </tagblock>
+  <tagRef name="Primary Message Sound" offset="1064" visible="True" />
+  <tagRef name="Secondary Message Sound" offset="1072" visible="True" />
+  <stringid name="Boot Griefer String" offset="1080" visible="True" />
+  <stringid name="Cannot Boot Griefer String" offset="1084" visible="True" />
+  <tagRef name="Training Shader" offset="1088" visible="True" />
+  <tagRef name="Human Training Top Right" offset="1096" visible="True" />
+  <tagRef name="Human Training Top Center" offset="1104" visible="True" />
+  <tagRef name="Human Training Top Left" offset="1112" visible="True" />
+  <tagRef name="Human Training Middle" offset="1120" visible="True" />
+  <tagRef name="Elite Training Top Right" offset="1128" visible="True" />
+  <tagRef name="Elite Training Top Center" offset="1136" visible="True" />
+  <tagRef name="Elite Training Top Left" offset="1144" visible="True" />
+  <tagRef name="Elite Training Middle" offset="1152" visible="True" />
+</plugin>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="72">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <undefined size="4" name="_Unnamed0" offset="0" visible="True" />
+  <int16 name="Priority" offset="4" visible="True" />
+  <undefined size="2" name="_Unnamed1" offset="6" visible="True" />
+  <float32 name="Room Intensity" offset="8" visible="True" />
+  <float32 name="Room Intensity Hf" offset="12" visible="True" />
+  <float32 name="Room Rolloff 0 To 10" offset="16" visible="True" />
+  <float32 name="Decay Time 1 To 20" offset="20" visible="True" />
+  <float32 name="Decay Hf Ratio 1 To 2" offset="24" visible="True" />
+  <float32 name="Reflections Intensity" offset="28" visible="True" />
+  <float32 name="Reflections Delay 0 To 3" offset="32" visible="True" />
+  <float32 name="Reverb Intensity" offset="36" visible="True" />
+  <float32 name="Reverb Delay 0 To 1" offset="40" visible="True" />
+  <float32 name="Diffusion" offset="44" visible="True" />
+  <float32 name="Density" offset="48" visible="True" />
+  <float32 name="Hf Reference20 To 20000" offset="52" visible="True" />
+  <undefined size="16" name="_Unnamed2" offset="56" visible="True" />
+</plugin>

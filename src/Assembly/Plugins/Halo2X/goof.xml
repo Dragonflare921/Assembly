@@ -1,0 +1,2256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="368">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <tagRef name="_Unnamed0" offset="0" visible="True" />
+  <tagRef name="_Unnamed1" offset="8" visible="True" />
+  <tagRef name="_Unnamed2" offset="16" visible="True" />
+  <tagblock name="Game Engine Settings" offset="24" elementSize="24" maxelements="40" label="Setting Category" visible="True">
+    <enum32 name="Setting Category" offset="0" visible="True">
+      <option name="Match-Ctf" value="0" />
+      <option name="Match-Slayer" value="1" />
+      <option name="Match-Oddball" value="2" />
+      <option name="Match-King" value="3" />
+      <option name="Match-Race" value="4" />
+      <option name="Match-Headhunter" value="5" />
+      <option name="Match-Juggernaut" value="6" />
+      <option name="Match-Territories" value="7" />
+      <option name="Match-Assault" value="8" />
+      <option name="Players" value="9" />
+      <option name="OBSOLETE" value="10" />
+      <option name="Vehicles" value="11" />
+      <option name="Equipment" value="12" />
+      <option name="Game-Ctf" value="13" />
+      <option name="Game-Slayer" value="14" />
+      <option name="Game-Oddball" value="15" />
+      <option name="Game-King" value="16" />
+      <option name="Game-Race" value="17" />
+      <option name="Game-Headhunter" value="18" />
+      <option name="Game-Juggernaut" value="19" />
+      <option name="Game-Territories" value="20" />
+      <option name="Game-Assault" value="21" />
+      <option name="Quick Options-Ctf" value="22" />
+      <option name="Quick Options-Slayer" value="23" />
+      <option name="Quick Options-Oddball" value="24" />
+      <option name="Quick Options-King" value="25" />
+      <option name="Quick Options-Race" value="26" />
+      <option name="Quick Options-Headhunter" value="27" />
+      <option name="Quick Options-Juggernaut" value="28" />
+      <option name="Quick Options-Territories" value="29" />
+      <option name="Quick Options-Assault" value="30" />
+      <option name="Team-Ctf" value="31" />
+      <option name="Team-Slayer" value="32" />
+      <option name="Team-Oddball" value="33" />
+      <option name="Team-King" value="34" />
+      <option name="Team-Race" value="35" />
+      <option name="Team-Headhunter" value="36" />
+      <option name="Team-Juggernaut" value="37" />
+      <option name="Team-Territories" value="38" />
+      <option name="Team-Assault" value="39" />
+    </enum32>
+    <undefined size="4" name="_Unnamed0" offset="4" visible="True" />
+    <tagblock name="Options" offset="8" elementSize="8" maxelements="32" label="Value Pairs" visible="True">
+      <tagRef name="Value Pairs" offset="0" visible="True" />
+    </tagblock>
+    <tagblock name="_Unnamed1" offset="16" elementSize="0" maxelements="0" label="" visible="True">
+    </tagblock>
+  </tagblock>
+  <tagRef name="Default Variant Strings" offset="32" visible="True" />
+  <tagblock name="Default Variants" offset="40" elementSize="20" maxelements="100" label="Variant Name" visible="True">
+    <stringid name="Variant Name" offset="0" visible="True" />
+    <enum32 name="Variant Type" offset="4" visible="True">
+      <option name="Slayer" value="0" />
+      <option name="Oddball" value="1" />
+      <option name="Juggernaut" value="2" />
+      <option name="King" value="3" />
+      <option name="Ctf" value="4" />
+      <option name="Invasion" value="5" />
+      <option name="Territories" value="6" />
+    </enum32>
+    <tagblock name="Settings" offset="8" elementSize="8" maxelements="112" label="Setting Category" visible="True">
+      <enum32 name="Setting Category" offset="0" visible="True">
+        <option name="Match Round Setting" value="0" />
+        <option name="Match Ctf Score To Win" value="1" />
+        <option name="Match Slayer Score To Win Round" value="2" />
+        <option name="Match Oddball Score To Win Round" value="3" />
+        <option name="Match King Score To Win Round" value="4" />
+        <option name="Match Race Score To Win Round" value="5" />
+        <option name="Match Headhunter Score To Win Round" value="6" />
+        <option name="Match Juggernaut Score To Win Round" value="7" />
+        <option name="Match Territories Score To Win Round" value="8" />
+        <option name="Match Assault Score To Win Round" value="9" />
+        <option name="Match Round Time Limit" value="10" />
+        <option name="Match Rounds Reset Map" value="11" />
+        <option name="Match Tie Resolution" value="12" />
+        <option name="Match Observers" value="13" />
+        <option name="Match Join In Progress" value="14" />
+        <option name="Maximum Players" value="15" />
+        <option name="Lives Per Round" value="16" />
+        <option name="Respawn Time" value="17" />
+        <option name="Suicide Penalty" value="18" />
+        <option name="Shields" value="19" />
+        <option name="Motion Sensor" value="20" />
+        <option name="Invisibility" value="21" />
+        <option name="Team Changing" value="22" />
+        <option name="Team Scoring" value="23" />
+        <option name="Friendly Fire" value="24" />
+        <option name="Team Respawn Setting" value="25" />
+        <option name="Betrayal Respawn Penalty" value="26" />
+        <option name="Team Killer Management" value="27" />
+        <option name="Slayer Bonus Points" value="28" />
+        <option name="Slayer Suicide Point Loss" value="29" />
+        <option name="Slayer Death Point Loss" value="30" />
+        <option name="Headhunter Moving Head Bin" value="31" />
+        <option name="Headhunter Point Multiplier" value="32" />
+        <option name="Headhunter Suicide Point Loss" value="33" />
+        <option name="Headhunter Death Point Loss" value="34" />
+        <option name="Headhunter Uncontested Bin" value="35" />
+        <option name="Headhunter Speed With Heads" value="36" />
+        <option name="Headhunter Max Heads Carried" value="37" />
+        <option name="King Uncontested Hill" value="38" />
+        <option name="King Team Time Multiplier" value="39" />
+        <option name="King Moving Hill" value="40" />
+        <option name="King Extra Damage On Hill" value="41" />
+        <option name="King Dmg Resistance On Hill" value="42" />
+        <option name="Oddball Ball Spawn Count" value="43" />
+        <option name="Oddball Ball Hit Damage" value="44" />
+        <option name="Oddball Speed With Ball" value="45" />
+        <option name="Oddball Driving Gunning With Ball" value="46" />
+        <option name="Oddball Waypoint To Ball" value="47" />
+        <option name="Race Random Track" value="48" />
+        <option name="Race Uncontested Flag" value="49" />
+        <option name="Ctf Game Type" value="50" />
+        <option name="Ctf Sudden Death" value="51" />
+        <option name="Ctf Flag May Be Returned" value="52" />
+        <option name="Ctf Flag At Home To Score" value="53" />
+        <option name="Ctf Flag Reset Time" value="54" />
+        <option name="Ctf Speed With Flag" value="55" />
+        <option name="Ctf Flag Hit Damage" value="56" />
+        <option name="Ctf Driving Gunning With Flag" value="57" />
+        <option name="Ctf Waypoint To Own Flag" value="58" />
+        <option name="Assault Game Type" value="59" />
+        <option name="Assault Sudden Death" value="60" />
+        <option name="Assault Detonation Time" value="61" />
+        <option name="Assault Bomb At Home To Score" value="62" />
+        <option name="Assault Arming Time" value="63" />
+        <option name="Assault Speed With Bomb" value="64" />
+        <option name="Assault Bomb Hit Damage" value="65" />
+        <option name="Assault Driving Gunning With Bomb" value="66" />
+        <option name="Assault Waypoint To Own Bomb" value="67" />
+        <option name="Juggernaut Betrayal Point Loss" value="68" />
+        <option name="Juggernaut Juggy Extra Damage" value="69" />
+        <option name="Juggernaut Juggy Infinite Ammo" value="70" />
+        <option name="Juggernaut Juggy Overshields" value="71" />
+        <option name="Juggernaut Juggy Active Camo" value="72" />
+        <option name="Juggernaut Juggy Motion Sensor" value="73" />
+        <option name="Territories Territory Count" value="74" />
+        <option name="Veh. Respawn" value="75" />
+        <option name="Veh. Primary Light Land" value="76" />
+        <option name="Veh. Secondary Light Land" value="77" />
+        <option name="Veh. Primary Heavy Land" value="78" />
+        <option name="Veh. Primary Flying" value="79" />
+        <option name="Veh. Secondary Heavy Land" value="80" />
+        <option name="Veh. Primary Turret" value="81" />
+        <option name="Veh. Secondary Turret" value="82" />
+        <option name="Equip. Weapons On Map" value="83" />
+        <option name="Equip. Overshields On Map" value="84" />
+        <option name="Equip. Active Camo On Map" value="85" />
+        <option name="Equip. Grenades On Map" value="86" />
+        <option name="Equip. Weapon Respawn Times" value="87" />
+        <option name="Equip. Starting Grenades" value="88" />
+        <option name="Equip. Primary Starting Equipment" value="89" />
+        <option name="UNS. Max. Living Players" value="90" />
+        <option name="UNS. Teams Enabled" value="91" />
+        <option name="UNS. Assault Bomb May Be Returned" value="92" />
+        <option name="UNS. Max. Teams" value="93" />
+        <option name="UNS. Equip. Secondary Starting Equipment" value="94" />
+        <option name="UNS. Assault Fuse Time" value="95" />
+        <option name="UNS. Juggy Movement" value="96" />
+        <option name="UNS. Sticky Fuse" value="97" />
+        <option name="UNS. Terr. Contest Time" value="98" />
+        <option name="UNS. Terr. Control Time" value="99" />
+        <option name="UNS. Oddb. Carr. Invis" value="100" />
+        <option name="UNS. King Invis In Hill" value="101" />
+        <option name="UNS. Ball Carr. Dmg. Resis." value="102" />
+        <option name="UNS. King Dmg. Res. In Hill" value="103" />
+        <option name="UNS. Players Ex. Dmg" value="104" />
+        <option name="UNS. Players Dmg. Resis." value="105" />
+        <option name="UNS. Ctf Carr. Dmg. Resis." value="106" />
+        <option name="UNS. Ctf Carr. Invis." value="107" />
+        <option name="UNS. Juggy Dmg. Resis." value="108" />
+        <option name="UNS. Bomb Carr. Dmg. Resis." value="109" />
+        <option name="UNS. Bomb Carr. Invis." value="110" />
+        <option name="UNS. Force Even Teams" value="111" />
+      </enum32>
+      <int32 name="Value" offset="4" visible="True" />
+    </tagblock>
+    <int8 name="Description Index" offset="16" visible="True" />
+    <undefined size="3" name="_Unnamed0" offset="17" visible="True" />
+  </tagblock>
+  <stringid name="_Unnamed3" offset="48" visible="True" />
+  <enum32 name="_Unnamed4" offset="52" visible="True">
+    <option name="Slayer" value="0" />
+    <option name="Oddball" value="1" />
+    <option name="Juggernaut" value="2" />
+    <option name="King" value="3" />
+    <option name="Ctf" value="4" />
+    <option name="Invasion" value="5" />
+    <option name="Territories" value="6" />
+  </enum32>
+  <tagblock name="Settings" offset="56" elementSize="8" maxelements="112" label="Setting Category" visible="True">
+    <enum32 name="Setting Category" offset="0" visible="True">
+      <option name="Match Round Setting" value="0" />
+      <option name="Match Ctf Score To Win" value="1" />
+      <option name="Match Slayer Score To Win Round" value="2" />
+      <option name="Match Oddball Score To Win Round" value="3" />
+      <option name="Match King Score To Win Round" value="4" />
+      <option name="Match Race Score To Win Round" value="5" />
+      <option name="Match Headhunter Score To Win Round" value="6" />
+      <option name="Match Juggernaut Score To Win Round" value="7" />
+      <option name="Match Territories Score To Win Round" value="8" />
+      <option name="Match Assault Score To Win Round" value="9" />
+      <option name="Match Round Time Limit" value="10" />
+      <option name="Match Rounds Reset Map" value="11" />
+      <option name="Match Tie Resolution" value="12" />
+      <option name="Match Observers" value="13" />
+      <option name="Match Join In Progress" value="14" />
+      <option name="Maximum Players" value="15" />
+      <option name="Lives Per Round" value="16" />
+      <option name="Respawn Time" value="17" />
+      <option name="Suicide Penalty" value="18" />
+      <option name="Shields" value="19" />
+      <option name="Motion Sensor" value="20" />
+      <option name="Invisibility" value="21" />
+      <option name="Team Changing" value="22" />
+      <option name="Team Scoring" value="23" />
+      <option name="Friendly Fire" value="24" />
+      <option name="Team Respawn Setting" value="25" />
+      <option name="Betrayal Respawn Penalty" value="26" />
+      <option name="Team Killer Management" value="27" />
+      <option name="Slayer Bonus Points" value="28" />
+      <option name="Slayer Suicide Point Loss" value="29" />
+      <option name="Slayer Death Point Loss" value="30" />
+      <option name="Headhunter Moving Head Bin" value="31" />
+      <option name="Headhunter Point Multiplier" value="32" />
+      <option name="Headhunter Suicide Point Loss" value="33" />
+      <option name="Headhunter Death Point Loss" value="34" />
+      <option name="Headhunter Uncontested Bin" value="35" />
+      <option name="Headhunter Speed With Heads" value="36" />
+      <option name="Headhunter Max Heads Carried" value="37" />
+      <option name="King Uncontested Hill" value="38" />
+      <option name="King Team Time Multiplier" value="39" />
+      <option name="King Moving Hill" value="40" />
+      <option name="King Extra Damage On Hill" value="41" />
+      <option name="King Dmg Resistance On Hill" value="42" />
+      <option name="Oddball Ball Spawn Count" value="43" />
+      <option name="Oddball Ball Hit Damage" value="44" />
+      <option name="Oddball Speed With Ball" value="45" />
+      <option name="Oddball Driving Gunning With Ball" value="46" />
+      <option name="Oddball Waypoint To Ball" value="47" />
+      <option name="Race Random Track" value="48" />
+      <option name="Race Uncontested Flag" value="49" />
+      <option name="Ctf Game Type" value="50" />
+      <option name="Ctf Sudden Death" value="51" />
+      <option name="Ctf Flag May Be Returned" value="52" />
+      <option name="Ctf Flag At Home To Score" value="53" />
+      <option name="Ctf Flag Reset Time" value="54" />
+      <option name="Ctf Speed With Flag" value="55" />
+      <option name="Ctf Flag Hit Damage" value="56" />
+      <option name="Ctf Driving Gunning With Flag" value="57" />
+      <option name="Ctf Waypoint To Own Flag" value="58" />
+      <option name="Assault Game Type" value="59" />
+      <option name="Assault Sudden Death" value="60" />
+      <option name="Assault Detonation Time" value="61" />
+      <option name="Assault Bomb At Home To Score" value="62" />
+      <option name="Assault Arming Time" value="63" />
+      <option name="Assault Speed With Bomb" value="64" />
+      <option name="Assault Bomb Hit Damage" value="65" />
+      <option name="Assault Driving Gunning With Bomb" value="66" />
+      <option name="Assault Waypoint To Own Bomb" value="67" />
+      <option name="Juggernaut Betrayal Point Loss" value="68" />
+      <option name="Juggernaut Juggy Extra Damage" value="69" />
+      <option name="Juggernaut Juggy Infinite Ammo" value="70" />
+      <option name="Juggernaut Juggy Overshields" value="71" />
+      <option name="Juggernaut Juggy Active Camo" value="72" />
+      <option name="Juggernaut Juggy Motion Sensor" value="73" />
+      <option name="Territories Territory Count" value="74" />
+      <option name="Veh. Respawn" value="75" />
+      <option name="Veh. Primary Light Land" value="76" />
+      <option name="Veh. Secondary Light Land" value="77" />
+      <option name="Veh. Primary Heavy Land" value="78" />
+      <option name="Veh. Primary Flying" value="79" />
+      <option name="Veh. Secondary Heavy Land" value="80" />
+      <option name="Veh. Primary Turret" value="81" />
+      <option name="Veh. Secondary Turret" value="82" />
+      <option name="Equip. Weapons On Map" value="83" />
+      <option name="Equip. Overshields On Map" value="84" />
+      <option name="Equip. Active Camo On Map" value="85" />
+      <option name="Equip. Grenades On Map" value="86" />
+      <option name="Equip. Weapon Respawn Times" value="87" />
+      <option name="Equip. Starting Grenades" value="88" />
+      <option name="Equip. Primary Starting Equipment" value="89" />
+      <option name="UNS. Max. Living Players" value="90" />
+      <option name="UNS. Teams Enabled" value="91" />
+      <option name="UNS. Assault Bomb May Be Returned" value="92" />
+      <option name="UNS. Max. Teams" value="93" />
+      <option name="UNS. Equip. Secondary Starting Equipment" value="94" />
+      <option name="UNS. Assault Fuse Time" value="95" />
+      <option name="UNS. Juggy Movement" value="96" />
+      <option name="UNS. Sticky Fuse" value="97" />
+      <option name="UNS. Terr. Contest Time" value="98" />
+      <option name="UNS. Terr. Control Time" value="99" />
+      <option name="UNS. Oddb. Carr. Invis" value="100" />
+      <option name="UNS. King Invis In Hill" value="101" />
+      <option name="UNS. Ball Carr. Dmg. Resis." value="102" />
+      <option name="UNS. King Dmg. Res. In Hill" value="103" />
+      <option name="UNS. Players Ex. Dmg" value="104" />
+      <option name="UNS. Players Dmg. Resis." value="105" />
+      <option name="UNS. Ctf Carr. Dmg. Resis." value="106" />
+      <option name="UNS. Ctf Carr. Invis." value="107" />
+      <option name="UNS. Juggy Dmg. Resis." value="108" />
+      <option name="UNS. Bomb Carr. Dmg. Resis." value="109" />
+      <option name="UNS. Bomb Carr. Invis." value="110" />
+      <option name="UNS. Force Even Teams" value="111" />
+    </enum32>
+    <int32 name="Value" offset="4" visible="True" />
+  </tagblock>
+  <int8 name="_Unnamed5" offset="64" visible="True" />
+  <undefined size="3" name="_Unnamed6" offset="65" visible="True" />
+  <stringid name="_Unnamed7" offset="68" visible="True" />
+  <enum32 name="_Unnamed8" offset="72" visible="True">
+    <option name="Slayer" value="0" />
+    <option name="Oddball" value="1" />
+    <option name="Juggernaut" value="2" />
+    <option name="King" value="3" />
+    <option name="Ctf" value="4" />
+    <option name="Invasion" value="5" />
+    <option name="Territories" value="6" />
+  </enum32>
+  <tagblock name="Settings2" offset="76" elementSize="8" maxelements="112" label="Setting Category" visible="True">
+    <enum32 name="Setting Category" offset="0" visible="True">
+      <option name="Match Round Setting" value="0" />
+      <option name="Match Ctf Score To Win" value="1" />
+      <option name="Match Slayer Score To Win Round" value="2" />
+      <option name="Match Oddball Score To Win Round" value="3" />
+      <option name="Match King Score To Win Round" value="4" />
+      <option name="Match Race Score To Win Round" value="5" />
+      <option name="Match Headhunter Score To Win Round" value="6" />
+      <option name="Match Juggernaut Score To Win Round" value="7" />
+      <option name="Match Territories Score To Win Round" value="8" />
+      <option name="Match Assault Score To Win Round" value="9" />
+      <option name="Match Round Time Limit" value="10" />
+      <option name="Match Rounds Reset Map" value="11" />
+      <option name="Match Tie Resolution" value="12" />
+      <option name="Match Observers" value="13" />
+      <option name="Match Join In Progress" value="14" />
+      <option name="Maximum Players" value="15" />
+      <option name="Lives Per Round" value="16" />
+      <option name="Respawn Time" value="17" />
+      <option name="Suicide Penalty" value="18" />
+      <option name="Shields" value="19" />
+      <option name="Motion Sensor" value="20" />
+      <option name="Invisibility" value="21" />
+      <option name="Team Changing" value="22" />
+      <option name="Team Scoring" value="23" />
+      <option name="Friendly Fire" value="24" />
+      <option name="Team Respawn Setting" value="25" />
+      <option name="Betrayal Respawn Penalty" value="26" />
+      <option name="Team Killer Management" value="27" />
+      <option name="Slayer Bonus Points" value="28" />
+      <option name="Slayer Suicide Point Loss" value="29" />
+      <option name="Slayer Death Point Loss" value="30" />
+      <option name="Headhunter Moving Head Bin" value="31" />
+      <option name="Headhunter Point Multiplier" value="32" />
+      <option name="Headhunter Suicide Point Loss" value="33" />
+      <option name="Headhunter Death Point Loss" value="34" />
+      <option name="Headhunter Uncontested Bin" value="35" />
+      <option name="Headhunter Speed With Heads" value="36" />
+      <option name="Headhunter Max Heads Carried" value="37" />
+      <option name="King Uncontested Hill" value="38" />
+      <option name="King Team Time Multiplier" value="39" />
+      <option name="King Moving Hill" value="40" />
+      <option name="King Extra Damage On Hill" value="41" />
+      <option name="King Dmg Resistance On Hill" value="42" />
+      <option name="Oddball Ball Spawn Count" value="43" />
+      <option name="Oddball Ball Hit Damage" value="44" />
+      <option name="Oddball Speed With Ball" value="45" />
+      <option name="Oddball Driving Gunning With Ball" value="46" />
+      <option name="Oddball Waypoint To Ball" value="47" />
+      <option name="Race Random Track" value="48" />
+      <option name="Race Uncontested Flag" value="49" />
+      <option name="Ctf Game Type" value="50" />
+      <option name="Ctf Sudden Death" value="51" />
+      <option name="Ctf Flag May Be Returned" value="52" />
+      <option name="Ctf Flag At Home To Score" value="53" />
+      <option name="Ctf Flag Reset Time" value="54" />
+      <option name="Ctf Speed With Flag" value="55" />
+      <option name="Ctf Flag Hit Damage" value="56" />
+      <option name="Ctf Driving Gunning With Flag" value="57" />
+      <option name="Ctf Waypoint To Own Flag" value="58" />
+      <option name="Assault Game Type" value="59" />
+      <option name="Assault Sudden Death" value="60" />
+      <option name="Assault Detonation Time" value="61" />
+      <option name="Assault Bomb At Home To Score" value="62" />
+      <option name="Assault Arming Time" value="63" />
+      <option name="Assault Speed With Bomb" value="64" />
+      <option name="Assault Bomb Hit Damage" value="65" />
+      <option name="Assault Driving Gunning With Bomb" value="66" />
+      <option name="Assault Waypoint To Own Bomb" value="67" />
+      <option name="Juggernaut Betrayal Point Loss" value="68" />
+      <option name="Juggernaut Juggy Extra Damage" value="69" />
+      <option name="Juggernaut Juggy Infinite Ammo" value="70" />
+      <option name="Juggernaut Juggy Overshields" value="71" />
+      <option name="Juggernaut Juggy Active Camo" value="72" />
+      <option name="Juggernaut Juggy Motion Sensor" value="73" />
+      <option name="Territories Territory Count" value="74" />
+      <option name="Veh. Respawn" value="75" />
+      <option name="Veh. Primary Light Land" value="76" />
+      <option name="Veh. Secondary Light Land" value="77" />
+      <option name="Veh. Primary Heavy Land" value="78" />
+      <option name="Veh. Primary Flying" value="79" />
+      <option name="Veh. Secondary Heavy Land" value="80" />
+      <option name="Veh. Primary Turret" value="81" />
+      <option name="Veh. Secondary Turret" value="82" />
+      <option name="Equip. Weapons On Map" value="83" />
+      <option name="Equip. Overshields On Map" value="84" />
+      <option name="Equip. Active Camo On Map" value="85" />
+      <option name="Equip. Grenades On Map" value="86" />
+      <option name="Equip. Weapon Respawn Times" value="87" />
+      <option name="Equip. Starting Grenades" value="88" />
+      <option name="Equip. Primary Starting Equipment" value="89" />
+      <option name="UNS. Max. Living Players" value="90" />
+      <option name="UNS. Teams Enabled" value="91" />
+      <option name="UNS. Assault Bomb May Be Returned" value="92" />
+      <option name="UNS. Max. Teams" value="93" />
+      <option name="UNS. Equip. Secondary Starting Equipment" value="94" />
+      <option name="UNS. Assault Fuse Time" value="95" />
+      <option name="UNS. Juggy Movement" value="96" />
+      <option name="UNS. Sticky Fuse" value="97" />
+      <option name="UNS. Terr. Contest Time" value="98" />
+      <option name="UNS. Terr. Control Time" value="99" />
+      <option name="UNS. Oddb. Carr. Invis" value="100" />
+      <option name="UNS. King Invis In Hill" value="101" />
+      <option name="UNS. Ball Carr. Dmg. Resis." value="102" />
+      <option name="UNS. King Dmg. Res. In Hill" value="103" />
+      <option name="UNS. Players Ex. Dmg" value="104" />
+      <option name="UNS. Players Dmg. Resis." value="105" />
+      <option name="UNS. Ctf Carr. Dmg. Resis." value="106" />
+      <option name="UNS. Ctf Carr. Invis." value="107" />
+      <option name="UNS. Juggy Dmg. Resis." value="108" />
+      <option name="UNS. Bomb Carr. Dmg. Resis." value="109" />
+      <option name="UNS. Bomb Carr. Invis." value="110" />
+      <option name="UNS. Force Even Teams" value="111" />
+    </enum32>
+    <int32 name="Value" offset="4" visible="True" />
+  </tagblock>
+  <int8 name="_Unnamed9" offset="84" visible="True" />
+  <undefined size="3" name="_Unnamed10" offset="85" visible="True" />
+  <stringid name="_Unnamed11" offset="88" visible="True" />
+  <enum32 name="_Unnamed12" offset="92" visible="True">
+    <option name="Slayer" value="0" />
+    <option name="Oddball" value="1" />
+    <option name="Juggernaut" value="2" />
+    <option name="King" value="3" />
+    <option name="Ctf" value="4" />
+    <option name="Invasion" value="5" />
+    <option name="Territories" value="6" />
+  </enum32>
+  <tagblock name="Settings3" offset="96" elementSize="8" maxelements="112" label="Setting Category" visible="True">
+    <enum32 name="Setting Category" offset="0" visible="True">
+      <option name="Match Round Setting" value="0" />
+      <option name="Match Ctf Score To Win" value="1" />
+      <option name="Match Slayer Score To Win Round" value="2" />
+      <option name="Match Oddball Score To Win Round" value="3" />
+      <option name="Match King Score To Win Round" value="4" />
+      <option name="Match Race Score To Win Round" value="5" />
+      <option name="Match Headhunter Score To Win Round" value="6" />
+      <option name="Match Juggernaut Score To Win Round" value="7" />
+      <option name="Match Territories Score To Win Round" value="8" />
+      <option name="Match Assault Score To Win Round" value="9" />
+      <option name="Match Round Time Limit" value="10" />
+      <option name="Match Rounds Reset Map" value="11" />
+      <option name="Match Tie Resolution" value="12" />
+      <option name="Match Observers" value="13" />
+      <option name="Match Join In Progress" value="14" />
+      <option name="Maximum Players" value="15" />
+      <option name="Lives Per Round" value="16" />
+      <option name="Respawn Time" value="17" />
+      <option name="Suicide Penalty" value="18" />
+      <option name="Shields" value="19" />
+      <option name="Motion Sensor" value="20" />
+      <option name="Invisibility" value="21" />
+      <option name="Team Changing" value="22" />
+      <option name="Team Scoring" value="23" />
+      <option name="Friendly Fire" value="24" />
+      <option name="Team Respawn Setting" value="25" />
+      <option name="Betrayal Respawn Penalty" value="26" />
+      <option name="Team Killer Management" value="27" />
+      <option name="Slayer Bonus Points" value="28" />
+      <option name="Slayer Suicide Point Loss" value="29" />
+      <option name="Slayer Death Point Loss" value="30" />
+      <option name="Headhunter Moving Head Bin" value="31" />
+      <option name="Headhunter Point Multiplier" value="32" />
+      <option name="Headhunter Suicide Point Loss" value="33" />
+      <option name="Headhunter Death Point Loss" value="34" />
+      <option name="Headhunter Uncontested Bin" value="35" />
+      <option name="Headhunter Speed With Heads" value="36" />
+      <option name="Headhunter Max Heads Carried" value="37" />
+      <option name="King Uncontested Hill" value="38" />
+      <option name="King Team Time Multiplier" value="39" />
+      <option name="King Moving Hill" value="40" />
+      <option name="King Extra Damage On Hill" value="41" />
+      <option name="King Dmg Resistance On Hill" value="42" />
+      <option name="Oddball Ball Spawn Count" value="43" />
+      <option name="Oddball Ball Hit Damage" value="44" />
+      <option name="Oddball Speed With Ball" value="45" />
+      <option name="Oddball Driving Gunning With Ball" value="46" />
+      <option name="Oddball Waypoint To Ball" value="47" />
+      <option name="Race Random Track" value="48" />
+      <option name="Race Uncontested Flag" value="49" />
+      <option name="Ctf Game Type" value="50" />
+      <option name="Ctf Sudden Death" value="51" />
+      <option name="Ctf Flag May Be Returned" value="52" />
+      <option name="Ctf Flag At Home To Score" value="53" />
+      <option name="Ctf Flag Reset Time" value="54" />
+      <option name="Ctf Speed With Flag" value="55" />
+      <option name="Ctf Flag Hit Damage" value="56" />
+      <option name="Ctf Driving Gunning With Flag" value="57" />
+      <option name="Ctf Waypoint To Own Flag" value="58" />
+      <option name="Assault Game Type" value="59" />
+      <option name="Assault Sudden Death" value="60" />
+      <option name="Assault Detonation Time" value="61" />
+      <option name="Assault Bomb At Home To Score" value="62" />
+      <option name="Assault Arming Time" value="63" />
+      <option name="Assault Speed With Bomb" value="64" />
+      <option name="Assault Bomb Hit Damage" value="65" />
+      <option name="Assault Driving Gunning With Bomb" value="66" />
+      <option name="Assault Waypoint To Own Bomb" value="67" />
+      <option name="Juggernaut Betrayal Point Loss" value="68" />
+      <option name="Juggernaut Juggy Extra Damage" value="69" />
+      <option name="Juggernaut Juggy Infinite Ammo" value="70" />
+      <option name="Juggernaut Juggy Overshields" value="71" />
+      <option name="Juggernaut Juggy Active Camo" value="72" />
+      <option name="Juggernaut Juggy Motion Sensor" value="73" />
+      <option name="Territories Territory Count" value="74" />
+      <option name="Veh. Respawn" value="75" />
+      <option name="Veh. Primary Light Land" value="76" />
+      <option name="Veh. Secondary Light Land" value="77" />
+      <option name="Veh. Primary Heavy Land" value="78" />
+      <option name="Veh. Primary Flying" value="79" />
+      <option name="Veh. Secondary Heavy Land" value="80" />
+      <option name="Veh. Primary Turret" value="81" />
+      <option name="Veh. Secondary Turret" value="82" />
+      <option name="Equip. Weapons On Map" value="83" />
+      <option name="Equip. Overshields On Map" value="84" />
+      <option name="Equip. Active Camo On Map" value="85" />
+      <option name="Equip. Grenades On Map" value="86" />
+      <option name="Equip. Weapon Respawn Times" value="87" />
+      <option name="Equip. Starting Grenades" value="88" />
+      <option name="Equip. Primary Starting Equipment" value="89" />
+      <option name="UNS. Max. Living Players" value="90" />
+      <option name="UNS. Teams Enabled" value="91" />
+      <option name="UNS. Assault Bomb May Be Returned" value="92" />
+      <option name="UNS. Max. Teams" value="93" />
+      <option name="UNS. Equip. Secondary Starting Equipment" value="94" />
+      <option name="UNS. Assault Fuse Time" value="95" />
+      <option name="UNS. Juggy Movement" value="96" />
+      <option name="UNS. Sticky Fuse" value="97" />
+      <option name="UNS. Terr. Contest Time" value="98" />
+      <option name="UNS. Terr. Control Time" value="99" />
+      <option name="UNS. Oddb. Carr. Invis" value="100" />
+      <option name="UNS. King Invis In Hill" value="101" />
+      <option name="UNS. Ball Carr. Dmg. Resis." value="102" />
+      <option name="UNS. King Dmg. Res. In Hill" value="103" />
+      <option name="UNS. Players Ex. Dmg" value="104" />
+      <option name="UNS. Players Dmg. Resis." value="105" />
+      <option name="UNS. Ctf Carr. Dmg. Resis." value="106" />
+      <option name="UNS. Ctf Carr. Invis." value="107" />
+      <option name="UNS. Juggy Dmg. Resis." value="108" />
+      <option name="UNS. Bomb Carr. Dmg. Resis." value="109" />
+      <option name="UNS. Bomb Carr. Invis." value="110" />
+      <option name="UNS. Force Even Teams" value="111" />
+    </enum32>
+    <int32 name="Value" offset="4" visible="True" />
+  </tagblock>
+  <int8 name="_Unnamed13" offset="104" visible="True" />
+  <undefined size="3" name="_Unnamed14" offset="105" visible="True" />
+  <stringid name="_Unnamed15" offset="108" visible="True" />
+  <enum32 name="_Unnamed16" offset="112" visible="True">
+    <option name="Slayer" value="0" />
+    <option name="Oddball" value="1" />
+    <option name="Juggernaut" value="2" />
+    <option name="King" value="3" />
+    <option name="Ctf" value="4" />
+    <option name="Invasion" value="5" />
+    <option name="Territories" value="6" />
+  </enum32>
+  <tagblock name="Settings4" offset="116" elementSize="8" maxelements="112" label="Setting Category" visible="True">
+    <enum32 name="Setting Category" offset="0" visible="True">
+      <option name="Match Round Setting" value="0" />
+      <option name="Match Ctf Score To Win" value="1" />
+      <option name="Match Slayer Score To Win Round" value="2" />
+      <option name="Match Oddball Score To Win Round" value="3" />
+      <option name="Match King Score To Win Round" value="4" />
+      <option name="Match Race Score To Win Round" value="5" />
+      <option name="Match Headhunter Score To Win Round" value="6" />
+      <option name="Match Juggernaut Score To Win Round" value="7" />
+      <option name="Match Territories Score To Win Round" value="8" />
+      <option name="Match Assault Score To Win Round" value="9" />
+      <option name="Match Round Time Limit" value="10" />
+      <option name="Match Rounds Reset Map" value="11" />
+      <option name="Match Tie Resolution" value="12" />
+      <option name="Match Observers" value="13" />
+      <option name="Match Join In Progress" value="14" />
+      <option name="Maximum Players" value="15" />
+      <option name="Lives Per Round" value="16" />
+      <option name="Respawn Time" value="17" />
+      <option name="Suicide Penalty" value="18" />
+      <option name="Shields" value="19" />
+      <option name="Motion Sensor" value="20" />
+      <option name="Invisibility" value="21" />
+      <option name="Team Changing" value="22" />
+      <option name="Team Scoring" value="23" />
+      <option name="Friendly Fire" value="24" />
+      <option name="Team Respawn Setting" value="25" />
+      <option name="Betrayal Respawn Penalty" value="26" />
+      <option name="Team Killer Management" value="27" />
+      <option name="Slayer Bonus Points" value="28" />
+      <option name="Slayer Suicide Point Loss" value="29" />
+      <option name="Slayer Death Point Loss" value="30" />
+      <option name="Headhunter Moving Head Bin" value="31" />
+      <option name="Headhunter Point Multiplier" value="32" />
+      <option name="Headhunter Suicide Point Loss" value="33" />
+      <option name="Headhunter Death Point Loss" value="34" />
+      <option name="Headhunter Uncontested Bin" value="35" />
+      <option name="Headhunter Speed With Heads" value="36" />
+      <option name="Headhunter Max Heads Carried" value="37" />
+      <option name="King Uncontested Hill" value="38" />
+      <option name="King Team Time Multiplier" value="39" />
+      <option name="King Moving Hill" value="40" />
+      <option name="King Extra Damage On Hill" value="41" />
+      <option name="King Dmg Resistance On Hill" value="42" />
+      <option name="Oddball Ball Spawn Count" value="43" />
+      <option name="Oddball Ball Hit Damage" value="44" />
+      <option name="Oddball Speed With Ball" value="45" />
+      <option name="Oddball Driving Gunning With Ball" value="46" />
+      <option name="Oddball Waypoint To Ball" value="47" />
+      <option name="Race Random Track" value="48" />
+      <option name="Race Uncontested Flag" value="49" />
+      <option name="Ctf Game Type" value="50" />
+      <option name="Ctf Sudden Death" value="51" />
+      <option name="Ctf Flag May Be Returned" value="52" />
+      <option name="Ctf Flag At Home To Score" value="53" />
+      <option name="Ctf Flag Reset Time" value="54" />
+      <option name="Ctf Speed With Flag" value="55" />
+      <option name="Ctf Flag Hit Damage" value="56" />
+      <option name="Ctf Driving Gunning With Flag" value="57" />
+      <option name="Ctf Waypoint To Own Flag" value="58" />
+      <option name="Assault Game Type" value="59" />
+      <option name="Assault Sudden Death" value="60" />
+      <option name="Assault Detonation Time" value="61" />
+      <option name="Assault Bomb At Home To Score" value="62" />
+      <option name="Assault Arming Time" value="63" />
+      <option name="Assault Speed With Bomb" value="64" />
+      <option name="Assault Bomb Hit Damage" value="65" />
+      <option name="Assault Driving Gunning With Bomb" value="66" />
+      <option name="Assault Waypoint To Own Bomb" value="67" />
+      <option name="Juggernaut Betrayal Point Loss" value="68" />
+      <option name="Juggernaut Juggy Extra Damage" value="69" />
+      <option name="Juggernaut Juggy Infinite Ammo" value="70" />
+      <option name="Juggernaut Juggy Overshields" value="71" />
+      <option name="Juggernaut Juggy Active Camo" value="72" />
+      <option name="Juggernaut Juggy Motion Sensor" value="73" />
+      <option name="Territories Territory Count" value="74" />
+      <option name="Veh. Respawn" value="75" />
+      <option name="Veh. Primary Light Land" value="76" />
+      <option name="Veh. Secondary Light Land" value="77" />
+      <option name="Veh. Primary Heavy Land" value="78" />
+      <option name="Veh. Primary Flying" value="79" />
+      <option name="Veh. Secondary Heavy Land" value="80" />
+      <option name="Veh. Primary Turret" value="81" />
+      <option name="Veh. Secondary Turret" value="82" />
+      <option name="Equip. Weapons On Map" value="83" />
+      <option name="Equip. Overshields On Map" value="84" />
+      <option name="Equip. Active Camo On Map" value="85" />
+      <option name="Equip. Grenades On Map" value="86" />
+      <option name="Equip. Weapon Respawn Times" value="87" />
+      <option name="Equip. Starting Grenades" value="88" />
+      <option name="Equip. Primary Starting Equipment" value="89" />
+      <option name="UNS. Max. Living Players" value="90" />
+      <option name="UNS. Teams Enabled" value="91" />
+      <option name="UNS. Assault Bomb May Be Returned" value="92" />
+      <option name="UNS. Max. Teams" value="93" />
+      <option name="UNS. Equip. Secondary Starting Equipment" value="94" />
+      <option name="UNS. Assault Fuse Time" value="95" />
+      <option name="UNS. Juggy Movement" value="96" />
+      <option name="UNS. Sticky Fuse" value="97" />
+      <option name="UNS. Terr. Contest Time" value="98" />
+      <option name="UNS. Terr. Control Time" value="99" />
+      <option name="UNS. Oddb. Carr. Invis" value="100" />
+      <option name="UNS. King Invis In Hill" value="101" />
+      <option name="UNS. Ball Carr. Dmg. Resis." value="102" />
+      <option name="UNS. King Dmg. Res. In Hill" value="103" />
+      <option name="UNS. Players Ex. Dmg" value="104" />
+      <option name="UNS. Players Dmg. Resis." value="105" />
+      <option name="UNS. Ctf Carr. Dmg. Resis." value="106" />
+      <option name="UNS. Ctf Carr. Invis." value="107" />
+      <option name="UNS. Juggy Dmg. Resis." value="108" />
+      <option name="UNS. Bomb Carr. Dmg. Resis." value="109" />
+      <option name="UNS. Bomb Carr. Invis." value="110" />
+      <option name="UNS. Force Even Teams" value="111" />
+    </enum32>
+    <int32 name="Value" offset="4" visible="True" />
+  </tagblock>
+  <int8 name="_Unnamed17" offset="124" visible="True" />
+  <undefined size="3" name="_Unnamed18" offset="125" visible="True" />
+  <stringid name="_Unnamed19" offset="128" visible="True" />
+  <enum32 name="_Unnamed20" offset="132" visible="True">
+    <option name="Slayer" value="0" />
+    <option name="Oddball" value="1" />
+    <option name="Juggernaut" value="2" />
+    <option name="King" value="3" />
+    <option name="Ctf" value="4" />
+    <option name="Invasion" value="5" />
+    <option name="Territories" value="6" />
+  </enum32>
+  <tagblock name="Settings5" offset="136" elementSize="8" maxelements="112" label="Setting Category" visible="True">
+    <enum32 name="Setting Category" offset="0" visible="True">
+      <option name="Match Round Setting" value="0" />
+      <option name="Match Ctf Score To Win" value="1" />
+      <option name="Match Slayer Score To Win Round" value="2" />
+      <option name="Match Oddball Score To Win Round" value="3" />
+      <option name="Match King Score To Win Round" value="4" />
+      <option name="Match Race Score To Win Round" value="5" />
+      <option name="Match Headhunter Score To Win Round" value="6" />
+      <option name="Match Juggernaut Score To Win Round" value="7" />
+      <option name="Match Territories Score To Win Round" value="8" />
+      <option name="Match Assault Score To Win Round" value="9" />
+      <option name="Match Round Time Limit" value="10" />
+      <option name="Match Rounds Reset Map" value="11" />
+      <option name="Match Tie Resolution" value="12" />
+      <option name="Match Observers" value="13" />
+      <option name="Match Join In Progress" value="14" />
+      <option name="Maximum Players" value="15" />
+      <option name="Lives Per Round" value="16" />
+      <option name="Respawn Time" value="17" />
+      <option name="Suicide Penalty" value="18" />
+      <option name="Shields" value="19" />
+      <option name="Motion Sensor" value="20" />
+      <option name="Invisibility" value="21" />
+      <option name="Team Changing" value="22" />
+      <option name="Team Scoring" value="23" />
+      <option name="Friendly Fire" value="24" />
+      <option name="Team Respawn Setting" value="25" />
+      <option name="Betrayal Respawn Penalty" value="26" />
+      <option name="Team Killer Management" value="27" />
+      <option name="Slayer Bonus Points" value="28" />
+      <option name="Slayer Suicide Point Loss" value="29" />
+      <option name="Slayer Death Point Loss" value="30" />
+      <option name="Headhunter Moving Head Bin" value="31" />
+      <option name="Headhunter Point Multiplier" value="32" />
+      <option name="Headhunter Suicide Point Loss" value="33" />
+      <option name="Headhunter Death Point Loss" value="34" />
+      <option name="Headhunter Uncontested Bin" value="35" />
+      <option name="Headhunter Speed With Heads" value="36" />
+      <option name="Headhunter Max Heads Carried" value="37" />
+      <option name="King Uncontested Hill" value="38" />
+      <option name="King Team Time Multiplier" value="39" />
+      <option name="King Moving Hill" value="40" />
+      <option name="King Extra Damage On Hill" value="41" />
+      <option name="King Dmg Resistance On Hill" value="42" />
+      <option name="Oddball Ball Spawn Count" value="43" />
+      <option name="Oddball Ball Hit Damage" value="44" />
+      <option name="Oddball Speed With Ball" value="45" />
+      <option name="Oddball Driving Gunning With Ball" value="46" />
+      <option name="Oddball Waypoint To Ball" value="47" />
+      <option name="Race Random Track" value="48" />
+      <option name="Race Uncontested Flag" value="49" />
+      <option name="Ctf Game Type" value="50" />
+      <option name="Ctf Sudden Death" value="51" />
+      <option name="Ctf Flag May Be Returned" value="52" />
+      <option name="Ctf Flag At Home To Score" value="53" />
+      <option name="Ctf Flag Reset Time" value="54" />
+      <option name="Ctf Speed With Flag" value="55" />
+      <option name="Ctf Flag Hit Damage" value="56" />
+      <option name="Ctf Driving Gunning With Flag" value="57" />
+      <option name="Ctf Waypoint To Own Flag" value="58" />
+      <option name="Assault Game Type" value="59" />
+      <option name="Assault Sudden Death" value="60" />
+      <option name="Assault Detonation Time" value="61" />
+      <option name="Assault Bomb At Home To Score" value="62" />
+      <option name="Assault Arming Time" value="63" />
+      <option name="Assault Speed With Bomb" value="64" />
+      <option name="Assault Bomb Hit Damage" value="65" />
+      <option name="Assault Driving Gunning With Bomb" value="66" />
+      <option name="Assault Waypoint To Own Bomb" value="67" />
+      <option name="Juggernaut Betrayal Point Loss" value="68" />
+      <option name="Juggernaut Juggy Extra Damage" value="69" />
+      <option name="Juggernaut Juggy Infinite Ammo" value="70" />
+      <option name="Juggernaut Juggy Overshields" value="71" />
+      <option name="Juggernaut Juggy Active Camo" value="72" />
+      <option name="Juggernaut Juggy Motion Sensor" value="73" />
+      <option name="Territories Territory Count" value="74" />
+      <option name="Veh. Respawn" value="75" />
+      <option name="Veh. Primary Light Land" value="76" />
+      <option name="Veh. Secondary Light Land" value="77" />
+      <option name="Veh. Primary Heavy Land" value="78" />
+      <option name="Veh. Primary Flying" value="79" />
+      <option name="Veh. Secondary Heavy Land" value="80" />
+      <option name="Veh. Primary Turret" value="81" />
+      <option name="Veh. Secondary Turret" value="82" />
+      <option name="Equip. Weapons On Map" value="83" />
+      <option name="Equip. Overshields On Map" value="84" />
+      <option name="Equip. Active Camo On Map" value="85" />
+      <option name="Equip. Grenades On Map" value="86" />
+      <option name="Equip. Weapon Respawn Times" value="87" />
+      <option name="Equip. Starting Grenades" value="88" />
+      <option name="Equip. Primary Starting Equipment" value="89" />
+      <option name="UNS. Max. Living Players" value="90" />
+      <option name="UNS. Teams Enabled" value="91" />
+      <option name="UNS. Assault Bomb May Be Returned" value="92" />
+      <option name="UNS. Max. Teams" value="93" />
+      <option name="UNS. Equip. Secondary Starting Equipment" value="94" />
+      <option name="UNS. Assault Fuse Time" value="95" />
+      <option name="UNS. Juggy Movement" value="96" />
+      <option name="UNS. Sticky Fuse" value="97" />
+      <option name="UNS. Terr. Contest Time" value="98" />
+      <option name="UNS. Terr. Control Time" value="99" />
+      <option name="UNS. Oddb. Carr. Invis" value="100" />
+      <option name="UNS. King Invis In Hill" value="101" />
+      <option name="UNS. Ball Carr. Dmg. Resis." value="102" />
+      <option name="UNS. King Dmg. Res. In Hill" value="103" />
+      <option name="UNS. Players Ex. Dmg" value="104" />
+      <option name="UNS. Players Dmg. Resis." value="105" />
+      <option name="UNS. Ctf Carr. Dmg. Resis." value="106" />
+      <option name="UNS. Ctf Carr. Invis." value="107" />
+      <option name="UNS. Juggy Dmg. Resis." value="108" />
+      <option name="UNS. Bomb Carr. Dmg. Resis." value="109" />
+      <option name="UNS. Bomb Carr. Invis." value="110" />
+      <option name="UNS. Force Even Teams" value="111" />
+    </enum32>
+    <int32 name="Value" offset="4" visible="True" />
+  </tagblock>
+  <int8 name="_Unnamed21" offset="144" visible="True" />
+  <undefined size="3" name="_Unnamed22" offset="145" visible="True" />
+  <stringid name="_Unnamed23" offset="148" visible="True" />
+  <enum32 name="_Unnamed24" offset="152" visible="True">
+    <option name="Slayer" value="0" />
+    <option name="Oddball" value="1" />
+    <option name="Juggernaut" value="2" />
+    <option name="King" value="3" />
+    <option name="Ctf" value="4" />
+    <option name="Invasion" value="5" />
+    <option name="Territories" value="6" />
+  </enum32>
+  <tagblock name="Settings6" offset="156" elementSize="8" maxelements="112" label="Setting Category" visible="True">
+    <enum32 name="Setting Category" offset="0" visible="True">
+      <option name="Match Round Setting" value="0" />
+      <option name="Match Ctf Score To Win" value="1" />
+      <option name="Match Slayer Score To Win Round" value="2" />
+      <option name="Match Oddball Score To Win Round" value="3" />
+      <option name="Match King Score To Win Round" value="4" />
+      <option name="Match Race Score To Win Round" value="5" />
+      <option name="Match Headhunter Score To Win Round" value="6" />
+      <option name="Match Juggernaut Score To Win Round" value="7" />
+      <option name="Match Territories Score To Win Round" value="8" />
+      <option name="Match Assault Score To Win Round" value="9" />
+      <option name="Match Round Time Limit" value="10" />
+      <option name="Match Rounds Reset Map" value="11" />
+      <option name="Match Tie Resolution" value="12" />
+      <option name="Match Observers" value="13" />
+      <option name="Match Join In Progress" value="14" />
+      <option name="Maximum Players" value="15" />
+      <option name="Lives Per Round" value="16" />
+      <option name="Respawn Time" value="17" />
+      <option name="Suicide Penalty" value="18" />
+      <option name="Shields" value="19" />
+      <option name="Motion Sensor" value="20" />
+      <option name="Invisibility" value="21" />
+      <option name="Team Changing" value="22" />
+      <option name="Team Scoring" value="23" />
+      <option name="Friendly Fire" value="24" />
+      <option name="Team Respawn Setting" value="25" />
+      <option name="Betrayal Respawn Penalty" value="26" />
+      <option name="Team Killer Management" value="27" />
+      <option name="Slayer Bonus Points" value="28" />
+      <option name="Slayer Suicide Point Loss" value="29" />
+      <option name="Slayer Death Point Loss" value="30" />
+      <option name="Headhunter Moving Head Bin" value="31" />
+      <option name="Headhunter Point Multiplier" value="32" />
+      <option name="Headhunter Suicide Point Loss" value="33" />
+      <option name="Headhunter Death Point Loss" value="34" />
+      <option name="Headhunter Uncontested Bin" value="35" />
+      <option name="Headhunter Speed With Heads" value="36" />
+      <option name="Headhunter Max Heads Carried" value="37" />
+      <option name="King Uncontested Hill" value="38" />
+      <option name="King Team Time Multiplier" value="39" />
+      <option name="King Moving Hill" value="40" />
+      <option name="King Extra Damage On Hill" value="41" />
+      <option name="King Dmg Resistance On Hill" value="42" />
+      <option name="Oddball Ball Spawn Count" value="43" />
+      <option name="Oddball Ball Hit Damage" value="44" />
+      <option name="Oddball Speed With Ball" value="45" />
+      <option name="Oddball Driving Gunning With Ball" value="46" />
+      <option name="Oddball Waypoint To Ball" value="47" />
+      <option name="Race Random Track" value="48" />
+      <option name="Race Uncontested Flag" value="49" />
+      <option name="Ctf Game Type" value="50" />
+      <option name="Ctf Sudden Death" value="51" />
+      <option name="Ctf Flag May Be Returned" value="52" />
+      <option name="Ctf Flag At Home To Score" value="53" />
+      <option name="Ctf Flag Reset Time" value="54" />
+      <option name="Ctf Speed With Flag" value="55" />
+      <option name="Ctf Flag Hit Damage" value="56" />
+      <option name="Ctf Driving Gunning With Flag" value="57" />
+      <option name="Ctf Waypoint To Own Flag" value="58" />
+      <option name="Assault Game Type" value="59" />
+      <option name="Assault Sudden Death" value="60" />
+      <option name="Assault Detonation Time" value="61" />
+      <option name="Assault Bomb At Home To Score" value="62" />
+      <option name="Assault Arming Time" value="63" />
+      <option name="Assault Speed With Bomb" value="64" />
+      <option name="Assault Bomb Hit Damage" value="65" />
+      <option name="Assault Driving Gunning With Bomb" value="66" />
+      <option name="Assault Waypoint To Own Bomb" value="67" />
+      <option name="Juggernaut Betrayal Point Loss" value="68" />
+      <option name="Juggernaut Juggy Extra Damage" value="69" />
+      <option name="Juggernaut Juggy Infinite Ammo" value="70" />
+      <option name="Juggernaut Juggy Overshields" value="71" />
+      <option name="Juggernaut Juggy Active Camo" value="72" />
+      <option name="Juggernaut Juggy Motion Sensor" value="73" />
+      <option name="Territories Territory Count" value="74" />
+      <option name="Veh. Respawn" value="75" />
+      <option name="Veh. Primary Light Land" value="76" />
+      <option name="Veh. Secondary Light Land" value="77" />
+      <option name="Veh. Primary Heavy Land" value="78" />
+      <option name="Veh. Primary Flying" value="79" />
+      <option name="Veh. Secondary Heavy Land" value="80" />
+      <option name="Veh. Primary Turret" value="81" />
+      <option name="Veh. Secondary Turret" value="82" />
+      <option name="Equip. Weapons On Map" value="83" />
+      <option name="Equip. Overshields On Map" value="84" />
+      <option name="Equip. Active Camo On Map" value="85" />
+      <option name="Equip. Grenades On Map" value="86" />
+      <option name="Equip. Weapon Respawn Times" value="87" />
+      <option name="Equip. Starting Grenades" value="88" />
+      <option name="Equip. Primary Starting Equipment" value="89" />
+      <option name="UNS. Max. Living Players" value="90" />
+      <option name="UNS. Teams Enabled" value="91" />
+      <option name="UNS. Assault Bomb May Be Returned" value="92" />
+      <option name="UNS. Max. Teams" value="93" />
+      <option name="UNS. Equip. Secondary Starting Equipment" value="94" />
+      <option name="UNS. Assault Fuse Time" value="95" />
+      <option name="UNS. Juggy Movement" value="96" />
+      <option name="UNS. Sticky Fuse" value="97" />
+      <option name="UNS. Terr. Contest Time" value="98" />
+      <option name="UNS. Terr. Control Time" value="99" />
+      <option name="UNS. Oddb. Carr. Invis" value="100" />
+      <option name="UNS. King Invis In Hill" value="101" />
+      <option name="UNS. Ball Carr. Dmg. Resis." value="102" />
+      <option name="UNS. King Dmg. Res. In Hill" value="103" />
+      <option name="UNS. Players Ex. Dmg" value="104" />
+      <option name="UNS. Players Dmg. Resis." value="105" />
+      <option name="UNS. Ctf Carr. Dmg. Resis." value="106" />
+      <option name="UNS. Ctf Carr. Invis." value="107" />
+      <option name="UNS. Juggy Dmg. Resis." value="108" />
+      <option name="UNS. Bomb Carr. Dmg. Resis." value="109" />
+      <option name="UNS. Bomb Carr. Invis." value="110" />
+      <option name="UNS. Force Even Teams" value="111" />
+    </enum32>
+    <int32 name="Value" offset="4" visible="True" />
+  </tagblock>
+  <int8 name="_Unnamed25" offset="164" visible="True" />
+  <undefined size="3" name="_Unnamed26" offset="165" visible="True" />
+  <stringid name="_Unnamed27" offset="168" visible="True" />
+  <enum32 name="_Unnamed28" offset="172" visible="True">
+    <option name="Slayer" value="0" />
+    <option name="Oddball" value="1" />
+    <option name="Juggernaut" value="2" />
+    <option name="King" value="3" />
+    <option name="Ctf" value="4" />
+    <option name="Invasion" value="5" />
+    <option name="Territories" value="6" />
+  </enum32>
+  <tagblock name="Settings7" offset="176" elementSize="8" maxelements="112" label="Setting Category" visible="True">
+    <enum32 name="Setting Category" offset="0" visible="True">
+      <option name="Match Round Setting" value="0" />
+      <option name="Match Ctf Score To Win" value="1" />
+      <option name="Match Slayer Score To Win Round" value="2" />
+      <option name="Match Oddball Score To Win Round" value="3" />
+      <option name="Match King Score To Win Round" value="4" />
+      <option name="Match Race Score To Win Round" value="5" />
+      <option name="Match Headhunter Score To Win Round" value="6" />
+      <option name="Match Juggernaut Score To Win Round" value="7" />
+      <option name="Match Territories Score To Win Round" value="8" />
+      <option name="Match Assault Score To Win Round" value="9" />
+      <option name="Match Round Time Limit" value="10" />
+      <option name="Match Rounds Reset Map" value="11" />
+      <option name="Match Tie Resolution" value="12" />
+      <option name="Match Observers" value="13" />
+      <option name="Match Join In Progress" value="14" />
+      <option name="Maximum Players" value="15" />
+      <option name="Lives Per Round" value="16" />
+      <option name="Respawn Time" value="17" />
+      <option name="Suicide Penalty" value="18" />
+      <option name="Shields" value="19" />
+      <option name="Motion Sensor" value="20" />
+      <option name="Invisibility" value="21" />
+      <option name="Team Changing" value="22" />
+      <option name="Team Scoring" value="23" />
+      <option name="Friendly Fire" value="24" />
+      <option name="Team Respawn Setting" value="25" />
+      <option name="Betrayal Respawn Penalty" value="26" />
+      <option name="Team Killer Management" value="27" />
+      <option name="Slayer Bonus Points" value="28" />
+      <option name="Slayer Suicide Point Loss" value="29" />
+      <option name="Slayer Death Point Loss" value="30" />
+      <option name="Headhunter Moving Head Bin" value="31" />
+      <option name="Headhunter Point Multiplier" value="32" />
+      <option name="Headhunter Suicide Point Loss" value="33" />
+      <option name="Headhunter Death Point Loss" value="34" />
+      <option name="Headhunter Uncontested Bin" value="35" />
+      <option name="Headhunter Speed With Heads" value="36" />
+      <option name="Headhunter Max Heads Carried" value="37" />
+      <option name="King Uncontested Hill" value="38" />
+      <option name="King Team Time Multiplier" value="39" />
+      <option name="King Moving Hill" value="40" />
+      <option name="King Extra Damage On Hill" value="41" />
+      <option name="King Dmg Resistance On Hill" value="42" />
+      <option name="Oddball Ball Spawn Count" value="43" />
+      <option name="Oddball Ball Hit Damage" value="44" />
+      <option name="Oddball Speed With Ball" value="45" />
+      <option name="Oddball Driving Gunning With Ball" value="46" />
+      <option name="Oddball Waypoint To Ball" value="47" />
+      <option name="Race Random Track" value="48" />
+      <option name="Race Uncontested Flag" value="49" />
+      <option name="Ctf Game Type" value="50" />
+      <option name="Ctf Sudden Death" value="51" />
+      <option name="Ctf Flag May Be Returned" value="52" />
+      <option name="Ctf Flag At Home To Score" value="53" />
+      <option name="Ctf Flag Reset Time" value="54" />
+      <option name="Ctf Speed With Flag" value="55" />
+      <option name="Ctf Flag Hit Damage" value="56" />
+      <option name="Ctf Driving Gunning With Flag" value="57" />
+      <option name="Ctf Waypoint To Own Flag" value="58" />
+      <option name="Assault Game Type" value="59" />
+      <option name="Assault Sudden Death" value="60" />
+      <option name="Assault Detonation Time" value="61" />
+      <option name="Assault Bomb At Home To Score" value="62" />
+      <option name="Assault Arming Time" value="63" />
+      <option name="Assault Speed With Bomb" value="64" />
+      <option name="Assault Bomb Hit Damage" value="65" />
+      <option name="Assault Driving Gunning With Bomb" value="66" />
+      <option name="Assault Waypoint To Own Bomb" value="67" />
+      <option name="Juggernaut Betrayal Point Loss" value="68" />
+      <option name="Juggernaut Juggy Extra Damage" value="69" />
+      <option name="Juggernaut Juggy Infinite Ammo" value="70" />
+      <option name="Juggernaut Juggy Overshields" value="71" />
+      <option name="Juggernaut Juggy Active Camo" value="72" />
+      <option name="Juggernaut Juggy Motion Sensor" value="73" />
+      <option name="Territories Territory Count" value="74" />
+      <option name="Veh. Respawn" value="75" />
+      <option name="Veh. Primary Light Land" value="76" />
+      <option name="Veh. Secondary Light Land" value="77" />
+      <option name="Veh. Primary Heavy Land" value="78" />
+      <option name="Veh. Primary Flying" value="79" />
+      <option name="Veh. Secondary Heavy Land" value="80" />
+      <option name="Veh. Primary Turret" value="81" />
+      <option name="Veh. Secondary Turret" value="82" />
+      <option name="Equip. Weapons On Map" value="83" />
+      <option name="Equip. Overshields On Map" value="84" />
+      <option name="Equip. Active Camo On Map" value="85" />
+      <option name="Equip. Grenades On Map" value="86" />
+      <option name="Equip. Weapon Respawn Times" value="87" />
+      <option name="Equip. Starting Grenades" value="88" />
+      <option name="Equip. Primary Starting Equipment" value="89" />
+      <option name="UNS. Max. Living Players" value="90" />
+      <option name="UNS. Teams Enabled" value="91" />
+      <option name="UNS. Assault Bomb May Be Returned" value="92" />
+      <option name="UNS. Max. Teams" value="93" />
+      <option name="UNS. Equip. Secondary Starting Equipment" value="94" />
+      <option name="UNS. Assault Fuse Time" value="95" />
+      <option name="UNS. Juggy Movement" value="96" />
+      <option name="UNS. Sticky Fuse" value="97" />
+      <option name="UNS. Terr. Contest Time" value="98" />
+      <option name="UNS. Terr. Control Time" value="99" />
+      <option name="UNS. Oddb. Carr. Invis" value="100" />
+      <option name="UNS. King Invis In Hill" value="101" />
+      <option name="UNS. Ball Carr. Dmg. Resis." value="102" />
+      <option name="UNS. King Dmg. Res. In Hill" value="103" />
+      <option name="UNS. Players Ex. Dmg" value="104" />
+      <option name="UNS. Players Dmg. Resis." value="105" />
+      <option name="UNS. Ctf Carr. Dmg. Resis." value="106" />
+      <option name="UNS. Ctf Carr. Invis." value="107" />
+      <option name="UNS. Juggy Dmg. Resis." value="108" />
+      <option name="UNS. Bomb Carr. Dmg. Resis." value="109" />
+      <option name="UNS. Bomb Carr. Invis." value="110" />
+      <option name="UNS. Force Even Teams" value="111" />
+    </enum32>
+    <int32 name="Value" offset="4" visible="True" />
+  </tagblock>
+  <int8 name="_Unnamed29" offset="184" visible="True" />
+  <undefined size="3" name="_Unnamed30" offset="185" visible="True" />
+  <stringid name="_Unnamed31" offset="188" visible="True" />
+  <enum32 name="_Unnamed32" offset="192" visible="True">
+    <option name="Slayer" value="0" />
+    <option name="Oddball" value="1" />
+    <option name="Juggernaut" value="2" />
+    <option name="King" value="3" />
+    <option name="Ctf" value="4" />
+    <option name="Invasion" value="5" />
+    <option name="Territories" value="6" />
+  </enum32>
+  <tagblock name="Settings8" offset="196" elementSize="8" maxelements="112" label="Setting Category" visible="True">
+    <enum32 name="Setting Category" offset="0" visible="True">
+      <option name="Match Round Setting" value="0" />
+      <option name="Match Ctf Score To Win" value="1" />
+      <option name="Match Slayer Score To Win Round" value="2" />
+      <option name="Match Oddball Score To Win Round" value="3" />
+      <option name="Match King Score To Win Round" value="4" />
+      <option name="Match Race Score To Win Round" value="5" />
+      <option name="Match Headhunter Score To Win Round" value="6" />
+      <option name="Match Juggernaut Score To Win Round" value="7" />
+      <option name="Match Territories Score To Win Round" value="8" />
+      <option name="Match Assault Score To Win Round" value="9" />
+      <option name="Match Round Time Limit" value="10" />
+      <option name="Match Rounds Reset Map" value="11" />
+      <option name="Match Tie Resolution" value="12" />
+      <option name="Match Observers" value="13" />
+      <option name="Match Join In Progress" value="14" />
+      <option name="Maximum Players" value="15" />
+      <option name="Lives Per Round" value="16" />
+      <option name="Respawn Time" value="17" />
+      <option name="Suicide Penalty" value="18" />
+      <option name="Shields" value="19" />
+      <option name="Motion Sensor" value="20" />
+      <option name="Invisibility" value="21" />
+      <option name="Team Changing" value="22" />
+      <option name="Team Scoring" value="23" />
+      <option name="Friendly Fire" value="24" />
+      <option name="Team Respawn Setting" value="25" />
+      <option name="Betrayal Respawn Penalty" value="26" />
+      <option name="Team Killer Management" value="27" />
+      <option name="Slayer Bonus Points" value="28" />
+      <option name="Slayer Suicide Point Loss" value="29" />
+      <option name="Slayer Death Point Loss" value="30" />
+      <option name="Headhunter Moving Head Bin" value="31" />
+      <option name="Headhunter Point Multiplier" value="32" />
+      <option name="Headhunter Suicide Point Loss" value="33" />
+      <option name="Headhunter Death Point Loss" value="34" />
+      <option name="Headhunter Uncontested Bin" value="35" />
+      <option name="Headhunter Speed With Heads" value="36" />
+      <option name="Headhunter Max Heads Carried" value="37" />
+      <option name="King Uncontested Hill" value="38" />
+      <option name="King Team Time Multiplier" value="39" />
+      <option name="King Moving Hill" value="40" />
+      <option name="King Extra Damage On Hill" value="41" />
+      <option name="King Dmg Resistance On Hill" value="42" />
+      <option name="Oddball Ball Spawn Count" value="43" />
+      <option name="Oddball Ball Hit Damage" value="44" />
+      <option name="Oddball Speed With Ball" value="45" />
+      <option name="Oddball Driving Gunning With Ball" value="46" />
+      <option name="Oddball Waypoint To Ball" value="47" />
+      <option name="Race Random Track" value="48" />
+      <option name="Race Uncontested Flag" value="49" />
+      <option name="Ctf Game Type" value="50" />
+      <option name="Ctf Sudden Death" value="51" />
+      <option name="Ctf Flag May Be Returned" value="52" />
+      <option name="Ctf Flag At Home To Score" value="53" />
+      <option name="Ctf Flag Reset Time" value="54" />
+      <option name="Ctf Speed With Flag" value="55" />
+      <option name="Ctf Flag Hit Damage" value="56" />
+      <option name="Ctf Driving Gunning With Flag" value="57" />
+      <option name="Ctf Waypoint To Own Flag" value="58" />
+      <option name="Assault Game Type" value="59" />
+      <option name="Assault Sudden Death" value="60" />
+      <option name="Assault Detonation Time" value="61" />
+      <option name="Assault Bomb At Home To Score" value="62" />
+      <option name="Assault Arming Time" value="63" />
+      <option name="Assault Speed With Bomb" value="64" />
+      <option name="Assault Bomb Hit Damage" value="65" />
+      <option name="Assault Driving Gunning With Bomb" value="66" />
+      <option name="Assault Waypoint To Own Bomb" value="67" />
+      <option name="Juggernaut Betrayal Point Loss" value="68" />
+      <option name="Juggernaut Juggy Extra Damage" value="69" />
+      <option name="Juggernaut Juggy Infinite Ammo" value="70" />
+      <option name="Juggernaut Juggy Overshields" value="71" />
+      <option name="Juggernaut Juggy Active Camo" value="72" />
+      <option name="Juggernaut Juggy Motion Sensor" value="73" />
+      <option name="Territories Territory Count" value="74" />
+      <option name="Veh. Respawn" value="75" />
+      <option name="Veh. Primary Light Land" value="76" />
+      <option name="Veh. Secondary Light Land" value="77" />
+      <option name="Veh. Primary Heavy Land" value="78" />
+      <option name="Veh. Primary Flying" value="79" />
+      <option name="Veh. Secondary Heavy Land" value="80" />
+      <option name="Veh. Primary Turret" value="81" />
+      <option name="Veh. Secondary Turret" value="82" />
+      <option name="Equip. Weapons On Map" value="83" />
+      <option name="Equip. Overshields On Map" value="84" />
+      <option name="Equip. Active Camo On Map" value="85" />
+      <option name="Equip. Grenades On Map" value="86" />
+      <option name="Equip. Weapon Respawn Times" value="87" />
+      <option name="Equip. Starting Grenades" value="88" />
+      <option name="Equip. Primary Starting Equipment" value="89" />
+      <option name="UNS. Max. Living Players" value="90" />
+      <option name="UNS. Teams Enabled" value="91" />
+      <option name="UNS. Assault Bomb May Be Returned" value="92" />
+      <option name="UNS. Max. Teams" value="93" />
+      <option name="UNS. Equip. Secondary Starting Equipment" value="94" />
+      <option name="UNS. Assault Fuse Time" value="95" />
+      <option name="UNS. Juggy Movement" value="96" />
+      <option name="UNS. Sticky Fuse" value="97" />
+      <option name="UNS. Terr. Contest Time" value="98" />
+      <option name="UNS. Terr. Control Time" value="99" />
+      <option name="UNS. Oddb. Carr. Invis" value="100" />
+      <option name="UNS. King Invis In Hill" value="101" />
+      <option name="UNS. Ball Carr. Dmg. Resis." value="102" />
+      <option name="UNS. King Dmg. Res. In Hill" value="103" />
+      <option name="UNS. Players Ex. Dmg" value="104" />
+      <option name="UNS. Players Dmg. Resis." value="105" />
+      <option name="UNS. Ctf Carr. Dmg. Resis." value="106" />
+      <option name="UNS. Ctf Carr. Invis." value="107" />
+      <option name="UNS. Juggy Dmg. Resis." value="108" />
+      <option name="UNS. Bomb Carr. Dmg. Resis." value="109" />
+      <option name="UNS. Bomb Carr. Invis." value="110" />
+      <option name="UNS. Force Even Teams" value="111" />
+    </enum32>
+    <int32 name="Value" offset="4" visible="True" />
+  </tagblock>
+  <int8 name="_Unnamed33" offset="204" visible="True" />
+  <undefined size="3" name="_Unnamed34" offset="205" visible="True" />
+  <stringid name="_Unnamed35" offset="208" visible="True" />
+  <enum32 name="_Unnamed36" offset="212" visible="True">
+    <option name="Slayer" value="0" />
+    <option name="Oddball" value="1" />
+    <option name="Juggernaut" value="2" />
+    <option name="King" value="3" />
+    <option name="Ctf" value="4" />
+    <option name="Invasion" value="5" />
+    <option name="Territories" value="6" />
+  </enum32>
+  <tagblock name="Settings9" offset="216" elementSize="8" maxelements="112" label="Setting Category" visible="True">
+    <enum32 name="Setting Category" offset="0" visible="True">
+      <option name="Match Round Setting" value="0" />
+      <option name="Match Ctf Score To Win" value="1" />
+      <option name="Match Slayer Score To Win Round" value="2" />
+      <option name="Match Oddball Score To Win Round" value="3" />
+      <option name="Match King Score To Win Round" value="4" />
+      <option name="Match Race Score To Win Round" value="5" />
+      <option name="Match Headhunter Score To Win Round" value="6" />
+      <option name="Match Juggernaut Score To Win Round" value="7" />
+      <option name="Match Territories Score To Win Round" value="8" />
+      <option name="Match Assault Score To Win Round" value="9" />
+      <option name="Match Round Time Limit" value="10" />
+      <option name="Match Rounds Reset Map" value="11" />
+      <option name="Match Tie Resolution" value="12" />
+      <option name="Match Observers" value="13" />
+      <option name="Match Join In Progress" value="14" />
+      <option name="Maximum Players" value="15" />
+      <option name="Lives Per Round" value="16" />
+      <option name="Respawn Time" value="17" />
+      <option name="Suicide Penalty" value="18" />
+      <option name="Shields" value="19" />
+      <option name="Motion Sensor" value="20" />
+      <option name="Invisibility" value="21" />
+      <option name="Team Changing" value="22" />
+      <option name="Team Scoring" value="23" />
+      <option name="Friendly Fire" value="24" />
+      <option name="Team Respawn Setting" value="25" />
+      <option name="Betrayal Respawn Penalty" value="26" />
+      <option name="Team Killer Management" value="27" />
+      <option name="Slayer Bonus Points" value="28" />
+      <option name="Slayer Suicide Point Loss" value="29" />
+      <option name="Slayer Death Point Loss" value="30" />
+      <option name="Headhunter Moving Head Bin" value="31" />
+      <option name="Headhunter Point Multiplier" value="32" />
+      <option name="Headhunter Suicide Point Loss" value="33" />
+      <option name="Headhunter Death Point Loss" value="34" />
+      <option name="Headhunter Uncontested Bin" value="35" />
+      <option name="Headhunter Speed With Heads" value="36" />
+      <option name="Headhunter Max Heads Carried" value="37" />
+      <option name="King Uncontested Hill" value="38" />
+      <option name="King Team Time Multiplier" value="39" />
+      <option name="King Moving Hill" value="40" />
+      <option name="King Extra Damage On Hill" value="41" />
+      <option name="King Dmg Resistance On Hill" value="42" />
+      <option name="Oddball Ball Spawn Count" value="43" />
+      <option name="Oddball Ball Hit Damage" value="44" />
+      <option name="Oddball Speed With Ball" value="45" />
+      <option name="Oddball Driving Gunning With Ball" value="46" />
+      <option name="Oddball Waypoint To Ball" value="47" />
+      <option name="Race Random Track" value="48" />
+      <option name="Race Uncontested Flag" value="49" />
+      <option name="Ctf Game Type" value="50" />
+      <option name="Ctf Sudden Death" value="51" />
+      <option name="Ctf Flag May Be Returned" value="52" />
+      <option name="Ctf Flag At Home To Score" value="53" />
+      <option name="Ctf Flag Reset Time" value="54" />
+      <option name="Ctf Speed With Flag" value="55" />
+      <option name="Ctf Flag Hit Damage" value="56" />
+      <option name="Ctf Driving Gunning With Flag" value="57" />
+      <option name="Ctf Waypoint To Own Flag" value="58" />
+      <option name="Assault Game Type" value="59" />
+      <option name="Assault Sudden Death" value="60" />
+      <option name="Assault Detonation Time" value="61" />
+      <option name="Assault Bomb At Home To Score" value="62" />
+      <option name="Assault Arming Time" value="63" />
+      <option name="Assault Speed With Bomb" value="64" />
+      <option name="Assault Bomb Hit Damage" value="65" />
+      <option name="Assault Driving Gunning With Bomb" value="66" />
+      <option name="Assault Waypoint To Own Bomb" value="67" />
+      <option name="Juggernaut Betrayal Point Loss" value="68" />
+      <option name="Juggernaut Juggy Extra Damage" value="69" />
+      <option name="Juggernaut Juggy Infinite Ammo" value="70" />
+      <option name="Juggernaut Juggy Overshields" value="71" />
+      <option name="Juggernaut Juggy Active Camo" value="72" />
+      <option name="Juggernaut Juggy Motion Sensor" value="73" />
+      <option name="Territories Territory Count" value="74" />
+      <option name="Veh. Respawn" value="75" />
+      <option name="Veh. Primary Light Land" value="76" />
+      <option name="Veh. Secondary Light Land" value="77" />
+      <option name="Veh. Primary Heavy Land" value="78" />
+      <option name="Veh. Primary Flying" value="79" />
+      <option name="Veh. Secondary Heavy Land" value="80" />
+      <option name="Veh. Primary Turret" value="81" />
+      <option name="Veh. Secondary Turret" value="82" />
+      <option name="Equip. Weapons On Map" value="83" />
+      <option name="Equip. Overshields On Map" value="84" />
+      <option name="Equip. Active Camo On Map" value="85" />
+      <option name="Equip. Grenades On Map" value="86" />
+      <option name="Equip. Weapon Respawn Times" value="87" />
+      <option name="Equip. Starting Grenades" value="88" />
+      <option name="Equip. Primary Starting Equipment" value="89" />
+      <option name="UNS. Max. Living Players" value="90" />
+      <option name="UNS. Teams Enabled" value="91" />
+      <option name="UNS. Assault Bomb May Be Returned" value="92" />
+      <option name="UNS. Max. Teams" value="93" />
+      <option name="UNS. Equip. Secondary Starting Equipment" value="94" />
+      <option name="UNS. Assault Fuse Time" value="95" />
+      <option name="UNS. Juggy Movement" value="96" />
+      <option name="UNS. Sticky Fuse" value="97" />
+      <option name="UNS. Terr. Contest Time" value="98" />
+      <option name="UNS. Terr. Control Time" value="99" />
+      <option name="UNS. Oddb. Carr. Invis" value="100" />
+      <option name="UNS. King Invis In Hill" value="101" />
+      <option name="UNS. Ball Carr. Dmg. Resis." value="102" />
+      <option name="UNS. King Dmg. Res. In Hill" value="103" />
+      <option name="UNS. Players Ex. Dmg" value="104" />
+      <option name="UNS. Players Dmg. Resis." value="105" />
+      <option name="UNS. Ctf Carr. Dmg. Resis." value="106" />
+      <option name="UNS. Ctf Carr. Invis." value="107" />
+      <option name="UNS. Juggy Dmg. Resis." value="108" />
+      <option name="UNS. Bomb Carr. Dmg. Resis." value="109" />
+      <option name="UNS. Bomb Carr. Invis." value="110" />
+      <option name="UNS. Force Even Teams" value="111" />
+    </enum32>
+    <int32 name="Value" offset="4" visible="True" />
+  </tagblock>
+  <int8 name="_Unnamed37" offset="224" visible="True" />
+  <undefined size="3" name="_Unnamed38" offset="225" visible="True" />
+  <stringid name="_Unnamed39" offset="228" visible="True" />
+  <enum32 name="_Unnamed40" offset="232" visible="True">
+    <option name="Slayer" value="0" />
+    <option name="Oddball" value="1" />
+    <option name="Juggernaut" value="2" />
+    <option name="King" value="3" />
+    <option name="Ctf" value="4" />
+    <option name="Invasion" value="5" />
+    <option name="Territories" value="6" />
+  </enum32>
+  <tagblock name="Settings10" offset="236" elementSize="8" maxelements="112" label="Setting Category" visible="True">
+    <enum32 name="Setting Category" offset="0" visible="True">
+      <option name="Match Round Setting" value="0" />
+      <option name="Match Ctf Score To Win" value="1" />
+      <option name="Match Slayer Score To Win Round" value="2" />
+      <option name="Match Oddball Score To Win Round" value="3" />
+      <option name="Match King Score To Win Round" value="4" />
+      <option name="Match Race Score To Win Round" value="5" />
+      <option name="Match Headhunter Score To Win Round" value="6" />
+      <option name="Match Juggernaut Score To Win Round" value="7" />
+      <option name="Match Territories Score To Win Round" value="8" />
+      <option name="Match Assault Score To Win Round" value="9" />
+      <option name="Match Round Time Limit" value="10" />
+      <option name="Match Rounds Reset Map" value="11" />
+      <option name="Match Tie Resolution" value="12" />
+      <option name="Match Observers" value="13" />
+      <option name="Match Join In Progress" value="14" />
+      <option name="Maximum Players" value="15" />
+      <option name="Lives Per Round" value="16" />
+      <option name="Respawn Time" value="17" />
+      <option name="Suicide Penalty" value="18" />
+      <option name="Shields" value="19" />
+      <option name="Motion Sensor" value="20" />
+      <option name="Invisibility" value="21" />
+      <option name="Team Changing" value="22" />
+      <option name="Team Scoring" value="23" />
+      <option name="Friendly Fire" value="24" />
+      <option name="Team Respawn Setting" value="25" />
+      <option name="Betrayal Respawn Penalty" value="26" />
+      <option name="Team Killer Management" value="27" />
+      <option name="Slayer Bonus Points" value="28" />
+      <option name="Slayer Suicide Point Loss" value="29" />
+      <option name="Slayer Death Point Loss" value="30" />
+      <option name="Headhunter Moving Head Bin" value="31" />
+      <option name="Headhunter Point Multiplier" value="32" />
+      <option name="Headhunter Suicide Point Loss" value="33" />
+      <option name="Headhunter Death Point Loss" value="34" />
+      <option name="Headhunter Uncontested Bin" value="35" />
+      <option name="Headhunter Speed With Heads" value="36" />
+      <option name="Headhunter Max Heads Carried" value="37" />
+      <option name="King Uncontested Hill" value="38" />
+      <option name="King Team Time Multiplier" value="39" />
+      <option name="King Moving Hill" value="40" />
+      <option name="King Extra Damage On Hill" value="41" />
+      <option name="King Dmg Resistance On Hill" value="42" />
+      <option name="Oddball Ball Spawn Count" value="43" />
+      <option name="Oddball Ball Hit Damage" value="44" />
+      <option name="Oddball Speed With Ball" value="45" />
+      <option name="Oddball Driving Gunning With Ball" value="46" />
+      <option name="Oddball Waypoint To Ball" value="47" />
+      <option name="Race Random Track" value="48" />
+      <option name="Race Uncontested Flag" value="49" />
+      <option name="Ctf Game Type" value="50" />
+      <option name="Ctf Sudden Death" value="51" />
+      <option name="Ctf Flag May Be Returned" value="52" />
+      <option name="Ctf Flag At Home To Score" value="53" />
+      <option name="Ctf Flag Reset Time" value="54" />
+      <option name="Ctf Speed With Flag" value="55" />
+      <option name="Ctf Flag Hit Damage" value="56" />
+      <option name="Ctf Driving Gunning With Flag" value="57" />
+      <option name="Ctf Waypoint To Own Flag" value="58" />
+      <option name="Assault Game Type" value="59" />
+      <option name="Assault Sudden Death" value="60" />
+      <option name="Assault Detonation Time" value="61" />
+      <option name="Assault Bomb At Home To Score" value="62" />
+      <option name="Assault Arming Time" value="63" />
+      <option name="Assault Speed With Bomb" value="64" />
+      <option name="Assault Bomb Hit Damage" value="65" />
+      <option name="Assault Driving Gunning With Bomb" value="66" />
+      <option name="Assault Waypoint To Own Bomb" value="67" />
+      <option name="Juggernaut Betrayal Point Loss" value="68" />
+      <option name="Juggernaut Juggy Extra Damage" value="69" />
+      <option name="Juggernaut Juggy Infinite Ammo" value="70" />
+      <option name="Juggernaut Juggy Overshields" value="71" />
+      <option name="Juggernaut Juggy Active Camo" value="72" />
+      <option name="Juggernaut Juggy Motion Sensor" value="73" />
+      <option name="Territories Territory Count" value="74" />
+      <option name="Veh. Respawn" value="75" />
+      <option name="Veh. Primary Light Land" value="76" />
+      <option name="Veh. Secondary Light Land" value="77" />
+      <option name="Veh. Primary Heavy Land" value="78" />
+      <option name="Veh. Primary Flying" value="79" />
+      <option name="Veh. Secondary Heavy Land" value="80" />
+      <option name="Veh. Primary Turret" value="81" />
+      <option name="Veh. Secondary Turret" value="82" />
+      <option name="Equip. Weapons On Map" value="83" />
+      <option name="Equip. Overshields On Map" value="84" />
+      <option name="Equip. Active Camo On Map" value="85" />
+      <option name="Equip. Grenades On Map" value="86" />
+      <option name="Equip. Weapon Respawn Times" value="87" />
+      <option name="Equip. Starting Grenades" value="88" />
+      <option name="Equip. Primary Starting Equipment" value="89" />
+      <option name="UNS. Max. Living Players" value="90" />
+      <option name="UNS. Teams Enabled" value="91" />
+      <option name="UNS. Assault Bomb May Be Returned" value="92" />
+      <option name="UNS. Max. Teams" value="93" />
+      <option name="UNS. Equip. Secondary Starting Equipment" value="94" />
+      <option name="UNS. Assault Fuse Time" value="95" />
+      <option name="UNS. Juggy Movement" value="96" />
+      <option name="UNS. Sticky Fuse" value="97" />
+      <option name="UNS. Terr. Contest Time" value="98" />
+      <option name="UNS. Terr. Control Time" value="99" />
+      <option name="UNS. Oddb. Carr. Invis" value="100" />
+      <option name="UNS. King Invis In Hill" value="101" />
+      <option name="UNS. Ball Carr. Dmg. Resis." value="102" />
+      <option name="UNS. King Dmg. Res. In Hill" value="103" />
+      <option name="UNS. Players Ex. Dmg" value="104" />
+      <option name="UNS. Players Dmg. Resis." value="105" />
+      <option name="UNS. Ctf Carr. Dmg. Resis." value="106" />
+      <option name="UNS. Ctf Carr. Invis." value="107" />
+      <option name="UNS. Juggy Dmg. Resis." value="108" />
+      <option name="UNS. Bomb Carr. Dmg. Resis." value="109" />
+      <option name="UNS. Bomb Carr. Invis." value="110" />
+      <option name="UNS. Force Even Teams" value="111" />
+    </enum32>
+    <int32 name="Value" offset="4" visible="True" />
+  </tagblock>
+  <int8 name="_Unnamed41" offset="244" visible="True" />
+  <undefined size="3" name="_Unnamed42" offset="245" visible="True" />
+  <stringid name="_Unnamed43" offset="248" visible="True" />
+  <enum32 name="_Unnamed44" offset="252" visible="True">
+    <option name="Slayer" value="0" />
+    <option name="Oddball" value="1" />
+    <option name="Juggernaut" value="2" />
+    <option name="King" value="3" />
+    <option name="Ctf" value="4" />
+    <option name="Invasion" value="5" />
+    <option name="Territories" value="6" />
+  </enum32>
+  <tagblock name="Settings11" offset="256" elementSize="8" maxelements="112" label="Setting Category" visible="True">
+    <enum32 name="Setting Category" offset="0" visible="True">
+      <option name="Match Round Setting" value="0" />
+      <option name="Match Ctf Score To Win" value="1" />
+      <option name="Match Slayer Score To Win Round" value="2" />
+      <option name="Match Oddball Score To Win Round" value="3" />
+      <option name="Match King Score To Win Round" value="4" />
+      <option name="Match Race Score To Win Round" value="5" />
+      <option name="Match Headhunter Score To Win Round" value="6" />
+      <option name="Match Juggernaut Score To Win Round" value="7" />
+      <option name="Match Territories Score To Win Round" value="8" />
+      <option name="Match Assault Score To Win Round" value="9" />
+      <option name="Match Round Time Limit" value="10" />
+      <option name="Match Rounds Reset Map" value="11" />
+      <option name="Match Tie Resolution" value="12" />
+      <option name="Match Observers" value="13" />
+      <option name="Match Join In Progress" value="14" />
+      <option name="Maximum Players" value="15" />
+      <option name="Lives Per Round" value="16" />
+      <option name="Respawn Time" value="17" />
+      <option name="Suicide Penalty" value="18" />
+      <option name="Shields" value="19" />
+      <option name="Motion Sensor" value="20" />
+      <option name="Invisibility" value="21" />
+      <option name="Team Changing" value="22" />
+      <option name="Team Scoring" value="23" />
+      <option name="Friendly Fire" value="24" />
+      <option name="Team Respawn Setting" value="25" />
+      <option name="Betrayal Respawn Penalty" value="26" />
+      <option name="Team Killer Management" value="27" />
+      <option name="Slayer Bonus Points" value="28" />
+      <option name="Slayer Suicide Point Loss" value="29" />
+      <option name="Slayer Death Point Loss" value="30" />
+      <option name="Headhunter Moving Head Bin" value="31" />
+      <option name="Headhunter Point Multiplier" value="32" />
+      <option name="Headhunter Suicide Point Loss" value="33" />
+      <option name="Headhunter Death Point Loss" value="34" />
+      <option name="Headhunter Uncontested Bin" value="35" />
+      <option name="Headhunter Speed With Heads" value="36" />
+      <option name="Headhunter Max Heads Carried" value="37" />
+      <option name="King Uncontested Hill" value="38" />
+      <option name="King Team Time Multiplier" value="39" />
+      <option name="King Moving Hill" value="40" />
+      <option name="King Extra Damage On Hill" value="41" />
+      <option name="King Dmg Resistance On Hill" value="42" />
+      <option name="Oddball Ball Spawn Count" value="43" />
+      <option name="Oddball Ball Hit Damage" value="44" />
+      <option name="Oddball Speed With Ball" value="45" />
+      <option name="Oddball Driving Gunning With Ball" value="46" />
+      <option name="Oddball Waypoint To Ball" value="47" />
+      <option name="Race Random Track" value="48" />
+      <option name="Race Uncontested Flag" value="49" />
+      <option name="Ctf Game Type" value="50" />
+      <option name="Ctf Sudden Death" value="51" />
+      <option name="Ctf Flag May Be Returned" value="52" />
+      <option name="Ctf Flag At Home To Score" value="53" />
+      <option name="Ctf Flag Reset Time" value="54" />
+      <option name="Ctf Speed With Flag" value="55" />
+      <option name="Ctf Flag Hit Damage" value="56" />
+      <option name="Ctf Driving Gunning With Flag" value="57" />
+      <option name="Ctf Waypoint To Own Flag" value="58" />
+      <option name="Assault Game Type" value="59" />
+      <option name="Assault Sudden Death" value="60" />
+      <option name="Assault Detonation Time" value="61" />
+      <option name="Assault Bomb At Home To Score" value="62" />
+      <option name="Assault Arming Time" value="63" />
+      <option name="Assault Speed With Bomb" value="64" />
+      <option name="Assault Bomb Hit Damage" value="65" />
+      <option name="Assault Driving Gunning With Bomb" value="66" />
+      <option name="Assault Waypoint To Own Bomb" value="67" />
+      <option name="Juggernaut Betrayal Point Loss" value="68" />
+      <option name="Juggernaut Juggy Extra Damage" value="69" />
+      <option name="Juggernaut Juggy Infinite Ammo" value="70" />
+      <option name="Juggernaut Juggy Overshields" value="71" />
+      <option name="Juggernaut Juggy Active Camo" value="72" />
+      <option name="Juggernaut Juggy Motion Sensor" value="73" />
+      <option name="Territories Territory Count" value="74" />
+      <option name="Veh. Respawn" value="75" />
+      <option name="Veh. Primary Light Land" value="76" />
+      <option name="Veh. Secondary Light Land" value="77" />
+      <option name="Veh. Primary Heavy Land" value="78" />
+      <option name="Veh. Primary Flying" value="79" />
+      <option name="Veh. Secondary Heavy Land" value="80" />
+      <option name="Veh. Primary Turret" value="81" />
+      <option name="Veh. Secondary Turret" value="82" />
+      <option name="Equip. Weapons On Map" value="83" />
+      <option name="Equip. Overshields On Map" value="84" />
+      <option name="Equip. Active Camo On Map" value="85" />
+      <option name="Equip. Grenades On Map" value="86" />
+      <option name="Equip. Weapon Respawn Times" value="87" />
+      <option name="Equip. Starting Grenades" value="88" />
+      <option name="Equip. Primary Starting Equipment" value="89" />
+      <option name="UNS. Max. Living Players" value="90" />
+      <option name="UNS. Teams Enabled" value="91" />
+      <option name="UNS. Assault Bomb May Be Returned" value="92" />
+      <option name="UNS. Max. Teams" value="93" />
+      <option name="UNS. Equip. Secondary Starting Equipment" value="94" />
+      <option name="UNS. Assault Fuse Time" value="95" />
+      <option name="UNS. Juggy Movement" value="96" />
+      <option name="UNS. Sticky Fuse" value="97" />
+      <option name="UNS. Terr. Contest Time" value="98" />
+      <option name="UNS. Terr. Control Time" value="99" />
+      <option name="UNS. Oddb. Carr. Invis" value="100" />
+      <option name="UNS. King Invis In Hill" value="101" />
+      <option name="UNS. Ball Carr. Dmg. Resis." value="102" />
+      <option name="UNS. King Dmg. Res. In Hill" value="103" />
+      <option name="UNS. Players Ex. Dmg" value="104" />
+      <option name="UNS. Players Dmg. Resis." value="105" />
+      <option name="UNS. Ctf Carr. Dmg. Resis." value="106" />
+      <option name="UNS. Ctf Carr. Invis." value="107" />
+      <option name="UNS. Juggy Dmg. Resis." value="108" />
+      <option name="UNS. Bomb Carr. Dmg. Resis." value="109" />
+      <option name="UNS. Bomb Carr. Invis." value="110" />
+      <option name="UNS. Force Even Teams" value="111" />
+    </enum32>
+    <int32 name="Value" offset="4" visible="True" />
+  </tagblock>
+  <int8 name="_Unnamed45" offset="264" visible="True" />
+  <undefined size="3" name="_Unnamed46" offset="265" visible="True" />
+  <stringid name="_Unnamed47" offset="268" visible="True" />
+  <enum32 name="_Unnamed48" offset="272" visible="True">
+    <option name="Slayer" value="0" />
+    <option name="Oddball" value="1" />
+    <option name="Juggernaut" value="2" />
+    <option name="King" value="3" />
+    <option name="Ctf" value="4" />
+    <option name="Invasion" value="5" />
+    <option name="Territories" value="6" />
+  </enum32>
+  <tagblock name="Settings12" offset="276" elementSize="8" maxelements="112" label="Setting Category" visible="True">
+    <enum32 name="Setting Category" offset="0" visible="True">
+      <option name="Match Round Setting" value="0" />
+      <option name="Match Ctf Score To Win" value="1" />
+      <option name="Match Slayer Score To Win Round" value="2" />
+      <option name="Match Oddball Score To Win Round" value="3" />
+      <option name="Match King Score To Win Round" value="4" />
+      <option name="Match Race Score To Win Round" value="5" />
+      <option name="Match Headhunter Score To Win Round" value="6" />
+      <option name="Match Juggernaut Score To Win Round" value="7" />
+      <option name="Match Territories Score To Win Round" value="8" />
+      <option name="Match Assault Score To Win Round" value="9" />
+      <option name="Match Round Time Limit" value="10" />
+      <option name="Match Rounds Reset Map" value="11" />
+      <option name="Match Tie Resolution" value="12" />
+      <option name="Match Observers" value="13" />
+      <option name="Match Join In Progress" value="14" />
+      <option name="Maximum Players" value="15" />
+      <option name="Lives Per Round" value="16" />
+      <option name="Respawn Time" value="17" />
+      <option name="Suicide Penalty" value="18" />
+      <option name="Shields" value="19" />
+      <option name="Motion Sensor" value="20" />
+      <option name="Invisibility" value="21" />
+      <option name="Team Changing" value="22" />
+      <option name="Team Scoring" value="23" />
+      <option name="Friendly Fire" value="24" />
+      <option name="Team Respawn Setting" value="25" />
+      <option name="Betrayal Respawn Penalty" value="26" />
+      <option name="Team Killer Management" value="27" />
+      <option name="Slayer Bonus Points" value="28" />
+      <option name="Slayer Suicide Point Loss" value="29" />
+      <option name="Slayer Death Point Loss" value="30" />
+      <option name="Headhunter Moving Head Bin" value="31" />
+      <option name="Headhunter Point Multiplier" value="32" />
+      <option name="Headhunter Suicide Point Loss" value="33" />
+      <option name="Headhunter Death Point Loss" value="34" />
+      <option name="Headhunter Uncontested Bin" value="35" />
+      <option name="Headhunter Speed With Heads" value="36" />
+      <option name="Headhunter Max Heads Carried" value="37" />
+      <option name="King Uncontested Hill" value="38" />
+      <option name="King Team Time Multiplier" value="39" />
+      <option name="King Moving Hill" value="40" />
+      <option name="King Extra Damage On Hill" value="41" />
+      <option name="King Dmg Resistance On Hill" value="42" />
+      <option name="Oddball Ball Spawn Count" value="43" />
+      <option name="Oddball Ball Hit Damage" value="44" />
+      <option name="Oddball Speed With Ball" value="45" />
+      <option name="Oddball Driving Gunning With Ball" value="46" />
+      <option name="Oddball Waypoint To Ball" value="47" />
+      <option name="Race Random Track" value="48" />
+      <option name="Race Uncontested Flag" value="49" />
+      <option name="Ctf Game Type" value="50" />
+      <option name="Ctf Sudden Death" value="51" />
+      <option name="Ctf Flag May Be Returned" value="52" />
+      <option name="Ctf Flag At Home To Score" value="53" />
+      <option name="Ctf Flag Reset Time" value="54" />
+      <option name="Ctf Speed With Flag" value="55" />
+      <option name="Ctf Flag Hit Damage" value="56" />
+      <option name="Ctf Driving Gunning With Flag" value="57" />
+      <option name="Ctf Waypoint To Own Flag" value="58" />
+      <option name="Assault Game Type" value="59" />
+      <option name="Assault Sudden Death" value="60" />
+      <option name="Assault Detonation Time" value="61" />
+      <option name="Assault Bomb At Home To Score" value="62" />
+      <option name="Assault Arming Time" value="63" />
+      <option name="Assault Speed With Bomb" value="64" />
+      <option name="Assault Bomb Hit Damage" value="65" />
+      <option name="Assault Driving Gunning With Bomb" value="66" />
+      <option name="Assault Waypoint To Own Bomb" value="67" />
+      <option name="Juggernaut Betrayal Point Loss" value="68" />
+      <option name="Juggernaut Juggy Extra Damage" value="69" />
+      <option name="Juggernaut Juggy Infinite Ammo" value="70" />
+      <option name="Juggernaut Juggy Overshields" value="71" />
+      <option name="Juggernaut Juggy Active Camo" value="72" />
+      <option name="Juggernaut Juggy Motion Sensor" value="73" />
+      <option name="Territories Territory Count" value="74" />
+      <option name="Veh. Respawn" value="75" />
+      <option name="Veh. Primary Light Land" value="76" />
+      <option name="Veh. Secondary Light Land" value="77" />
+      <option name="Veh. Primary Heavy Land" value="78" />
+      <option name="Veh. Primary Flying" value="79" />
+      <option name="Veh. Secondary Heavy Land" value="80" />
+      <option name="Veh. Primary Turret" value="81" />
+      <option name="Veh. Secondary Turret" value="82" />
+      <option name="Equip. Weapons On Map" value="83" />
+      <option name="Equip. Overshields On Map" value="84" />
+      <option name="Equip. Active Camo On Map" value="85" />
+      <option name="Equip. Grenades On Map" value="86" />
+      <option name="Equip. Weapon Respawn Times" value="87" />
+      <option name="Equip. Starting Grenades" value="88" />
+      <option name="Equip. Primary Starting Equipment" value="89" />
+      <option name="UNS. Max. Living Players" value="90" />
+      <option name="UNS. Teams Enabled" value="91" />
+      <option name="UNS. Assault Bomb May Be Returned" value="92" />
+      <option name="UNS. Max. Teams" value="93" />
+      <option name="UNS. Equip. Secondary Starting Equipment" value="94" />
+      <option name="UNS. Assault Fuse Time" value="95" />
+      <option name="UNS. Juggy Movement" value="96" />
+      <option name="UNS. Sticky Fuse" value="97" />
+      <option name="UNS. Terr. Contest Time" value="98" />
+      <option name="UNS. Terr. Control Time" value="99" />
+      <option name="UNS. Oddb. Carr. Invis" value="100" />
+      <option name="UNS. King Invis In Hill" value="101" />
+      <option name="UNS. Ball Carr. Dmg. Resis." value="102" />
+      <option name="UNS. King Dmg. Res. In Hill" value="103" />
+      <option name="UNS. Players Ex. Dmg" value="104" />
+      <option name="UNS. Players Dmg. Resis." value="105" />
+      <option name="UNS. Ctf Carr. Dmg. Resis." value="106" />
+      <option name="UNS. Ctf Carr. Invis." value="107" />
+      <option name="UNS. Juggy Dmg. Resis." value="108" />
+      <option name="UNS. Bomb Carr. Dmg. Resis." value="109" />
+      <option name="UNS. Bomb Carr. Invis." value="110" />
+      <option name="UNS. Force Even Teams" value="111" />
+    </enum32>
+    <int32 name="Value" offset="4" visible="True" />
+  </tagblock>
+  <int8 name="_Unnamed49" offset="284" visible="True" />
+  <undefined size="3" name="_Unnamed50" offset="285" visible="True" />
+  <stringid name="_Unnamed51" offset="288" visible="True" />
+  <enum32 name="_Unnamed52" offset="292" visible="True">
+    <option name="Slayer" value="0" />
+    <option name="Oddball" value="1" />
+    <option name="Juggernaut" value="2" />
+    <option name="King" value="3" />
+    <option name="Ctf" value="4" />
+    <option name="Invasion" value="5" />
+    <option name="Territories" value="6" />
+  </enum32>
+  <tagblock name="Settings13" offset="296" elementSize="8" maxelements="112" label="Setting Category" visible="True">
+    <enum32 name="Setting Category" offset="0" visible="True">
+      <option name="Match Round Setting" value="0" />
+      <option name="Match Ctf Score To Win" value="1" />
+      <option name="Match Slayer Score To Win Round" value="2" />
+      <option name="Match Oddball Score To Win Round" value="3" />
+      <option name="Match King Score To Win Round" value="4" />
+      <option name="Match Race Score To Win Round" value="5" />
+      <option name="Match Headhunter Score To Win Round" value="6" />
+      <option name="Match Juggernaut Score To Win Round" value="7" />
+      <option name="Match Territories Score To Win Round" value="8" />
+      <option name="Match Assault Score To Win Round" value="9" />
+      <option name="Match Round Time Limit" value="10" />
+      <option name="Match Rounds Reset Map" value="11" />
+      <option name="Match Tie Resolution" value="12" />
+      <option name="Match Observers" value="13" />
+      <option name="Match Join In Progress" value="14" />
+      <option name="Maximum Players" value="15" />
+      <option name="Lives Per Round" value="16" />
+      <option name="Respawn Time" value="17" />
+      <option name="Suicide Penalty" value="18" />
+      <option name="Shields" value="19" />
+      <option name="Motion Sensor" value="20" />
+      <option name="Invisibility" value="21" />
+      <option name="Team Changing" value="22" />
+      <option name="Team Scoring" value="23" />
+      <option name="Friendly Fire" value="24" />
+      <option name="Team Respawn Setting" value="25" />
+      <option name="Betrayal Respawn Penalty" value="26" />
+      <option name="Team Killer Management" value="27" />
+      <option name="Slayer Bonus Points" value="28" />
+      <option name="Slayer Suicide Point Loss" value="29" />
+      <option name="Slayer Death Point Loss" value="30" />
+      <option name="Headhunter Moving Head Bin" value="31" />
+      <option name="Headhunter Point Multiplier" value="32" />
+      <option name="Headhunter Suicide Point Loss" value="33" />
+      <option name="Headhunter Death Point Loss" value="34" />
+      <option name="Headhunter Uncontested Bin" value="35" />
+      <option name="Headhunter Speed With Heads" value="36" />
+      <option name="Headhunter Max Heads Carried" value="37" />
+      <option name="King Uncontested Hill" value="38" />
+      <option name="King Team Time Multiplier" value="39" />
+      <option name="King Moving Hill" value="40" />
+      <option name="King Extra Damage On Hill" value="41" />
+      <option name="King Dmg Resistance On Hill" value="42" />
+      <option name="Oddball Ball Spawn Count" value="43" />
+      <option name="Oddball Ball Hit Damage" value="44" />
+      <option name="Oddball Speed With Ball" value="45" />
+      <option name="Oddball Driving Gunning With Ball" value="46" />
+      <option name="Oddball Waypoint To Ball" value="47" />
+      <option name="Race Random Track" value="48" />
+      <option name="Race Uncontested Flag" value="49" />
+      <option name="Ctf Game Type" value="50" />
+      <option name="Ctf Sudden Death" value="51" />
+      <option name="Ctf Flag May Be Returned" value="52" />
+      <option name="Ctf Flag At Home To Score" value="53" />
+      <option name="Ctf Flag Reset Time" value="54" />
+      <option name="Ctf Speed With Flag" value="55" />
+      <option name="Ctf Flag Hit Damage" value="56" />
+      <option name="Ctf Driving Gunning With Flag" value="57" />
+      <option name="Ctf Waypoint To Own Flag" value="58" />
+      <option name="Assault Game Type" value="59" />
+      <option name="Assault Sudden Death" value="60" />
+      <option name="Assault Detonation Time" value="61" />
+      <option name="Assault Bomb At Home To Score" value="62" />
+      <option name="Assault Arming Time" value="63" />
+      <option name="Assault Speed With Bomb" value="64" />
+      <option name="Assault Bomb Hit Damage" value="65" />
+      <option name="Assault Driving Gunning With Bomb" value="66" />
+      <option name="Assault Waypoint To Own Bomb" value="67" />
+      <option name="Juggernaut Betrayal Point Loss" value="68" />
+      <option name="Juggernaut Juggy Extra Damage" value="69" />
+      <option name="Juggernaut Juggy Infinite Ammo" value="70" />
+      <option name="Juggernaut Juggy Overshields" value="71" />
+      <option name="Juggernaut Juggy Active Camo" value="72" />
+      <option name="Juggernaut Juggy Motion Sensor" value="73" />
+      <option name="Territories Territory Count" value="74" />
+      <option name="Veh. Respawn" value="75" />
+      <option name="Veh. Primary Light Land" value="76" />
+      <option name="Veh. Secondary Light Land" value="77" />
+      <option name="Veh. Primary Heavy Land" value="78" />
+      <option name="Veh. Primary Flying" value="79" />
+      <option name="Veh. Secondary Heavy Land" value="80" />
+      <option name="Veh. Primary Turret" value="81" />
+      <option name="Veh. Secondary Turret" value="82" />
+      <option name="Equip. Weapons On Map" value="83" />
+      <option name="Equip. Overshields On Map" value="84" />
+      <option name="Equip. Active Camo On Map" value="85" />
+      <option name="Equip. Grenades On Map" value="86" />
+      <option name="Equip. Weapon Respawn Times" value="87" />
+      <option name="Equip. Starting Grenades" value="88" />
+      <option name="Equip. Primary Starting Equipment" value="89" />
+      <option name="UNS. Max. Living Players" value="90" />
+      <option name="UNS. Teams Enabled" value="91" />
+      <option name="UNS. Assault Bomb May Be Returned" value="92" />
+      <option name="UNS. Max. Teams" value="93" />
+      <option name="UNS. Equip. Secondary Starting Equipment" value="94" />
+      <option name="UNS. Assault Fuse Time" value="95" />
+      <option name="UNS. Juggy Movement" value="96" />
+      <option name="UNS. Sticky Fuse" value="97" />
+      <option name="UNS. Terr. Contest Time" value="98" />
+      <option name="UNS. Terr. Control Time" value="99" />
+      <option name="UNS. Oddb. Carr. Invis" value="100" />
+      <option name="UNS. King Invis In Hill" value="101" />
+      <option name="UNS. Ball Carr. Dmg. Resis." value="102" />
+      <option name="UNS. King Dmg. Res. In Hill" value="103" />
+      <option name="UNS. Players Ex. Dmg" value="104" />
+      <option name="UNS. Players Dmg. Resis." value="105" />
+      <option name="UNS. Ctf Carr. Dmg. Resis." value="106" />
+      <option name="UNS. Ctf Carr. Invis." value="107" />
+      <option name="UNS. Juggy Dmg. Resis." value="108" />
+      <option name="UNS. Bomb Carr. Dmg. Resis." value="109" />
+      <option name="UNS. Bomb Carr. Invis." value="110" />
+      <option name="UNS. Force Even Teams" value="111" />
+    </enum32>
+    <int32 name="Value" offset="4" visible="True" />
+  </tagblock>
+  <int8 name="_Unnamed53" offset="304" visible="True" />
+  <undefined size="3" name="_Unnamed54" offset="305" visible="True" />
+  <stringid name="_Unnamed55" offset="308" visible="True" />
+  <enum32 name="_Unnamed56" offset="312" visible="True">
+    <option name="Slayer" value="0" />
+    <option name="Oddball" value="1" />
+    <option name="Juggernaut" value="2" />
+    <option name="King" value="3" />
+    <option name="Ctf" value="4" />
+    <option name="Invasion" value="5" />
+    <option name="Territories" value="6" />
+  </enum32>
+  <tagblock name="Settings14" offset="316" elementSize="8" maxelements="112" label="Setting Category" visible="True">
+    <enum32 name="Setting Category" offset="0" visible="True">
+      <option name="Match Round Setting" value="0" />
+      <option name="Match Ctf Score To Win" value="1" />
+      <option name="Match Slayer Score To Win Round" value="2" />
+      <option name="Match Oddball Score To Win Round" value="3" />
+      <option name="Match King Score To Win Round" value="4" />
+      <option name="Match Race Score To Win Round" value="5" />
+      <option name="Match Headhunter Score To Win Round" value="6" />
+      <option name="Match Juggernaut Score To Win Round" value="7" />
+      <option name="Match Territories Score To Win Round" value="8" />
+      <option name="Match Assault Score To Win Round" value="9" />
+      <option name="Match Round Time Limit" value="10" />
+      <option name="Match Rounds Reset Map" value="11" />
+      <option name="Match Tie Resolution" value="12" />
+      <option name="Match Observers" value="13" />
+      <option name="Match Join In Progress" value="14" />
+      <option name="Maximum Players" value="15" />
+      <option name="Lives Per Round" value="16" />
+      <option name="Respawn Time" value="17" />
+      <option name="Suicide Penalty" value="18" />
+      <option name="Shields" value="19" />
+      <option name="Motion Sensor" value="20" />
+      <option name="Invisibility" value="21" />
+      <option name="Team Changing" value="22" />
+      <option name="Team Scoring" value="23" />
+      <option name="Friendly Fire" value="24" />
+      <option name="Team Respawn Setting" value="25" />
+      <option name="Betrayal Respawn Penalty" value="26" />
+      <option name="Team Killer Management" value="27" />
+      <option name="Slayer Bonus Points" value="28" />
+      <option name="Slayer Suicide Point Loss" value="29" />
+      <option name="Slayer Death Point Loss" value="30" />
+      <option name="Headhunter Moving Head Bin" value="31" />
+      <option name="Headhunter Point Multiplier" value="32" />
+      <option name="Headhunter Suicide Point Loss" value="33" />
+      <option name="Headhunter Death Point Loss" value="34" />
+      <option name="Headhunter Uncontested Bin" value="35" />
+      <option name="Headhunter Speed With Heads" value="36" />
+      <option name="Headhunter Max Heads Carried" value="37" />
+      <option name="King Uncontested Hill" value="38" />
+      <option name="King Team Time Multiplier" value="39" />
+      <option name="King Moving Hill" value="40" />
+      <option name="King Extra Damage On Hill" value="41" />
+      <option name="King Dmg Resistance On Hill" value="42" />
+      <option name="Oddball Ball Spawn Count" value="43" />
+      <option name="Oddball Ball Hit Damage" value="44" />
+      <option name="Oddball Speed With Ball" value="45" />
+      <option name="Oddball Driving Gunning With Ball" value="46" />
+      <option name="Oddball Waypoint To Ball" value="47" />
+      <option name="Race Random Track" value="48" />
+      <option name="Race Uncontested Flag" value="49" />
+      <option name="Ctf Game Type" value="50" />
+      <option name="Ctf Sudden Death" value="51" />
+      <option name="Ctf Flag May Be Returned" value="52" />
+      <option name="Ctf Flag At Home To Score" value="53" />
+      <option name="Ctf Flag Reset Time" value="54" />
+      <option name="Ctf Speed With Flag" value="55" />
+      <option name="Ctf Flag Hit Damage" value="56" />
+      <option name="Ctf Driving Gunning With Flag" value="57" />
+      <option name="Ctf Waypoint To Own Flag" value="58" />
+      <option name="Assault Game Type" value="59" />
+      <option name="Assault Sudden Death" value="60" />
+      <option name="Assault Detonation Time" value="61" />
+      <option name="Assault Bomb At Home To Score" value="62" />
+      <option name="Assault Arming Time" value="63" />
+      <option name="Assault Speed With Bomb" value="64" />
+      <option name="Assault Bomb Hit Damage" value="65" />
+      <option name="Assault Driving Gunning With Bomb" value="66" />
+      <option name="Assault Waypoint To Own Bomb" value="67" />
+      <option name="Juggernaut Betrayal Point Loss" value="68" />
+      <option name="Juggernaut Juggy Extra Damage" value="69" />
+      <option name="Juggernaut Juggy Infinite Ammo" value="70" />
+      <option name="Juggernaut Juggy Overshields" value="71" />
+      <option name="Juggernaut Juggy Active Camo" value="72" />
+      <option name="Juggernaut Juggy Motion Sensor" value="73" />
+      <option name="Territories Territory Count" value="74" />
+      <option name="Veh. Respawn" value="75" />
+      <option name="Veh. Primary Light Land" value="76" />
+      <option name="Veh. Secondary Light Land" value="77" />
+      <option name="Veh. Primary Heavy Land" value="78" />
+      <option name="Veh. Primary Flying" value="79" />
+      <option name="Veh. Secondary Heavy Land" value="80" />
+      <option name="Veh. Primary Turret" value="81" />
+      <option name="Veh. Secondary Turret" value="82" />
+      <option name="Equip. Weapons On Map" value="83" />
+      <option name="Equip. Overshields On Map" value="84" />
+      <option name="Equip. Active Camo On Map" value="85" />
+      <option name="Equip. Grenades On Map" value="86" />
+      <option name="Equip. Weapon Respawn Times" value="87" />
+      <option name="Equip. Starting Grenades" value="88" />
+      <option name="Equip. Primary Starting Equipment" value="89" />
+      <option name="UNS. Max. Living Players" value="90" />
+      <option name="UNS. Teams Enabled" value="91" />
+      <option name="UNS. Assault Bomb May Be Returned" value="92" />
+      <option name="UNS. Max. Teams" value="93" />
+      <option name="UNS. Equip. Secondary Starting Equipment" value="94" />
+      <option name="UNS. Assault Fuse Time" value="95" />
+      <option name="UNS. Juggy Movement" value="96" />
+      <option name="UNS. Sticky Fuse" value="97" />
+      <option name="UNS. Terr. Contest Time" value="98" />
+      <option name="UNS. Terr. Control Time" value="99" />
+      <option name="UNS. Oddb. Carr. Invis" value="100" />
+      <option name="UNS. King Invis In Hill" value="101" />
+      <option name="UNS. Ball Carr. Dmg. Resis." value="102" />
+      <option name="UNS. King Dmg. Res. In Hill" value="103" />
+      <option name="UNS. Players Ex. Dmg" value="104" />
+      <option name="UNS. Players Dmg. Resis." value="105" />
+      <option name="UNS. Ctf Carr. Dmg. Resis." value="106" />
+      <option name="UNS. Ctf Carr. Invis." value="107" />
+      <option name="UNS. Juggy Dmg. Resis." value="108" />
+      <option name="UNS. Bomb Carr. Dmg. Resis." value="109" />
+      <option name="UNS. Bomb Carr. Invis." value="110" />
+      <option name="UNS. Force Even Teams" value="111" />
+    </enum32>
+    <int32 name="Value" offset="4" visible="True" />
+  </tagblock>
+  <int8 name="_Unnamed57" offset="324" visible="True" />
+  <undefined size="3" name="_Unnamed58" offset="325" visible="True" />
+  <stringid name="_Unnamed59" offset="328" visible="True" />
+  <enum32 name="_Unnamed60" offset="332" visible="True">
+    <option name="Slayer" value="0" />
+    <option name="Oddball" value="1" />
+    <option name="Juggernaut" value="2" />
+    <option name="King" value="3" />
+    <option name="Ctf" value="4" />
+    <option name="Invasion" value="5" />
+    <option name="Territories" value="6" />
+  </enum32>
+  <tagblock name="Settings15" offset="336" elementSize="8" maxelements="112" label="Setting Category" visible="True">
+    <enum32 name="Setting Category" offset="0" visible="True">
+      <option name="Match Round Setting" value="0" />
+      <option name="Match Ctf Score To Win" value="1" />
+      <option name="Match Slayer Score To Win Round" value="2" />
+      <option name="Match Oddball Score To Win Round" value="3" />
+      <option name="Match King Score To Win Round" value="4" />
+      <option name="Match Race Score To Win Round" value="5" />
+      <option name="Match Headhunter Score To Win Round" value="6" />
+      <option name="Match Juggernaut Score To Win Round" value="7" />
+      <option name="Match Territories Score To Win Round" value="8" />
+      <option name="Match Assault Score To Win Round" value="9" />
+      <option name="Match Round Time Limit" value="10" />
+      <option name="Match Rounds Reset Map" value="11" />
+      <option name="Match Tie Resolution" value="12" />
+      <option name="Match Observers" value="13" />
+      <option name="Match Join In Progress" value="14" />
+      <option name="Maximum Players" value="15" />
+      <option name="Lives Per Round" value="16" />
+      <option name="Respawn Time" value="17" />
+      <option name="Suicide Penalty" value="18" />
+      <option name="Shields" value="19" />
+      <option name="Motion Sensor" value="20" />
+      <option name="Invisibility" value="21" />
+      <option name="Team Changing" value="22" />
+      <option name="Team Scoring" value="23" />
+      <option name="Friendly Fire" value="24" />
+      <option name="Team Respawn Setting" value="25" />
+      <option name="Betrayal Respawn Penalty" value="26" />
+      <option name="Team Killer Management" value="27" />
+      <option name="Slayer Bonus Points" value="28" />
+      <option name="Slayer Suicide Point Loss" value="29" />
+      <option name="Slayer Death Point Loss" value="30" />
+      <option name="Headhunter Moving Head Bin" value="31" />
+      <option name="Headhunter Point Multiplier" value="32" />
+      <option name="Headhunter Suicide Point Loss" value="33" />
+      <option name="Headhunter Death Point Loss" value="34" />
+      <option name="Headhunter Uncontested Bin" value="35" />
+      <option name="Headhunter Speed With Heads" value="36" />
+      <option name="Headhunter Max Heads Carried" value="37" />
+      <option name="King Uncontested Hill" value="38" />
+      <option name="King Team Time Multiplier" value="39" />
+      <option name="King Moving Hill" value="40" />
+      <option name="King Extra Damage On Hill" value="41" />
+      <option name="King Dmg Resistance On Hill" value="42" />
+      <option name="Oddball Ball Spawn Count" value="43" />
+      <option name="Oddball Ball Hit Damage" value="44" />
+      <option name="Oddball Speed With Ball" value="45" />
+      <option name="Oddball Driving Gunning With Ball" value="46" />
+      <option name="Oddball Waypoint To Ball" value="47" />
+      <option name="Race Random Track" value="48" />
+      <option name="Race Uncontested Flag" value="49" />
+      <option name="Ctf Game Type" value="50" />
+      <option name="Ctf Sudden Death" value="51" />
+      <option name="Ctf Flag May Be Returned" value="52" />
+      <option name="Ctf Flag At Home To Score" value="53" />
+      <option name="Ctf Flag Reset Time" value="54" />
+      <option name="Ctf Speed With Flag" value="55" />
+      <option name="Ctf Flag Hit Damage" value="56" />
+      <option name="Ctf Driving Gunning With Flag" value="57" />
+      <option name="Ctf Waypoint To Own Flag" value="58" />
+      <option name="Assault Game Type" value="59" />
+      <option name="Assault Sudden Death" value="60" />
+      <option name="Assault Detonation Time" value="61" />
+      <option name="Assault Bomb At Home To Score" value="62" />
+      <option name="Assault Arming Time" value="63" />
+      <option name="Assault Speed With Bomb" value="64" />
+      <option name="Assault Bomb Hit Damage" value="65" />
+      <option name="Assault Driving Gunning With Bomb" value="66" />
+      <option name="Assault Waypoint To Own Bomb" value="67" />
+      <option name="Juggernaut Betrayal Point Loss" value="68" />
+      <option name="Juggernaut Juggy Extra Damage" value="69" />
+      <option name="Juggernaut Juggy Infinite Ammo" value="70" />
+      <option name="Juggernaut Juggy Overshields" value="71" />
+      <option name="Juggernaut Juggy Active Camo" value="72" />
+      <option name="Juggernaut Juggy Motion Sensor" value="73" />
+      <option name="Territories Territory Count" value="74" />
+      <option name="Veh. Respawn" value="75" />
+      <option name="Veh. Primary Light Land" value="76" />
+      <option name="Veh. Secondary Light Land" value="77" />
+      <option name="Veh. Primary Heavy Land" value="78" />
+      <option name="Veh. Primary Flying" value="79" />
+      <option name="Veh. Secondary Heavy Land" value="80" />
+      <option name="Veh. Primary Turret" value="81" />
+      <option name="Veh. Secondary Turret" value="82" />
+      <option name="Equip. Weapons On Map" value="83" />
+      <option name="Equip. Overshields On Map" value="84" />
+      <option name="Equip. Active Camo On Map" value="85" />
+      <option name="Equip. Grenades On Map" value="86" />
+      <option name="Equip. Weapon Respawn Times" value="87" />
+      <option name="Equip. Starting Grenades" value="88" />
+      <option name="Equip. Primary Starting Equipment" value="89" />
+      <option name="UNS. Max. Living Players" value="90" />
+      <option name="UNS. Teams Enabled" value="91" />
+      <option name="UNS. Assault Bomb May Be Returned" value="92" />
+      <option name="UNS. Max. Teams" value="93" />
+      <option name="UNS. Equip. Secondary Starting Equipment" value="94" />
+      <option name="UNS. Assault Fuse Time" value="95" />
+      <option name="UNS. Juggy Movement" value="96" />
+      <option name="UNS. Sticky Fuse" value="97" />
+      <option name="UNS. Terr. Contest Time" value="98" />
+      <option name="UNS. Terr. Control Time" value="99" />
+      <option name="UNS. Oddb. Carr. Invis" value="100" />
+      <option name="UNS. King Invis In Hill" value="101" />
+      <option name="UNS. Ball Carr. Dmg. Resis." value="102" />
+      <option name="UNS. King Dmg. Res. In Hill" value="103" />
+      <option name="UNS. Players Ex. Dmg" value="104" />
+      <option name="UNS. Players Dmg. Resis." value="105" />
+      <option name="UNS. Ctf Carr. Dmg. Resis." value="106" />
+      <option name="UNS. Ctf Carr. Invis." value="107" />
+      <option name="UNS. Juggy Dmg. Resis." value="108" />
+      <option name="UNS. Bomb Carr. Dmg. Resis." value="109" />
+      <option name="UNS. Bomb Carr. Invis." value="110" />
+      <option name="UNS. Force Even Teams" value="111" />
+    </enum32>
+    <int32 name="Value" offset="4" visible="True" />
+  </tagblock>
+  <int8 name="_Unnamed61" offset="344" visible="True" />
+  <undefined size="3" name="_Unnamed62" offset="345" visible="True" />
+  <stringid name="_Unnamed63" offset="348" visible="True" />
+  <enum32 name="_Unnamed64" offset="352" visible="True">
+    <option name="Slayer" value="0" />
+    <option name="Oddball" value="1" />
+    <option name="Juggernaut" value="2" />
+    <option name="King" value="3" />
+    <option name="Ctf" value="4" />
+    <option name="Invasion" value="5" />
+    <option name="Territories" value="6" />
+  </enum32>
+  <tagblock name="Settings16" offset="356" elementSize="8" maxelements="112" label="Setting Category" visible="True">
+    <enum32 name="Setting Category" offset="0" visible="True">
+      <option name="Match Round Setting" value="0" />
+      <option name="Match Ctf Score To Win" value="1" />
+      <option name="Match Slayer Score To Win Round" value="2" />
+      <option name="Match Oddball Score To Win Round" value="3" />
+      <option name="Match King Score To Win Round" value="4" />
+      <option name="Match Race Score To Win Round" value="5" />
+      <option name="Match Headhunter Score To Win Round" value="6" />
+      <option name="Match Juggernaut Score To Win Round" value="7" />
+      <option name="Match Territories Score To Win Round" value="8" />
+      <option name="Match Assault Score To Win Round" value="9" />
+      <option name="Match Round Time Limit" value="10" />
+      <option name="Match Rounds Reset Map" value="11" />
+      <option name="Match Tie Resolution" value="12" />
+      <option name="Match Observers" value="13" />
+      <option name="Match Join In Progress" value="14" />
+      <option name="Maximum Players" value="15" />
+      <option name="Lives Per Round" value="16" />
+      <option name="Respawn Time" value="17" />
+      <option name="Suicide Penalty" value="18" />
+      <option name="Shields" value="19" />
+      <option name="Motion Sensor" value="20" />
+      <option name="Invisibility" value="21" />
+      <option name="Team Changing" value="22" />
+      <option name="Team Scoring" value="23" />
+      <option name="Friendly Fire" value="24" />
+      <option name="Team Respawn Setting" value="25" />
+      <option name="Betrayal Respawn Penalty" value="26" />
+      <option name="Team Killer Management" value="27" />
+      <option name="Slayer Bonus Points" value="28" />
+      <option name="Slayer Suicide Point Loss" value="29" />
+      <option name="Slayer Death Point Loss" value="30" />
+      <option name="Headhunter Moving Head Bin" value="31" />
+      <option name="Headhunter Point Multiplier" value="32" />
+      <option name="Headhunter Suicide Point Loss" value="33" />
+      <option name="Headhunter Death Point Loss" value="34" />
+      <option name="Headhunter Uncontested Bin" value="35" />
+      <option name="Headhunter Speed With Heads" value="36" />
+      <option name="Headhunter Max Heads Carried" value="37" />
+      <option name="King Uncontested Hill" value="38" />
+      <option name="King Team Time Multiplier" value="39" />
+      <option name="King Moving Hill" value="40" />
+      <option name="King Extra Damage On Hill" value="41" />
+      <option name="King Dmg Resistance On Hill" value="42" />
+      <option name="Oddball Ball Spawn Count" value="43" />
+      <option name="Oddball Ball Hit Damage" value="44" />
+      <option name="Oddball Speed With Ball" value="45" />
+      <option name="Oddball Driving Gunning With Ball" value="46" />
+      <option name="Oddball Waypoint To Ball" value="47" />
+      <option name="Race Random Track" value="48" />
+      <option name="Race Uncontested Flag" value="49" />
+      <option name="Ctf Game Type" value="50" />
+      <option name="Ctf Sudden Death" value="51" />
+      <option name="Ctf Flag May Be Returned" value="52" />
+      <option name="Ctf Flag At Home To Score" value="53" />
+      <option name="Ctf Flag Reset Time" value="54" />
+      <option name="Ctf Speed With Flag" value="55" />
+      <option name="Ctf Flag Hit Damage" value="56" />
+      <option name="Ctf Driving Gunning With Flag" value="57" />
+      <option name="Ctf Waypoint To Own Flag" value="58" />
+      <option name="Assault Game Type" value="59" />
+      <option name="Assault Sudden Death" value="60" />
+      <option name="Assault Detonation Time" value="61" />
+      <option name="Assault Bomb At Home To Score" value="62" />
+      <option name="Assault Arming Time" value="63" />
+      <option name="Assault Speed With Bomb" value="64" />
+      <option name="Assault Bomb Hit Damage" value="65" />
+      <option name="Assault Driving Gunning With Bomb" value="66" />
+      <option name="Assault Waypoint To Own Bomb" value="67" />
+      <option name="Juggernaut Betrayal Point Loss" value="68" />
+      <option name="Juggernaut Juggy Extra Damage" value="69" />
+      <option name="Juggernaut Juggy Infinite Ammo" value="70" />
+      <option name="Juggernaut Juggy Overshields" value="71" />
+      <option name="Juggernaut Juggy Active Camo" value="72" />
+      <option name="Juggernaut Juggy Motion Sensor" value="73" />
+      <option name="Territories Territory Count" value="74" />
+      <option name="Veh. Respawn" value="75" />
+      <option name="Veh. Primary Light Land" value="76" />
+      <option name="Veh. Secondary Light Land" value="77" />
+      <option name="Veh. Primary Heavy Land" value="78" />
+      <option name="Veh. Primary Flying" value="79" />
+      <option name="Veh. Secondary Heavy Land" value="80" />
+      <option name="Veh. Primary Turret" value="81" />
+      <option name="Veh. Secondary Turret" value="82" />
+      <option name="Equip. Weapons On Map" value="83" />
+      <option name="Equip. Overshields On Map" value="84" />
+      <option name="Equip. Active Camo On Map" value="85" />
+      <option name="Equip. Grenades On Map" value="86" />
+      <option name="Equip. Weapon Respawn Times" value="87" />
+      <option name="Equip. Starting Grenades" value="88" />
+      <option name="Equip. Primary Starting Equipment" value="89" />
+      <option name="UNS. Max. Living Players" value="90" />
+      <option name="UNS. Teams Enabled" value="91" />
+      <option name="UNS. Assault Bomb May Be Returned" value="92" />
+      <option name="UNS. Max. Teams" value="93" />
+      <option name="UNS. Equip. Secondary Starting Equipment" value="94" />
+      <option name="UNS. Assault Fuse Time" value="95" />
+      <option name="UNS. Juggy Movement" value="96" />
+      <option name="UNS. Sticky Fuse" value="97" />
+      <option name="UNS. Terr. Contest Time" value="98" />
+      <option name="UNS. Terr. Control Time" value="99" />
+      <option name="UNS. Oddb. Carr. Invis" value="100" />
+      <option name="UNS. King Invis In Hill" value="101" />
+      <option name="UNS. Ball Carr. Dmg. Resis." value="102" />
+      <option name="UNS. King Dmg. Res. In Hill" value="103" />
+      <option name="UNS. Players Ex. Dmg" value="104" />
+      <option name="UNS. Players Dmg. Resis." value="105" />
+      <option name="UNS. Ctf Carr. Dmg. Resis." value="106" />
+      <option name="UNS. Ctf Carr. Invis." value="107" />
+      <option name="UNS. Juggy Dmg. Resis." value="108" />
+      <option name="UNS. Bomb Carr. Dmg. Resis." value="109" />
+      <option name="UNS. Bomb Carr. Invis." value="110" />
+      <option name="UNS. Force Even Teams" value="111" />
+    </enum32>
+    <int32 name="Value" offset="4" visible="True" />
+  </tagblock>
+  <int8 name="_Unnamed65" offset="364" visible="True" />
+  <undefined size="3" name="_Unnamed66" offset="365" visible="True" />
+</plugin>

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="92">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <tagRef name="Template" offset="0" visible="True" />
+  <stringid name="Material Name" offset="8" visible="True" />
+  <tagblock name="Runtime Properties" offset="12" elementSize="80" maxelements="1" label="Diffuse Map" visible="True">
+    <tagRef name="Diffuse Map" offset="0" visible="True" />
+    <tagRef name="Lightmap Emissive Map" offset="8" visible="True" />
+    <float32 name="Lightmap Emissive Color R" offset="16" visible="True" />
+    <float32 name="Lightmap Emissive Color G" offset="20" visible="True" />
+    <float32 name="Lightmap Emissive Color B" offset="24" visible="True" />
+    <float32 name="Lightmap Emissive Power" offset="28" visible="True" />
+    <float32 name="Lightmap Resolution Scale" offset="32" visible="True" />
+    <float32 name="Lightmap Half Life" offset="36" visible="True" />
+    <float32 name="Lightmap Diffuse Scale" offset="40" visible="True" />
+    <tagRef name="Alpha Test Map" offset="44" visible="True" />
+    <tagRef name="Translucent Map" offset="52" visible="True" />
+    <float32 name="Lightmap Transparent Color R" offset="60" visible="True" />
+    <float32 name="Lightmap Transparent Color G" offset="64" visible="True" />
+    <float32 name="Lightmap Transparent Color B" offset="68" visible="True" />
+    <float32 name="Lightmap Transparent Alpha" offset="72" visible="True" />
+    <float32 name="Lightmap Foliage Scale" offset="76" visible="True" />
+  </tagblock>
+  <undefined size="2" name="_Unnamed0" offset="20" visible="True" />
+  <flags16 name="Flags" offset="22" visible="True">
+    <bit name="Water" index="0" />
+    <bit name="Sort First" index="1" />
+    <bit name="No Active Camo" index="2" />
+  </flags16>
+  <tagblock name="Parameters" offset="24" elementSize="40" maxelements="64" label="Name" visible="True">
+    <stringid name="Name" offset="0" visible="True" />
+    <enum16 name="Type" offset="4" visible="True">
+      <option name="Bitmap" value="0" />
+      <option name="Value" value="1" />
+      <option name="Color" value="2" />
+      <option name="Switch" value="3" />
+    </enum16>
+    <undefined size="2" name="_Unnamed0" offset="6" visible="True" />
+    <tagRef name="Bitmap" offset="8" visible="True" />
+    <float32 name="Const Value" offset="16" visible="True" />
+    <float32 name="Const Color R" offset="20" visible="True" />
+    <float32 name="Const Color G" offset="24" visible="True" />
+    <float32 name="Const Color B" offset="28" visible="True" />
+    <tagblock name="Animation Properties" offset="32" elementSize="24" maxelements="14" label="Type" visible="True">
+      <enum16 name="Type" offset="0" visible="True">
+        <option name="Bitmap Scale Uniform" value="0" />
+        <option name="Bitmap Scale X" value="1" />
+        <option name="Bitmap Scale Y" value="2" />
+        <option name="Bitmap Scale Z" value="3" />
+        <option name="Bitmap Translation X" value="4" />
+        <option name="Bitmap Translation Y" value="5" />
+        <option name="Bitmap Translation Z" value="6" />
+        <option name="Bitmap Rotation Angle" value="7" />
+        <option name="Bitmap Rotation Axis X" value="8" />
+        <option name="Bitmap Rotation Axis Y" value="9" />
+        <option name="Bitmap Rotation Axis Z" value="10" />
+        <option name="Value" value="11" />
+        <option name="Color" value="12" />
+        <option name="Bitmap Index" value="13" />
+      </enum16>
+      <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+      <stringid name="Input Name" offset="4" visible="True" />
+      <stringid name="Range Name" offset="8" visible="True" />
+      <float32 name="Time Period" offset="12" visible="True" />
+      <tagblock name="Data" offset="16" elementSize="1" maxelements="1024" label="" visible="True">
+        <int8 name="Value" offset="0" visible="True" />
+      </tagblock>
+    </tagblock>
+  </tagblock>
+  <tagblock name="Postprocess Definition" offset="32" elementSize="124" maxelements="1" label="" visible="True">
+    <int32 name="Shader Template Index" offset="0" visible="True" />
+    <tagblock name="Bitmaps" offset="4" elementSize="12" maxelements="1024" label="" visible="True">
+      <undefined size="4" name="Shader Bitmap Reference" offset="0" visible="True" />
+      <int32 name="Bitmap Index" offset="4" visible="True" />
+      <float32 name="Log Bitmap Dimension" offset="8" visible="True" />
+    </tagblock>
+    <tagblock name="Pixel Constants" offset="12" elementSize="4" maxelements="1024" label="" visible="True">
+      <int8 name="Color A" offset="0" visible="True" />
+      <int8 name="Color R" offset="4" visible="True" />
+      <int8 name="Color G" offset="8" visible="True" />
+      <int8 name="Color B" offset="12" visible="True" />
+    </tagblock>
+    <tagblock name="Vertex Constants" offset="20" elementSize="16" maxelements="1024" label="" visible="True">
+      <float32 name="Vector3 X" offset="0" visible="True" />
+      <float32 name="Vector3 Y" offset="4" visible="True" />
+      <float32 name="Vector3 Z" offset="8" visible="True" />
+      <float32 name="W" offset="12" visible="True" />
+    </tagblock>
+    <tagblock name="Levels Of Detail" offset="28" elementSize="6" maxelements="1024" label="" visible="True">
+      <int32 name="Available Layer Flags" offset="0" visible="True" />
+      <int16 name="Block Index Data" offset="4" visible="True" />
+    </tagblock>
+    <tagblock name="Layers" offset="36" elementSize="2" maxelements="1024" label="" visible="True">
+      <int16 name="Block Index Data" offset="0" visible="True" />
+    </tagblock>
+    <tagblock name="Passes" offset="44" elementSize="2" maxelements="1024" label="" visible="True">
+      <int16 name="Block Index Data" offset="0" visible="True" />
+    </tagblock>
+    <tagblock name="Implementations" offset="52" elementSize="10" maxelements="1024" label="" visible="True">
+      <int16 name="Block Index Data" offset="0" visible="True" />
+      <int16 name="Block Index Data2" offset="2" visible="True" />
+      <int16 name="Block Index Data3" offset="4" visible="True" />
+      <int16 name="Block Index Data4" offset="6" visible="True" />
+      <int16 name="Block Index Data5" offset="8" visible="True" />
+    </tagblock>
+    <tagblock name="Overlays" offset="60" elementSize="20" maxelements="1024" label="" visible="True">
+      <stringid name="Input Name" offset="0" visible="True" />
+      <stringid name="Range Name" offset="4" visible="True" />
+      <float32 name="Time Period In Seconds" offset="8" visible="True" />
+      <tagblock name="Data" offset="12" elementSize="1" maxelements="1024" label="" visible="True">
+        <int8 name="Value" offset="0" visible="True" />
+      </tagblock>
+    </tagblock>
+    <tagblock name="Overlay References" offset="68" elementSize="4" maxelements="1024" label="" visible="True">
+      <int16 name="Overlay Index" offset="0" visible="True" />
+      <int16 name="Transform Index" offset="2" visible="True" />
+    </tagblock>
+    <tagblock name="Animated Parameters" offset="76" elementSize="2" maxelements="1024" label="" visible="True">
+      <int16 name="Block Index Data" offset="0" visible="True" />
+    </tagblock>
+    <tagblock name="Animated Parameter References" offset="84" elementSize="4" maxelements="1024" label="" visible="True">
+      <undefined size="3" name="_Unnamed0" offset="0" visible="True" />
+      <int8 name="Parameter Index" offset="3" visible="True" />
+    </tagblock>
+    <tagblock name="Bitmap Properties" offset="92" elementSize="4" maxelements="5" label="" visible="True">
+      <int16 name="Bitmap Index" offset="0" visible="True" />
+      <int16 name="Animated Parameter Index" offset="2" visible="True" />
+    </tagblock>
+    <tagblock name="Color Properties" offset="100" elementSize="12" maxelements="2" label="" visible="True">
+      <float32 name="Color R" offset="0" visible="True" />
+      <float32 name="Color G" offset="4" visible="True" />
+      <float32 name="Color B" offset="8" visible="True" />
+    </tagblock>
+    <tagblock name="Value Properties" offset="108" elementSize="4" maxelements="6" label="" visible="True">
+      <float32 name="Value" offset="0" visible="True" />
+    </tagblock>
+    <tagblock name="Old Levels Of Detail" offset="116" elementSize="152" maxelements="1024" label="" visible="True">
+      <float32 name="Projected Height Percentage" offset="0" visible="True" />
+      <int32 name="Available Layers" offset="4" visible="True" />
+      <tagblock name="Layers" offset="8" elementSize="2" maxelements="25" label="" visible="True">
+        <int16 name="Block Index Data" offset="0" visible="True" />
+      </tagblock>
+      <tagblock name="Passes" offset="16" elementSize="10" maxelements="1024" label="Shader Pass" visible="True">
+        <tagRef name="Shader Pass" offset="0" visible="True" />
+        <int16 name="Block Index Data" offset="8" visible="True" />
+      </tagblock>
+      <tagblock name="Implementations" offset="24" elementSize="44" maxelements="1024" label="" visible="True">
+        <int16 name="Block Index Data" offset="0" visible="True" />
+        <int16 name="Block Index Data2" offset="2" visible="True" />
+        <int16 name="Block Index Data3" offset="4" visible="True" />
+        <int16 name="Block Index Data4" offset="6" visible="True" />
+        <int16 name="Block Index Data5" offset="8" visible="True" />
+        <int16 name="Block Index Data6" offset="10" visible="True" />
+        <int16 name="Block Index Data7" offset="12" visible="True" />
+        <int16 name="Block Index Data8" offset="14" visible="True" />
+        <int16 name="Block Index Data9" offset="16" visible="True" />
+        <int16 name="Block Index Data10" offset="18" visible="True" />
+        <int16 name="Block Index Data11" offset="20" visible="True" />
+        <int16 name="Block Index Data12" offset="22" visible="True" />
+        <int16 name="Block Index Data13" offset="24" visible="True" />
+        <int16 name="Block Index Data14" offset="26" visible="True" />
+        <int16 name="Block Index Data15" offset="28" visible="True" />
+        <int16 name="Block Index Data16" offset="30" visible="True" />
+        <int16 name="Block Index Data17" offset="32" visible="True" />
+        <int16 name="Block Index Data18" offset="34" visible="True" />
+        <int16 name="Block Index Data19" offset="36" visible="True" />
+        <int16 name="Block Index Data20" offset="38" visible="True" />
+        <int16 name="Block Index Data21" offset="40" visible="True" />
+        <int16 name="Block Index Data22" offset="42" visible="True" />
+      </tagblock>
+      <tagblock name="Bitmaps" offset="32" elementSize="10" maxelements="1024" label="" visible="True">
+        <int8 name="Parameter Index" offset="0" visible="True" />
+        <int8 name="Flags" offset="1" visible="True" />
+        <int32 name="Bitmap Group Index" offset="2" visible="True" />
+        <float32 name="Log Bitmap Dimension" offset="6" visible="True" />
+      </tagblock>
+      <tagblock name="Bitmap Transforms" offset="40" elementSize="6" maxelements="1024" label="" visible="True">
+        <int8 name="Parameter Index" offset="0" visible="True" />
+        <int8 name="Bitmap Transform Index" offset="1" visible="True" />
+        <float32 name="Value" offset="2" visible="True" />
+      </tagblock>
+      <tagblock name="Values" offset="48" elementSize="5" maxelements="1024" label="" visible="True">
+        <int8 name="Parameter Index" offset="0" visible="True" />
+        <float32 name="Value" offset="1" visible="True" />
+      </tagblock>
+      <tagblock name="Colors" offset="56" elementSize="13" maxelements="1024" label="" visible="True">
+        <int8 name="Parameter Index" offset="0" visible="True" />
+        <float32 name="Color R" offset="1" visible="True" />
+        <float32 name="Color G" offset="5" visible="True" />
+        <float32 name="Color B" offset="9" visible="True" />
+      </tagblock>
+      <tagblock name="Bitmap Transform Overlays" offset="64" elementSize="23" maxelements="1024" label="" visible="True">
+        <int8 name="Parameter Index" offset="0" visible="True" />
+        <int8 name="Transform Index" offset="1" visible="True" />
+        <int8 name="Animation Property Type" offset="2" visible="True" />
+        <stringid name="Input Name" offset="3" visible="True" />
+        <stringid name="Range Name" offset="7" visible="True" />
+        <float32 name="Time Period In Seconds" offset="11" visible="True" />
+        <tagblock name="Data" offset="15" elementSize="1" maxelements="1024" label="" visible="True">
+          <int8 name="Value" offset="0" visible="True" />
+        </tagblock>
+      </tagblock>
+      <tagblock name="Value Overlays" offset="72" elementSize="21" maxelements="1024" label="" visible="True">
+        <int8 name="Parameter Index" offset="0" visible="True" />
+        <stringid name="Input Name" offset="1" visible="True" />
+        <stringid name="Range Name" offset="5" visible="True" />
+        <float32 name="Time Period In Seconds" offset="9" visible="True" />
+        <tagblock name="Data" offset="13" elementSize="1" maxelements="1024" label="" visible="True">
+          <int8 name="Value" offset="0" visible="True" />
+        </tagblock>
+      </tagblock>
+      <tagblock name="Color Overlays" offset="80" elementSize="21" maxelements="1024" label="" visible="True">
+        <int8 name="Parameter Index" offset="0" visible="True" />
+        <stringid name="Input Name" offset="1" visible="True" />
+        <stringid name="Range Name" offset="5" visible="True" />
+        <float32 name="Time Period In Seconds" offset="9" visible="True" />
+        <tagblock name="Data" offset="13" elementSize="1" maxelements="1024" label="" visible="True">
+          <int8 name="Value" offset="0" visible="True" />
+        </tagblock>
+      </tagblock>
+      <tagblock name="Vertex Shader Constants" offset="88" elementSize="18" maxelements="1024" label="" visible="True">
+        <int8 name="Register Index" offset="0" visible="True" />
+        <int8 name="Register Bank" offset="1" visible="True" />
+        <float32 name="Data" offset="2" visible="True" />
+        <float32 name="Data2" offset="6" visible="True" />
+        <float32 name="Data3" offset="10" visible="True" />
+        <float32 name="Data4" offset="14" visible="True" />
+      </tagblock>
+      <tagblock name="Render States" offset="96" elementSize="5" maxelements="1024" label="" visible="True">
+        <int8 name="State Index" offset="0" visible="True" />
+        <int32 name="State Value" offset="1" visible="True" />
+      </tagblock>
+      <tagblock name="Texture Stage States" offset="104" elementSize="6" maxelements="1024" label="" visible="True">
+        <int8 name="State Index" offset="0" visible="True" />
+        <int8 name="Stage Index" offset="1" visible="True" />
+        <int32 name="State Value" offset="2" visible="True" />
+      </tagblock>
+      <tagblock name="Render State Parameters" offset="112" elementSize="3" maxelements="1024" label="" visible="True">
+        <int8 name="Parameter Index" offset="0" visible="True" />
+        <int8 name="Parameter Type" offset="1" visible="True" />
+        <int8 name="State Index" offset="2" visible="True" />
+      </tagblock>
+      <tagblock name="Texture Stage Parameters" offset="120" elementSize="4" maxelements="1024" label="" visible="True">
+        <int8 name="Parameter Index" offset="0" visible="True" />
+        <int8 name="Parameter Type" offset="1" visible="True" />
+        <int8 name="State Index" offset="2" visible="True" />
+        <int8 name="Stage Index" offset="3" visible="True" />
+      </tagblock>
+      <tagblock name="Textures" offset="128" elementSize="4" maxelements="1024" label="" visible="True">
+        <int8 name="Stage Index" offset="0" visible="True" />
+        <int8 name="Parameter Index" offset="1" visible="True" />
+        <int8 name="Global Texture Index" offset="2" visible="True" />
+        <int8 name="Flags" offset="3" visible="True" />
+      </tagblock>
+      <tagblock name="Vn Constants" offset="136" elementSize="4" maxelements="1024" label="" visible="True">
+        <int8 name="Register Index" offset="0" visible="True" />
+        <int8 name="Parameter Index" offset="1" visible="True" />
+        <int8 name="Destination Mask" offset="2" visible="True" />
+        <int8 name="Scale By Texture Stage" offset="3" visible="True" />
+      </tagblock>
+      <tagblock name="Cn Constants" offset="144" elementSize="4" maxelements="1024" label="" visible="True">
+        <int8 name="Register Index" offset="0" visible="True" />
+        <int8 name="Parameter Index" offset="1" visible="True" />
+        <int8 name="Destination Mask" offset="2" visible="True" />
+        <int8 name="Scale By Texture Stage" offset="3" visible="True" />
+      </tagblock>
+    </tagblock>
+  </tagblock>
+  <undefined size="4" name="_Unnamed1" offset="40" visible="True" />
+  <tagblock name="Predicted Resources" offset="44" elementSize="8" maxelements="2048" label="" visible="True">
+    <enum16 name="Type" offset="0" visible="True">
+      <option name="Bitmap" value="0" />
+      <option name="Sound" value="1" />
+      <option name="Render Model Geometry" value="2" />
+      <option name="Cluster Geometry" value="3" />
+      <option name="Cluster Instanced Geometry" value="4" />
+      <option name="Lightmap Geometry Object Buckets" value="5" />
+      <option name="Lightmap Geometry Instance Buckets" value="6" />
+      <option name="Lightmap Cluster Bitmaps" value="7" />
+      <option name="Lightmap Instance Bitmaps" value="8" />
+    </enum16>
+    <int16 name="Resource Index" offset="2" visible="True" />
+  </tagblock>
+  <tagRef name="Light Response" offset="52" visible="True" />
+  <enum16 name="Shader LOD Bias" offset="60" visible="True">
+    <option name="None" value="0" />
+    <option name="4X Size" value="1" />
+    <option name="2X Size" value="2" />
+    <option name="1/2 Size" value="3" />
+    <option name="1/4 Size" value="4" />
+    <option name="Never" value="5" />
+    <option name="Cinematic" value="6" />
+  </enum16>
+  <enum16 name="Specular Type" offset="62" visible="True">
+    <option name="None" value="0" />
+    <option name="Default" value="1" />
+    <option name="Dull" value="2" />
+    <option name="Shiny" value="3" />
+  </enum16>
+  <enum16 name="Lightmap Type" offset="64" visible="True">
+    <option name="Diffuse" value="0" />
+    <option name="Default Specular" value="1" />
+    <option name="Dull Specular" value="2" />
+    <option name="Shiny Specular" value="3" />
+  </enum16>
+  <undefined size="2" name="_Unnamed2" offset="66" visible="True" />
+  <float32 name="Lightmap Specular Brightness" offset="68" visible="True" />
+  <float32 name="Lightmap Ambient Bias" offset="72" visible="True" />
+  <tagblock name="Postprocess Properties" offset="76" elementSize="4" maxelements="5" label="" visible="True">
+    <int32 name="Bitmap Group Index" offset="0" visible="True" />
+  </tagblock>
+  <float32 name="Added Depth Bias Offset" offset="84" visible="True" />
+  <float32 name="Added Depth Bias Slope Scale" offset="88" visible="True" />
+</plugin>

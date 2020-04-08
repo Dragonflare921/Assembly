@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="24">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <tagRef name="Global Dialogue Info" offset="0" visible="True" />
+  <flags32 name="Flags" offset="8" visible="True">
+    <bit name="Female" index="0" />
+  </flags32>
+  <tagblock name="Vocalizations" offset="12" elementSize="16" maxelements="500" label="Vocalization" visible="True">
+    <flags16 name="Flags" offset="0" visible="True">
+      <bit name="New Vocalization" index="0" />
+    </flags16>
+    <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+    <stringid name="Vocalization" offset="4" visible="True" />
+    <tagRef name="Sound" offset="8" visible="True" />
+  </tagblock>
+  <stringid name="Mission Dialogue Designator" offset="20" visible="True" />
+</plugin>

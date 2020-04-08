@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="60">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <flags16 name="Flags" offset="0" visible="True">
+    <bit name="Unused" index="0" />
+  </flags16>
+  <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+  <undefined size="4" name="_Unnamed1" offset="4" visible="True" />
+  <float32 name="Radius From" offset="8" visible="True" />
+  <float32 name="Radius To" offset="12" visible="True" />
+  <undefined size="12" name="_Unnamed2" offset="16" visible="True" />
+  <float32 name="Debug Color A" offset="28" visible="True" />
+  <float32 name="Debug Color R" offset="32" visible="True" />
+  <float32 name="Debug Color G" offset="36" visible="True" />
+  <float32 name="Debug Color B" offset="40" visible="True" />
+  <tagRef name="Base Map" offset="44" visible="True" />
+  <tagRef name="Detail Map" offset="52" visible="True" />
+</plugin>

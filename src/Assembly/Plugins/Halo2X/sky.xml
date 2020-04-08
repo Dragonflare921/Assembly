@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="172">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <tagRef name="Render Model" offset="0" visible="True" />
+  <tagRef name="Animation Graph" offset="8" visible="True" />
+  <flags32 name="Flags" offset="16" visible="True">
+    <bit name="Fixed In World Space" index="0" />
+    <bit name="Depreciated" index="1" />
+    <bit name="Sky Casts Light From Below" index="2" />
+    <bit name="Disable Sky In Lightmaps" index="3" />
+    <bit name="Fog Only Affects Containing Clusters" index="4" />
+    <bit name="Use Clear Color" index="5" />
+  </flags32>
+  <float32 name="Render Model Scale" offset="20" visible="True" />
+  <float32 name="Movement Scale" offset="24" visible="True" />
+  <tagblock name="Cube Map" offset="28" elementSize="12" maxelements="1" label="Cube Map Reference" visible="True">
+    <tagRef name="Cube Map Reference" offset="0" visible="True" />
+    <float32 name="Power Scale" offset="8" visible="True" />
+  </tagblock>
+  <float32 name="Indoor Ambient Color R" offset="36" visible="True" />
+  <float32 name="Indoor Ambient Color G" offset="40" visible="True" />
+  <float32 name="Indoor Ambient Color B" offset="44" visible="True" />
+  <undefined size="4" name="_Unnamed0" offset="48" visible="True" />
+  <float32 name="Outdoor Ambient Color R" offset="52" visible="True" />
+  <float32 name="Outdoor Ambient Color G" offset="56" visible="True" />
+  <float32 name="Outdoor Ambient Color B" offset="60" visible="True" />
+  <undefined size="4" name="_Unnamed1" offset="64" visible="True" />
+  <float32 name="Fog Spread Distance" offset="68" visible="True" />
+  <tagblock name="Atmospheric Fog" offset="72" elementSize="24" maxelements="1" label="" visible="True">
+    <float32 name="Color R" offset="0" visible="True" />
+    <float32 name="Color G" offset="4" visible="True" />
+    <float32 name="Color B" offset="8" visible="True" />
+    <float32 name="Maximum Density" offset="12" visible="True" />
+    <float32 name="Start Distance" offset="16" visible="True" />
+    <float32 name="Opaque Distance" offset="20" visible="True" />
+  </tagblock>
+  <tagblock name="Secondary Fog" offset="80" elementSize="24" maxelements="1" label="" visible="True">
+    <float32 name="Color R" offset="0" visible="True" />
+    <float32 name="Color G" offset="4" visible="True" />
+    <float32 name="Color B" offset="8" visible="True" />
+    <float32 name="Maximum Density" offset="12" visible="True" />
+    <float32 name="Start Distance" offset="16" visible="True" />
+    <float32 name="Opaque Distance" offset="20" visible="True" />
+  </tagblock>
+  <tagblock name="Sky Fog" offset="88" elementSize="16" maxelements="1" label="" visible="True">
+    <float32 name="Color R" offset="0" visible="True" />
+    <float32 name="Color G" offset="4" visible="True" />
+    <float32 name="Color B" offset="8" visible="True" />
+    <float32 name="Density" offset="12" visible="True" />
+  </tagblock>
+  <tagblock name="Patchy Fog" offset="96" elementSize="80" maxelements="1" label="Patchy Fog" visible="True">
+    <float32 name="Color R" offset="0" visible="True" />
+    <float32 name="Color G" offset="4" visible="True" />
+    <float32 name="Color B" offset="8" visible="True" />
+    <undefined size="12" name="_Unnamed0" offset="12" visible="True" />
+    <float32 name="Density From" offset="24" visible="True" />
+    <float32 name="Density To" offset="28" visible="True" />
+    <float32 name="Distance From" offset="32" visible="True" />
+    <float32 name="Distance To" offset="36" visible="True" />
+    <undefined size="32" name="_Unnamed1" offset="40" visible="True" />
+    <tagRef name="Patchy Fog" offset="72" visible="True" />
+  </tagblock>
+  <float32 name="Amount" offset="104" visible="True" />
+  <float32 name="Threshold" offset="108" visible="True" />
+  <float32 name="Brightness" offset="112" visible="True" />
+  <float32 name="Gamma Power" offset="116" visible="True" />
+  <tagblock name="Lights" offset="120" elementSize="52" maxelements="8" label="Lens Flare" visible="True">
+    <float32 name="Direction Vector X" offset="0" visible="True" />
+    <float32 name="Direction Vector Y" offset="4" visible="True" />
+    <float32 name="Direction Vector Z" offset="8" visible="True" />
+    <float32 name="Direction Yaw" offset="12" visible="True" />
+    <float32 name="Direction Pitch" offset="16" visible="True" />
+    <tagRef name="Lens Flare" offset="20" visible="True" />
+    <tagblock name="Fog" offset="28" elementSize="44" maxelements="1" label="" visible="True">
+      <float32 name="Color R" offset="0" visible="True" />
+      <float32 name="Color G" offset="4" visible="True" />
+      <float32 name="Color B" offset="8" visible="True" />
+      <float32 name="Maximum Density" offset="12" visible="True" />
+      <float32 name="Start Distance" offset="16" visible="True" />
+      <float32 name="Opaque Distance" offset="20" visible="True" />
+      <float32 name="Cone From" offset="24" visible="True" />
+      <float32 name="Cone To" offset="28" visible="True" />
+      <float32 name="Atmospheric Fog Influence" offset="32" visible="True" />
+      <float32 name="Secondary Fog Influence" offset="36" visible="True" />
+      <float32 name="Sky Fog Influence" offset="40" visible="True" />
+    </tagblock>
+    <tagblock name="Fog Opposite" offset="36" elementSize="44" maxelements="1" label="" visible="True">
+      <float32 name="Color R" offset="0" visible="True" />
+      <float32 name="Color G" offset="4" visible="True" />
+      <float32 name="Color B" offset="8" visible="True" />
+      <float32 name="Maximum Density" offset="12" visible="True" />
+      <float32 name="Start Distance" offset="16" visible="True" />
+      <float32 name="Opaque Distance" offset="20" visible="True" />
+      <float32 name="Cone From" offset="24" visible="True" />
+      <float32 name="Cone To" offset="28" visible="True" />
+      <float32 name="Atmospheric Fog Influence" offset="32" visible="True" />
+      <float32 name="Secondary Fog Influence" offset="36" visible="True" />
+      <float32 name="Sky Fog Influence" offset="40" visible="True" />
+    </tagblock>
+    <tagblock name="Radiosity" offset="44" elementSize="40" maxelements="1" label="" visible="True">
+      <flags32 name="Flags" offset="0" visible="True">
+        <bit name="Affects Exteriors" index="0" />
+        <bit name="Affects Interiors" index="1" />
+        <bit name="Direct Illumination In Lightmaps" index="2" />
+        <bit name="Indirect Illumination In Lightmaps" index="3" />
+      </flags32>
+      <float32 name="Color R" offset="4" visible="True" />
+      <float32 name="Color G" offset="8" visible="True" />
+      <float32 name="Color B" offset="12" visible="True" />
+      <float32 name="Power" offset="16" visible="True" />
+      <float32 name="Test Distance" offset="20" visible="True" />
+      <undefined size="12" name="_Unnamed0" offset="24" visible="True" />
+      <float32 name="Diameter" offset="36" visible="True" />
+    </tagblock>
+  </tagblock>
+  <float32 name="Global Sky Rotation" offset="128" visible="True" />
+  <tagblock name="Shader Functions" offset="132" elementSize="36" maxelements="8" label="Global Function Name" visible="True">
+    <undefined size="4" name="_Unnamed0" offset="0" visible="True" />
+    <ascii name="Global Function Name" offset="4" visible="True" />
+  </tagblock>
+  <tagblock name="Animations" offset="140" elementSize="36" maxelements="8" label="" visible="True">
+    <int16 name="Animation Index" offset="0" visible="True" />
+    <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+    <float32 name="Period" offset="4" visible="True" />
+    <undefined size="28" name="_Unnamed1" offset="8" visible="True" />
+  </tagblock>
+  <undefined size="12" name="_Unnamed2" offset="148" visible="True" />
+  <float32 name="Clear Color R" offset="160" visible="True" />
+  <float32 name="Clear Color G" offset="164" visible="True" />
+  <float32 name="Clear Color B" offset="168" visible="True" />
+</plugin>

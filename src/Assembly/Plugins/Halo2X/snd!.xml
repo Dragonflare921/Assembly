@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="19">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <flags16 name="Flags" offset="0" visible="True">
+    <bit name="Fit To ADPMC Blocksize" index="0" />
+    <bit name="Split Long Sound Into Permutations" index="1" />
+    <bit name="Always Spatialize" index="2" />
+    <bit name="Never Obstruct" index="3" />
+    <bit name="Internal Dont Touch" index="4" />
+    <bit name="Used Huge Sound Transmission" index="5" />
+    <bit name="Link Count To Owner Unit" index="6" />
+    <bit name="Pitch Range Is Language" index="7" />
+    <bit name="Don't Use Sound Class Speaker Flag" index="8" />
+    <bit name="Don't Use Lipsync Data" index="9" />
+  </flags16>
+  <int8 name="Sound Class" offset="2" visible="True" />
+  <enum8 name="Sample Rate" offset="3" visible="True">
+    <option name="None" value="0" />
+    <option name="Xbox ADPCM" value="1" />
+    <option name="WMA" value="2" />
+  </enum8>
+  <enum8 name="Encoding" offset="4" visible="True">
+    <option name="Mono 22050Kbps" value="0" />
+    <option name="Stero 44100Kbps" value="1" />
+    <option name="WMA Specific" value="2" />
+  </enum8>
+  <enum8 name="Compression" offset="5" visible="True">
+    <option name="None (Big Endian)" value="0" />
+  </enum8>
+  <int16 name="Playback Index" offset="6" visible="True" />
+  <int16 name="First Pitch Range Index" offset="8" visible="True" />
+  <int8 name="Scale Index" offset="10" visible="True" />
+  <int8 name="Promotion Index" offset="11" visible="True" />
+  <int8 name="Custom Playback Index" offset="12" visible="True" />
+  <int16 name="Extra Info Index" offset="13" visible="True" />
+  <int32 name="Max Play Time" offset="15" visible="True" />
+</plugin>

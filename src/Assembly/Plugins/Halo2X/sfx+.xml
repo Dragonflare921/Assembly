@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="8">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <tagblock name="Sound Effects" offset="0" elementSize="56" maxelements="128" label="Name" visible="True">
+    <stringid name="Name" offset="0" visible="True" />
+    <tagblock name="_Unnamed0" offset="4" elementSize="8" maxelements="8" label="" visible="True">
+      <enum32 name="Mixbin" offset="0" visible="True">
+        <option name="Front Left" value="0" />
+        <option name="Front Right" value="1" />
+        <option name="Back Left" value="2" />
+        <option name="Back Right" value="3" />
+        <option name="Center" value="4" />
+        <option name="Low Frequency" value="5" />
+        <option name="Reverb" value="6" />
+        <option name="3D Front Left" value="7" />
+        <option name="3D Front Right" value="8" />
+        <option name="3D Back Left" value="9" />
+        <option name="3D Back Right" value="10" />
+        <option name="Default Left Speakers" value="11" />
+        <option name="Default Right Speakers" value="12" />
+      </enum32>
+      <float32 name="Gain" offset="4" visible="True" />
+    </tagblock>
+    <flags32 name="Flags" offset="12" visible="True">
+      <bit name="Use 3D Radio Hack" index="0" />
+    </flags32>
+    <undefined size="8" name="_Unnamed1" offset="16" visible="True" />
+    <tagblock name="Filter" offset="24" elementSize="72" maxelements="1" label="" visible="True">
+      <enum32 name="Filter Type" offset="0" visible="True">
+        <option name="Parametric EQ" value="0" />
+        <option name="DLS2" value="1" />
+        <option name="Both (Only Valid For Mono)" value="2" />
+      </enum32>
+      <int32 name="Filter Width" offset="4" visible="True" />
+      <float32 name="Scale Bounds From" offset="8" visible="True" />
+      <float32 name="Scale Bounds To" offset="12" visible="True" />
+      <float32 name="Random Base And Variance From" offset="16" visible="True" />
+      <float32 name="Random Base And Variance To" offset="20" visible="True" />
+      <float32 name="Scale Bounds2 From" offset="24" visible="True" />
+      <float32 name="Scale Bounds2 To" offset="28" visible="True" />
+      <float32 name="Random Base And Variance2 From" offset="32" visible="True" />
+      <float32 name="Random Base And Variance2 To" offset="36" visible="True" />
+      <float32 name="Scale Bounds3 From" offset="40" visible="True" />
+      <float32 name="Scale Bounds3 To" offset="44" visible="True" />
+      <float32 name="Random Base And Variance3 From" offset="48" visible="True" />
+      <float32 name="Random Base And Variance3 To" offset="52" visible="True" />
+      <float32 name="Scale Bounds4 From" offset="56" visible="True" />
+      <float32 name="Scale Bounds4 To" offset="60" visible="True" />
+      <float32 name="Random Base And Variance4 From" offset="64" visible="True" />
+      <float32 name="Random Base And Variance4 To" offset="68" visible="True" />
+    </tagblock>
+    <tagblock name="Pitch Lfo" offset="32" elementSize="48" maxelements="1" label="" visible="True">
+      <float32 name="Scale Bounds From" offset="0" visible="True" />
+      <float32 name="Scale Bounds To" offset="4" visible="True" />
+      <float32 name="Random Base And Variance From" offset="8" visible="True" />
+      <float32 name="Random Base And Variance To" offset="12" visible="True" />
+      <float32 name="Scale Bounds2 From" offset="16" visible="True" />
+      <float32 name="Scale Bounds2 To" offset="20" visible="True" />
+      <float32 name="Random Base And Variance2 From" offset="24" visible="True" />
+      <float32 name="Random Base And Variance2 To" offset="28" visible="True" />
+      <float32 name="Scale Bounds3 From" offset="32" visible="True" />
+      <float32 name="Scale Bounds3 To" offset="36" visible="True" />
+      <float32 name="Random Base And Variance3 From" offset="40" visible="True" />
+      <float32 name="Random Base And Variance3 To" offset="44" visible="True" />
+    </tagblock>
+    <tagblock name="Filter Lfo" offset="40" elementSize="64" maxelements="1" label="" visible="True">
+      <float32 name="Scale Bounds From" offset="0" visible="True" />
+      <float32 name="Scale Bounds To" offset="4" visible="True" />
+      <float32 name="Random Base And Variance From" offset="8" visible="True" />
+      <float32 name="Random Base And Variance To" offset="12" visible="True" />
+      <float32 name="Scale Bounds2 From" offset="16" visible="True" />
+      <float32 name="Scale Bounds2 To" offset="20" visible="True" />
+      <float32 name="Random Base And Variance2 From" offset="24" visible="True" />
+      <float32 name="Random Base And Variance2 To" offset="28" visible="True" />
+      <float32 name="Scale Bounds3 From" offset="32" visible="True" />
+      <float32 name="Scale Bounds3 To" offset="36" visible="True" />
+      <float32 name="Random Base And Variance3 From" offset="40" visible="True" />
+      <float32 name="Random Base And Variance3 To" offset="44" visible="True" />
+      <float32 name="Scale Bounds4 From" offset="48" visible="True" />
+      <float32 name="Scale Bounds4 To" offset="52" visible="True" />
+      <float32 name="Random Base And Variance4 From" offset="56" visible="True" />
+      <float32 name="Random Base And Variance4 To" offset="60" visible="True" />
+    </tagblock>
+    <tagblock name="Sound Effect" offset="48" elementSize="40" maxelements="1" label="_Unnamed0" visible="True">
+      <tagRef name="_Unnamed0" offset="0" visible="True" />
+      <tagblock name="Components" offset="8" elementSize="16" maxelements="16" label="Sound" visible="True">
+        <tagRef name="Sound" offset="0" visible="True" />
+        <float32 name="Gain" offset="8" visible="True" />
+        <flags32 name="Flags" offset="12" visible="True">
+          <bit name="Don't Play At Start" index="0" />
+          <bit name="Play On Stop" index="1" />
+          <bit name="" index="2" />
+          <bit name="Play Alternate" index="3" />
+          <bit name="" index="4" />
+          <bit name="Sync With Origin Looping Sound" index="5" />
+        </flags32>
+      </tagblock>
+      <tagblock name="_Unnamed1" offset="16" elementSize="12" maxelements="128" label="" visible="True">
+        <stringid name="Name" offset="0" visible="True" />
+        <tagblock name="Overrides" offset="4" elementSize="32" maxelements="128" label="" visible="True">
+          <stringid name="Name" offset="0" visible="True" />
+          <stringid name="Input" offset="4" visible="True" />
+          <stringid name="Range" offset="8" visible="True" />
+          <float32 name="Time Period" offset="12" visible="True" />
+          <int32 name="Integer Value" offset="16" visible="True" />
+          <float32 name="Real Value" offset="20" visible="True" />
+          <tagblock name="Data" offset="24" elementSize="1" maxelements="1024" label="" visible="True">
+            <int8 name="Value" offset="0" visible="True" />
+          </tagblock>
+        </tagblock>
+      </tagblock>
+      <undefined size="8" name="_Unnamed2" offset="24" visible="True" />
+      <tagblock name="_Unnamed3" offset="32" elementSize="20" maxelements="1" label="" visible="True">
+        <tagblock name="Sound Effects" offset="0" elementSize="28" maxelements="8" label="" visible="True">
+          <tagblock name="Function Inputs" offset="0" elementSize="16" maxelements="16" label="" visible="True">
+            <enum16 name="Input" offset="0" visible="True">
+              <option name="Zero" value="0" />
+              <option name="Time" value="1" />
+              <option name="Scale" value="2" />
+              <option name="Rolloff" value="3" />
+            </enum16>
+            <enum16 name="Range" offset="2" visible="True">
+              <option name="Zero" value="0" />
+              <option name="Time" value="1" />
+              <option name="Scale" value="2" />
+              <option name="Rolloff" value="3" />
+            </enum16>
+            <tagblock name="Data" offset="4" elementSize="1" maxelements="1024" label="" visible="True">
+              <int8 name="Value" offset="0" visible="True" />
+            </tagblock>
+            <float32 name="Time Period" offset="12" visible="True" />
+          </tagblock>
+          <tagblock name="Constant Inputs" offset="8" elementSize="4" maxelements="16" label="" visible="True">
+            <float32 name="Constant Value" offset="0" visible="True" />
+          </tagblock>
+          <tagblock name="Template Override Descriptors" offset="16" elementSize="1" maxelements="16" label="" visible="True">
+            <int8 name="Override Descriptor" offset="0" visible="True" />
+          </tagblock>
+          <int32 name="Input Overrides" offset="24" visible="True" />
+        </tagblock>
+        <tagblock name="Low Frequency Input" offset="8" elementSize="16" maxelements="16" label="" visible="True">
+          <enum16 name="Input" offset="0" visible="True">
+            <option name="Zero" value="0" />
+            <option name="Time" value="1" />
+            <option name="Scale" value="2" />
+            <option name="Rolloff" value="3" />
+          </enum16>
+          <enum16 name="Range" offset="2" visible="True">
+            <option name="Zero" value="0" />
+            <option name="Time" value="1" />
+            <option name="Scale" value="2" />
+            <option name="Rolloff" value="3" />
+          </enum16>
+          <tagblock name="Data" offset="4" elementSize="1" maxelements="1024" label="" visible="True">
+            <int8 name="Value" offset="0" visible="True" />
+          </tagblock>
+          <float32 name="Time Period" offset="12" visible="True" />
+        </tagblock>
+        <int32 name="Sound Effect Overrides" offset="16" visible="True" />
+      </tagblock>
+    </tagblock>
+  </tagblock>
+</plugin>

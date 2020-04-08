@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="4">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <int32 name="Unused" offset="0" visible="True" />
+</plugin>

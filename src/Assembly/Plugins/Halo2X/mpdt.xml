@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="20">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <float32 name="Ground Friction Scale" offset="0" visible="True" />
+  <float32 name="Ground Friction Normal K1 Scale" offset="4" visible="True" />
+  <float32 name="Ground Friction Normal K0 Scale" offset="8" visible="True" />
+  <float32 name="Ground Depth Scale" offset="12" visible="True" />
+  <float32 name="Ground Damp Fraction Scale" offset="16" visible="True" />
+</plugin>

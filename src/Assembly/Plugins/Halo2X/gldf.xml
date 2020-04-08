@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="8">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <tagblock name="Lighting Variables" offset="0" elementSize="144" maxelements="13" label="" visible="True">
+    <flags32 name="Object Affected" offset="0" visible="True">
+      <bit name="All" index="0" />
+      <bit name="Biped" index="1" />
+      <bit name="Vehicle" index="2" />
+      <bit name="Weapon" index="3" />
+      <bit name="Equipment" index="4" />
+      <bit name="Garbage" index="5" />
+      <bit name="Projectile" index="6" />
+      <bit name="Scenery" index="7" />
+      <bit name="Machine" index="8" />
+      <bit name="Control" index="9" />
+      <bit name="Light Fixture" index="10" />
+      <bit name="Sound Scenery" index="11" />
+      <bit name="Crate" index="12" />
+      <bit name="Creature" index="13" />
+    </flags32>
+    <float32 name="Lightmap Brightness Offset" offset="4" visible="True" />
+    <float32 name="Min Lightmap Color R" offset="8" visible="True" />
+    <float32 name="Min Lightmap Color G" offset="12" visible="True" />
+    <float32 name="Min Lightmap Color B" offset="16" visible="True" />
+    <float32 name="Max Lightmap Color R" offset="20" visible="True" />
+    <float32 name="Max Lightmap Color G" offset="24" visible="True" />
+    <float32 name="Max Lightmap Color B" offset="28" visible="True" />
+    <float32 name="Exclusion Angle From Up" offset="32" visible="True" />
+    <tagblock name="Primary Light Function" offset="36" elementSize="1" maxelements="1024" label="" visible="True">
+      <int8 name="Value" offset="0" visible="True" />
+    </tagblock>
+    <float32 name="Min Lightmap Color2 R" offset="44" visible="True" />
+    <float32 name="Min Lightmap Color2 G" offset="48" visible="True" />
+    <float32 name="Min Lightmap Color2 B" offset="52" visible="True" />
+    <float32 name="Max Lightmap Color2 R" offset="56" visible="True" />
+    <float32 name="Max Lightmap Color2 G" offset="60" visible="True" />
+    <float32 name="Max Lightmap Color2 B" offset="64" visible="True" />
+    <float32 name="Min Diffuse Sample R" offset="68" visible="True" />
+    <float32 name="Min Diffuse Sample G" offset="72" visible="True" />
+    <float32 name="Min Diffuse Sample B" offset="76" visible="True" />
+    <float32 name="Max Diffuse Sample R" offset="80" visible="True" />
+    <float32 name="Max Diffuse Sample G" offset="84" visible="True" />
+    <float32 name="Max Diffuse Sample B" offset="88" visible="True" />
+    <float32 name="Z Axis Rotation" offset="92" visible="True" />
+    <tagblock name="Secondary Light Function" offset="96" elementSize="1" maxelements="1024" label="" visible="True">
+      <int8 name="Value" offset="0" visible="True" />
+    </tagblock>
+    <float32 name="Min Lightmap Sample R" offset="104" visible="True" />
+    <float32 name="Min Lightmap Sample G" offset="108" visible="True" />
+    <float32 name="Min Lightmap Sample B" offset="112" visible="True" />
+    <float32 name="Max Lightmap Sample R" offset="116" visible="True" />
+    <float32 name="Max Lightmap Sample G" offset="120" visible="True" />
+    <float32 name="Max Lightmap Sample B" offset="124" visible="True" />
+    <tagblock name="Ambient Light Function" offset="128" elementSize="1" maxelements="1024" label="" visible="True">
+      <int8 name="Value" offset="0" visible="True" />
+    </tagblock>
+    <tagblock name="Lightmap Shadows" offset="136" elementSize="1" maxelements="1024" label="" visible="True">
+      <int8 name="Value" offset="0" visible="True" />
+    </tagblock>
+  </tagblock>
+</plugin>

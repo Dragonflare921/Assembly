@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="28">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <tagblock name="Template Collection" offset="0" elementSize="28" maxelements="8" label="" visible="True">
+    <stringid name="Dsp Effect" offset="0" visible="True" />
+    <undefined size="8" name="Explanation" offset="4" visible="True" />
+    <flags32 name="Flags" offset="12" visible="True">
+      <bit name="Use High Level Parameters" index="0" />
+      <bit name="Custom Parameters" index="1" />
+    </flags32>
+    <int16 name="_Unnamed0" offset="16" visible="True" />
+    <int16 name="_Unnamed1" offset="18" visible="True" />
+    <tagblock name="Parameters" offset="20" elementSize="36" maxelements="128" label="" visible="True">
+      <stringid name="Name" offset="0" visible="True" />
+      <enum16 name="Type" offset="4" visible="True">
+        <option name="Integer" value="0" />
+        <option name="Real" value="1" />
+        <option name="Filter Type" value="2" />
+      </enum16>
+      <flags16 name="Flags" offset="6" visible="True">
+        <bit name="Expose As Function" index="0" />
+      </flags16>
+      <int32 name="Hardware Offset" offset="8" visible="True" />
+      <int32 name="Default Enum Integer Value" offset="12" visible="True" />
+      <float32 name="Default Scalar Value" offset="16" visible="True" />
+      <tagblock name="Data" offset="20" elementSize="1" maxelements="1024" label="" visible="True">
+        <int8 name="Value" offset="0" visible="True" />
+      </tagblock>
+      <float32 name="Minimum Scalar Value" offset="28" visible="True" />
+      <float32 name="Maximum Scalar Value" offset="32" visible="True" />
+    </tagblock>
+  </tagblock>
+  <stringid name="Input Effect Name" offset="8" visible="True" />
+  <tagblock name="Additional Sound Inputs" offset="12" elementSize="16" maxelements="1" label="" visible="True">
+    <stringid name="Dsp Effect" offset="0" visible="True" />
+    <tagblock name="Data" offset="4" elementSize="1" maxelements="1024" label="" visible="True">
+      <int8 name="Value" offset="0" visible="True" />
+    </tagblock>
+    <float32 name="Time Period" offset="12" visible="True" />
+  </tagblock>
+  <tagblock name="_Unnamed0" offset="20" elementSize="12" maxelements="1" label="" visible="True">
+    <tagblock name="Platform Effect Templates" offset="0" elementSize="24" maxelements="8" label="" visible="True">
+      <stringid name="Input Dsp Effect Name" offset="0" visible="True" />
+      <undefined size="12" name="_Unnamed0" offset="4" visible="True" />
+      <tagblock name="Components" offset="16" elementSize="16" maxelements="16" label="" visible="True">
+        <enum32 name="Value Type" offset="0" visible="True">
+          <option name="Zero" value="0" />
+          <option name="Time" value="1" />
+          <option name="Scale" value="2" />
+          <option name="Rolloff" value="3" />
+        </enum32>
+        <float32 name="Default Value" offset="4" visible="True" />
+        <float32 name="Minimum Value" offset="8" visible="True" />
+        <float32 name="Maximum Value" offset="12" visible="True" />
+      </tagblock>
+    </tagblock>
+    <stringid name="Input Dsp Effect Name" offset="8" visible="True" />
+  </tagblock>
+</plugin>

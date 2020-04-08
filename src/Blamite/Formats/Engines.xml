@@ -40,6 +40,7 @@
 
     <engine name="Halo 1 Custom Edition" version="01.00.10.0621" inherits="Halo 1 Custom Edition" />
 
+    <!-- NOTE: CEA 360 and MCC have the same build strings, this makes things harder -->
     <engine name="Halo 1 Anniversary" version="01.00.01.0563">
         <shortName>H1A</shortName>
         <plugins>Halo1</plugins>
@@ -51,6 +52,7 @@
         <databases>
             <layouts type="layouts" path="Formats/Halo1/Layouts" />
             <groupNames type="groupNames" path="Formats/Halo1/H1_GroupNames.xml" />
+            <!-- NOTE: this is bad i know, but MCC CEA poking is "higher priority" -->
         </databases>
     </engine>
     
@@ -74,8 +76,8 @@
 	<engine name="Halo 2 Vista" version="11122.07.08.24.1808.main" inherits="Halo 2 Vista" />
 
     <engine name="Halo 2 Xbox" version="02.09.27.09809">
-        <shortName>H2Xbox</shortName>
-        <plugins>Halo2</plugins>
+        <shortName>Halo2</shortName>
+        <plugins>Halo2X</plugins>
         <engineInfo>
             <headerSize>0x800</headerSize>
             <!-- TODO: this might not be accurate -->
@@ -292,24 +294,24 @@
 		<shortName>ReachMCC_F2</shortName>
 	</engine>
 
-	<engine name="Halo: Reach MCC" version="Oct 24 2019 15:56:32" >
-		<shortName>ReachMCC</shortName>
-		<plugins>ReachMCC</plugins>
-		<fallbackPlugins>Reach</fallbackPlugins>
-		<engineInfo>
-			<headerSize>0xA000</headerSize>
-			<segmentAlignment>0x1000</segmentAlignment>
-			<expandMagic>0x50000000</expandMagic>
-			<gameExecutable>MCC-Win64-Shipping</gameExecutable>
-			<gameExecutableAlt>MCC-Win64-Shipping-WinStore</gameExecutableAlt>
-			<gameModule>haloreach</gameModule>
-		</engineInfo>
-		<databases>
-			<localeSymbols type="localeSymbols" path="Formats/ReachMCC/ReachMCC_LocaleSymbols.xml" />
-			<stringIds type="stringIds" path="Formats/ReachMCC/ReachMCC_StringIDs.xml" />
-			<scripting type="scripting" path="Formats/ReachMCC/ReachMCC_Scripting.xml" />
-			<poking type="poking" path="Formats/ReachMCC/ReachMCC_Poking.xml" />
-			<layouts type="layouts" path="Formats/ReachMCC/Layouts" />
-		</databases>
-	</engine>
+    <engine name="Halo: Reach MCC" version="Oct 24 2019 15:56:32" >
+        <shortName>ReachMCC</shortName>
+        <plugins>ReachMCC</plugins>
+        <fallbackPlugins>Reach</fallbackPlugins>
+        <engineInfo>
+            <headerSize>0xA000</headerSize>
+            <segmentAlignment>0x1000</segmentAlignment>
+            <expandMagic>0x50000000</expandMagic>
+            <gameExecutable>MCC-Win64-Shipping</gameExecutable>
+            <gameExecutableAlt>MCC-Win64-Shipping-WinStore</gameExecutableAlt>
+            <gameModule>haloreach</gameModule>
+        </engineInfo>
+        <databases>
+            <localeSymbols type="localeSymbols" path="Formats/ReachMCC/ReachMCC_LocaleSymbols.xml" />
+            <stringIds type="stringIds" path="Formats/ReachMCC/ReachMCC_StringIDs.xml" />
+            <scripting type="scripting" path="Formats/ReachMCC/ReachMCC_Scripting.xml" />
+            <poking type="poking" path="Formats/ReachMCC/ReachMCC_Poking.xml" />
+            <layouts type="layouts" path="Formats/ReachMCC/Layouts" />
+        </databases>
+    </engine>
 </engines>

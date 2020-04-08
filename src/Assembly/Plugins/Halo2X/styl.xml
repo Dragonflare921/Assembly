@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="92">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <ascii name="Name" offset="0" visible="True" />
+  <enum16 name="Combat Status Decay Options" offset="32" visible="True">
+    <option name="Latch At Idle" value="0" />
+    <option name="Latch At Alert" value="1" />
+    <option name="Latch At Combat" value="2" />
+  </enum16>
+  <undefined size="2" name="_Unnamed0" offset="34" visible="True" />
+  <enum16 name="Attitude" offset="36" visible="True">
+    <option name="Normal" value="0" />
+    <option name="Timid" value="1" />
+    <option name="Aggressive" value="2" />
+  </enum16>
+  <undefined size="2" name="_Unnamed1" offset="38" visible="True" />
+  <enum8 name="Engage Attitude" offset="40" visible="True">
+    <option name="Default" value="0" />
+    <option name="Normal" value="1" />
+    <option name="Timid" value="2" />
+    <option name="Aggressive" value="3" />
+  </enum8>
+  <enum8 name="Evasion Attitude" offset="41" visible="True">
+    <option name="Default" value="0" />
+    <option name="Normal" value="1" />
+    <option name="Timid" value="2" />
+    <option name="Aggressive" value="3" />
+  </enum8>
+  <enum8 name="Cover Attitude" offset="42" visible="True">
+    <option name="Default" value="0" />
+    <option name="Normal" value="1" />
+    <option name="Timid" value="2" />
+    <option name="Aggressive" value="3" />
+  </enum8>
+  <enum8 name="Search Attitude" offset="43" visible="True">
+    <option name="Default" value="0" />
+    <option name="Normal" value="1" />
+    <option name="Timid" value="2" />
+    <option name="Aggressive" value="3" />
+  </enum8>
+  <enum8 name="Presearch Attitude" offset="44" visible="True">
+    <option name="Default" value="0" />
+    <option name="Normal" value="1" />
+    <option name="Timid" value="2" />
+    <option name="Aggressive" value="3" />
+  </enum8>
+  <enum8 name="Retreat Attitude" offset="45" visible="True">
+    <option name="Default" value="0" />
+    <option name="Normal" value="1" />
+    <option name="Timid" value="2" />
+    <option name="Aggressive" value="3" />
+  </enum8>
+  <enum8 name="Charge Attitude" offset="46" visible="True">
+    <option name="Default" value="0" />
+    <option name="Normal" value="1" />
+    <option name="Timid" value="2" />
+    <option name="Aggressive" value="3" />
+  </enum8>
+  <enum8 name="Ready Attitude" offset="47" visible="True">
+    <option name="Default" value="0" />
+    <option name="Normal" value="1" />
+    <option name="Timid" value="2" />
+    <option name="Aggressive" value="3" />
+  </enum8>
+  <enum8 name="Idle Attitude" offset="48" visible="True">
+    <option name="Default" value="0" />
+    <option name="Normal" value="1" />
+    <option name="Timid" value="2" />
+    <option name="Aggressive" value="3" />
+  </enum8>
+  <enum8 name="Weapon Attitude" offset="49" visible="True">
+    <option name="Default" value="0" />
+    <option name="Normal" value="1" />
+    <option name="Timid" value="2" />
+    <option name="Aggressive" value="3" />
+  </enum8>
+  <enum8 name="Swarm Attitude" offset="50" visible="True">
+    <option name="Default" value="0" />
+    <option name="Normal" value="1" />
+    <option name="Timid" value="2" />
+    <option name="Aggressive" value="3" />
+  </enum8>
+  <undefined size="1" name="_Unnamed2" offset="51" visible="True" />
+  <flags32 name="Style Control" offset="52" visible="True">
+    <bit name="New Behaviors Default To ON" index="0" />
+  </flags32>
+  <flags32 name="Behaviors1" offset="56" visible="True">
+    <bit name="------GENERAL------" index="0" />
+    <bit name="Root" index="1" />
+    <bit name="Null" index="2" />
+    <bit name="Null_Discrete" index="3" />
+    <bit name="Obey" index="4" />
+    <bit name="Guard" index="5" />
+    <bit name="Follow Behavior" index="6" />
+    <bit name="Ready" index="7" />
+    <bit name="Smash_Obstacle" index="8" />
+    <bit name="Destroy_Obstacle" index="9" />
+    <bit name="Perch" index="10" />
+    <bit name="Cover_Friend" index="11" />
+    <bit name="Blind_Panic" index="12" />
+    <bit name="------ENGAGE------" index="13" />
+    <bit name="Engage" index="14" />
+    <bit name="Fight" index="15" />
+    <bit name="Melee_Charge" index="16" />
+    <bit name="Melee_Leaping_Charge" index="17" />
+    <bit name="Surprise" index="18" />
+    <bit name="Grenade_Impulse" index="19" />
+    <bit name="Anti_Vehicle_Grenade" index="20" />
+    <bit name="Stalk" index="21" />
+    <bit name="Berserk_Wander_Impulse" index="22" />
+    <bit name="------BERSERK------" index="23" />
+    <bit name="Last_Man_Berserk" index="24" />
+    <bit name="Stuck_With_Grenade_Berserk" index="25" />
+    <bit name="------PRESEARCH------" index="26" />
+    <bit name="Presearch" index="27" />
+    <bit name="Presearch Uncover" index="28" />
+    <bit name="Destroy_Cover" index="29" />
+    <bit name="Suppressing Fire" index="30" />
+    <bit name="Grenade_Uncover" index="31" />
+  </flags32>
+  <flags32 name="Behaviors2" offset="60" visible="True">
+    <bit name="Leap_On_Cover" index="0" />
+    <bit name="------SEARCH------" index="1" />
+    <bit name="Search" index="2" />
+    <bit name="Uncover" index="3" />
+    <bit name="Investigate" index="4" />
+    <bit name="Pursuit_Sync" index="5" />
+    <bit name="Pursuit" index="6" />
+    <bit name="Postsearch" index="7" />
+    <bit name="Coverme_Investigate" index="8" />
+    <bit name="------SELF-DEFENSE------" index="9" />
+    <bit name="Self_Preservation" index="10" />
+    <bit name="Cover" index="11" />
+    <bit name="Cover Peek" index="12" />
+    <bit name="Avoid" index="13" />
+    <bit name="Evasion_Impulse" index="14" />
+    <bit name="Dive_Impulse" index="15" />
+    <bit name="Danger Cover Impulse" index="16" />
+    <bit name="Danger Crouch Impulse" index="17" />
+    <bit name="Proximity_Melee" index="18" />
+    <bit name="Proximity_Self_Preservation" index="19" />
+    <bit name="Unreachable_Enemy_Cover" index="20" />
+    <bit name="Scary_Target_Cover" index="21" />
+    <bit name="Group_Emerge" index="22" />
+    <bit name="------RETREAT------" index="23" />
+    <bit name="Retreat" index="24" />
+    <bit name="Retreat_Grenade" index="25" />
+    <bit name="Flee" index="26" />
+    <bit name="Cower" index="27" />
+    <bit name="Low_Shield_Retreat" index="28" />
+    <bit name="Scary_Target_Retreat" index="29" />
+    <bit name="Leader_Dead_Retreat" index="30" />
+    <bit name="Peer_Dead_Retreat" index="31" />
+  </flags32>
+  <flags32 name="Behaviors3" offset="64" visible="True">
+    <bit name="Danger_Retreat" index="0" />
+    <bit name="Proximity_Retreat" index="1" />
+    <bit name="Charge When Cornered" index="2" />
+    <bit name="Surprise_Retreat" index="3" />
+    <bit name="Overheated_Weapon_Retreat" index="4" />
+    <bit name="------AMBUSH------" index="5" />
+    <bit name="Ambush" index="6" />
+    <bit name="Coordinated_Ambush" index="7" />
+    <bit name="Proximity_Ambush" index="8" />
+    <bit name="Vulnerable_Enemy_Ambush" index="9" />
+    <bit name="Nowhere_To_Run_Ambush" index="10" />
+    <bit name="------VEHICLE------" index="11" />
+    <bit name="Vehicle" index="12" />
+    <bit name="Enter_Friendly_Vehicle" index="13" />
+    <bit name="Re-Enter_Flipped_Vehicle" index="14" />
+    <bit name="Vehicle_Entry_Engage_Impulse" index="15" />
+    <bit name="Vehicle_Board" index="16" />
+    <bit name="Vehicle_Fight" index="17" />
+    <bit name="Vehicle_Charge" index="18" />
+    <bit name="Vehicle_Ram_Behavior" index="19" />
+    <bit name="Vehicle_Cover" index="20" />
+    <bit name="Damage_Vehicle_Cover" index="21" />
+    <bit name="Exposed_Rear_Cover_Impulse" index="22" />
+    <bit name="Player_Endagered_Cover_Impulse" index="23" />
+    <bit name="Vehicle_Avoid" index="24" />
+    <bit name="Vehicle_Pickup" index="25" />
+    <bit name="Vehicle_Player_Pickup" index="26" />
+    <bit name="Vehicle_Exit_Impulse" index="27" />
+    <bit name="Danger_Vehicle_Exit_Impulse" index="28" />
+    <bit name="Vehicle_Flip" index="29" />
+    <bit name="Vehicle_Turtle" index="30" />
+    <bit name="Vehicle_Engage_Patrol_Impulse" index="31" />
+  </flags32>
+  <flags32 name="Behaviors4" offset="68" visible="True">
+    <bit name="Vehicle_Engage_Wander_Impulse" index="0" />
+    <bit name="------POSTCOMBAT------" index="1" />
+    <bit name="Postcombat" index="2" />
+    <bit name="Post_Postcombat" index="3" />
+    <bit name="Check_Friend" index="4" />
+    <bit name="Shoot_Corpse" index="5" />
+    <bit name="Postcombat_Approach" index="6" />
+    <bit name="------ALERT------" index="7" />
+    <bit name="Alert" index="8" />
+    <bit name="------IDLE------" index="9" />
+    <bit name="Idle" index="10" />
+    <bit name="Wander Behavior" index="11" />
+    <bit name="Flight_Wander" index="12" />
+    <bit name="Patrol" index="13" />
+    <bit name="Fall_Sleep" index="14" />
+    <bit name="------BUGGERS------" index="15" />
+    <bit name="Bugger_Ground_Uncover" index="16" />
+    <bit name="------SWARMS------" index="17" />
+    <bit name="Swarm_Root" index="18" />
+    <bit name="Swarm_Attack" index="19" />
+    <bit name="Support_Attack" index="20" />
+    <bit name="Infect" index="21" />
+    <bit name="Scatter" index="22" />
+    <bit name="Eject Parasite" index="23" />
+    <bit name="Flood_Self_Preservation" index="24" />
+    <bit name="Juggernaut Flurry" index="25" />
+    <bit name="------SENTINELS------" index="26" />
+    <bit name="Enforcer Weapon Control" index="27" />
+    <bit name="Grapple" index="28" />
+    <bit name="------SPECIAL------" index="29" />
+    <bit name="Formation" index="30" />
+    <bit name="Grunt Scared By Elite" index="31" />
+  </flags32>
+  <flags32 name="Behaviors5" offset="72" visible="True">
+    <bit name="Stunned" index="0" />
+    <bit name="Cure_Isolation" index="1" />
+    <bit name="Deploy_Turret" index="2" />
+    <bit name="" index="3" />
+    <bit name="" index="4" />
+    <bit name="" index="5" />
+    <bit name="" index="6" />
+    <bit name="" index="7" />
+    <bit name="" index="8" />
+    <bit name="" index="9" />
+    <bit name="" index="10" />
+    <bit name="" index="11" />
+    <bit name="" index="12" />
+    <bit name="" index="13" />
+    <bit name="" index="14" />
+    <bit name="" index="15" />
+    <bit name="" index="16" />
+    <bit name="" index="17" />
+    <bit name="" index="18" />
+    <bit name="" index="19" />
+    <bit name="" index="20" />
+    <bit name="" index="21" />
+    <bit name="" index="22" />
+    <bit name="" index="23" />
+    <bit name="" index="24" />
+    <bit name="" index="25" />
+    <bit name="" index="26" />
+    <bit name="" index="27" />
+    <bit name="" index="28" />
+    <bit name="" index="29" />
+    <bit name="" index="30" />
+    <bit name="" index="31" />
+  </flags32>
+  <tagblock name="Special Movement" offset="76" elementSize="4" maxelements="1" label="" visible="True">
+    <flags32 name="Special Movement 1" offset="0" visible="True">
+      <bit name="Jump" index="0" />
+      <bit name="Climb" index="1" />
+      <bit name="Vault" index="2" />
+      <bit name="Mount" index="3" />
+      <bit name="Hoist" index="4" />
+      <bit name="Wall Jump" index="5" />
+      <bit name="N/A" index="6" />
+    </flags32>
+  </tagblock>
+  <tagblock name="Behavior List" offset="84" elementSize="32" maxelements="160" label="Behavior Name" visible="True">
+    <ascii name="Behavior Name" offset="0" visible="True" />
+  </tagblock>
+</plugin>

@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="252">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <tagRef name="Render Model" offset="0" visible="True" />
+  <tagRef name="Collision Model" offset="8" visible="True" />
+  <tagRef name="Animation" offset="16" visible="True" />
+  <tagRef name="Physics" offset="24" visible="True" />
+  <tagRef name="Physics_Model" offset="32" visible="True" />
+  <float32 name="Disappear Distance" offset="40" visible="True" />
+  <float32 name="Begin Fade Distance" offset="44" visible="True" />
+  <undefined size="4" name="_Unnamed0" offset="48" visible="True" />
+  <float32 name="Reduce To L1" offset="52" visible="True" />
+  <float32 name="Reduce To L2" offset="56" visible="True" />
+  <float32 name="Reduce To L3" offset="60" visible="True" />
+  <float32 name="Reduce To L4" offset="64" visible="True" />
+  <float32 name="Reduce To L5" offset="68" visible="True" />
+  <undefined size="4" name="_Unnamed1" offset="72" visible="True" />
+  <enum16 name="Shadow Fade Distance" offset="76" visible="True">
+    <option name="Fade At Super High Detail Level" value="0" />
+    <option name="Fade At High Detail Level" value="1" />
+    <option name="Fade At Medium Detail Level" value="2" />
+    <option name="Fade At Low Detail Level" value="3" />
+    <option name="Fade At Super Low Detail Level" value="4" />
+    <option name="Fade Never" value="5" />
+  </enum16>
+  <undefined size="2" name="_Unnamed2" offset="78" visible="True" />
+  <tagblock name="Variants" offset="80" elementSize="56" maxelements="64" label="Name" visible="True">
+    <stringid name="Name" offset="0" visible="True" />
+    <undefined size="16" name="_Unnamed0" offset="4" visible="True" />
+    <tagblock name="Regions" offset="20" elementSize="20" maxelements="16" label="Region Name" visible="True">
+      <stringid name="Region Name" offset="0" visible="True" />
+      <undefined size="1" name="_Unnamed0" offset="4" visible="True" />
+      <undefined size="1" name="_Unnamed1" offset="5" visible="True" />
+      <int16 name="Parent Variant" offset="6" visible="True" reflexiveoffset="80" reflexivesize="56" itemoffset="0" itemtype="stringid" layer="root" />
+      <tagblock name="Permutations" offset="8" elementSize="32" maxelements="32" label="Permutation Name" visible="True">
+        <stringid name="Permutation Name" offset="0" visible="True" />
+        <undefined size="1" name="_Unnamed0" offset="4" visible="True" />
+        <flags8 name="Flags" offset="5" visible="True">
+          <bit name="Copy States To All Permutations" index="0" />
+        </flags8>
+        <undefined size="2" name="_Unnamed1" offset="6" visible="True" />
+        <float32 name="Probability" offset="8" visible="True" />
+        <tagblock name="States" offset="12" elementSize="24" maxelements="10" label="State" visible="True">
+          <stringid name="Permutation Name" offset="0" visible="True" />
+          <undefined size="1" name="_Unnamed0" offset="4" visible="True" />
+          <flags8 name="Property Flags" offset="5" visible="True">
+            <bit name="Blurred" index="0" />
+            <bit name="Hella Blurred" index="1" />
+            <bit name="Shielded" index="2" />
+          </flags8>
+          <enum16 name="State" offset="6" visible="True">
+            <option name="Default" value="0" />
+            <option name="Minor Damage" value="1" />
+            <option name="Medium Damage" value="2" />
+            <option name="Major Damage" value="3" />
+            <option name="Destroyed" value="4" />
+          </enum16>
+          <tagRef name="Looping Effect" offset="8" visible="True" />
+          <stringid name="Looping Effect Marker Name" offset="16" visible="True" />
+          <float32 name="Initial Probability" offset="20" visible="True" />
+        </tagblock>
+        <undefined size="5" name="_Unnamed2" offset="20" visible="True" />
+        <undefined size="7" name="_Unnamed3" offset="25" visible="True" />
+      </tagblock>
+      <enum16 name="Sort Order" offset="16" visible="True">
+        <option name="No Sorting" value="0" />
+        <option name="-5 (Closest)" value="1" />
+        <option name="-4" value="2" />
+        <option name="-3" value="3" />
+        <option name="-2" value="4" />
+        <option name="-1" value="5" />
+        <option name="0 (Same As Model)" value="6" />
+        <option name="1" value="7" />
+        <option name="2" value="8" />
+        <option name="3" value="9" />
+        <option name="4" value="10" />
+        <option name="5 (Farthest)" value="11" />
+      </enum16>
+      <undefined size="2" name="_Unnamed2" offset="18" visible="True" />
+    </tagblock>
+    <tagblock name="Objects" offset="28" elementSize="16" maxelements="16" label="Parent Marker" visible="True">
+      <stringid name="Parent Marker" offset="0" visible="True" />
+      <stringid name="Child Marker" offset="4" visible="True" />
+      <tagRef name="Child Object" offset="8" visible="True" />
+    </tagblock>
+    <undefined size="8" name="_Unnamed1" offset="36" visible="True" />
+    <stringid name="Dialogue Sound Effect" offset="44" visible="True" />
+    <tagRef name="Dialogue" offset="48" visible="True" />
+  </tagblock>
+  <tagblock name="Materials" offset="88" elementSize="20" maxelements="32" label="" visible="True">
+    <stringid name="Material Name" offset="0" visible="True" />
+    <enum16 name="Material Type" offset="4" visible="True">
+      <option name="Dirt" value="0" />
+      <option name="Sand" value="1" />
+      <option name="Stone" value="2" />
+      <option name="Snow" value="3" />
+      <option name="Wood" value="4" />
+      <option name="Metal (Hollow)" value="5" />
+      <option name="Metal (Thin)" value="6" />
+      <option name="Metal (Thick)" value="7" />
+      <option name="Rubber" value="8" />
+      <option name="Glass" value="9" />
+      <option name="Force Field" value="10" />
+      <option name="Grunt" value="11" />
+      <option name="Hunter Armor" value="12" />
+      <option name="Hunter Skin" value="13" />
+      <option name="Elite" value="14" />
+      <option name="Jackal" value="15" />
+      <option name="Jackal Energy Shield" value="16" />
+      <option name="Engineer Skin" value="17" />
+      <option name="Engineer Force Field" value="18" />
+      <option name="Flood Combat Form" value="19" />
+      <option name="Flood Carrier Form" value="20" />
+      <option name="Cyborg Armor" value="21" />
+      <option name="Cyborg Energy Shield" value="22" />
+      <option name="Human Armor" value="23" />
+      <option name="Human Skin" value="24" />
+      <option name="Sentinel" value="25" />
+      <option name="Monitor" value="26" />
+      <option name="Plastic" value="27" />
+      <option name="Water" value="28" />
+      <option name="Leaves" value="29" />
+      <option name="Elite Energy Shield" value="30" />
+      <option name="Ice" value="31" />
+      <option name="Hunter Shield" value="32" />
+    </enum16>
+    <int16 name="Damage Section" offset="6" visible="True" />
+    <undefined size="2" name="_Unnamed0" offset="8" visible="True" />
+    <undefined size="2" name="_Unnamed1" offset="10" visible="True" />
+    <stringid name="Global Material Name" offset="12" visible="True" />
+    <undefined size="4" name="_Unnamed2" offset="16" visible="True" />
+  </tagblock>
+  <tagblock name="New Damage Info" offset="96" elementSize="248" maxelements="1" label="Shield Damaged First Person Shader" visible="True">
+    <flags32 name="Flags" offset="0" visible="True">
+      <bit name="Takes Shield Damage For Children" index="0" />
+      <bit name="Takes Body Damage For Children" index="1" />
+      <bit name="Always Shields Friendly Damage" index="2" />
+      <bit name="Passes Area Damage To Children" index="3" />
+      <bit name="Parent Never Takes Body Damage For Us" index="4" />
+      <bit name="Only Damaged By Explosives" index="5" />
+      <bit name="Parent Never Takes Shield Damage For Us" index="6" />
+      <bit name="Cannot Die From Damage" index="7" />
+      <bit name="Passes Attached Damage To Riders" index="8" />
+    </flags32>
+    <stringid name="Global Indirect Material Name" offset="4" visible="True" />
+    <int16 name="Indirect Damage Section" offset="8" visible="True" />
+    <undefined size="2" name="_Unnamed0" offset="10" visible="True" />
+    <undefined size="4" name="_Unnamed1" offset="12" visible="True" />
+    <enum8 name="Collision Damage Reporting Type" offset="16" visible="True">
+      <option name="Teh Guardians!!1!!1!" value="0" />
+      <option name="Falling Damage" value="1" />
+      <option name="Generic Collision Damage" value="2" />
+      <option name="Generic Melee Damage" value="3" />
+      <option name="Generic Explosion" value="4" />
+      <option name="Magnum Pistol" value="5" />
+      <option name="Plasma Pistol" value="6" />
+      <option name="Needler" value="7" />
+      <option name="Smg" value="8" />
+      <option name="Plasma Rifle" value="9" />
+      <option name="Battle Rifle" value="10" />
+      <option name="Carbine" value="11" />
+      <option name="Shotgun" value="12" />
+      <option name="Sniper Rifle" value="13" />
+      <option name="Beam Rifle" value="14" />
+      <option name="Rocket Launcher" value="15" />
+      <option name="Flak Cannon" value="16" />
+      <option name="Brute Shot" value="17" />
+      <option name="Disintegrator" value="18" />
+      <option name="Brute Plasma Rifle" value="19" />
+      <option name="Energy Sword" value="20" />
+      <option name="Frag Grenade" value="21" />
+      <option name="Plasma Grenade" value="22" />
+      <option name="Flag Melee Damage" value="23" />
+      <option name="Bomb Melee Damage" value="24" />
+      <option name="Bomb Explosion Damage" value="25" />
+      <option name="Ball Melee Damage" value="26" />
+      <option name="Human Turret" value="27" />
+      <option name="Plasma Turret" value="28" />
+      <option name="Banshee" value="29" />
+      <option name="Ghost" value="30" />
+      <option name="Mongoose" value="31" />
+      <option name="Scorpion" value="32" />
+      <option name="Spectre Driver" value="33" />
+      <option name="Spectre Gunner" value="34" />
+      <option name="Warthog Driver" value="35" />
+      <option name="Warthog Gunner" value="36" />
+      <option name="Wraith" value="37" />
+      <option name="Tank" value="38" />
+      <option name="Sentinel Beam" value="39" />
+      <option name="Sentinel Rpg" value="40" />
+      <option name="Teleporter" value="41" />
+    </enum8>
+    <enum8 name="Response Damage Reporting Type" offset="17" visible="True">
+      <option name="Teh Guardians!!1!!1!" value="0" />
+      <option name="Falling Damage" value="1" />
+      <option name="Generic Collision Damage" value="2" />
+      <option name="Generic Melee Damage" value="3" />
+      <option name="Generic Explosion" value="4" />
+      <option name="Magnum Pistol" value="5" />
+      <option name="Plasma Pistol" value="6" />
+      <option name="Needler" value="7" />
+      <option name="Smg" value="8" />
+      <option name="Plasma Rifle" value="9" />
+      <option name="Battle Rifle" value="10" />
+      <option name="Carbine" value="11" />
+      <option name="Shotgun" value="12" />
+      <option name="Sniper Rifle" value="13" />
+      <option name="Beam Rifle" value="14" />
+      <option name="Rocket Launcher" value="15" />
+      <option name="Flak Cannon" value="16" />
+      <option name="Brute Shot" value="17" />
+      <option name="Disintegrator" value="18" />
+      <option name="Brute Plasma Rifle" value="19" />
+      <option name="Energy Sword" value="20" />
+      <option name="Frag Grenade" value="21" />
+      <option name="Plasma Grenade" value="22" />
+      <option name="Flag Melee Damage" value="23" />
+      <option name="Bomb Melee Damage" value="24" />
+      <option name="Bomb Explosion Damage" value="25" />
+      <option name="Ball Melee Damage" value="26" />
+      <option name="Human Turret" value="27" />
+      <option name="Plasma Turret" value="28" />
+      <option name="Banshee" value="29" />
+      <option name="Ghost" value="30" />
+      <option name="Mongoose" value="31" />
+      <option name="Scorpion" value="32" />
+      <option name="Spectre Driver" value="33" />
+      <option name="Spectre Gunner" value="34" />
+      <option name="Warthog Driver" value="35" />
+      <option name="Warthog Gunner" value="36" />
+      <option name="Wraith" value="37" />
+      <option name="Tank" value="38" />
+      <option name="Sentinel Beam" value="39" />
+      <option name="Sentinel Rpg" value="40" />
+      <option name="Teleporter" value="41" />
+    </enum8>
+    <undefined size="2" name="_Unnamed2" offset="18" visible="True" />
+    <undefined size="20" name="_Unnamed3" offset="20" visible="True" />
+    <float32 name="Maximum Vitality" offset="40" visible="True" />
+    <float32 name="Minimum Stun Damage" offset="44" visible="True" />
+    <float32 name="Stun Time" offset="48" visible="True" />
+    <float32 name="Recharge Time" offset="52" visible="True" />
+    <float32 name="Recharge Fraction" offset="56" visible="True" />
+    <undefined size="64" name="_Unnamed4" offset="60" visible="True" />
+    <tagRef name="Shield Damaged First Person Shader" offset="124" visible="True" />
+    <tagRef name="Shield Damaged Shader" offset="132" visible="True" />
+    <float32 name="Maximum Shield Vitality" offset="140" visible="True" />
+    <stringid name="Global Shield Material Name" offset="144" visible="True" />
+    <float32 name="Minimum Stun Damage2" offset="148" visible="True" />
+    <float32 name="Stun Time2" offset="152" visible="True" />
+    <float32 name="Recharge Time2" offset="156" visible="True" />
+    <float32 name="Shield Damaged Threshold" offset="160" visible="True" />
+    <tagRef name="Shield Damaged Effect" offset="164" visible="True" />
+    <tagRef name="Shield Depleted Effect" offset="172" visible="True" />
+    <tagRef name="Shield Recharging Effect" offset="180" visible="True" />
+    <tagblock name="Damage Sections" offset="188" elementSize="56" maxelements="16" label="Name" visible="True">
+      <stringid name="Name" offset="0" visible="True" />
+      <flags32 name="Flags" offset="4" visible="True">
+        <bit name="Absorbs Body Damage" index="0" />
+        <bit name="Takes Full Dmg When Object Dies" index="1" />
+        <bit name="Cannot Die With Riders" index="2" />
+        <bit name="Takes Full Dmg When Obj Dstryd" index="3" />
+        <bit name="Restored On Ressurection" index="4" />
+        <bit name="Unused" index="5" />
+        <bit name="Unused" index="6" />
+        <bit name="Heatshottable" index="7" />
+        <bit name="Ignores Shields" index="8" />
+      </flags32>
+      <float32 name="Vitality Percentage" offset="8" visible="True" />
+      <tagblock name="Instant Responses" offset="12" elementSize="80" maxelements="16" label="Transition Effect" visible="True">
+        <enum16 name="Response Type" offset="0" visible="True">
+          <option name="Receives All Damage" value="0" />
+          <option name="Receives Area Effect Damage" value="1" />
+          <option name="Receives Local Damage" value="2" />
+        </enum16>
+        <enum16 name="Constraint Damage Type" offset="2" visible="True">
+          <option name="None" value="0" />
+          <option name="Destroy One Of Group" value="1" />
+          <option name="Destroy Entire Group" value="2" />
+          <option name="Loosen One Of Group" value="3" />
+          <option name="Loosen Entire Group" value="4" />
+        </enum16>
+        <flags32 name="Flags" offset="4" visible="True">
+          <bit name="Kills Object" index="0" />
+          <bit name="Inhibits Melee Attack" index="1" />
+          <bit name="Inhibits Weapon Attack" index="2" />
+          <bit name="Inhibits Walking" index="3" />
+          <bit name="Forces Drop Weapon" index="4" />
+          <bit name="Kills Weapon Primary Trigger" index="5" />
+          <bit name="Kills Weapon Secondary Trigger" index="6" />
+          <bit name="Destroys Object" index="7" />
+          <bit name="Damages Weapon Primary Trigger" index="8" />
+          <bit name="Damages Weapon Secondary Trigger" index="9" />
+          <bit name="Light Damage Left Turn" index="10" />
+          <bit name="Major Damage Left Turn" index="11" />
+          <bit name="Light Damage Right Turn" index="12" />
+          <bit name="Major Damage Right Turn" index="13" />
+          <bit name="Light Damage Engine" index="14" />
+          <bit name="Major Damage Engine" index="15" />
+          <bit name="Kills Object (No Player Solo)" index="16" />
+          <bit name="Causes Detonation" index="17" />
+          <bit name="Destroy All Group Constraints" index="18" />
+          <bit name="Kills Variant Objects" index="19" />
+          <bit name="Force Unattached Effects" index="20" />
+          <bit name="Fires Under Threshold" index="21" />
+          <bit name="Triggers Special Death" index="22" />
+          <bit name="Only On Special Death" index="23" />
+          <bit name="Only NOT On Special Death" index="24" />
+        </flags32>
+        <float32 name="Damage Threshold" offset="8" visible="True" />
+        <tagRef name="Transition Effect" offset="12" visible="True" />
+        <tagRef name="Transition Damage Effect" offset="20" visible="True" />
+        <stringid name="Region" offset="28" visible="True" />
+        <enum16 name="New State" offset="32" visible="True">
+          <option name="Default" value="0" />
+          <option name="Minor Damage" value="1" />
+          <option name="Medium Damage" value="2" />
+          <option name="Major Damage" value="3" />
+          <option name="Destroyed" value="4" />
+        </enum16>
+        <int16 name="Runtime Region Index" offset="34" visible="True" />
+        <stringid name="Effect Marker Name" offset="36" visible="True" />
+        <stringid name="Damage Effect Marker Name" offset="40" visible="True" />
+        <float32 name="Response Delay" offset="44" visible="True" />
+        <tagRef name="Delay Effect" offset="48" visible="True" />
+        <stringid name="Delay Effect Marker Name" offset="56" visible="True" />
+        <stringid name="Constraintgroup Name" offset="60" visible="True" />
+        <stringid name="Ejecting Seat Label" offset="64" visible="True" />
+        <float32 name="Skip Fraction" offset="68" visible="True" />
+        <stringid name="Destroyed Child Object Marker Name" offset="72" visible="True" />
+        <float32 name="Total Damage Threshold" offset="76" visible="True" />
+      </tagblock>
+      <tagblock name="_Unnamed0" offset="20" elementSize="0" maxelements="0" label="" visible="True">
+      </tagblock>
+      <tagblock name="_Unnamed1" offset="28" elementSize="0" maxelements="0" label="" visible="True">
+      </tagblock>
+      <float32 name="Stun Time" offset="36" visible="True" />
+      <float32 name="Recharge Time" offset="40" visible="True" />
+      <undefined size="4" name="_Unnamed2" offset="44" visible="True" />
+      <stringid name="Resurrection Restored Region Name" offset="48" visible="True" />
+      <undefined size="4" name="_Unnamed3" offset="52" visible="True" />
+    </tagblock>
+    <tagblock name="Nodes" offset="196" elementSize="16" maxelements="255" label="" visible="True">
+      <undefined size="2" name="_Unnamed0" offset="0" visible="True" />
+      <undefined size="2" name="_Unnamed1" offset="2" visible="True" />
+      <undefined size="12" name="_Unnamed2" offset="4" visible="True" />
+    </tagblock>
+    <undefined size="2" name="_Unnamed5" offset="204" visible="True" />
+    <undefined size="2" name="_Unnamed6" offset="206" visible="True" />
+    <undefined size="4" name="_Unnamed7" offset="208" visible="True" />
+    <undefined size="4" name="_Unnamed8" offset="212" visible="True" />
+    <tagblock name="Damage Seats" offset="216" elementSize="20" maxelements="16" label="Seat Label" visible="True">
+      <stringid name="Seat Label" offset="0" visible="True" />
+      <float32 name="Direct Damage Scale" offset="4" visible="True" />
+      <float32 name="Damage Transfer Fall-Off Radius" offset="8" visible="True" />
+      <float32 name="Maximum Transfer Damage Scale" offset="12" visible="True" />
+      <float32 name="Minimum Transfer Damage Scale" offset="16" visible="True" />
+    </tagblock>
+    <tagblock name="Damage Constraints" offset="224" elementSize="20" maxelements="16" label="" visible="True">
+      <stringid name="Physics Model Constraint Name" offset="0" visible="True" />
+      <stringid name="Damage Constraint Name" offset="4" visible="True" />
+      <stringid name="Damage Constraint Group Name" offset="8" visible="True" />
+      <float32 name="Group Probability Scale" offset="12" visible="True" />
+      <undefined size="4" name="_Unnamed0" offset="16" visible="True" />
+    </tagblock>
+    <tagRef name="Overshield First Person Shader" offset="232" visible="True" />
+    <tagRef name="Overshield Shader" offset="240" visible="True" />
+  </tagblock>
+  <tagblock name="Targets" offset="104" elementSize="28" maxelements="32" label="Marker Name" visible="True">
+    <stringid name="Marker Name" offset="0" visible="True" />
+    <float32 name="Size" offset="4" visible="True" />
+    <float32 name="Cone Angle" offset="8" visible="True" />
+    <int16 name="Damage Section" offset="12" visible="True" />
+    <int16 name="Variant" offset="14" visible="True" reflexiveoffset="80" reflexivesize="56" itemoffset="0" itemtype="stringid" layer="root" />
+    <float32 name="Targeting Relevance" offset="16" visible="True" />
+    <flags32 name="Flags" offset="20" visible="True">
+      <bit name="Locked By Human Tracking" index="0" />
+      <bit name="Locked By Plasma Tracking" index="1" />
+      <bit name="Headshot" index="2" />
+      <bit name="Vulnerable" index="3" />
+      <bit name="Alwas Locked By Plasma Tracking" index="4" />
+    </flags32>
+    <float32 name="Lock On Distance" offset="24" visible="True" />
+  </tagblock>
+  <tagblock name="Model Variations" offset="112" elementSize="16" maxelements="16" label="Name" visible="True">
+    <stringid name="Name" offset="0" visible="True" />
+    <int8 name="Collision Region Index" offset="4" visible="True" />
+    <int8 name="Physics Region Index" offset="5" visible="True" />
+    <undefined size="2" name="_Unnamed0" offset="6" visible="True" />
+    <tagblock name="Permutations" offset="8" elementSize="8" maxelements="32" label="Name" visible="True">
+      <stringid name="Name" offset="0" visible="True" />
+      <flags8 name="Flags" offset="4" visible="True">
+        <bit name="Cannot Be Chosen Randomly" index="0" />
+      </flags8>
+      <int8 name="Collision Permutation Index" offset="5" visible="True" />
+      <undefined size="2" name="_Unnamed0" offset="6" visible="True" />
+    </tagblock>
+  </tagblock>
+  <tagblock name="Nodes" offset="120" elementSize="92" maxelements="255" label="Name" visible="True">
+    <stringid name="Name" offset="0" visible="True" />
+    <int16 name="Parent Node" offset="4" visible="True" reflexiveoffset="120" reflexivesize="92" itemoffset="0" itemtype="stringid" layer="root" />
+    <int16 name="First Child Node" offset="6" visible="True" reflexiveoffset="120" reflexivesize="92" itemoffset="0" itemtype="stringid" layer="root" />
+    <int16 name="Next Sibling Node" offset="8" visible="True" reflexiveoffset="120" reflexivesize="92" itemoffset="0" itemtype="stringid" layer="root" />
+    <undefined size="2" name="_Unnamed0" offset="10" visible="True" />
+    <float32 name="Default Translation X" offset="12" visible="True" />
+    <float32 name="Default Translation Y" offset="16" visible="True" />
+    <float32 name="Default Translation Z" offset="20" visible="True" />
+    <float32 name="Default Rotation i" offset="24" visible="True" />
+    <float32 name="Default Rotation j" offset="28" visible="True" />
+    <float32 name="Default Rotation k" offset="32" visible="True" />
+    <float32 name="Default Rotation w" offset="36" visible="True" />
+    <float32 name="Default Inverse Scale" offset="40" visible="True" />
+    <float32 name="Default Inverse Forward X" offset="44" visible="True" />
+    <float32 name="Default Inverse Forward Y" offset="48" visible="True" />
+    <float32 name="Default Inverse Forward Z" offset="52" visible="True" />
+    <float32 name="Default Inverse Left X" offset="56" visible="True" />
+    <float32 name="Default Inverse Left Y" offset="60" visible="True" />
+    <float32 name="Default Inverse Left Z" offset="64" visible="True" />
+    <float32 name="Default Inverse Up X" offset="68" visible="True" />
+    <float32 name="Default Inverse Up Y" offset="72" visible="True" />
+    <float32 name="Default Inverse Up Z" offset="76" visible="True" />
+    <float32 name="Default Inverse Position X" offset="80" visible="True" />
+    <float32 name="Default Inverse Position Y" offset="84" visible="True" />
+    <float32 name="Default Inverse Position Z" offset="88" visible="True" />
+  </tagblock>
+  <undefined size="4" name="_Unnamed5" offset="128" visible="True" />
+  <tagblock name="Model Object Data" offset="132" elementSize="20" maxelements="1" label="" visible="True">
+    <enum16 name="Type" offset="0" visible="True">
+      <option name="Not Set" value="0" />
+      <option name="User Defined" value="1" />
+      <option name="Auto Generated" value="2" />
+    </enum16>
+    <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+    <float32 name="Offset X" offset="4" visible="True" />
+    <float32 name="Offset Y" offset="8" visible="True" />
+    <float32 name="Offset Z" offset="12" visible="True" />
+    <float32 name="Radius" offset="16" visible="True" />
+  </tagblock>
+  <tagRef name="Default Dialogue" offset="140" visible="True" />
+  <tagRef name="UNUSED" offset="148" visible="True" />
+  <flags32 name="Flags" offset="156" visible="True">
+    <bit name="Active Camo Always On" index="0" />
+    <bit name="Active Camo Always Merge" index="1" />
+    <bit name="Active Camo Never Merge" index="2" />
+  </flags32>
+  <stringid name="Default Dialogue Effect" offset="160" visible="True" />
+  <int8 name="_Unnamed6" offset="164" visible="True" />
+  <int8 name="_Unnamed7" offset="165" visible="True" />
+  <int8 name="_Unnamed8" offset="166" visible="True" />
+  <int8 name="_Unnamed9" offset="167" visible="True" />
+  <int8 name="_Unnamed10" offset="168" visible="True" />
+  <int8 name="_Unnamed11" offset="169" visible="True" />
+  <int8 name="_Unnamed12" offset="170" visible="True" />
+  <int8 name="_Unnamed13" offset="171" visible="True" />
+  <int8 name="_Unnamed14" offset="172" visible="True" />
+  <int8 name="_Unnamed15" offset="173" visible="True" />
+  <int8 name="_Unnamed16" offset="174" visible="True" />
+  <int8 name="_Unnamed17" offset="175" visible="True" />
+  <int8 name="_Unnamed18" offset="176" visible="True" />
+  <int8 name="_Unnamed19" offset="177" visible="True" />
+  <int8 name="_Unnamed20" offset="178" visible="True" />
+  <int8 name="_Unnamed21" offset="179" visible="True" />
+  <int8 name="_Unnamed22" offset="180" visible="True" />
+  <int8 name="_Unnamed23" offset="181" visible="True" />
+  <int8 name="_Unnamed24" offset="182" visible="True" />
+  <int8 name="_Unnamed25" offset="183" visible="True" />
+  <int8 name="_Unnamed26" offset="184" visible="True" />
+  <int8 name="_Unnamed27" offset="185" visible="True" />
+  <int8 name="_Unnamed28" offset="186" visible="True" />
+  <int8 name="_Unnamed29" offset="187" visible="True" />
+  <int8 name="_Unnamed30" offset="188" visible="True" />
+  <int8 name="_Unnamed31" offset="189" visible="True" />
+  <int8 name="_Unnamed32" offset="190" visible="True" />
+  <int8 name="_Unnamed33" offset="191" visible="True" />
+  <int8 name="_Unnamed34" offset="192" visible="True" />
+  <int8 name="_Unnamed35" offset="193" visible="True" />
+  <int8 name="_Unnamed36" offset="194" visible="True" />
+  <int8 name="_Unnamed37" offset="195" visible="True" />
+  <int8 name="_Unnamed38" offset="196" visible="True" />
+  <int8 name="_Unnamed39" offset="197" visible="True" />
+  <int8 name="_Unnamed40" offset="198" visible="True" />
+  <int8 name="_Unnamed41" offset="199" visible="True" />
+  <int8 name="_Unnamed42" offset="200" visible="True" />
+  <int8 name="_Unnamed43" offset="201" visible="True" />
+  <int8 name="_Unnamed44" offset="202" visible="True" />
+  <int8 name="_Unnamed45" offset="203" visible="True" />
+  <int8 name="_Unnamed46" offset="204" visible="True" />
+  <int8 name="_Unnamed47" offset="205" visible="True" />
+  <int8 name="_Unnamed48" offset="206" visible="True" />
+  <int8 name="_Unnamed49" offset="207" visible="True" />
+  <int8 name="_Unnamed50" offset="208" visible="True" />
+  <int8 name="_Unnamed51" offset="209" visible="True" />
+  <int8 name="_Unnamed52" offset="210" visible="True" />
+  <int8 name="_Unnamed53" offset="211" visible="True" />
+  <int8 name="_Unnamed54" offset="212" visible="True" />
+  <int8 name="_Unnamed55" offset="213" visible="True" />
+  <int8 name="_Unnamed56" offset="214" visible="True" />
+  <int8 name="_Unnamed57" offset="215" visible="True" />
+  <int8 name="_Unnamed58" offset="216" visible="True" />
+  <int8 name="_Unnamed59" offset="217" visible="True" />
+  <int8 name="_Unnamed60" offset="218" visible="True" />
+  <int8 name="_Unnamed61" offset="219" visible="True" />
+  <int8 name="_Unnamed62" offset="220" visible="True" />
+  <int8 name="_Unnamed63" offset="221" visible="True" />
+  <int8 name="_Unnamed64" offset="222" visible="True" />
+  <int8 name="_Unnamed65" offset="223" visible="True" />
+  <int8 name="_Unnamed66" offset="224" visible="True" />
+  <int8 name="_Unnamed67" offset="225" visible="True" />
+  <int8 name="_Unnamed68" offset="226" visible="True" />
+  <int8 name="_Unnamed69" offset="227" visible="True" />
+  <flags32 name="Runtime Flags" offset="228" visible="True">
+    <bit name="Contains Run-Time Nodes" index="0" />
+  </flags32>
+  <tagblock name="Scenario Load Parameters" offset="232" elementSize="48" maxelements="32" label="Scenario" visible="True">
+    <tagRef name="Scenario" offset="0" visible="True" />
+    <undefined size="8" name="Parameters" offset="8" visible="True" />
+    <undefined size="32" name="_Unnamed0" offset="16" visible="True" />
+  </tagblock>
+  <tagRef name="Hologram Shader" offset="240" visible="True" />
+  <stringid name="Hologram Control Function" offset="248" visible="True" />
+</plugin>

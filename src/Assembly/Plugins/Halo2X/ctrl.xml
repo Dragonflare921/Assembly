@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="320">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <undefined size="2" name="_Unnamed0" offset="0" visible="True" />
+  <flags16 name="Flags" offset="2" visible="True">
+    <bit name="Does Not Cast Shadow" index="0" />
+    <bit name="Search Cardinal Direction Lightmaps On Failure" index="1" />
+    <bit name="Unused" index="2" />
+    <bit name="Not A Pathfinding Obstacle" index="3" />
+    <bit name="Extension Of Parent" index="4" />
+    <bit name="Does Not Cause Collision Damage" index="5" />
+    <bit name="Early Mover" index="6" />
+    <bit name="Early Mover Localized Physics" index="7" />
+    <bit name="Use Static Massive Lightmap Sample" index="8" />
+    <bit name="Object Scales Attachments" index="9" />
+    <bit name="Inherits Player's Appearance" index="10" />
+    <bit name="Dead Bipeds Can't Localize" index="11" />
+    <bit name="Attach To Clusters By Dynamic Sphere" index="12" />
+    <bit name="Effects Created By This Object Do Not Spawn Objects In Multiplayer." index="13" />
+  </flags16>
+  <float32 name="Bounding Radius" offset="4" visible="True" />
+  <float32 name="Bounding Offset X" offset="8" visible="True" />
+  <float32 name="Bounding Offset Y" offset="12" visible="True" />
+  <float32 name="Bounding Offset Z" offset="16" visible="True" />
+  <float32 name="Acceleration Scale" offset="20" visible="True" />
+  <enum16 name="Lightmap Shadow Mode" offset="24" visible="True">
+    <option name="Default" value="0" />
+    <option name="Never" value="1" />
+    <option name="Always" value="2" />
+  </enum16>
+  <enum8 name="Sweetener Size" offset="26" visible="True">
+    <option name="Small" value="0" />
+    <option name="Medium" value="1" />
+    <option name="Large" value="2" />
+  </enum8>
+  <undefined size="1" name="_Unnamed1" offset="27" visible="True" />
+  <undefined size="4" name="_Unnamed2" offset="28" visible="True" />
+  <float32 name="Dynamic Light Sphere Radius" offset="32" visible="True" />
+  <float32 name="Dynamic Light Sphere Offset X" offset="36" visible="True" />
+  <float32 name="Dynamic Light Sphere Offset Y" offset="40" visible="True" />
+  <float32 name="Dynamic Light Sphere Offset Z" offset="44" visible="True" />
+  <stringid name="Default Model Variant" offset="48" visible="True" />
+  <tagRef name="Model" offset="52" visible="True" />
+  <tagRef name="Crate Object" offset="60" visible="True" />
+  <tagRef name="Modifier Shader" offset="68" visible="True" />
+  <tagRef name="Creation Effect" offset="76" visible="True" />
+  <tagRef name="Material Effects" offset="84" visible="True" />
+  <tagblock name="Ai Properties" offset="92" elementSize="16" maxelements="1" label="" visible="True">
+    <flags32 name="Ai Flags" offset="0" visible="True">
+      <bit name="Detroyable Cover" index="0" />
+      <bit name="Pathfinding Ignore When Dead" index="1" />
+      <bit name="Dynamic Cover" index="2" />
+    </flags32>
+    <stringid name="Ai Type Name" offset="4" visible="True" />
+    <undefined size="4" name="_Unnamed0" offset="8" visible="True" />
+    <enum16 name="Ai Size" offset="12" visible="True">
+      <option name="Default" value="0" />
+      <option name="Tiny" value="1" />
+      <option name="Small" value="2" />
+      <option name="Medium" value="3" />
+      <option name="Large" value="4" />
+      <option name="Huge" value="5" />
+      <option name="Immobile" value="6" />
+    </enum16>
+    <enum16 name="Leap Jump Speed" offset="14" visible="True">
+      <option name="NONE" value="0" />
+      <option name="Down" value="1" />
+      <option name="Step" value="2" />
+      <option name="Crouch" value="3" />
+      <option name="Stand" value="4" />
+      <option name="Storey" value="5" />
+      <option name="Tower" value="6" />
+      <option name="Infinite" value="7" />
+    </enum16>
+  </tagblock>
+  <tagblock name="Functions" offset="100" elementSize="32" maxelements="256" label="" visible="True">
+    <flags32 name="Flags" offset="0" visible="True">
+      <bit name="Invert" index="0" />
+      <bit name="Mapping Does Not Controls Active" index="1" />
+      <bit name="Always Active" index="2" />
+      <bit name="Random Time Offset" index="3" />
+    </flags32>
+    <stringid name="Import Name" offset="4" visible="True" />
+    <stringid name="Export Name" offset="8" visible="True" />
+    <stringid name="Turn Off With" offset="12" visible="True" />
+    <float32 name="Min Value" offset="16" visible="True" />
+    <tagblock name="Data" offset="20" elementSize="1" maxelements="1024" label="" visible="True">
+      <int8 name="Value" offset="0" visible="True" />
+    </tagblock>
+    <stringid name="Scale By" offset="28" visible="True" />
+  </tagblock>
+  <float32 name="Apply Collision Damage Scale" offset="108" visible="True" />
+  <float32 name="Min Game Acc Default" offset="112" visible="True" />
+  <float32 name="Max Game Acc Default" offset="116" visible="True" />
+  <float32 name="Min Game Scale Default" offset="120" visible="True" />
+  <float32 name="Max Game Scale Default" offset="124" visible="True" />
+  <float32 name="Min Abs Acc Default" offset="128" visible="True" />
+  <float32 name="Max Abs Acc Default" offset="132" visible="True" />
+  <float32 name="Min Abs Scale Default" offset="136" visible="True" />
+  <float32 name="Max Abs Scale Default" offset="140" visible="True" />
+  <int16 name="Hud Text Message Index" offset="144" visible="True" />
+  <undefined size="2" name="_Unnamed3" offset="146" visible="True" />
+  <tagblock name="Attachments" offset="148" elementSize="24" maxelements="16" label="Type" visible="True">
+    <tagRef name="Type" offset="0" visible="True" />
+    <stringid name="Marker" offset="8" visible="True" />
+    <enum16 name="Change Color" offset="12" visible="True">
+      <option name="None" value="0" />
+      <option name="Primary" value="1" />
+      <option name="Secondary" value="2" />
+      <option name="Tertiary" value="3" />
+      <option name="Quaternary" value="4" />
+    </enum16>
+    <undefined size="2" name="_Unnamed0" offset="14" visible="True" />
+    <stringid name="Primary Scale" offset="16" visible="True" />
+    <stringid name="Secondary Scale" offset="20" visible="True" />
+  </tagblock>
+  <tagblock name="Widgets" offset="156" elementSize="8" maxelements="4" label="Type" visible="True">
+    <tagRef name="Type" offset="0" visible="True" />
+  </tagblock>
+  <tagblock name="Old Functions" offset="164" elementSize="80" maxelements="4" label="" visible="True">
+    <undefined size="76" name="_Unnamed0" offset="0" visible="True" />
+    <stringid name="_Unnamed1" offset="76" visible="True" />
+  </tagblock>
+  <tagblock name="Change Colors" offset="172" elementSize="16" maxelements="4" label="" visible="True">
+    <tagblock name="Initial Permutations" offset="0" elementSize="32" maxelements="32" label="" visible="True">
+      <float32 name="Weight" offset="0" visible="True" />
+      <float32 name="Color Lower Bound R" offset="4" visible="True" />
+      <float32 name="Color Lower Bound G" offset="8" visible="True" />
+      <float32 name="Color Lower Bound B" offset="12" visible="True" />
+      <float32 name="Color Upper Bound R" offset="16" visible="True" />
+      <float32 name="Color Upper Bound G" offset="20" visible="True" />
+      <float32 name="Color Upper Bound B" offset="24" visible="True" />
+      <stringid name="Variant Name" offset="28" visible="True" />
+    </tagblock>
+    <tagblock name="Functions" offset="8" elementSize="40" maxelements="4" label="" visible="True">
+      <undefined size="4" name="_Unnamed0" offset="0" visible="True" />
+      <flags32 name="Scale Flags" offset="4" visible="True">
+        <bit name="Blend In Hsv" index="0" />
+        <bit name="...More Colors" index="1" />
+      </flags32>
+      <float32 name="Color Lower Bound R" offset="8" visible="True" />
+      <float32 name="Color Lower Bound G" offset="12" visible="True" />
+      <float32 name="Color Lower Bound B" offset="16" visible="True" />
+      <float32 name="Color Upper Bound R" offset="20" visible="True" />
+      <float32 name="Color Upper Bound G" offset="24" visible="True" />
+      <float32 name="Color Upper Bound B" offset="28" visible="True" />
+      <stringid name="Darken By" offset="32" visible="True" />
+      <stringid name="Scale By" offset="36" visible="True" />
+    </tagblock>
+  </tagblock>
+  <tagblock name="Predicted Resources" offset="180" elementSize="8" maxelements="2048" label="" visible="True">
+    <enum16 name="Type" offset="0" visible="True">
+      <option name="Bitmap" value="0" />
+      <option name="Sound" value="1" />
+      <option name="Render Model Geometry" value="2" />
+      <option name="Cluster Geometry" value="3" />
+      <option name="Cluster Instanced Geometry" value="4" />
+      <option name="Lightmap Geometry Object Buckets" value="5" />
+      <option name="Lightmap Geometry Instance Buckets" value="6" />
+      <option name="Lightmap Cluster Bitmaps" value="7" />
+      <option name="Lightmap Instance Bitmaps" value="8" />
+    </enum16>
+    <int16 name="Resource Index" offset="2" visible="True" />
+  </tagblock>
+  <flags32 name="Flags" offset="188" visible="True">
+    <bit name="Position Loops" index="0" />
+    <bit name="(Unused)" index="1" />
+    <bit name="Allow Interpolation" index="2" />
+  </flags32>
+  <float32 name="Power Transition Time" offset="192" visible="True" />
+  <float32 name="Power Acceleration Time" offset="196" visible="True" />
+  <float32 name="Position Transition Time" offset="200" visible="True" />
+  <float32 name="Position Acceleration Time" offset="204" visible="True" />
+  <float32 name="Depowered Position Transition Time" offset="208" visible="True" />
+  <float32 name="Depowered Position Acceleration Time" offset="212" visible="True" />
+  <flags16 name="Lightmap Flags" offset="216" visible="True">
+    <bit name="Don't Use In Lightmap" index="0" />
+    <bit name="Don't Use In Lightprobe" index="1" />
+  </flags16>
+  <undefined size="2" name="_Unnamed0" offset="218" visible="True" />
+  <tagRef name="Open Up" offset="220" visible="True" />
+  <tagRef name="Close Down" offset="228" visible="True" />
+  <tagRef name="Opened" offset="236" visible="True" />
+  <tagRef name="Closed" offset="244" visible="True" />
+  <tagRef name="Depowered" offset="252" visible="True" />
+  <tagRef name="Repowered" offset="260" visible="True" />
+  <float32 name="Delay Time" offset="268" visible="True" />
+  <tagRef name="Delay Effect" offset="272" visible="True" />
+  <float32 name="Automatic Activation Radius" offset="280" visible="True" />
+  <enum16 name="Type" offset="284" visible="True">
+    <option name="Toggle Switch" value="0" />
+    <option name="On Button" value="1" />
+    <option name="Off Button" value="2" />
+    <option name="Call Button" value="3" />
+  </enum16>
+  <enum16 name="Triggers When" offset="286" visible="True">
+    <option name="Touched By Player" value="0" />
+    <option name="Destroyed" value="1" />
+  </enum16>
+  <float32 name="Call Value" offset="288" visible="True" />
+  <stringid name="Action String" offset="292" visible="True" />
+  <tagRef name="On" offset="296" visible="True" />
+  <tagRef name="Off" offset="304" visible="True" />
+  <tagRef name="Deny" offset="312" visible="True" />
+</plugin>

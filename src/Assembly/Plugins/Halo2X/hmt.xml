@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="108">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <undefined size="8" name="Text Data" offset="0" visible="True" />
+  <tagblock name="Message Elements" offset="8" elementSize="2" maxelements="8192" label="" visible="True">
+    <int8 name="Type" offset="0" visible="True" />
+    <int8 name="Data" offset="1" visible="True" />
+  </tagblock>
+  <tagblock name="Messages" offset="16" elementSize="64" maxelements="1024" label="" visible="True">
+    <ascii name="Name" offset="0" visible="True" />
+    <int16 name="Start Index Into Text Blob" offset="32" visible="True" />
+    <int16 name="Start Index Of Message Block" offset="34" visible="True" />
+    <int8 name="Panel Count" offset="36" visible="True" />
+    <undefined size="3" name="_Unnamed0" offset="37" visible="True" />
+    <undefined size="24" name="_Unnamed1" offset="40" visible="True" />
+  </tagblock>
+  <undefined size="84" name="_Unnamed0" offset="24" visible="True" />
+</plugin>

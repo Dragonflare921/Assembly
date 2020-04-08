@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="144">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <flags32 name="Flags" offset="0" visible="True">
+  </flags32>
+  <tagRef name="Stencil Bitmaps" offset="4" visible="True" />
+  <tagRef name="Source Bitmap" offset="12" visible="True" />
+  <int16 name="Stencil Sequence Index" offset="20" visible="True" />
+  <int16 name="Source Sequence Index" offset="22" visible="True" />
+  <undefined size="16" name="_Unnamed0" offset="24" visible="True" />
+  <undefined size="4" name="_Unnamed1" offset="40" visible="True" />
+  <enum16 name="Interpolate Colors" offset="44" visible="True">
+    <option name="Linearly" value="0" />
+    <option name="Faster Near Empty" value="1" />
+    <option name="Faster Near Full" value="2" />
+    <option name="Through Random Noise" value="3" />
+  </enum16>
+  <enum16 name="Anchor Colors" offset="46" visible="True">
+    <option name="At Both Ends" value="0" />
+    <option name="At Empty" value="1" />
+    <option name="At Full" value="2" />
+  </enum16>
+  <undefined size="8" name="_Unnamed2" offset="48" visible="True" />
+  <float32 name="Empty Color A" offset="56" visible="True" />
+  <float32 name="Empty Color R" offset="60" visible="True" />
+  <float32 name="Empty Color G" offset="64" visible="True" />
+  <float32 name="Empty Color B" offset="68" visible="True" />
+  <float32 name="Full Color A" offset="72" visible="True" />
+  <float32 name="Full Color R" offset="76" visible="True" />
+  <float32 name="Full Color G" offset="80" visible="True" />
+  <float32 name="Full Color B" offset="84" visible="True" />
+  <undefined size="20" name="_Unnamed3" offset="88" visible="True" />
+  <float32 name="Unmask Distance" offset="108" visible="True" />
+  <float32 name="Mask Distance" offset="112" visible="True" />
+  <undefined size="20" name="_Unnamed4" offset="116" visible="True" />
+  <undefined size="8" name="Encoded Stencil" offset="136" visible="True" />
+</plugin>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="112">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <tagblock name="Shaders" offset="0" elementSize="8" maxelements="8" label="Shader" visible="True">
+    <tagRef name="Shader" offset="0" visible="True" />
+  </tagblock>
+  <float32 name="Lighting Min Scale" offset="8" visible="True" />
+  <float32 name="Lighting Max Scale" offset="12" visible="True" />
+  <tagblock name="Classes" offset="16" elementSize="20" maxelements="8" label="" visible="True">
+    <stringid name="Name" offset="0" visible="True" />
+    <enum8 name="Type" offset="4" visible="True">
+      <option name="Model" value="0" />
+      <option name="Floating Decal" value="1" />
+      <option name="Projected Decal" value="2" />
+      <option name="Screen Facing Quad" value="3" />
+      <option name="Axis Rotating Quad" value="4" />
+      <option name="Cross Quad" value="5" />
+    </enum8>
+    <undefined size="3" name="_Unnamed0" offset="5" visible="True" />
+    <float32 name="Scale" offset="8" visible="True" />
+    <tagblock name="Permutations" offset="12" elementSize="40" maxelements="64" label="" visible="True">
+      <stringid name="Name" offset="0" visible="True" />
+      <int8 name="Shader" offset="4" visible="True" />
+      <undefined size="3" name="_Unnamed0" offset="5" visible="True" />
+      <flags8 name="Flags" offset="8" visible="True">
+        <bit name="Align To Normal" index="0" />
+        <bit name="Only On Ground" index="1" />
+        <bit name="Upright" index="2" />
+      </flags8>
+      <enum8 name="Fade Distance" offset="9" visible="True">
+        <option name="Close" value="0" />
+        <option name="Medium" value="1" />
+        <option name="Far" value="2" />
+      </enum8>
+      <int8 name="Index" offset="10" visible="True" />
+      <int8 name="Distribution Weight" offset="11" visible="True" />
+      <float32 name="Scale From" offset="12" visible="True" />
+      <float32 name="Scale To" offset="16" visible="True" />
+      <undefined size="1" offset="20" visible="True" />
+      <int8 name="Tint 1 R" offset="24" visible="True" />
+      <int8 name="Tint 1 G" offset="28" visible="True" />
+      <int8 name="Tint 1 B" offset="32" visible="True" />
+      <undefined size="1" offset="24" visible="True" />
+      <int8 name="Tint 2 R" offset="28" visible="True" />
+      <int8 name="Tint 2 G" offset="32" visible="True" />
+      <int8 name="Tint 2 B" offset="36" visible="True" />
+      <float32 name="Base Map Tint Percentage" offset="28" visible="True" />
+      <float32 name="Lightmap Tint Percentage" offset="32" visible="True" />
+      <float32 name="Wind Scale" offset="36" visible="True" />
+    </tagblock>
+  </tagblock>
+  <tagblock name="Models" offset="24" elementSize="8" maxelements="256" label="" visible="True">
+    <stringid name="Model Name" offset="0" visible="True" />
+    <int16 name="Index Start" offset="4" visible="True" />
+    <int16 name="Index Count" offset="6" visible="True" />
+  </tagblock>
+  <tagblock name="Raw Vertices" offset="32" elementSize="56" maxelements="32768" label="" visible="True">
+    <float32 name="Position X" offset="0" visible="True" />
+    <float32 name="Position Y" offset="4" visible="True" />
+    <float32 name="Position Z" offset="8" visible="True" />
+    <float32 name="Normal X" offset="12" visible="True" />
+    <float32 name="Normal Y" offset="16" visible="True" />
+    <float32 name="Normal Z" offset="20" visible="True" />
+    <float32 name="Tangent X" offset="24" visible="True" />
+    <float32 name="Tangent Y" offset="28" visible="True" />
+    <float32 name="Tangent Z" offset="32" visible="True" />
+    <float32 name="Binormal X" offset="36" visible="True" />
+    <float32 name="Binormal Y" offset="40" visible="True" />
+    <float32 name="Binormal Z" offset="44" visible="True" />
+    <float32 name="Texcoord X" offset="48" visible="True" />
+    <float32 name="Texcoord Y" offset="52" visible="True" />
+  </tagblock>
+  <tagblock name="Indices" offset="40" elementSize="2" maxelements="32768" label="" visible="True">
+    <int16 name="Index" offset="0" visible="True" />
+  </tagblock>
+  <tagblock name="Cached Data" offset="48" elementSize="32" maxelements="1" label="" visible="True">
+    <undefined size="32" name="Vertex Buffer" offset="0" visible="True" />
+  </tagblock>
+  <uint32 name="Resource Data Offset" offset="56" visible="True" />
+  <uint32 name="Resource Data Size" offset="58" visible="True" />
+  <int32 name="Section Data Size" offset="64" visible="True" />
+  <int32 name="Resource Data Size" offset="68" visible="True" />
+  <tagblock name="Resources" offset="72" elementSize="16" maxelements="1024" label="" visible="True">
+    <enum8 name="Type" offset="0" visible="True">
+      <option name="Tag Block" value="0" />
+      <option name="Tag Data" value="1" />
+      <option name="Vertex Buffer" value="2" />
+    </enum8>
+    <undefined size="3" name="_Unnamed0" offset="1" visible="True" />
+    <int16 name="Primary Locator" offset="4" visible="True" />
+    <int16 name="Secondary Locator" offset="6" visible="True" />
+    <int32 name="Resource Data Size" offset="8" visible="True" />
+    <int32 name="Resource Data Offset" offset="12" visible="True" />
+  </tagblock>
+  <undefined size="4" name="Geometry Self Reference" offset="80" visible="True" />
+  <int16 name="Owner Tag Section Offset" offset="84" visible="True" />
+  <undefined size="2" name="_Unnamed0" offset="86" visible="True" />
+  <undefined size="4" name="_Unnamed1" offset="88" visible="True" />
+  <undefined size="16" name="_Unnamed2" offset="92" visible="True" />
+  <undefined size="4" name="_Unnamed3" offset="108" visible="True" />
+</plugin>

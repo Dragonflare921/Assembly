@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Plugin Class="wigl" Header_Size="172">
+  <HaloTagType Name="Unknown" Offset="0" />
+  <TagIdent Name="Unknown" Offset="4" />
+  <HaloTagType Name="Unused" Offset="8" />
+  <TagIdent Name="Unused" Offset="12" />
+  <LongInteger Name="Unknown" Offset="16" />
+  <RealFloat Name="Unknown" Offset="20" />
+  <RealFloat Name="Unknown" Offset="24" />
+  <TagBlock Name="Unknown" Offset="28">
+    <HaloTagType Name="Unused" Offset="0" />
+    <TagIdent Name="Unused" Offset="4" />
+    <RealFloat Name="Unknown" Offset="8" />
+  </TagBlock>
+  <RealFloat Name="Unknown" Offset="36" />
+  <RealFloat Name="Unknown" Offset="40" />
+  <RealFloat Name="Unknown" Offset="44" />
+  <Padding Size="4" Offset="48" />
+  <RealFloat Name="Unknown" Offset="52" />
+  <RealFloat Name="Unknown" Offset="56" />
+  <RealFloat Name="Unknown" Offset="60" />
+  <Padding Size="4" Offset="64" />
+  <RealFloat Name="Unknown" Offset="68" />
+  <TagBlock Name="Fog" Offset="72">
+    <RealFloat Name="Red" Offset="0" />
+    <RealFloat Name="Green" Offset="4" />
+    <RealFloat Name="Blue" Offset="8" />
+    <RealFloat Name="Alpha" Offset="12" />
+    <RealFloat Name="Start Distance" Offset="16" />
+    <RealFloat Name="Full Distnace" Offset="20" />
+  </TagBlock>
+  <TagBlock Name="Unknown" Offset="80">
+    <RealFloat Name="Unknown" Offset="0" />
+    <RealFloat Name="Unknown" Offset="4" />
+    <RealFloat Name="Unknown" Offset="8" />
+    <RealFloat Name="Unknown" Offset="12" />
+    <RealFloat Name="Unknown" Offset="16" />
+    <RealFloat Name="Unknown" Offset="20" />
+  </TagBlock>
+  <TagBlock Name="Unknown" Offset="88">
+    <RealFloat Name="Unknown" Offset="0" />
+    <RealFloat Name="Unknown" Offset="4" />
+    <RealFloat Name="Unknown" Offset="8" />
+    <RealFloat Name="Unknown" Offset="12" />
+  </TagBlock>
+  <TagBlock Name="Fog Thickness Values" Offset="96">
+    <RealFloat Name="Unknown" Offset="0" />
+    <RealFloat Name="Unknown" Offset="4" />
+    <RealFloat Name="Unknown" Offset="8" />
+    <RealFloat Name="Unknown" Offset="12" />
+    <RealFloat Name="Unknown" Offset="16" />
+    <RealFloat Name="Unknown" Offset="20" />
+    <RealFloat Name="Fog Thickness" Offset="24" />
+    <RealFloat Name="Fog Visibility" Offset="28" />
+    <RealFloat Name="Unknown" Offset="32" />
+    <RealFloat Name="Unknown" Offset="36" />
+    <Padding Size="32" Offset="40" />
+    <HaloTagType Name="Unknown" Offset="72" />
+    <TagIdent Name="Unknown" Offset="76" />
+  </TagBlock>
+  <RealFloat Name="Unknown" Offset="104" />
+  <RealFloat Name="Unknown" Offset="108" />
+  <RealFloat Name="Unknown" Offset="112" />
+  <RealFloat Name="Unknown" Offset="116" />
+  <TagBlock Name="Unknown" Offset="120">
+    <Padding Size="12" Offset="0" />
+    <LongInteger Name="Unknown" Offset="12" />
+    <LongInteger Name="Unknown" Offset="16" />
+    <HaloTagType Name="Unknown" Offset="20" />
+    <TagIdent Name="Unknown" Offset="24" />
+    <Padding Size="16" Offset="28" />
+    <TagBlock Name="Unknown" Offset="44">
+      <LongInteger Name="Unknown" Offset="0" />
+      <RealFloat Name="Unknown" Offset="4" />
+      <RealFloat Name="Unknown" Offset="8" />
+      <RealFloat Name="Unknown" Offset="12" />
+      <RealFloat Name="Unknown" Offset="16" />
+      <RealFloat Name="Unknown" Offset="20" />
+      <Padding Size="12" Offset="24" />
+      <LongInteger Name="Unknown" Offset="36" />
+    </TagBlock>
+  </TagBlock>
+  <RealFloat Name="Unknown" Offset="128" />
+  <Padding Size="28" Offset="132" />
+  <RealFloat Name="Unknown" Offset="160" />
+  <RealFloat Name="Unknown" Offset="164" />
+  <RealFloat Name="Unknown" Offset="168" />
+</Plugin>

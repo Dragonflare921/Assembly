@@ -100,11 +100,8 @@ namespace Blamite.Blam.SecondGen.Structures
             // hack to set meta offset mask on xbox
             if (BuildString == "02.09.27.09809")
             {
-                // we hacked in a meta header size into the values earlier in the cache load
-                //metaOffsetMask = (uint)(values.GetInteger("tag table offset") - values.GetInteger("meta header size"));
-                // TODO: were hacking in the first tag's address to adjust the offset mask
-                //metaOffsetMask = (uint)((uint)values.GetInteger("first tag address") - (metaOffset + tagDataSize));
-                metaOffsetMask = (uint)values.GetInteger("first tag address");
+                // we hacked in a first tag address earlier
+                metaOffsetMask = (uint)values.GetInteger("first tag address") - (uint)values.GetInteger("tag data offset");
             }
             else
             {

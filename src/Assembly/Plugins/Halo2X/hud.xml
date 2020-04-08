@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="92">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <tagRef name="Digits Bitmap" offset="0" visible="True" />
+  <int8 name="Bitmap Digit Width" offset="8" visible="True" />
+  <int8 name="Screen Digit Width" offset="9" visible="True" />
+  <int8 name="X Offset" offset="10" visible="True" />
+  <int8 name="Y Offset" offset="11" visible="True" />
+  <int8 name="Decimal Point Width" offset="12" visible="True" />
+  <int8 name="Colon Width" offset="13" visible="True" />
+  <undefined size="2" name="_Unnamed0" offset="14" visible="True" />
+  <undefined size="76" name="_Unnamed1" offset="16" visible="True" />
+</plugin>

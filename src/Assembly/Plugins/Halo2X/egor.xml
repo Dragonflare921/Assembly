@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="144">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <undefined size="64" name="_Unnamed0" offset="0" visible="True" />
+  <tagRef name="Shader" offset="64" visible="True" />
+  <undefined size="64" name="_Unnamed1" offset="72" visible="True" />
+  <tagblock name="Pass References" offset="136" elementSize="172" maxelements="8" label="" visible="True">
+    <undefined size="8" name="Explanation" offset="0" visible="True" />
+    <int16 name="Layer Pass Index" offset="8" visible="True" />
+    <undefined size="2" name="_Unnamed0" offset="10" visible="True" />
+    <int8 name="Primary0 And Secondary0" offset="12" visible="True" />
+    <int8 name="Primary0 And Secondary02" offset="13" visible="True" />
+    <int8 name="Primary0 And Secondary03" offset="14" visible="True" />
+    <int8 name="Primary0 And Secondary04" offset="15" visible="True" />
+    <undefined size="64" name="_Unnamed1" offset="16" visible="True" />
+    <enum16 name="Stage 0 Mode" offset="80" visible="True">
+      <option name="Default" value="0" />
+      <option name="Viewport Normalized" value="1" />
+      <option name="Viewport Relative" value="2" />
+      <option name="Framebuffer Relative" value="3" />
+      <option name="Zero" value="4" />
+    </enum16>
+    <enum16 name="Stage 1 Mode" offset="82" visible="True">
+      <option name="Default" value="0" />
+      <option name="Viewport Normalized" value="1" />
+      <option name="Viewport Relative" value="2" />
+      <option name="Framebuffer Relative" value="3" />
+      <option name="Zero" value="4" />
+    </enum16>
+    <enum16 name="Stage 2 Mode" offset="84" visible="True">
+      <option name="Default" value="0" />
+      <option name="Viewport Normalized" value="1" />
+      <option name="Viewport Relative" value="2" />
+      <option name="Framebuffer Relative" value="3" />
+      <option name="Zero" value="4" />
+    </enum16>
+    <enum16 name="Stage 3 Mode" offset="86" visible="True">
+      <option name="Default" value="0" />
+      <option name="Viewport Normalized" value="1" />
+      <option name="Viewport Relative" value="2" />
+      <option name="Framebuffer Relative" value="3" />
+      <option name="Zero" value="4" />
+    </enum16>
+    <tagblock name="Advanced Control" offset="88" elementSize="72" maxelements="1" label="" visible="True">
+      <flags16 name="Stage 0 Flags" offset="0" visible="True">
+        <bit name="Xy Scaled By Z_Far" index="0" />
+      </flags16>
+      <flags16 name="Stage 1 Flags" offset="2" visible="True">
+        <bit name="Xy Scaled By Z_Far" index="0" />
+      </flags16>
+      <flags16 name="Stage 2 Flags" offset="4" visible="True">
+        <bit name="Xy Scaled By Z_Far" index="0" />
+      </flags16>
+      <flags16 name="Stage 3 Flags" offset="6" visible="True">
+        <bit name="Xy Scaled By Z_Far" index="0" />
+      </flags16>
+      <float32 name="Stage 0 Offset i" offset="8" visible="True" />
+      <float32 name="Stage 0 Offset j" offset="12" visible="True" />
+      <float32 name="Stage 0 Offset k" offset="16" visible="True" />
+      <float32 name="Stage 0 Offset d" offset="20" visible="True" />
+      <float32 name="Stage 1 Offset i" offset="24" visible="True" />
+      <float32 name="Stage 1 Offset j" offset="28" visible="True" />
+      <float32 name="Stage 1 Offset k" offset="32" visible="True" />
+      <float32 name="Stage 1 Offset d" offset="36" visible="True" />
+      <float32 name="Stage 2 Offset i" offset="40" visible="True" />
+      <float32 name="Stage 2 Offset j" offset="44" visible="True" />
+      <float32 name="Stage 2 Offset k" offset="48" visible="True" />
+      <float32 name="Stage 2 Offset d" offset="52" visible="True" />
+      <float32 name="Stage 3 Offset i" offset="56" visible="True" />
+      <float32 name="Stage 3 Offset j" offset="60" visible="True" />
+      <float32 name="Stage 3 Offset k" offset="64" visible="True" />
+      <float32 name="Stage 3 Offset d" offset="68" visible="True" />
+    </tagblock>
+    <enum16 name="Target" offset="96" visible="True">
+      <option name="Framebuffer" value="0" />
+      <option name="Texaccum" value="1" />
+      <option name="Texaccum Small" value="2" />
+      <option name="Texaccum Tiny" value="3" />
+      <option name="Copy Fb To Texaccum" value="4" />
+    </enum16>
+    <undefined size="2" name="_Unnamed2" offset="98" visible="True" />
+    <undefined size="64" name="_Unnamed3" offset="100" visible="True" />
+    <tagblock name="Convolution" offset="164" elementSize="92" maxelements="2" label="" visible="True">
+      <flags16 name="Flags" offset="0" visible="True">
+        <bit name="Only When Primary Is Active" index="0" />
+        <bit name="Only When Secondary Is Active" index="1" />
+        <bit name="Predator Zoom" index="2" />
+      </flags16>
+      <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+      <undefined size="64" name="_Unnamed1" offset="4" visible="True" />
+      <float32 name="Convolution Amount" offset="68" visible="True" />
+      <float32 name="Filter Scale" offset="72" visible="True" />
+      <float32 name="Filter Box Factor" offset="76" visible="True" />
+      <float32 name="Zoom Falloff Radius" offset="80" visible="True" />
+      <float32 name="Zoom Cutoff Radius" offset="84" visible="True" />
+      <float32 name="Resolution Scale" offset="88" visible="True" />
+    </tagblock>
+  </tagblock>
+</plugin>

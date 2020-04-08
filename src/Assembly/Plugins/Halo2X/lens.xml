@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="100">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <float32 name="Falloff Angle" offset="0" visible="True" />
+  <float32 name="Cutoff Angle" offset="4" visible="True" />
+  <undefined size="4" name="_Unnamed0" offset="8" visible="True" />
+  <undefined size="4" name="_Unnamed1" offset="12" visible="True" />
+  <float32 name="Occlusion Radius" offset="16" visible="True" />
+  <enum16 name="Occlusion Offset Direction" offset="20" visible="True">
+    <option name="Toward Viewer" value="0" />
+    <option name="Marker Forward" value="1" />
+    <option name="None" value="2" />
+  </enum16>
+  <enum16 name="Occlusion Inner Radius Scale" offset="22" visible="True">
+    <option name="None" value="0" />
+    <option name="1/2" value="1" />
+    <option name="1/4" value="2" />
+    <option name="1/8" value="3" />
+    <option name="1/16" value="4" />
+    <option name="1/32" value="5" />
+    <option name="1/64" value="6" />
+  </enum16>
+  <float32 name="Near Fade Distance" offset="24" visible="True" />
+  <float32 name="Far Fade Distance" offset="28" visible="True" />
+  <tagRef name="Bitmap" offset="32" visible="True" />
+  <flags16 name="Flags" offset="40" visible="True">
+    <bit name="Sun" index="0" />
+    <bit name="No Occlusion Test" index="1" />
+    <bit name="Only Render In First Person" index="2" />
+    <bit name="Only Render In Third Person" index="3" />
+    <bit name="Fade In More Quickly" index="4" />
+    <bit name="Fade Out More Quickly" index="5" />
+    <bit name="Scale By Marker" index="6" />
+  </flags16>
+  <undefined size="2" name="_Unnamed2" offset="42" visible="True" />
+  <enum16 name="Rotation Function" offset="44" visible="True">
+    <option name="None" value="0" />
+    <option name="Rotation A" value="1" />
+    <option name="Rotation B" value="2" />
+    <option name="Rotation-Translation" value="3" />
+    <option name="Translation" value="4" />
+  </enum16>
+  <undefined size="2" name="_Unnamed3" offset="46" visible="True" />
+  <float32 name="Rotation Function Scale" offset="48" visible="True" />
+  <float32 name="Corona Scale X" offset="52" visible="True" />
+  <float32 name="Corona Scale Y" offset="56" visible="True" />
+  <enum16 name="Falloff Function" offset="60" visible="True">
+    <option name="Linear" value="0" />
+    <option name="Late" value="1" />
+    <option name="Very Late" value="2" />
+    <option name="Early" value="3" />
+    <option name="Very Early" value="4" />
+    <option name="Cosine" value="5" />
+    <option name="Zero" value="6" />
+    <option name="One" value="7" />
+  </enum16>
+  <undefined size="2" name="_Unnamed4" offset="62" visible="True" />
+  <tagblock name="Reflections" offset="64" elementSize="48" maxelements="32" label="" visible="True">
+    <flags16 name="Flags" offset="0" visible="True">
+      <bit name="Align Rotation With Screen Center" index="0" />
+      <bit name="Radius NOT Scaled By Distance" index="1" />
+      <bit name="Radius Scaled By Occlusion Factor" index="2" />
+      <bit name="Occluded By Solid Objects" index="3" />
+      <bit name="Ignore Light Color" index="4" />
+      <bit name="Not Affected By Inner Occlusion" index="5" />
+    </flags16>
+    <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+    <int16 name="Bitmap Index" offset="4" visible="True" />
+    <undefined size="2" name="_Unnamed1" offset="6" visible="True" />
+    <float32 name="Position" offset="8" visible="True" />
+    <float32 name="Rotation Offset" offset="12" visible="True" />
+    <float32 name="Radius From" offset="16" visible="True" />
+    <float32 name="Radius To" offset="20" visible="True" />
+    <float32 name="Brightness From" offset="24" visible="True" />
+    <float32 name="Brightness To" offset="28" visible="True" />
+    <float32 name="Modulation Factor" offset="32" visible="True" />
+    <float32 name="Color R" offset="36" visible="True" />
+    <float32 name="Color G" offset="40" visible="True" />
+    <float32 name="Color B" offset="44" visible="True" />
+  </tagblock>
+  <flags16 name="Flags2" offset="72" visible="True">
+    <bit name="Synchronized" index="0" />
+  </flags16>
+  <undefined size="2" name="_Unnamed5" offset="74" visible="True" />
+  <tagblock name="Brightness" offset="76" elementSize="8" maxelements="1" label="" visible="True">
+    <tagblock name="Data" offset="0" elementSize="1" maxelements="1024" label="" visible="True">
+      <int8 name="Value" offset="0" visible="True" />
+    </tagblock>
+  </tagblock>
+  <tagblock name="Color" offset="84" elementSize="8" maxelements="1" label="" visible="True">
+    <tagblock name="Data" offset="0" elementSize="1" maxelements="1024" label="" visible="True">
+      <int8 name="Value" offset="0" visible="True" />
+    </tagblock>
+  </tagblock>
+  <tagblock name="Rotation" offset="92" elementSize="8" maxelements="1" label="" visible="True">
+    <tagblock name="Data" offset="0" elementSize="1" maxelements="1024" label="" visible="True">
+      <int8 name="Value" offset="0" visible="True" />
+    </tagblock>
+  </tagblock>
+</plugin>

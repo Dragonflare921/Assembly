@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="16">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <float32 name="Falloff Distance From Camera" offset="0" visible="True" />
+  <float32 name="Cutoff Distance From Camera" offset="4" visible="True" />
+  <tagblock name="Volumes" offset="8" elementSize="152" maxelements="16" label="Bitmap" visible="True">
+    <flags32 name="Flags" offset="0" visible="True">
+      <bit name="Force Linear Radius Function" index="0" />
+      <bit name="Force Linear Offset" index="1" />
+      <bit name="Force Differential Evaluation" index="2" />
+      <bit name="Fuzzy" index="3" />
+      <bit name="Not Scaled By Event Duration" index="4" />
+      <bit name="Scaled By Marker" index="5" />
+    </flags32>
+    <tagRef name="Bitmap" offset="4" visible="True" />
+    <int32 name="Sprite Count" offset="12" visible="True" />
+    <tagblock name="Offset" offset="16" elementSize="1" maxelements="1024" label="" visible="True">
+      <int8 name="Value" offset="0" visible="True" />
+    </tagblock>
+    <tagblock name="Radius" offset="24" elementSize="1" maxelements="1024" label="" visible="True">
+      <int8 name="Value" offset="0" visible="True" />
+    </tagblock>
+    <tagblock name="Brightness" offset="32" elementSize="1" maxelements="1024" label="" visible="True">
+      <int8 name="Value" offset="0" visible="True" />
+    </tagblock>
+    <tagblock name="Color" offset="40" elementSize="1" maxelements="1024" label="" visible="True">
+      <int8 name="Value" offset="0" visible="True" />
+    </tagblock>
+    <tagblock name="Facing" offset="48" elementSize="1" maxelements="1024" label="" visible="True">
+      <int8 name="Value" offset="0" visible="True" />
+    </tagblock>
+    <tagblock name="Aspect" offset="56" elementSize="28" maxelements="1" label="" visible="True">
+      <tagblock name="Data" offset="0" elementSize="1" maxelements="1024" label="" visible="True">
+        <int8 name="Value" offset="0" visible="True" />
+      </tagblock>
+      <tagblock name="Data2" offset="8" elementSize="1" maxelements="1024" label="" visible="True">
+        <int8 name="Value" offset="0" visible="True" />
+      </tagblock>
+      <float32 name="Parallel Scale" offset="16" visible="True" />
+      <float32 name="Parallel Threshold Angle" offset="20" visible="True" />
+      <float32 name="Parallel Exponent" offset="24" visible="True" />
+    </tagblock>
+    <float32 name="Radius Frac Min" offset="64" visible="True" />
+    <float32 name="DEPRECATED X-Step Exponent" offset="68" visible="True" />
+    <int32 name="DEPRECATED X-Buffer Length" offset="72" visible="True" />
+    <int32 name="X-Buffer Spacing" offset="76" visible="True" />
+    <int32 name="X-Buffer Min Iterations" offset="80" visible="True" />
+    <int32 name="X-Buffer Max Iterations" offset="84" visible="True" />
+    <float32 name="X-Delta Max Error" offset="88" visible="True" />
+    <undefined size="4" name="_Unnamed0" offset="92" visible="True" />
+    <tagblock name="" offset="96" elementSize="8" maxelements="256" label="" visible="True">
+      <float32 name="_Unnamed0 X" offset="0" visible="True" />
+      <float32 name="_Unnamed0 Y" offset="4" visible="True" />
+    </tagblock>
+    <undefined size="48" name="_Unnamed1" offset="104" visible="True" />
+  </tagblock>
+</plugin>

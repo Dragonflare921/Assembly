@@ -1,0 +1,1192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="104">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <flags32 name="Flags" offset="0" visible="True">
+    <bit name="1/4 Screen Dialog" index="0" />
+    <bit name="Multiple Panes Are For List Flavor Items" index="1" />
+    <bit name="No Header Text" index="2" />
+    <bit name="1/2 Screen Dialog" index="3" />
+    <bit name="Large Dialog" index="4" />
+    <bit name="Disable Overlay Effect" index="5" />
+  </flags32>
+  <enum16 name="Screen ID" offset="4" visible="True">
+    <option name="Test #1" value="0" />
+    <option name="Test #2" value="1" />
+    <option name="Test #3" value="2" />
+    <option name="Test #4" value="3" />
+    <option name="Test #5" value="4" />
+    <option name="Game Shell Background" value="5" />
+    <option name="Main Menu" value="6" />
+    <option name="Error Dialog OK Cancel" value="7" />
+    <option name="Error Dialog OK" value="8" />
+    <option name="Press Start Intro" value="9" />
+    <option name="Player Profile Select" value="10" />
+    <option name="SP Level Select" value="11" />
+    <option name="SP Difficulty Select" value="12" />
+    <option name="Network Squad Browser" value="13" />
+    <option name="MP Pregame Lobby" value="14" />
+    <option name="Custom Game Menu" value="15" />
+    <option name="Postgame Stats" value="16" />
+    <option name="MP Map Select" value="17" />
+    <option name="SP Pause Game" value="18" />
+    <option name="Settings" value="19" />
+    <option name="Gamertag Select" value="20" />
+    <option name="Gamertag Passcode Entry" value="21" />
+    <option name="Multiplayer Protocol" value="22" />
+    <option name="Squad Settings" value="23" />
+    <option name="Squad Game Settings" value="24" />
+    <option name="Squad Privacy Settings" value="25" />
+    <option name="Y Menu-Gameshell" value="26" />
+    <option name="Y Menu-Gameshell Collapsed" value="27" />
+    <option name="Y Menu-Ingame" value="28" />
+    <option name="Y Menu-Ingame Collapsed" value="29" />
+    <option name="4Way Join Screen" value="30" />
+    <option name="Y Menu-Player Selected Options" value="31" />
+    <option name="Player Selected Options" value="32" />
+    <option name="Confirmation Dialog" value="33" />
+    <option name="Live Feedback Menu Dialog" value="34" />
+    <option name="Live Message Type Dialog" value="35" />
+    <option name="Voice Msg Dialog" value="36" />
+    <option name="Stereo Faceplate" value="37" />
+    <option name="Player Profile Edit Menu" value="38" />
+    <option name="PP Controller Settings" value="39" />
+    <option name="PP Button Settings" value="40" />
+    <option name="PP Thumbstick Settings" value="41" />
+    <option name="PP Look Sensitivity Settings" value="42" />
+    <option name="PP Invert Look Settings" value="43" />
+    <option name="PP Autolevel Settings" value="44" />
+    <option name="PP Handicap Settings" value="45" />
+    <option name="PP High Score Rec Settings" value="46" />
+    <option name="PP Multiplayer Settings Menu" value="47" />
+    <option name="PP Profile Delete Confirmation Dlg" value="48" />
+    <option name="PP Choose Foreground Emblem" value="49" />
+    <option name="PP Choose Primary Color" value="50" />
+    <option name="PP Choose Secondary Color" value="51" />
+    <option name="PP Choose Model" value="52" />
+    <option name="PP Voice Settings Menu" value="53" />
+    <option name="PP Choose Voice Mask" value="54" />
+    <option name="PP Voice Thru TV" value="55" />
+    <option name="PP Edit Rotation List" value="56" />
+    <option name="PP XBL Status Menu" value="57" />
+    <option name="PP Appear Offline" value="58" />
+    <option name="PP Auto-Offline" value="59" />
+    <option name="Game Engine Category Listing" value="60" />
+    <option name="Edit Slayer Menu" value="61" />
+    <option name="Edit KOTH Menu" value="62" />
+    <option name="Edit Race Menu" value="63" />
+    <option name="Edit Oddball Menu" value="64" />
+    <option name="Edit Juggernaut Menu" value="65" />
+    <option name="Edit Headhunter Menu" value="66" />
+    <option name="Edit CTF Menu" value="67" />
+    <option name="Edit Assault Menu" value="68" />
+    <option name="Edit Slayer Score To Win" value="69" />
+    <option name="Edit Slayer Time Limit" value="70" />
+    <option name="Edit Slayer Teams" value="71" />
+    <option name="Edit Slayer Score 4 Killing" value="72" />
+    <option name="Edit Slayer Kill In Order" value="73" />
+    <option name="Edit Slayer Death Pt Loss" value="74" />
+    <option name="Edit Slayer Suicide Pt Loss" value="75" />
+    <option name="Edit Slayer Dmg After Kill" value="76" />
+    <option name="Edit Slayer Dmg After Death" value="77" />
+    <option name="Edit Slayer Speed After Kill" value="78" />
+    <option name="Edit Slayer Speed After Death" value="79" />
+    <option name="Edit KOTH Score To Win" value="80" />
+    <option name="Edit KOTH Time Limit" value="81" />
+    <option name="Edit KOTH Teams" value="82" />
+    <option name="Edit KOTH Moving Hills" value="83" />
+    <option name="Edit KOTH Uncontesed Control" value="84" />
+    <option name="Edit KOTH Xtra Dmg" value="85" />
+    <option name="Edit Race Laps To Win" value="86" />
+    <option name="Edit Race Time Limit" value="87" />
+    <option name="Edit Race Teams" value="88" />
+    <option name="Edit Race Team Scoring" value="89" />
+    <option name="Edit Race Type" value="90" />
+    <option name="Edit Race Flag Order" value="91" />
+    <option name="Edit Race Game End Condition" value="92" />
+    <option name="Edit Race Dmg With Laps" value="93" />
+    <option name="Edit Race Speed With Laps" value="94" />
+    <option name="Edit Oddball Time To Win" value="95" />
+    <option name="Edit Oddball Time Limit" value="96" />
+    <option name="Edit Oddball Teams" value="97" />
+    <option name="Edit Oddball Ball Spawn Count" value="98" />
+    <option name="Edit Oddball Ball Waypoints" value="99" />
+    <option name="Edit Oddball Damage With Ball" value="100" />
+    <option name="Edit Oddball Speed With Ball" value="101" />
+    <option name="Edit Oddball Invisibility With Ball" value="102" />
+    <option name="Edit Jug Score To Win" value="103" />
+    <option name="Edit Jug Time Limit" value="104" />
+    <option name="Edit Jug Pts For Killing Jugger" value="105" />
+    <option name="Edit Jug Count" value="106" />
+    <option name="Edit Jug Species" value="107" />
+    <option name="Edit Jug Starting Equip" value="108" />
+    <option name="Edit Jug Damage" value="109" />
+    <option name="Edit Jug Health" value="110" />
+    <option name="Edit Jug Speed" value="111" />
+    <option name="Edit Jug Regeneration" value="112" />
+    <option name="Edit Jug Waypoints" value="113" />
+    <option name="Edit HH Score To Win" value="114" />
+    <option name="Edit HH Time Limit" value="115" />
+    <option name="Edit HH Teams" value="116" />
+    <option name="Edit HH Death Pt Loss" value="117" />
+    <option name="Edit HH Suicide Pt Loss" value="118" />
+    <option name="Edit HH Speed With Token" value="119" />
+    <option name="Edit HH Dropped Token Lifetime" value="120" />
+    <option name="Edit HH Score Multiplier" value="121" />
+    <option name="Edit CTF Score To Win" value="122" />
+    <option name="Edit CTF Time Limit" value="123" />
+    <option name="Edit CTF Tie Resolution" value="124" />
+    <option name="Edit CTF Single Flag" value="125" />
+    <option name="Edit CTF Role Swapping" value="126" />
+    <option name="Edit CTF Flag At Home To Score" value="127" />
+    <option name="Edit CTF Flag Must Reset" value="128" />
+    <option name="Edit CTF Dmg With Flag" value="129" />
+    <option name="Edit CTF Speed With Flag" value="130" />
+    <option name="Edit Assault Score To Win" value="131" />
+    <option name="Edit Assault Time Limit" value="132" />
+    <option name="Edit Assault Tie Resolution" value="133" />
+    <option name="Edit Assault Single Flag" value="134" />
+    <option name="Edit Assault Role Swapping" value="135" />
+    <option name="Edit Assault Enemy Flag At Home To Score" value="136" />
+    <option name="Edit Assault Flag Must Reset" value="137" />
+    <option name="Edit Assault Dmg With Flag" value="138" />
+    <option name="Edit Assault Speed With Flag" value="139" />
+    <option name="Edit Player Number Of Lives" value="140" />
+    <option name="Edit Player Max Health" value="141" />
+    <option name="Edit Player Shields" value="142" />
+    <option name="Edit Player Respawn Time" value="143" />
+    <option name="Edit Player Count" value="144" />
+    <option name="Edit Player Invisibility" value="145" />
+    <option name="Edit Player Suicide Penalty" value="146" />
+    <option name="Edit Player Friendly Fire" value="147" />
+    <option name="Edit Item Respawn Grenades" value="148" />
+    <option name="Edit Item Powerups" value="149" />
+    <option name="Edit Item Weapon Set" value="150" />
+    <option name="Edit Item Starting Equipment" value="151" />
+    <option name="Edit Item Warthogs" value="152" />
+    <option name="Edit Item Ghosts" value="153" />
+    <option name="Edit Item Scorpions" value="154" />
+    <option name="Edit Item Banshees" value="155" />
+    <option name="Edit Item Mongeese" value="156" />
+    <option name="Edit Item Shadows" value="157" />
+    <option name="Edit Item Wraiths" value="158" />
+    <option name="Edit Indicator Objectives" value="159" />
+    <option name="Edit Indicator Players On Motion Sensor" value="160" />
+    <option name="Edit Indicator Invisible Players On Motion Sensor" value="161" />
+    <option name="Edit Indicator Friends" value="162" />
+    <option name="Edit Indicator Enemies" value="163" />
+    <option name="Edit Player Options" value="164" />
+    <option name="Edit Item Options" value="165" />
+    <option name="Edit Indicator Options" value="166" />
+    <option name="Virtual Keyboard" value="167" />
+    <option name="Custom Game Menu" value="168" />
+    <option name="Slayer Quick Options" value="169" />
+    <option name="KOTH Quick Options" value="170" />
+    <option name="Race Quick Options" value="171" />
+    <option name="Oddball Quick Options" value="172" />
+    <option name="Jugger Quick Options" value="173" />
+    <option name="HH Quick Options" value="174" />
+    <option name="CTF Quick Options" value="175" />
+    <option name="Assault Quick Options" value="176" />
+    <option name="Pick New Squad Leader" value="177" />
+    <option name="Variant Editing Options Menu" value="178" />
+    <option name="Playlist List-Settings" value="179" />
+    <option name="Playlist Contents" value="180" />
+    <option name="Playlist Selected Options" value="181" />
+    <option name="Xbox Live Task Progress" value="182" />
+    <option name="PP Vibration Settings" value="183" />
+    <option name="Boot Player Dialog" value="184" />
+    <option name="Postgame Stats-Lobby" value="185" />
+    <option name="Xbox Live Main Menu" value="186" />
+    <option name="Edit Terries Menu" value="187" />
+    <option name="Edit Terries Score To Win" value="188" />
+    <option name="Edit Terries Time Limit" value="189" />
+    <option name="Edit Terries Teams" value="190" />
+    <option name="Terries Quick Options" value="191" />
+    <option name="Xbox Live Notification Beeper" value="192" />
+    <option name="Player Profile Select-Fancy" value="193" />
+    <option name="Saved Game File Actions Dialog" value="194" />
+    <option name="MP Start Menu" value="195" />
+    <option name="MP Start Player Settings" value="196" />
+    <option name="MP Start Handicap Settings" value="197" />
+    <option name="MP Start Change Teams" value="198" />
+    <option name="MP Start Admin Settings" value="199" />
+    <option name="MP Start Controller Settings" value="200" />
+    <option name="MP Start Voice Settings" value="201" />
+    <option name="MP Start Online Status" value="202" />
+    <option name="Mpalpha Legal Warning" value="203" />
+    <option name="Squad Join Progress Dialog" value="204" />
+    <option name="MP Alpha Postgame Legal Warning" value="205" />
+    <option name="MP Map Select-Lobby" value="206" />
+    <option name="MP Variant Type-Lobby" value="207" />
+    <option name="MP Variant List-Lobby" value="208" />
+    <option name="Loading Progress" value="209" />
+    <option name="Matchmaking Progress" value="210" />
+    <option name="Live Message Display" value="211" />
+    <option name="Fade-In From Black" value="212" />
+    <option name="Live Player Profile" value="213" />
+    <option name="Live Clan Profile" value="214" />
+    <option name="Live Message Send" value="215" />
+    <option name="Friends Options Dialog" value="216" />
+    <option name="Clan Options Dialog" value="217" />
+    <option name="Campaign Options Dialog" value="218" />
+    <option name="Optimatch Hoppers Fullscreen" value="219" />
+    <option name="Playlist List-Dialog" value="220" />
+    <option name="Variant Editing Format" value="221" />
+    <option name="Variant Quick Options Format" value="222" />
+    <option name="Variant Param Setting Format" value="223" />
+    <option name="Vehicle Options" value="224" />
+    <option name="Match Options" value="225" />
+    <option name="Player Options" value="226" />
+    <option name="Team Options" value="227" />
+    <option name="Game Options" value="228" />
+    <option name="Equipment Options" value="229" />
+    <option name="Multiple Choice Dialog" value="230" />
+    <option name="Network Transition Progress" value="231" />
+    <option name="Xbox Live Stats" value="232" />
+    <option name="PP Choose Background Emblem" value="233" />
+    <option name="PP Buttons Qtr" value="234" />
+    <option name="PP Stix Qtr" value="235" />
+    <option name="Clan Member Privs" value="236" />
+    <option name="Optimatch Hoppers Lobby" value="237" />
+    <option name="Saved Game File Dialog" value="238" />
+    <option name="XYZZY" value="239" />
+    <option name="Error OK Cancel Large" value="240" />
+    <option name="YZZYX" value="241" />
+    <option name="Subtitle Display" value="242" />
+    <option name="PP Keyboard Settings" value="243" />
+    <option name="PP Keyboard Settings Qtr" value="244" />
+    <option name="PP Invert Dual Wield" value="245" />
+    <option name="System Settings" value="246" />
+    <option name="Bungie News" value="247" />
+    <option name="Filter Select" value="248" />
+    <option name="Live Game Browser" value="249" />
+    <option name="Game Details" value="250" />
+    <option name="MP Custom Map Select" value="251" />
+    <option name="MP All Maps Select" value="252" />
+    <option name="PP Advanced Keyboard Settings" value="253" />
+    <option name="PP Advanced Keyboard Settings Qtr" value="254" />
+    <option name="Network Adapter Settings" value="255" />
+  </enum16>
+  <enum16 name="Button Key Type" offset="6" visible="True">
+    <option name="NONE" value="0" />
+    <option name="A=SELECT B=BACK" value="1" />
+    <option name="A=SELECT B=CANCEL" value="2" />
+    <option name="A=ENTER B=CANCEL" value="3" />
+    <option name="Y=XBOX LIVE PLAYERS" value="4" />
+    <option name="X=FRIENDS OPTIONS" value="5" />
+    <option name="X=CLAN OPTIONS" value="6" />
+    <option name="X=RECENT PLAYERS OPTIONS" value="7" />
+    <option name="X=OPTIONS" value="8" />
+    <option name="A=SELECT" value="9" />
+    <option name="X=SETTINGS A=SELECT B=BACK" value="10" />
+    <option name="X=DELETE A=SELECT B=DONE" value="11" />
+    <option name="A=ACCEPT" value="12" />
+    <option name="B=CANCEL" value="13" />
+    <option name="Y=XBOX_LIVE_PLAYERS A=SELECT B=BACK" value="14" />
+    <option name="Y=XBOX_LIVE_PLAYERS A=SELECT B=CANCEL" value="15" />
+    <option name="Y=XBOX_LIVE_PLAYERS A=ENTER B=CANCEL" value="16" />
+    <option name="Y=XBOX_LIVE_PLAYERS A=SELECT" value="17" />
+    <option name="Y=XBOX_LIVE_PLAYERS A=SELECT B=DONE" value="18" />
+    <option name="Y=XBOX_LIVE_PLAYERS A=ACCEPT" value="19" />
+    <option name="Y=XBOX_LIVE_PLAYERS B=CANCEL" value="20" />
+    <option name="X=DELETE A=SELECT B=BACK" value="21" />
+    <option name="A=OK" value="22" />
+  </enum16>
+  <float32 name="Text Color A" offset="8" visible="True" />
+  <float32 name="Text Color R" offset="12" visible="True" />
+  <float32 name="Text Color G" offset="16" visible="True" />
+  <float32 name="Text Color B" offset="20" visible="True" />
+  <tagRef name="String List Tag" offset="24" visible="True" />
+  <tagblock name="Panes" offset="32" elementSize="76" maxelements="16" label="" visible="True">
+    <undefined size="2" name="_Unnamed0" offset="0" visible="True" />
+    <enum16 name="Animation Index" offset="2" visible="True">
+      <option name="NONE" value="0" />
+      <option name="00" value="1" />
+      <option name="01" value="2" />
+      <option name="02" value="3" />
+      <option name="03" value="4" />
+      <option name="04" value="5" />
+      <option name="05" value="6" />
+      <option name="06" value="7" />
+      <option name="07" value="8" />
+      <option name="08" value="9" />
+      <option name="09" value="10" />
+      <option name="10" value="11" />
+      <option name="11" value="12" />
+      <option name="12" value="13" />
+      <option name="13" value="14" />
+      <option name="14" value="15" />
+      <option name="15" value="16" />
+      <option name="16" value="17" />
+      <option name="17" value="18" />
+      <option name="18" value="19" />
+      <option name="19" value="20" />
+      <option name="20" value="21" />
+      <option name="21" value="22" />
+      <option name="22" value="23" />
+      <option name="23" value="24" />
+      <option name="24" value="25" />
+      <option name="25" value="26" />
+      <option name="26" value="27" />
+      <option name="27" value="28" />
+      <option name="28" value="29" />
+      <option name="29" value="30" />
+      <option name="30" value="31" />
+      <option name="31" value="32" />
+      <option name="32" value="33" />
+      <option name="33" value="34" />
+      <option name="34" value="35" />
+      <option name="35" value="36" />
+      <option name="36" value="37" />
+      <option name="37" value="38" />
+      <option name="38" value="39" />
+      <option name="39" value="40" />
+      <option name="40" value="41" />
+      <option name="41" value="42" />
+      <option name="42" value="43" />
+      <option name="43" value="44" />
+      <option name="44" value="45" />
+      <option name="45" value="46" />
+      <option name="46" value="47" />
+      <option name="47" value="48" />
+      <option name="48" value="49" />
+      <option name="49" value="50" />
+      <option name="50" value="51" />
+      <option name="51" value="52" />
+      <option name="52" value="53" />
+      <option name="53" value="54" />
+      <option name="54" value="55" />
+      <option name="55" value="56" />
+      <option name="56" value="57" />
+      <option name="57" value="58" />
+      <option name="58" value="59" />
+      <option name="59" value="60" />
+      <option name="60" value="61" />
+      <option name="61" value="62" />
+      <option name="62" value="63" />
+      <option name="63" value="64" />
+    </enum16>
+    <tagblock name="Buttons" offset="4" elementSize="60" maxelements="64" label="Bitmap" visible="True">
+      <flags32 name="Text Flags" offset="0" visible="True">
+        <bit name="Left Justify Text" index="0" />
+        <bit name="Right Justify Text" index="1" />
+        <bit name="Pulsating Text" index="2" />
+        <bit name="Callout Text" index="3" />
+        <bit name="Small (31 Char) Buffer" index="4" />
+      </flags32>
+      <enum16 name="Animation Index" offset="4" visible="True">
+        <option name="NONE" value="0" />
+        <option name="00" value="1" />
+        <option name="01" value="2" />
+        <option name="02" value="3" />
+        <option name="03" value="4" />
+        <option name="04" value="5" />
+        <option name="05" value="6" />
+        <option name="06" value="7" />
+        <option name="07" value="8" />
+        <option name="08" value="9" />
+        <option name="09" value="10" />
+        <option name="10" value="11" />
+        <option name="11" value="12" />
+        <option name="12" value="13" />
+        <option name="13" value="14" />
+        <option name="14" value="15" />
+        <option name="15" value="16" />
+        <option name="16" value="17" />
+        <option name="17" value="18" />
+        <option name="18" value="19" />
+        <option name="19" value="20" />
+        <option name="20" value="21" />
+        <option name="21" value="22" />
+        <option name="22" value="23" />
+        <option name="23" value="24" />
+        <option name="24" value="25" />
+        <option name="25" value="26" />
+        <option name="26" value="27" />
+        <option name="27" value="28" />
+        <option name="28" value="29" />
+        <option name="29" value="30" />
+        <option name="30" value="31" />
+        <option name="31" value="32" />
+        <option name="32" value="33" />
+        <option name="33" value="34" />
+        <option name="34" value="35" />
+        <option name="35" value="36" />
+        <option name="36" value="37" />
+        <option name="37" value="38" />
+        <option name="38" value="39" />
+        <option name="39" value="40" />
+        <option name="40" value="41" />
+        <option name="41" value="42" />
+        <option name="42" value="43" />
+        <option name="43" value="44" />
+        <option name="44" value="45" />
+        <option name="45" value="46" />
+        <option name="46" value="47" />
+        <option name="47" value="48" />
+        <option name="48" value="49" />
+        <option name="49" value="50" />
+        <option name="50" value="51" />
+        <option name="51" value="52" />
+        <option name="52" value="53" />
+        <option name="53" value="54" />
+        <option name="54" value="55" />
+        <option name="55" value="56" />
+        <option name="56" value="57" />
+        <option name="57" value="58" />
+        <option name="58" value="59" />
+        <option name="59" value="60" />
+        <option name="60" value="61" />
+        <option name="61" value="62" />
+        <option name="62" value="63" />
+        <option name="63" value="64" />
+      </enum16>
+      <int16 name="Intro Animation Delay Milliseconds" offset="6" visible="True" />
+      <undefined size="2" name="_Unnamed0" offset="8" visible="True" />
+      <enum16 name="Custom Font" offset="10" visible="True">
+        <option name="Terminal" value="0" />
+        <option name="Body Text" value="1" />
+        <option name="Title" value="2" />
+        <option name="Super Large Font" value="3" />
+        <option name="Large Body Text" value="4" />
+        <option name="Split Screen Hud Message" value="5" />
+        <option name="Full Screen Hud Message" value="6" />
+        <option name="English Body Text" value="7" />
+        <option name="HUD Number Text" value="8" />
+        <option name="Subtitle Font" value="9" />
+        <option name="Main Menu Font" value="10" />
+        <option name="Text Chat Font" value="11" />
+      </enum16>
+      <float32 name="Text Color A" offset="12" visible="True" />
+      <float32 name="Text Color R" offset="16" visible="True" />
+      <float32 name="Text Color G" offset="20" visible="True" />
+      <float32 name="Text Color B" offset="24" visible="True" />
+      <int16 name="Bounds Top" offset="28" visible="True" />
+      <int16 name="Bounds Left" offset="30" visible="True" />
+      <int16 name="Bounds Bottom" offset="32" visible="True" />
+      <int16 name="Bounds Right" offset="34" visible="True" />
+      <tagRef name="Bitmap" offset="36" visible="True" />
+      <int16 name="Bitmap Offset X" offset="44" visible="True" />
+      <int16 name="Bitmap Offset Y" offset="46" visible="True" />
+      <stringid name="String Id" offset="48" visible="True" />
+      <int16 name="Render Depth Bias" offset="52" visible="True" />
+      <int16 name="Mouse Region Top Offset" offset="54" visible="True" />
+      <flags32 name="Button Flags" offset="56" visible="True">
+        <bit name="DOESN't Tab Vertically" index="0" />
+        <bit name="DOESN't Tab Horizontally" index="1" />
+      </flags32>
+    </tagblock>
+    <tagblock name="List Block" offset="12" elementSize="24" maxelements="1" label="" visible="True">
+      <flags32 name="Flags" offset="0" visible="True">
+        <bit name="List Wraps" index="0" />
+        <bit name="Interactive" index="1" />
+      </flags32>
+      <enum16 name="Skin Index" offset="4" visible="True">
+        <option name="Default" value="0" />
+        <option name="Squad Lobby Player List" value="1" />
+        <option name="Settings List" value="2" />
+        <option name="Playlist Entry List" value="3" />
+        <option name="Variants" value="4" />
+        <option name="Game Browser" value="5" />
+        <option name="Online Player Menu" value="6" />
+        <option name="Game Setup Menu" value="7" />
+        <option name="Playlist Contents Display" value="8" />
+        <option name="Player Profile Picker" value="9" />
+        <option name="Mp Map Selection" value="10" />
+        <option name="Main Menu List" value="11" />
+        <option name="Color Picker" value="12" />
+        <option name="Profile Picker" value="13" />
+        <option name="Y Menu Recent List" value="14" />
+        <option name="Pcr Team Stats" value="15" />
+        <option name="Pcr Player Stats" value="16" />
+        <option name="Pcr Kill Stats" value="17" />
+        <option name="Pcr Pvp Stats" value="18" />
+        <option name="Pcr Medal Stats" value="19" />
+        <option name="Matchmaking Progress" value="20" />
+        <option name="Default 5" value="21" />
+        <option name="Default 6" value="22" />
+        <option name="Advanced Settings List" value="23" />
+        <option name="Live Game Browser" value="24" />
+        <option name="Default Wide" value="25" />
+        <option name="Unused26" value="26" />
+        <option name="Unused27" value="27" />
+        <option name="Unused28" value="28" />
+        <option name="Unused29" value="29" />
+        <option name="Unused30" value="30" />
+        <option name="Unused31" value="31" />
+      </enum16>
+      <int16 name="Num Visible Items" offset="6" visible="True" />
+      <int16 name="Bottom Left X" offset="8" visible="True" />
+      <int16 name="Bottom Left Y" offset="10" visible="True" />
+      <enum16 name="Animation Index" offset="12" visible="True">
+        <option name="NONE" value="0" />
+        <option name="00" value="1" />
+        <option name="01" value="2" />
+        <option name="02" value="3" />
+        <option name="03" value="4" />
+        <option name="04" value="5" />
+        <option name="05" value="6" />
+        <option name="06" value="7" />
+        <option name="07" value="8" />
+        <option name="08" value="9" />
+        <option name="09" value="10" />
+        <option name="10" value="11" />
+        <option name="11" value="12" />
+        <option name="12" value="13" />
+        <option name="13" value="14" />
+        <option name="14" value="15" />
+        <option name="15" value="16" />
+        <option name="16" value="17" />
+        <option name="17" value="18" />
+        <option name="18" value="19" />
+        <option name="19" value="20" />
+        <option name="20" value="21" />
+        <option name="21" value="22" />
+        <option name="22" value="23" />
+        <option name="23" value="24" />
+        <option name="24" value="25" />
+        <option name="25" value="26" />
+        <option name="26" value="27" />
+        <option name="27" value="28" />
+        <option name="28" value="29" />
+        <option name="29" value="30" />
+        <option name="30" value="31" />
+        <option name="31" value="32" />
+        <option name="32" value="33" />
+        <option name="33" value="34" />
+        <option name="34" value="35" />
+        <option name="35" value="36" />
+        <option name="36" value="37" />
+        <option name="37" value="38" />
+        <option name="38" value="39" />
+        <option name="39" value="40" />
+        <option name="40" value="41" />
+        <option name="41" value="42" />
+        <option name="42" value="43" />
+        <option name="43" value="44" />
+        <option name="44" value="45" />
+        <option name="45" value="46" />
+        <option name="46" value="47" />
+        <option name="47" value="48" />
+        <option name="48" value="49" />
+        <option name="49" value="50" />
+        <option name="50" value="51" />
+        <option name="51" value="52" />
+        <option name="52" value="53" />
+        <option name="53" value="54" />
+        <option name="54" value="55" />
+        <option name="55" value="56" />
+        <option name="56" value="57" />
+        <option name="57" value="58" />
+        <option name="58" value="59" />
+        <option name="59" value="60" />
+        <option name="60" value="61" />
+        <option name="61" value="62" />
+        <option name="62" value="63" />
+        <option name="63" value="64" />
+      </enum16>
+      <int16 name="Intro Animation Delay Milliseconds" offset="14" visible="True" />
+      <tagblock name="UNUSED" offset="16" elementSize="20" maxelements="100" label="" visible="True">
+        <enum16 name="Value Type" offset="0" visible="True">
+          <option name="Integer Number" value="0" />
+          <option name="Floating Point Number" value="1" />
+          <option name="Boolean" value="2" />
+          <option name="Text String" value="3" />
+        </enum16>
+        <enum16 name="Boolean Value" offset="2" visible="True">
+          <option name="FALSE" value="0" />
+          <option name="TRUE" value="1" />
+        </enum16>
+        <int32 name="Integer Value" offset="4" visible="True" />
+        <float32 name="Fp Value" offset="8" visible="True" />
+        <stringid name="Text Value String_Id" offset="12" visible="True" />
+        <stringid name="Text Label String_Id" offset="16" visible="True" />
+      </tagblock>
+    </tagblock>
+    <tagblock name="Table View" offset="20" elementSize="40" maxelements="1" label="" visible="True">
+      <flags32 name="Flags" offset="0" visible="True">
+        <bit name="Unused" index="0" />
+      </flags32>
+      <enum16 name="Animation Index" offset="4" visible="True">
+        <option name="NONE" value="0" />
+        <option name="00" value="1" />
+        <option name="01" value="2" />
+        <option name="02" value="3" />
+        <option name="03" value="4" />
+        <option name="04" value="5" />
+        <option name="05" value="6" />
+        <option name="06" value="7" />
+        <option name="07" value="8" />
+        <option name="08" value="9" />
+        <option name="09" value="10" />
+        <option name="10" value="11" />
+        <option name="11" value="12" />
+        <option name="12" value="13" />
+        <option name="13" value="14" />
+        <option name="14" value="15" />
+        <option name="15" value="16" />
+        <option name="16" value="17" />
+        <option name="17" value="18" />
+        <option name="18" value="19" />
+        <option name="19" value="20" />
+        <option name="20" value="21" />
+        <option name="21" value="22" />
+        <option name="22" value="23" />
+        <option name="23" value="24" />
+        <option name="24" value="25" />
+        <option name="25" value="26" />
+        <option name="26" value="27" />
+        <option name="27" value="28" />
+        <option name="28" value="29" />
+        <option name="29" value="30" />
+        <option name="30" value="31" />
+        <option name="31" value="32" />
+        <option name="32" value="33" />
+        <option name="33" value="34" />
+        <option name="34" value="35" />
+        <option name="35" value="36" />
+        <option name="36" value="37" />
+        <option name="37" value="38" />
+        <option name="38" value="39" />
+        <option name="39" value="40" />
+        <option name="40" value="41" />
+        <option name="41" value="42" />
+        <option name="42" value="43" />
+        <option name="43" value="44" />
+        <option name="44" value="45" />
+        <option name="45" value="46" />
+        <option name="46" value="47" />
+        <option name="47" value="48" />
+        <option name="48" value="49" />
+        <option name="49" value="50" />
+        <option name="50" value="51" />
+        <option name="51" value="52" />
+        <option name="52" value="53" />
+        <option name="53" value="54" />
+        <option name="54" value="55" />
+        <option name="55" value="56" />
+        <option name="56" value="57" />
+        <option name="57" value="58" />
+        <option name="58" value="59" />
+        <option name="59" value="60" />
+        <option name="60" value="61" />
+        <option name="61" value="62" />
+        <option name="62" value="63" />
+        <option name="63" value="64" />
+      </enum16>
+      <int16 name="Intro Animation Delay Milliseconds" offset="6" visible="True" />
+      <enum16 name="Custom Font" offset="8" visible="True">
+        <option name="Terminal" value="0" />
+        <option name="Body Text" value="1" />
+        <option name="Title" value="2" />
+        <option name="Super Large Font" value="3" />
+        <option name="Large Body Text" value="4" />
+        <option name="Split Screen Hud Message" value="5" />
+        <option name="Full Screen Hud Message" value="6" />
+        <option name="English Body Text" value="7" />
+        <option name="HUD Number Text" value="8" />
+        <option name="Subtitle Font" value="9" />
+        <option name="Main Menu Font" value="10" />
+        <option name="Text Chat Font" value="11" />
+      </enum16>
+      <undefined size="2" name="_Unnamed0" offset="10" visible="True" />
+      <float32 name="Text Color A" offset="12" visible="True" />
+      <float32 name="Text Color R" offset="16" visible="True" />
+      <float32 name="Text Color G" offset="20" visible="True" />
+      <float32 name="Text Color B" offset="24" visible="True" />
+      <int16 name="Top-Left X" offset="28" visible="True" />
+      <int16 name="Top-Left Y" offset="30" visible="True" />
+      <tagblock name="Table Rows" offset="32" elementSize="16" maxelements="16" label="" visible="True">
+        <flags32 name="Flags" offset="0" visible="True">
+          <bit name="Unused" index="0" />
+        </flags32>
+        <int16 name="Row Height" offset="4" visible="True" />
+        <undefined size="2" name="_Unnamed0" offset="6" visible="True" />
+        <tagblock name="Row Cells" offset="8" elementSize="28" maxelements="8" label="Bitmap Tag" visible="True">
+          <flags32 name="Text Flags" offset="0" visible="True">
+            <bit name="Left Justify Text" index="0" />
+            <bit name="Right Justify Text" index="1" />
+            <bit name="Pulsating Text" index="2" />
+            <bit name="Callout Text" index="3" />
+            <bit name="Small (31 Char) Buffer" index="4" />
+          </flags32>
+          <int16 name="Cell Width" offset="4" visible="True" />
+          <undefined size="2" name="_Unnamed0" offset="6" visible="True" />
+          <int16 name="Bitmap Top-Left X" offset="8" visible="True" />
+          <int16 name="Bitmap Top-Left Y" offset="10" visible="True" />
+          <tagRef name="Bitmap Tag" offset="12" visible="True" />
+          <stringid name="String Id" offset="20" visible="True" />
+          <int16 name="Render Depth Bias" offset="24" visible="True" />
+          <undefined size="2" name="_Unnamed1" offset="26" visible="True" />
+        </tagblock>
+      </tagblock>
+    </tagblock>
+    <tagblock name="Text Blocks" offset="28" elementSize="44" maxelements="64" label="" visible="True">
+      <flags32 name="Text Flags" offset="0" visible="True">
+        <bit name="Left Justify Text" index="0" />
+        <bit name="Right Justify Text" index="1" />
+        <bit name="Pulsating Text" index="2" />
+        <bit name="Callout Text" index="3" />
+        <bit name="Small (31 Char) Buffer" index="4" />
+      </flags32>
+      <enum16 name="Animation Index" offset="4" visible="True">
+        <option name="NONE" value="0" />
+        <option name="00" value="1" />
+        <option name="01" value="2" />
+        <option name="02" value="3" />
+        <option name="03" value="4" />
+        <option name="04" value="5" />
+        <option name="05" value="6" />
+        <option name="06" value="7" />
+        <option name="07" value="8" />
+        <option name="08" value="9" />
+        <option name="09" value="10" />
+        <option name="10" value="11" />
+        <option name="11" value="12" />
+        <option name="12" value="13" />
+        <option name="13" value="14" />
+        <option name="14" value="15" />
+        <option name="15" value="16" />
+        <option name="16" value="17" />
+        <option name="17" value="18" />
+        <option name="18" value="19" />
+        <option name="19" value="20" />
+        <option name="20" value="21" />
+        <option name="21" value="22" />
+        <option name="22" value="23" />
+        <option name="23" value="24" />
+        <option name="24" value="25" />
+        <option name="25" value="26" />
+        <option name="26" value="27" />
+        <option name="27" value="28" />
+        <option name="28" value="29" />
+        <option name="29" value="30" />
+        <option name="30" value="31" />
+        <option name="31" value="32" />
+        <option name="32" value="33" />
+        <option name="33" value="34" />
+        <option name="34" value="35" />
+        <option name="35" value="36" />
+        <option name="36" value="37" />
+        <option name="37" value="38" />
+        <option name="38" value="39" />
+        <option name="39" value="40" />
+        <option name="40" value="41" />
+        <option name="41" value="42" />
+        <option name="42" value="43" />
+        <option name="43" value="44" />
+        <option name="44" value="45" />
+        <option name="45" value="46" />
+        <option name="46" value="47" />
+        <option name="47" value="48" />
+        <option name="48" value="49" />
+        <option name="49" value="50" />
+        <option name="50" value="51" />
+        <option name="51" value="52" />
+        <option name="52" value="53" />
+        <option name="53" value="54" />
+        <option name="54" value="55" />
+        <option name="55" value="56" />
+        <option name="56" value="57" />
+        <option name="57" value="58" />
+        <option name="58" value="59" />
+        <option name="59" value="60" />
+        <option name="60" value="61" />
+        <option name="61" value="62" />
+        <option name="62" value="63" />
+        <option name="63" value="64" />
+      </enum16>
+      <int16 name="Intro Animation Delay Milliseconds" offset="6" visible="True" />
+      <undefined size="2" name="_Unnamed0" offset="8" visible="True" />
+      <enum16 name="Custom Font" offset="10" visible="True">
+        <option name="Terminal" value="0" />
+        <option name="Body Text" value="1" />
+        <option name="Title" value="2" />
+        <option name="Super Large Font" value="3" />
+        <option name="Large Body Text" value="4" />
+        <option name="Split Screen Hud Message" value="5" />
+        <option name="Full Screen Hud Message" value="6" />
+        <option name="English Body Text" value="7" />
+        <option name="HUD Number Text" value="8" />
+        <option name="Subtitle Font" value="9" />
+        <option name="Main Menu Font" value="10" />
+        <option name="Text Chat Font" value="11" />
+      </enum16>
+      <float32 name="Text Color A" offset="12" visible="True" />
+      <float32 name="Text Color R" offset="16" visible="True" />
+      <float32 name="Text Color G" offset="20" visible="True" />
+      <float32 name="Text Color B" offset="24" visible="True" />
+      <int16 name="Text Bounds Top" offset="28" visible="True" />
+      <int16 name="Text Bounds Left" offset="30" visible="True" />
+      <int16 name="Text Bounds Bottom" offset="32" visible="True" />
+      <int16 name="Text Bounds Right" offset="34" visible="True" />
+      <stringid name="String Id" offset="36" visible="True" />
+      <int16 name="Render Depth Bias" offset="40" visible="True" />
+      <undefined size="2" name="_Unnamed1" offset="42" visible="True" />
+    </tagblock>
+    <tagblock name="Bitmap Blocks" offset="36" elementSize="56" maxelements="64" label="Bitmap Tag" visible="True">
+      <flags32 name="Flags" offset="0" visible="True">
+        <bit name="Ignore For List Skin Size Calculation" index="0" />
+        <bit name="Swap On Relative List Position" index="1" />
+        <bit name="Render As Progress Bar" index="2" />
+      </flags32>
+      <enum16 name="Animation Index" offset="4" visible="True">
+        <option name="NONE" value="0" />
+        <option name="00" value="1" />
+        <option name="01" value="2" />
+        <option name="02" value="3" />
+        <option name="03" value="4" />
+        <option name="04" value="5" />
+        <option name="05" value="6" />
+        <option name="06" value="7" />
+        <option name="07" value="8" />
+        <option name="08" value="9" />
+        <option name="09" value="10" />
+        <option name="10" value="11" />
+        <option name="11" value="12" />
+        <option name="12" value="13" />
+        <option name="13" value="14" />
+        <option name="14" value="15" />
+        <option name="15" value="16" />
+        <option name="16" value="17" />
+        <option name="17" value="18" />
+        <option name="18" value="19" />
+        <option name="19" value="20" />
+        <option name="20" value="21" />
+        <option name="21" value="22" />
+        <option name="22" value="23" />
+        <option name="23" value="24" />
+        <option name="24" value="25" />
+        <option name="25" value="26" />
+        <option name="26" value="27" />
+        <option name="27" value="28" />
+        <option name="28" value="29" />
+        <option name="29" value="30" />
+        <option name="30" value="31" />
+        <option name="31" value="32" />
+        <option name="32" value="33" />
+        <option name="33" value="34" />
+        <option name="34" value="35" />
+        <option name="35" value="36" />
+        <option name="36" value="37" />
+        <option name="37" value="38" />
+        <option name="38" value="39" />
+        <option name="39" value="40" />
+        <option name="40" value="41" />
+        <option name="41" value="42" />
+        <option name="42" value="43" />
+        <option name="43" value="44" />
+        <option name="44" value="45" />
+        <option name="45" value="46" />
+        <option name="46" value="47" />
+        <option name="47" value="48" />
+        <option name="48" value="49" />
+        <option name="49" value="50" />
+        <option name="50" value="51" />
+        <option name="51" value="52" />
+        <option name="52" value="53" />
+        <option name="53" value="54" />
+        <option name="54" value="55" />
+        <option name="55" value="56" />
+        <option name="56" value="57" />
+        <option name="57" value="58" />
+        <option name="58" value="59" />
+        <option name="59" value="60" />
+        <option name="60" value="61" />
+        <option name="61" value="62" />
+        <option name="62" value="63" />
+        <option name="63" value="64" />
+      </enum16>
+      <int16 name="Intro Animation Delay Milliseconds" offset="6" visible="True" />
+      <enum16 name="Bitmap Blend Method" offset="8" visible="True">
+        <option name="Standard" value="0" />
+        <option name="Multiply" value="1" />
+        <option name="UNUSED" value="2" />
+      </enum16>
+      <int16 name="Initial Sprite Frame" offset="10" visible="True" />
+      <int16 name="Top-Left X" offset="12" visible="True" />
+      <int16 name="Top-Left Y" offset="14" visible="True" />
+      <float32 name="Horiz Texture Wrapssecond" offset="16" visible="True" />
+      <float32 name="Vert Texture Wrapssecond" offset="20" visible="True" />
+      <tagRef name="Bitmap Tag" offset="24" visible="True" />
+      <int16 name="Render Depth Bias" offset="32" visible="True" />
+      <undefined size="2" name="_Unnamed0" offset="34" visible="True" />
+      <float32 name="Sprite Animation Speed Fps" offset="36" visible="True" />
+      <int16 name="Progress Bottom-Left X" offset="40" visible="True" />
+      <int16 name="Progress Bottom-Left Y" offset="42" visible="True" />
+      <stringid name="String Identifier" offset="44" visible="True" />
+      <float32 name="Progress Scale X" offset="48" visible="True" />
+      <float32 name="Progress Scale Y" offset="52" visible="True" />
+    </tagblock>
+    <tagblock name="Model Scene Blocks" offset="44" elementSize="76" maxelements="32" label="" visible="True">
+      <flags32 name="Flags" offset="0" visible="True">
+        <bit name="Unused" index="0" />
+      </flags32>
+      <enum16 name="Animation Index" offset="4" visible="True">
+        <option name="NONE" value="0" />
+        <option name="00" value="1" />
+        <option name="01" value="2" />
+        <option name="02" value="3" />
+        <option name="03" value="4" />
+        <option name="04" value="5" />
+        <option name="05" value="6" />
+        <option name="06" value="7" />
+        <option name="07" value="8" />
+        <option name="08" value="9" />
+        <option name="09" value="10" />
+        <option name="10" value="11" />
+        <option name="11" value="12" />
+        <option name="12" value="13" />
+        <option name="13" value="14" />
+        <option name="14" value="15" />
+        <option name="15" value="16" />
+        <option name="16" value="17" />
+        <option name="17" value="18" />
+        <option name="18" value="19" />
+        <option name="19" value="20" />
+        <option name="20" value="21" />
+        <option name="21" value="22" />
+        <option name="22" value="23" />
+        <option name="23" value="24" />
+        <option name="24" value="25" />
+        <option name="25" value="26" />
+        <option name="26" value="27" />
+        <option name="27" value="28" />
+        <option name="28" value="29" />
+        <option name="29" value="30" />
+        <option name="30" value="31" />
+        <option name="31" value="32" />
+        <option name="32" value="33" />
+        <option name="33" value="34" />
+        <option name="34" value="35" />
+        <option name="35" value="36" />
+        <option name="36" value="37" />
+        <option name="37" value="38" />
+        <option name="38" value="39" />
+        <option name="39" value="40" />
+        <option name="40" value="41" />
+        <option name="41" value="42" />
+        <option name="42" value="43" />
+        <option name="43" value="44" />
+        <option name="44" value="45" />
+        <option name="45" value="46" />
+        <option name="46" value="47" />
+        <option name="47" value="48" />
+        <option name="48" value="49" />
+        <option name="49" value="50" />
+        <option name="50" value="51" />
+        <option name="51" value="52" />
+        <option name="52" value="53" />
+        <option name="53" value="54" />
+        <option name="54" value="55" />
+        <option name="55" value="56" />
+        <option name="56" value="57" />
+        <option name="57" value="58" />
+        <option name="58" value="59" />
+        <option name="59" value="60" />
+        <option name="60" value="61" />
+        <option name="61" value="62" />
+        <option name="62" value="63" />
+        <option name="63" value="64" />
+      </enum16>
+      <int16 name="Intro Animation Delay Milliseconds" offset="6" visible="True" />
+      <int16 name="Render Depth Bias" offset="8" visible="True" />
+      <undefined size="2" name="_Unnamed0" offset="10" visible="True" />
+      <tagblock name="Objects" offset="12" elementSize="32" maxelements="32" label="" visible="True">
+        <ascii name="Name" offset="0" visible="True" />
+      </tagblock>
+      <tagblock name="Lights" offset="20" elementSize="32" maxelements="8" label="" visible="True">
+        <ascii name="Name" offset="0" visible="True" />
+      </tagblock>
+      <float32 name="Animation Scale Factor X" offset="28" visible="True" />
+      <float32 name="Animation Scale Factor Y" offset="32" visible="True" />
+      <float32 name="Animation Scale Factor Z" offset="36" visible="True" />
+      <float32 name="Camera Position X" offset="40" visible="True" />
+      <float32 name="Camera Position Y" offset="44" visible="True" />
+      <float32 name="Camera Position Z" offset="48" visible="True" />
+      <float32 name="Fov Degress" offset="52" visible="True" />
+      <int16 name="Ui Viewport Top" offset="56" visible="True" />
+      <int16 name="Ui Viewport Left" offset="58" visible="True" />
+      <int16 name="Ui Viewport Bottom" offset="60" visible="True" />
+      <int16 name="Ui Viewport Right" offset="62" visible="True" />
+      <stringid name="UNUSED Intro Anim" offset="64" visible="True" />
+      <stringid name="UNUSED Outro Anim" offset="68" visible="True" />
+      <stringid name="UNUSED Ambient Anim" offset="72" visible="True" />
+    </tagblock>
+    <tagblock name="Text-Value Blocks" offset="52" elementSize="40" maxelements="100" label="" visible="True">
+      <ascii name="Name" offset="0" visible="True" />
+      <tagblock name="Text Value Pairs" offset="32" elementSize="20" maxelements="100" label="" visible="True">
+        <enum16 name="Value Type" offset="0" visible="True">
+          <option name="Integer Number" value="0" />
+          <option name="Floating Point Number" value="1" />
+          <option name="Boolean" value="2" />
+          <option name="Text String" value="3" />
+        </enum16>
+        <enum16 name="Boolean Value" offset="2" visible="True">
+          <option name="FALSE" value="0" />
+          <option name="TRUE" value="1" />
+        </enum16>
+        <int32 name="Integer Value" offset="4" visible="True" />
+        <float32 name="Fp Value" offset="8" visible="True" />
+        <stringid name="Text Value String_Id" offset="12" visible="True" />
+        <stringid name="Text Label String_Id" offset="16" visible="True" />
+      </tagblock>
+    </tagblock>
+    <tagblock name="Hud Blocks" offset="60" elementSize="36" maxelements="64" label="Bitmap" visible="True">
+      <flags32 name="Flags" offset="0" visible="True">
+        <bit name="Ignore For List Skin Size" index="0" />
+        <bit name="Needs Valid Rank" index="1" />
+      </flags32>
+      <enum16 name="Animation Index" offset="4" visible="True">
+        <option name="NONE" value="0" />
+        <option name="00" value="1" />
+        <option name="01" value="2" />
+        <option name="02" value="3" />
+        <option name="03" value="4" />
+        <option name="04" value="5" />
+        <option name="05" value="6" />
+        <option name="06" value="7" />
+        <option name="07" value="8" />
+        <option name="08" value="9" />
+        <option name="09" value="10" />
+        <option name="10" value="11" />
+        <option name="11" value="12" />
+        <option name="12" value="13" />
+        <option name="13" value="14" />
+        <option name="14" value="15" />
+        <option name="15" value="16" />
+        <option name="16" value="17" />
+        <option name="17" value="18" />
+        <option name="18" value="19" />
+        <option name="19" value="20" />
+        <option name="20" value="21" />
+        <option name="21" value="22" />
+        <option name="22" value="23" />
+        <option name="23" value="24" />
+        <option name="24" value="25" />
+        <option name="25" value="26" />
+        <option name="26" value="27" />
+        <option name="27" value="28" />
+        <option name="28" value="29" />
+        <option name="29" value="30" />
+        <option name="30" value="31" />
+        <option name="31" value="32" />
+        <option name="32" value="33" />
+        <option name="33" value="34" />
+        <option name="34" value="35" />
+        <option name="35" value="36" />
+        <option name="36" value="37" />
+        <option name="37" value="38" />
+        <option name="38" value="39" />
+        <option name="39" value="40" />
+        <option name="40" value="41" />
+        <option name="41" value="42" />
+        <option name="42" value="43" />
+        <option name="43" value="44" />
+        <option name="44" value="45" />
+        <option name="45" value="46" />
+        <option name="46" value="47" />
+        <option name="47" value="48" />
+        <option name="48" value="49" />
+        <option name="49" value="50" />
+        <option name="50" value="51" />
+        <option name="51" value="52" />
+        <option name="52" value="53" />
+        <option name="53" value="54" />
+        <option name="54" value="55" />
+        <option name="55" value="56" />
+        <option name="56" value="57" />
+        <option name="57" value="58" />
+        <option name="58" value="59" />
+        <option name="59" value="60" />
+        <option name="60" value="61" />
+        <option name="61" value="62" />
+        <option name="62" value="63" />
+        <option name="63" value="64" />
+      </enum16>
+      <int16 name="Intro Animation Delay Milliseconds" offset="6" visible="True" />
+      <int16 name="Render Depth Bias" offset="8" visible="True" />
+      <int16 name="Starting Bitmap Sequence Index" offset="10" visible="True" />
+      <tagRef name="Bitmap" offset="12" visible="True" />
+      <tagRef name="Shader" offset="20" visible="True" />
+      <int16 name="Bounds Top" offset="28" visible="True" />
+      <int16 name="Bounds Left" offset="30" visible="True" />
+      <int16 name="Bounds Bottom" offset="32" visible="True" />
+      <int16 name="Bounds Right" offset="34" visible="True" />
+    </tagblock>
+    <tagblock name="Player Blocks" offset="68" elementSize="24" maxelements="64" label="Skin" visible="True">
+      <undefined size="4" name="_Unnamed0" offset="0" visible="True" />
+      <tagRef name="Skin" offset="4" visible="True" />
+      <int16 name="Bottom-Left X" offset="12" visible="True" />
+      <int16 name="Bottom-Left Y" offset="14" visible="True" />
+      <enum8 name="Table Order" offset="16" visible="True">
+        <option name="Row Major" value="0" />
+        <option name="Column Major" value="1" />
+      </enum8>
+      <int8 name="Maximum Player Count" offset="17" visible="True" />
+      <int8 name="Row Count" offset="18" visible="True" />
+      <int8 name="Column Count" offset="19" visible="True" />
+      <int16 name="Row Height" offset="20" visible="True" />
+      <int16 name="Column Width" offset="22" visible="True" />
+    </tagblock>
+  </tagblock>
+  <enum16 name="Shape Group" offset="40" visible="True">
+    <option name="NONE" value="0" />
+    <option name="00" value="1" />
+    <option name="01" value="2" />
+    <option name="02" value="3" />
+    <option name="03" value="4" />
+    <option name="04" value="5" />
+    <option name="05" value="6" />
+    <option name="06" value="7" />
+    <option name="07" value="8" />
+    <option name="08" value="9" />
+    <option name="09" value="10" />
+    <option name="10" value="11" />
+    <option name="11" value="12" />
+    <option name="12" value="13" />
+    <option name="13" value="14" />
+    <option name="14" value="15" />
+    <option name="15" value="16" />
+    <option name="16" value="17" />
+    <option name="17" value="18" />
+    <option name="18" value="19" />
+    <option name="19" value="20" />
+    <option name="20" value="21" />
+    <option name="21" value="22" />
+    <option name="22" value="23" />
+    <option name="23" value="24" />
+    <option name="24" value="25" />
+    <option name="25" value="26" />
+    <option name="26" value="27" />
+    <option name="27" value="28" />
+    <option name="28" value="29" />
+    <option name="29" value="30" />
+    <option name="30" value="31" />
+    <option name="31" value="32" />
+  </enum16>
+  <undefined size="2" name="_Unnamed0" offset="42" visible="True" />
+  <stringid name="Header String Id" offset="44" visible="True" />
+  <tagblock name="Local Strings" offset="48" elementSize="12" maxelements="16" label="Section Name" visible="True">
+    <stringid name="Section Name" offset="0" visible="True" />
+    <tagblock name="Local String Section References" offset="4" elementSize="4" maxelements="64" label="" visible="True">
+      <stringid name="String Id" offset="0" visible="True" />
+    </tagblock>
+  </tagblock>
+  <tagblock name="Local Bitmaps" offset="56" elementSize="8" maxelements="16" label="Bitmap" visible="True">
+    <tagRef name="Bitmap" offset="0" visible="True" />
+  </tagblock>
+  <float32 name="Source Color R" offset="64" visible="True" />
+  <float32 name="Source Color G" offset="68" visible="True" />
+  <float32 name="Source Color B" offset="72" visible="True" />
+  <float32 name="Destination Color R" offset="76" visible="True" />
+  <float32 name="Destination Color G" offset="80" visible="True" />
+  <float32 name="Destination Color B" offset="84" visible="True" />
+  <float32 name="Accumulate Zoom Scale X" offset="88" visible="True" />
+  <float32 name="Accumulate Zoom Scale Y" offset="92" visible="True" />
+  <float32 name="Refraction Scale X" offset="96" visible="True" />
+  <float32 name="Refraction Scale Y" offset="100" visible="True" />
+</plugin>

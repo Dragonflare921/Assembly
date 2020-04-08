@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="8">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <tagblock name="Lines" offset="0" elementSize="16" maxelements="500" label="Name" visible="True">
+    <stringid name="Name" offset="0" visible="True" />
+    <tagblock name="Variants" offset="4" elementSize="16" maxelements="10" label="Variant Designation" visible="True">
+      <stringid name="Variant Designation" offset="0" visible="True" />
+      <tagRef name="Sound" offset="4" visible="True" />
+      <stringid name="Sound Effect" offset="12" visible="True" />
+    </tagblock>
+    <stringid name="Default Sound Effect" offset="12" visible="True" />
+  </tagblock>
+</plugin>

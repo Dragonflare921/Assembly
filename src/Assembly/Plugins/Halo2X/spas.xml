@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="36">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <undefined size="8" name="Documentation" offset="0" visible="True" />
+  <tagblock name="Parameters" offset="8" elementSize="44" maxelements="64" label="Name" visible="True">
+    <stringid name="Name" offset="0" visible="True" />
+    <undefined size="8" name="Explanation" offset="4" visible="True" />
+    <enum16 name="Type" offset="12" visible="True">
+      <option name="Bitmap" value="0" />
+      <option name="Value" value="1" />
+      <option name="Color" value="2" />
+      <option name="Switch" value="3" />
+    </enum16>
+    <flags16 name="Flags" offset="14" visible="True">
+      <bit name="No Bitmap LOD" index="0" />
+      <bit name="Required Parameter" index="1" />
+    </flags16>
+    <tagRef name="Default Bitmap" offset="16" visible="True" />
+    <float32 name="Default Const Value" offset="24" visible="True" />
+    <float32 name="Default Const Color R" offset="28" visible="True" />
+    <float32 name="Default Const Color G" offset="32" visible="True" />
+    <float32 name="Default Const Color B" offset="36" visible="True" />
+    <enum16 name="Source Extern" offset="40" visible="True">
+      <option name="None" value="0" />
+      <option name="GLOBAL: Eye Forward Vector (Z)" value="1" />
+      <option name="GLOBAL: Eye Right Vector (X)" value="2" />
+      <option name="GLOBAL: Eye Up Vector (Y)" value="3" />
+      <option name="OBJECT: Primary Color" value="4" />
+      <option name="OBJECT: Secondary Color" value="5" />
+      <option name="OBJECT: Function Value" value="6" />
+      <option name="LIGHT: Diffuse Color" value="7" />
+      <option name="LIGHT: Specular Color" value="8" />
+      <option name="LIGHT: Forward Vector (Z)" value="9" />
+      <option name="LIGHT: Right Vector (X)" value="10" />
+      <option name="LIGHT: Up Vector (Y)" value="11" />
+      <option name="LIGHT: Object-Relative Forward Vector (Z)" value="12" />
+      <option name="LIGHT: Object-Relative Right Vector (X)" value="13" />
+      <option name="LIGHT: Object-Relative Up Vector (Y)" value="14" />
+      <option name="LIGHT: Object Falloff Value" value="15" />
+      <option name="LIGHT: Object Gel Color" value="16" />
+      <option name="LIGHTMAP: Object Ambient Factor" value="17" />
+      <option name="LIGHTMAP: Object Direct Vector" value="18" />
+      <option name="LIGHTMAP: Object Direct Color" value="19" />
+      <option name="LIGHTMAP: Object Indirect Vector" value="20" />
+      <option name="LIGHTMAP: Object Indirect Color" value="21" />
+      <option name="OLD FOG: Atmospheric Color" value="22" />
+      <option name="OLD FOG: Atmospheric Max Density" value="23" />
+      <option name="OLD FOG: Planar Color" value="24" />
+      <option name="OLD FOG: Planar Max Density" value="25" />
+      <option name="OLD FOG: Atmospheric Planar Blend Value" value="26" />
+      <option name="OLD FOG: Object Atmospheric Density" value="27" />
+      <option name="OLD FOG: Object Planar Density" value="28" />
+      <option name="OLD FOG: Object Color" value="29" />
+      <option name="OLD FOG: Object Density" value="30" />
+      <option name="OBJECT: Model Alpha" value="31" />
+      <option name="OBJECT: Shadow Alpha" value="32" />
+      <option name="LIGHT: Overbrighten Diffuse Shift" value="33" />
+      <option name="LIGHT: Overbrighten Specular Shift" value="34" />
+      <option name="LIGHT: Diffuse Contrast" value="35" />
+      <option name="LIGHT: Specular Gel" value="36" />
+      <option name="SHADER: Specular Type" value="37" />
+      <option name="Pad3" value="38" />
+      <option name="Pad3-Scale" value="39" />
+      <option name="Pad Thai" value="40" />
+      <option name="Taco Salad" value="41" />
+      <option name="Anisotropic Binormal" value="42" />
+      <option name="OBJECT LIGHT: Shadow Fade" value="43" />
+      <option name="LIGHT: Shadow Fade" value="44" />
+      <option name="OLD FOG: Atmospheric Density" value="45" />
+      <option name="OLD FOG: Planar Density" value="46" />
+      <option name="OLD FOG: Planar Density Invert" value="47" />
+      <option name="OBJECT: Change Color Tertiary" value="48" />
+      <option name="OBJECT: Change Color Quaternary" value="49" />
+      <option name="LIGHTMAP: Object Specular Color" value="50" />
+      <option name="SHADER: Lightmap Type" value="51" />
+      <option name="LIGHTMAP: Object Ambient Color" value="52" />
+      <option name="SHADER: Lightmap Specular Brightness" value="53" />
+      <option name="GLOBAL: Lightmap Shadow Darkening" value="54" />
+      <option name="LIGHTMAP: Object Env Brightness" value="55" />
+      <option name="FOG: Atmospheric Max Density" value="56" />
+      <option name="FOG: Atmospheric Color" value="57" />
+      <option name="FOG: Atmospheric Color Adj" value="58" />
+      <option name="FOG: Atmospheric Planar Blend" value="59" />
+      <option name="FOG: Atmospheric Planar Blend Adj Inv" value="60" />
+      <option name="FOG: Atmospheric Planar Blend Adj" value="61" />
+      <option name="FOG: Secondary Max Density" value="62" />
+      <option name="FOG: Secondary Color" value="63" />
+      <option name="FOG: Secondary Color Adj" value="64" />
+      <option name="FOG: Atmospheric Secondary Blend" value="65" />
+      <option name="FOG: Atmospheric Secondary Blend Adj Inv" value="66" />
+      <option name="FOG: Atmospheric Secondary Blend Adj" value="67" />
+      <option name="FOG: Sky Density" value="68" />
+      <option name="FOG: Sky Color" value="69" />
+      <option name="FOG: Sky Color Adj" value="70" />
+      <option name="FOG: Planar Max Density" value="71" />
+      <option name="FOG: Planar Color" value="72" />
+      <option name="FOG: Planar Color Adj" value="73" />
+      <option name="FOG: Planar Eye Density" value="74" />
+      <option name="FOG: Planar Eye Density Adj Inv" value="75" />
+      <option name="FOG: Planar Eye Density Adj" value="76" />
+      <option name="HUD: Waypoint Primary Color" value="77" />
+      <option name="HUD: Waypoint Secondary Color" value="78" />
+      <option name="LIGHTMAP: Object Specular Color Times One Half" value="79" />
+      <option name="LIGHT: Specular Enabled" value="80" />
+      <option name="LIGHT: Definition Specular Enabled" value="81" />
+      <option name="OBJECT: Active Camo Amount" value="82" />
+      <option name="OBJECT: Super Camo Amount" value="83" />
+      <option name="HUD: Custom Color 1" value="84" />
+      <option name="HUD: Custom Color 2" value="85" />
+      <option name="HUD: Custom Color 3" value="86" />
+      <option name="HUD: Custom Color 4" value="87" />
+      <option name="OBJECT: Active Camo RGB" value="88" />
+      <option name="FOG: Patchy Plane N(Xyz)" value="89" />
+      <option name="FOG: Patchy Plane D(W)" value="90" />
+      <option name="HUD: Global Fade" value="91" />
+      <option name="SCREEN EFFECT: Primary" value="92" />
+      <option name="SCREEN EFFECT: Secondary" value="93" />
+    </enum16>
+    <undefined size="2" name="_Unnamed0" offset="42" visible="True" />
+  </tagblock>
+  <undefined size="2" name="_Unnamed0" offset="16" visible="True" />
+  <undefined size="2" name="_Unnamed1" offset="18" visible="True" />
+  <tagblock name="Implementations" offset="20" elementSize="116" maxelements="32" label="Vertex Shader" visible="True">
+    <flags16 name="Flags" offset="0" visible="True">
+      <bit name="Delete From Cache File" index="0" />
+      <bit name="Critical" index="1" />
+    </flags16>
+    <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+    <tagblock name="Textures" offset="4" elementSize="60" maxelements="8" label="" visible="True">
+      <stringid name="Source Parameter" offset="0" visible="True" />
+      <enum16 name="Source Extern" offset="4" visible="True">
+        <option name="None" value="0" />
+        <option name="GLOBAL: Vector Normalization" value="1" />
+        <option name="UNUSED" value="2" />
+        <option name="GLOBAL: Target Texaccum" value="3" />
+        <option name="UNUSED" value="4" />
+        <option name="GLOBAL: Target Frame Buffer" value="5" />
+        <option name="GLOBA: Target Z" value="6" />
+        <option name="UNUSED" value="7" />
+        <option name="GLOBAL: Target Shadow" value="8" />
+        <option name="LIGHT: Falloff" value="9" />
+        <option name="LIGHT: Gel" value="10" />
+        <option name="LIGHTMAP" value="11" />
+        <option name="UNUSED" value="12" />
+        <option name="GLOBAL: Shadow Buffer" value="13" />
+        <option name="GLOBAL: Gradient Separate" value="14" />
+        <option name="GLOBAL: Gradient Product" value="15" />
+        <option name="HUD: Bitmap" value="16" />
+        <option name="GLOBAL: Active Camo" value="17" />
+        <option name="GLOBAL: Texture Camera" value="18" />
+        <option name="GLOBAL: Water Reflection" value="19" />
+        <option name="GLOBAL: Water Refraction" value="20" />
+        <option name="GLOBAL: Aux 1" value="21" />
+        <option name="GLOBAL: Aux 2" value="22" />
+        <option name="GLOBAL: Particle Distortion" value="23" />
+        <option name="GLOBAL: Convolution 1" value="24" />
+        <option name="GLOBAL: Convolution 2" value="25" />
+        <option name="SHADER: Active Camo Bump" value="26" />
+        <option name="FIRST PERSON: Scope" value="27" />
+      </enum16>
+      <undefined size="2" name="_Unnamed0" offset="6" visible="True" />
+      <undefined size="2" name="_Unnamed1" offset="8" visible="True" />
+      <enum16 name="Mode" offset="10" visible="True">
+        <option name="2D" value="0" />
+        <option name="3D" value="1" />
+        <option name="Cube Map" value="2" />
+        <option name="Passthrough" value="3" />
+        <option name="Texkill" value="4" />
+        <option name="2D Dependent AR" value="5" />
+        <option name="2D Dependent GB" value="6" />
+        <option name="2D Bumpenv" value="7" />
+        <option name="2D Bumpenv Luminance" value="8" />
+        <option name="3D BRDF" value="9" />
+        <option name="Dot Product" value="10" />
+        <option name="Dot Product 2D" value="11" />
+        <option name="Dot Product 3D" value="12" />
+        <option name="Dot Product Cube Map" value="13" />
+        <option name="Dot Product ZW" value="14" />
+        <option name="Dot Reflect Diffuse" value="15" />
+        <option name="Dot Reflect Specular" value="16" />
+        <option name="Dot Reflect Specular Const" value="17" />
+        <option name="None" value="18" />
+      </enum16>
+      <undefined size="2" name="_Unnamed2" offset="12" visible="True" />
+      <enum16 name="Dot Mapping" offset="14" visible="True">
+        <option name="0 To 1" value="0" />
+        <option name="Signed D3D" value="1" />
+        <option name="Signed GL" value="2" />
+        <option name="Signed NV" value="3" />
+        <option name="HILO: 0 To 1" value="4" />
+        <option name="HILO: Signed Hemisphere D3D" value="5" />
+        <option name="HILO: Signed Hemisphere GL" value="6" />
+        <option name="HILO: Signed Hemisphere NV" value="7" />
+      </enum16>
+      <int16 name="Input Stage" offset="16" visible="True" />
+      <undefined size="2" name="_Unnamed3" offset="18" visible="True" />
+      <tagblock name="Address State" offset="20" elementSize="8" maxelements="1" label="" visible="True">
+        <enum16 name="U Address Mode" offset="0" visible="True">
+          <option name="Wrap" value="0" />
+          <option name="Mirror" value="1" />
+          <option name="Clamp" value="2" />
+          <option name="Border" value="3" />
+          <option name="Clamp To Edge" value="4" />
+        </enum16>
+        <enum16 name="V Address Mode" offset="2" visible="True">
+          <option name="Wrap" value="0" />
+          <option name="Mirror" value="1" />
+          <option name="Clamp" value="2" />
+          <option name="Border" value="3" />
+          <option name="Clamp To Edge" value="4" />
+        </enum16>
+        <enum16 name="W Address Mode" offset="4" visible="True">
+          <option name="Wrap" value="0" />
+          <option name="Mirror" value="1" />
+          <option name="Clamp" value="2" />
+          <option name="Border" value="3" />
+          <option name="Clamp To Edge" value="4" />
+        </enum16>
+        <undefined size="2" name="_Unnamed0" offset="6" visible="True" />
+      </tagblock>
+      <tagblock name="Filter State" offset="28" elementSize="16" maxelements="1" label="" visible="True">
+        <enum16 name="Mag Filter" offset="0" visible="True">
+          <option name="None" value="0" />
+          <option name="Point Sampled" value="1" />
+          <option name="Linear" value="2" />
+          <option name="Anisotropic" value="3" />
+          <option name="Quincunx" value="4" />
+          <option name="Gaussian Cubic" value="5" />
+        </enum16>
+        <enum16 name="Min Filter" offset="2" visible="True">
+          <option name="None" value="0" />
+          <option name="Point Sampled" value="1" />
+          <option name="Linear" value="2" />
+          <option name="Anisotropic" value="3" />
+          <option name="Quincunx" value="4" />
+          <option name="Gaussian Cubic" value="5" />
+        </enum16>
+        <enum16 name="Mip Filter" offset="4" visible="True">
+          <option name="None" value="0" />
+          <option name="Point Sampled" value="1" />
+          <option name="Linear" value="2" />
+          <option name="Anisotropic" value="3" />
+          <option name="Quincunx" value="4" />
+          <option name="Gaussian Cubic" value="5" />
+        </enum16>
+        <undefined size="2" name="_Unnamed0" offset="6" visible="True" />
+        <float32 name="Mipmap Bias" offset="8" visible="True" />
+        <int16 name="Max Mipmap Index" offset="12" visible="True" />
+        <enum16 name="Anisotropy" offset="14" visible="True">
+          <option name="Non Anisotropic" value="0" />
+          <option name="2-Tap" value="1" />
+          <option name="3-Tap" value="2" />
+          <option name="4-Tap" value="3" />
+        </enum16>
+      </tagblock>
+      <tagblock name="Kill State" offset="36" elementSize="12" maxelements="1" label="" visible="True">
+        <flags16 name="Flags" offset="0" visible="True">
+          <bit name="Alpha Kill" index="0" />
+        </flags16>
+        <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+        <enum16 name="Colorkey Mode" offset="4" visible="True">
+          <option name="Disabled" value="0" />
+          <option name="Zero Alpha" value="1" />
+          <option name="Zero ARGB" value="2" />
+          <option name="Kill" value="3" />
+        </enum16>
+        <undefined size="2" name="_Unnamed1" offset="6" visible="True" />
+        <undefined size="1" offset="8" visible="True" />
+        <int8 name="Colorkey Color R" offset="12" visible="True" />
+        <int8 name="Colorkey Color G" offset="16" visible="True" />
+        <int8 name="Colorkey Color B" offset="20" visible="True" />
+      </tagblock>
+      <tagblock name="Misc State" offset="44" elementSize="8" maxelements="1" label="" visible="True">
+        <flags16 name="Component Sign Flags" offset="0" visible="True">
+          <bit name="R Signed" index="0" />
+          <bit name="G Signed" index="1" />
+          <bit name="B Signed" index="2" />
+          <bit name="A Signed" index="3" />
+        </flags16>
+        <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+        <int8 name="Border Color A" offset="4" visible="True" />
+        <int8 name="Border Color R" offset="8" visible="True" />
+        <int8 name="Border Color G" offset="12" visible="True" />
+        <int8 name="Border Color B" offset="16" visible="True" />
+      </tagblock>
+      <tagblock name="Constants" offset="52" elementSize="8" maxelements="10" label="Constant" visible="True">
+        <stringid name="Source Parameter" offset="0" visible="True" />
+        <undefined size="2" name="_Unnamed0" offset="4" visible="True" />
+        <enum16 name="Constant" offset="6" visible="True">
+          <option name="Mipmap Bias (Value)" value="0" />
+          <option name="Colorkey Color" value="1" />
+          <option name="Border Color" value="2" />
+          <option name="Border Alpha (Value)" value="3" />
+          <option name="Bumpenv Mat[0][0]" value="4" />
+          <option name="Bumpenv Mat[0][1]" value="5" />
+          <option name="Bumpenv Mat[1][0]" value="6" />
+          <option name="Bumpenv Mat[1][1]" value="7" />
+          <option name="Bumpenv Lum Scale (Value)" value="8" />
+          <option name="Bumpenv Lum Offset (Value)" value="9" />
+        </enum16>
+      </tagblock>
+    </tagblock>
+    <tagRef name="Vertex Shader" offset="12" visible="True" />
+    <tagblock name="Vs Constants" offset="20" elementSize="12" maxelements="32" label="" visible="True">
+      <stringid name="Source Parameter" offset="0" visible="True" />
+      <enum16 name="Scale By Texture Stage" offset="4" visible="True">
+        <option name="None" value="0" />
+        <option name="Stage 0" value="1" />
+        <option name="Stage 1" value="2" />
+        <option name="Stage 2" value="3" />
+        <option name="Stage 3" value="4" />
+      </enum16>
+      <enum16 name="Register Bank" offset="6" visible="True">
+        <option name="Vn [0,15]" value="0" />
+        <option name="Cn [0,12]" value="1" />
+      </enum16>
+      <int16 name="Register Index" offset="8" visible="True" />
+      <enum16 name="Component Mask" offset="10" visible="True">
+        <option name="X (Value)" value="0" />
+        <option name="Y (Value)" value="1" />
+        <option name="Z (Value)" value="2" />
+        <option name="W (Value)" value="3" />
+        <option name="Xyz/Rgb (Color)" value="4" />
+        <option name="X (Uniform Scale)" value="5" />
+        <option name="Y (Uniform Scale)" value="6" />
+        <option name="Z (Uniform Scale)" value="7" />
+        <option name="W (Uniform Scale)" value="8" />
+        <option name="Xy (2D Scale)" value="9" />
+        <option name="Zw (2D Scale)" value="10" />
+        <option name="Xy (2D Translation)" value="11" />
+        <option name="Zw (2D Translation)" value="12" />
+        <option name="Xyzw (2D Simple Xform)" value="13" />
+        <option name="Xyw Row 1 (2D Affine Xform)" value="14" />
+        <option name="Xyw Row 2 (2D Affine Xform)" value="15" />
+        <option name="Xyz (3D Scale)" value="16" />
+        <option name="Xyz (3D Translation)" value="17" />
+        <option name="Xyzw Row 1 (3D Affine Xform)" value="18" />
+        <option name="Xyzw Row 2 (3D Affine Xform)" value="19" />
+        <option name="Xyzw Row 3 (3D Affine Xform)" value="20" />
+      </enum16>
+    </tagblock>
+    <undefined size="8" name="Pixel Shader Code NO LONGER USED" offset="28" visible="True" />
+    <enum16 name="Channels" offset="36" visible="True">
+      <option name="All" value="0" />
+      <option name="Color Only" value="1" />
+      <option name="Alpha Only" value="2" />
+      <option name="Custom" value="3" />
+    </enum16>
+    <enum16 name="Alpha-Blend" offset="38" visible="True">
+      <option name="Disabled" value="0" />
+      <option name="Add" value="1" />
+      <option name="Multiply" value="2" />
+      <option name="Add Src Times Dstalpha" value="3" />
+      <option name="Add Src Times Srcalpha" value="4" />
+      <option name="Add Dst Times Srcalpha Inverse" value="5" />
+      <option name="Alpha Blend" value="6" />
+      <option name="Custom" value="7" />
+    </enum16>
+    <enum16 name="Depth" offset="40" visible="True">
+      <option name="Disabled" value="0" />
+      <option name="Default Opaque" value="1" />
+      <option name="Default Opaque Write" value="2" />
+      <option name="Default Transparent" value="3" />
+      <option name="Custom" value="4" />
+    </enum16>
+    <undefined size="2" name="_Unnamed1" offset="42" visible="True" />
+    <tagblock name="Channel State" offset="44" elementSize="4" maxelements="1" label="" visible="True">
+      <flags16 name="Flags" offset="0" visible="True">
+        <bit name="R" index="0" />
+        <bit name="G" index="1" />
+        <bit name="B" index="2" />
+        <bit name="A" index="3" />
+      </flags16>
+      <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+    </tagblock>
+    <tagblock name="Alpha-Blend State" offset="52" elementSize="16" maxelements="1" label="" visible="True">
+      <enum16 name="Blend Function" offset="0" visible="True">
+        <option name="Add" value="0" />
+        <option name="Subtract" value="1" />
+        <option name="Reverse Subtract" value="2" />
+        <option name="Min" value="3" />
+        <option name="Max" value="4" />
+        <option name="Add Signed" value="5" />
+        <option name="Reverse Subtract Signed" value="6" />
+        <option name="Logic-Op" value="7" />
+      </enum16>
+      <enum16 name="Blend Src Factor" offset="2" visible="True">
+        <option name="Zero" value="0" />
+        <option name="One" value="1" />
+        <option name="Srccolor" value="2" />
+        <option name="Srccolor Inverse" value="3" />
+        <option name="Srcalpha" value="4" />
+        <option name="Srcalpha Inverse" value="5" />
+        <option name="Dstcolor" value="6" />
+        <option name="Dstcolor Inverse" value="7" />
+        <option name="Dstalpha" value="8" />
+        <option name="Dstalpha Inverse" value="9" />
+        <option name="Srcalpha Saturate" value="10" />
+        <option name="Constant Color" value="11" />
+        <option name="Constant Color Inverse" value="12" />
+        <option name="Constant Alpha" value="13" />
+        <option name="Constant Alpha Inverse" value="14" />
+      </enum16>
+      <enum16 name="Blend Dst Factor" offset="4" visible="True">
+        <option name="Zero" value="0" />
+        <option name="One" value="1" />
+        <option name="Srccolor" value="2" />
+        <option name="Srccolor Inverse" value="3" />
+        <option name="Srcalpha" value="4" />
+        <option name="Srcalpha Inverse" value="5" />
+        <option name="Dstcolor" value="6" />
+        <option name="Dstcolor Inverse" value="7" />
+        <option name="Dstalpha" value="8" />
+        <option name="Dstalpha Inverse" value="9" />
+        <option name="Srcalpha Saturate" value="10" />
+        <option name="Constant Color" value="11" />
+        <option name="Constant Color Inverse" value="12" />
+        <option name="Constant Alpha" value="13" />
+        <option name="Constant Alpha Inverse" value="14" />
+      </enum16>
+      <undefined size="2" name="_Unnamed0" offset="6" visible="True" />
+      <int8 name="Blend Color A" offset="8" visible="True" />
+      <int8 name="Blend Color R" offset="12" visible="True" />
+      <int8 name="Blend Color G" offset="16" visible="True" />
+      <int8 name="Blend Color B" offset="20" visible="True" />
+      <flags16 name="Logic-Op Flags" offset="12" visible="True">
+        <bit name="Src=0 Dst=0" index="0" />
+        <bit name="Src=0 Dst=1" index="1" />
+        <bit name="Src=1 Dst=0" index="2" />
+        <bit name="Src=1 Dst=1" index="3" />
+      </flags16>
+      <undefined size="2" name="_Unnamed1" offset="14" visible="True" />
+    </tagblock>
+    <tagblock name="Alpha-Test State" offset="60" elementSize="8" maxelements="1" label="" visible="True">
+      <flags16 name="Flags" offset="0" visible="True">
+        <bit name="Alpha-Test Enabled" index="0" />
+        <bit name="Sample-Alpha To Coverage" index="1" />
+        <bit name="Sample-Alpha To One" index="2" />
+      </flags16>
+      <enum16 name="Alpha Compare Function" offset="2" visible="True">
+        <option name="Never" value="0" />
+        <option name="Less" value="1" />
+        <option name="Equal" value="2" />
+        <option name="Less Or Equal" value="3" />
+        <option name="Greater" value="4" />
+        <option name="Not Equal" value="5" />
+        <option name="Greater Or Equal" value="6" />
+        <option name="Always" value="7" />
+      </enum16>
+      <int16 name="Alpha-Test Ref" offset="4" visible="True" />
+      <undefined size="2" name="_Unnamed0" offset="6" visible="True" />
+    </tagblock>
+    <tagblock name="Depth State" offset="68" elementSize="16" maxelements="1" label="" visible="True">
+      <enum16 name="Mode" offset="0" visible="True">
+        <option name="Use Z" value="0" />
+        <option name="Use W" value="1" />
+      </enum16>
+      <enum16 name="Depth Compare Function" offset="2" visible="True">
+        <option name="Never" value="0" />
+        <option name="Less" value="1" />
+        <option name="Equal" value="2" />
+        <option name="Less Or Equal" value="3" />
+        <option name="Greater" value="4" />
+        <option name="Not Equal" value="5" />
+        <option name="Greater Or Equal" value="6" />
+        <option name="Always" value="7" />
+      </enum16>
+      <flags16 name="Flags" offset="4" visible="True">
+        <bit name="Depth Write" index="0" />
+        <bit name="Offset Points" index="1" />
+        <bit name="Offset Lines" index="2" />
+        <bit name="Offset Triangles" index="3" />
+        <bit name="Clip Control Don't Cull Primitive" index="4" />
+        <bit name="Clip Control Clamp" index="5" />
+        <bit name="Clip Control Ignore W Sign" index="6" />
+      </flags16>
+      <undefined size="2" name="_Unnamed0" offset="6" visible="True" />
+      <float32 name="Depth Bias Slope Scale" offset="8" visible="True" />
+      <float32 name="Depth Bias" offset="12" visible="True" />
+    </tagblock>
+    <tagblock name="Cull State" offset="76" elementSize="4" maxelements="1" label="" visible="True">
+      <enum16 name="Mode" offset="0" visible="True">
+        <option name="None" value="0" />
+        <option name="CW" value="1" />
+        <option name="CCW" value="2" />
+      </enum16>
+      <enum16 name="Front Face" offset="2" visible="True">
+        <option name="CW" value="0" />
+        <option name="CCW" value="1" />
+      </enum16>
+    </tagblock>
+    <tagblock name="Fill State" offset="84" elementSize="12" maxelements="1" label="" visible="True">
+      <flags16 name="Flags" offset="0" visible="True">
+        <bit name="Flat Shading" index="0" />
+        <bit name="Edge Antialiasing" index="1" />
+      </flags16>
+      <enum16 name="Fill Mode" offset="2" visible="True">
+        <option name="Solid" value="0" />
+        <option name="Wireframe" value="1" />
+        <option name="Points" value="2" />
+      </enum16>
+      <enum16 name="Back Fill Mode" offset="4" visible="True">
+        <option name="Solid" value="0" />
+        <option name="Wireframe" value="1" />
+        <option name="Points" value="2" />
+      </enum16>
+      <undefined size="2" name="_Unnamed0" offset="6" visible="True" />
+      <float32 name="Line Width" offset="8" visible="True" />
+    </tagblock>
+    <tagblock name="Misc State" offset="92" elementSize="8" maxelements="1" label="" visible="True">
+      <flags16 name="Flags" offset="0" visible="True">
+        <bit name="YUV To RGB" index="0" />
+        <bit name="16-Bit Dither" index="1" />
+        <bit name="32-Bit DXT1 Noise" index="2" />
+      </flags16>
+      <undefined size="2" name="_Unnamed0" offset="2" visible="True" />
+      <undefined size="1" offset="4" visible="True" />
+      <int8 name="Fog Color R" offset="8" visible="True" />
+      <int8 name="Fog Color G" offset="12" visible="True" />
+      <int8 name="Fog Color B" offset="16" visible="True" />
+    </tagblock>
+    <tagblock name="Constants" offset="100" elementSize="8" maxelements="7" label="Constant" visible="True">
+      <stringid name="Source Parameter" offset="0" visible="True" />
+      <undefined size="2" name="_Unnamed0" offset="4" visible="True" />
+      <enum16 name="Constant" offset="6" visible="True">
+        <option name="Constant Blend Color" value="0" />
+        <option name="Constant Blend Alpha (Value)" value="1" />
+        <option name="Alpha-Test Ref (Value)" value="2" />
+        <option name="Depth Bias Slope Scale (Value)" value="3" />
+        <option name="Depth Bias (Value)" value="4" />
+        <option name="Line Width (Value)" value="5" />
+        <option name="Fog Color" value="6" />
+      </enum16>
+    </tagblock>
+    <tagRef name="Pixel Shader" offset="108" visible="True" />
+  </tagblock>
+  <tagblock name="Postprocess Definition" offset="28" elementSize="88" maxelements="1" label="" visible="True">
+    <tagblock name="Implementations" offset="0" elementSize="306" maxelements="1024" label="Vertex Shader" visible="True">
+      <int16 name="Block Index Data" offset="0" visible="True" />
+      <int16 name="Block Index Data2" offset="2" visible="True" />
+      <int16 name="Block Index Data3" offset="4" visible="True" />
+      <undefined size="240" name="_Unnamed0" offset="6" visible="True" />
+      <int16 name="Block Index Data4" offset="246" visible="True" />
+      <int16 name="Block Index Data5" offset="248" visible="True" />
+      <int16 name="Block Index Data6" offset="250" visible="True" />
+      <tagRef name="Vertex Shader" offset="252" visible="True" />
+      <undefined size="8" name="_Unnamed1" offset="260" visible="True" />
+      <undefined size="8" name="_Unnamed2" offset="268" visible="True" />
+      <undefined size="4" name="_Unnamed3" offset="276" visible="True" />
+      <undefined size="4" name="_Unnamed4" offset="280" visible="True" />
+      <int16 name="Block Index Data7" offset="284" visible="True" />
+      <int16 name="Block Index Data8" offset="286" visible="True" />
+      <int16 name="Block Index Data9" offset="288" visible="True" />
+      <int16 name="Block Index Data10" offset="290" visible="True" />
+      <int16 name="Block Index Data11" offset="292" visible="True" />
+      <int16 name="Block Index Data12" offset="294" visible="True" />
+      <int16 name="Block Index Data13" offset="296" visible="True" />
+      <int16 name="Block Index Data14" offset="298" visible="True" />
+      <int16 name="Block Index Data15" offset="300" visible="True" />
+      <int16 name="Block Index Data16" offset="302" visible="True" />
+      <int16 name="Block Index Data17" offset="304" visible="True" />
+    </tagblock>
+    <tagblock name="Textures" offset="8" elementSize="4" maxelements="1024" label="" visible="True">
+      <int8 name="Bitmap Parameter Index" offset="0" visible="True" />
+      <int8 name="Bitmap Extern Index" offset="1" visible="True" />
+      <int8 name="Texture Stage Index" offset="2" visible="True" />
+      <int8 name="Flags" offset="3" visible="True" />
+    </tagblock>
+    <tagblock name="Render States" offset="16" elementSize="5" maxelements="1024" label="" visible="True">
+      <int8 name="State Index" offset="0" visible="True" />
+      <int32 name="State Value" offset="1" visible="True" />
+    </tagblock>
+    <tagblock name="Texture States" offset="24" elementSize="24" maxelements="1024" label="" visible="True">
+      <undefined size="24" name="_Unnamed0" offset="0" visible="True" />
+    </tagblock>
+    <tagblock name="Ps Fragments" offset="32" elementSize="3" maxelements="1024" label="" visible="True">
+      <int8 name="Switch Parameter Index" offset="0" visible="True" />
+      <int16 name="Block Index Data" offset="1" visible="True" />
+    </tagblock>
+    <tagblock name="Ps Permutations" offset="40" elementSize="6" maxelements="1024" label="" visible="True">
+      <int16 name="Enum Index" offset="0" visible="True" />
+      <int16 name="Flags" offset="2" visible="True" />
+      <int16 name="Block Index Data" offset="4" visible="True" />
+    </tagblock>
+    <tagblock name="Ps Combiners" offset="48" elementSize="32" maxelements="1024" label="" visible="True">
+      <undefined size="16" name="_Unnamed0" offset="0" visible="True" />
+      <int8 name="Constant Color0 A" offset="16" visible="True" />
+      <int8 name="Constant Color0 R" offset="20" visible="True" />
+      <int8 name="Constant Color0 G" offset="24" visible="True" />
+      <int8 name="Constant Color0 B" offset="28" visible="True" />
+      <int8 name="Constant Color1 A" offset="20" visible="True" />
+      <int8 name="Constant Color1 R" offset="24" visible="True" />
+      <int8 name="Constant Color1 G" offset="28" visible="True" />
+      <int8 name="Constant Color1 B" offset="32" visible="True" />
+      <int8 name="Color A Register Ptr Index" offset="24" visible="True" />
+      <int8 name="Color B Register Ptr Index" offset="25" visible="True" />
+      <int8 name="Color C Register Ptr Index" offset="26" visible="True" />
+      <int8 name="Color D Register Ptr Index" offset="27" visible="True" />
+      <int8 name="Alpha A Register Ptr Index" offset="28" visible="True" />
+      <int8 name="Alpha B Register Ptr Index" offset="29" visible="True" />
+      <int8 name="Alpha C Register Ptr Index" offset="30" visible="True" />
+      <int8 name="Alpha D Register Ptr Index" offset="31" visible="True" />
+    </tagblock>
+    <tagblock name="Externs" offset="56" elementSize="4" maxelements="1024" label="" visible="True">
+      <undefined size="3" name="_Unnamed0" offset="0" visible="True" />
+      <int8 name="Extern Index" offset="3" visible="True" />
+    </tagblock>
+    <tagblock name="Constants" offset="64" elementSize="7" maxelements="1024" label="" visible="True">
+      <stringid name="Parameter Name" offset="0" visible="True" />
+      <int8 name="Component Mask" offset="4" visible="True" />
+      <int8 name="Scale By Texture Stage" offset="5" visible="True" />
+      <int8 name="Function Index" offset="6" visible="True" />
+    </tagblock>
+    <tagblock name="Constant Info" offset="72" elementSize="7" maxelements="1024" label="" visible="True">
+      <stringid name="Parameter Name" offset="0" visible="True" />
+      <undefined size="3" name="_Unnamed0" offset="4" visible="True" />
+    </tagblock>
+    <tagblock name="Old Implementations" offset="80" elementSize="438" maxelements="1024" label="Vertex Shader" visible="True">
+      <tagblock name="Render States" offset="0" elementSize="5" maxelements="1024" label="" visible="True">
+        <int8 name="State Index" offset="0" visible="True" />
+        <int32 name="State Value" offset="1" visible="True" />
+      </tagblock>
+      <tagblock name="Texture Stage States" offset="8" elementSize="6" maxelements="1024" label="" visible="True">
+        <int8 name="State Index" offset="0" visible="True" />
+        <int8 name="Stage Index" offset="1" visible="True" />
+        <int32 name="State Value" offset="2" visible="True" />
+      </tagblock>
+      <tagblock name="Render State Parameters" offset="16" elementSize="3" maxelements="1024" label="" visible="True">
+        <int8 name="Parameter Index" offset="0" visible="True" />
+        <int8 name="Parameter Type" offset="1" visible="True" />
+        <int8 name="State Index" offset="2" visible="True" />
+      </tagblock>
+      <tagblock name="Texture Stage Parameters" offset="24" elementSize="4" maxelements="1024" label="" visible="True">
+        <int8 name="Parameter Index" offset="0" visible="True" />
+        <int8 name="Parameter Type" offset="1" visible="True" />
+        <int8 name="State Index" offset="2" visible="True" />
+        <int8 name="Stage Index" offset="3" visible="True" />
+      </tagblock>
+      <tagblock name="Textures" offset="32" elementSize="4" maxelements="1024" label="" visible="True">
+        <int8 name="Stage Index" offset="0" visible="True" />
+        <int8 name="Parameter Index" offset="1" visible="True" />
+        <int8 name="Global Texture Index" offset="2" visible="True" />
+        <int8 name="Flags" offset="3" visible="True" />
+      </tagblock>
+      <tagblock name="Vn Constants" offset="40" elementSize="4" maxelements="1024" label="" visible="True">
+        <int8 name="Register Index" offset="0" visible="True" />
+        <int8 name="Parameter Index" offset="1" visible="True" />
+        <int8 name="Destination Mask" offset="2" visible="True" />
+        <int8 name="Scale By Texture Stage" offset="3" visible="True" />
+      </tagblock>
+      <tagblock name="Cn Constants" offset="48" elementSize="4" maxelements="1024" label="" visible="True">
+        <int8 name="Register Index" offset="0" visible="True" />
+        <int8 name="Parameter Index" offset="1" visible="True" />
+        <int8 name="Destination Mask" offset="2" visible="True" />
+        <int8 name="Scale By Texture Stage" offset="3" visible="True" />
+      </tagblock>
+      <int16 name="Block Index Data" offset="56" visible="True" />
+      <int16 name="Block Index Data2" offset="58" visible="True" />
+      <int16 name="Block Index Data3" offset="60" visible="True" />
+      <int16 name="Block Index Data4" offset="62" visible="True" />
+      <int16 name="Block Index Data5" offset="64" visible="True" />
+      <int16 name="Block Index Data6" offset="66" visible="True" />
+      <int16 name="Block Index Data7" offset="68" visible="True" />
+      <int16 name="Block Index Data8" offset="70" visible="True" />
+      <int16 name="Block Index Data9" offset="72" visible="True" />
+      <int16 name="Block Index Data10" offset="74" visible="True" />
+      <int16 name="Block Index Data11" offset="76" visible="True" />
+      <int16 name="Block Index Data12" offset="78" visible="True" />
+      <int16 name="Block Index Data13" offset="80" visible="True" />
+      <int16 name="Block Index Data14" offset="82" visible="True" />
+      <int16 name="Block Index Data15" offset="84" visible="True" />
+      <int16 name="Block Index Data16" offset="86" visible="True" />
+      <int16 name="Block Index Data17" offset="88" visible="True" />
+      <int16 name="Block Index Data18" offset="90" visible="True" />
+      <int16 name="Block Index Data19" offset="92" visible="True" />
+      <int16 name="Block Index Data20" offset="94" visible="True" />
+      <int16 name="Block Index Data21" offset="96" visible="True" />
+      <tagRef name="Vertex Shader" offset="98" visible="True" />
+      <undefined size="8" name="_Unnamed0" offset="106" visible="True" />
+      <undefined size="8" name="_Unnamed1" offset="114" visible="True" />
+      <undefined size="4" name="_Unnamed2" offset="122" visible="True" />
+      <undefined size="4" name="_Unnamed3" offset="126" visible="True" />
+      <tagblock name="Value Externs" offset="130" elementSize="2" maxelements="1024" label="" visible="True">
+        <int8 name="Parameter Index" offset="0" visible="True" />
+        <int8 name="Extern Index" offset="1" visible="True" />
+      </tagblock>
+      <tagblock name="Color Externs" offset="138" elementSize="2" maxelements="1024" label="" visible="True">
+        <int8 name="Parameter Index" offset="0" visible="True" />
+        <int8 name="Extern Index" offset="1" visible="True" />
+      </tagblock>
+      <tagblock name="Switch Externs" offset="146" elementSize="2" maxelements="1024" label="" visible="True">
+        <int8 name="Parameter Index" offset="0" visible="True" />
+        <int8 name="Extern Index" offset="1" visible="True" />
+      </tagblock>
+      <int16 name="Bitmap Parameter Count" offset="154" visible="True" />
+      <undefined size="2" name="_Unnamed4" offset="156" visible="True" />
+      <undefined size="240" name="_Unnamed5" offset="158" visible="True" />
+      <tagblock name="Pixel Shader Fragments" offset="398" elementSize="3" maxelements="1024" label="" visible="True">
+        <int8 name="Switch Parameter Index" offset="0" visible="True" />
+        <int16 name="Block Index Data" offset="1" visible="True" />
+      </tagblock>
+      <tagblock name="Pixel Shader Permutations" offset="406" elementSize="16" maxelements="1024" label="" visible="True">
+        <int16 name="Enum Index" offset="0" visible="True" />
+        <flags16 name="Flags" offset="2" visible="True">
+          <bit name="Has Final Combiner" index="0" />
+        </flags16>
+        <int16 name="Block Index Data" offset="4" visible="True" />
+        <int16 name="Block Index Data2" offset="6" visible="True" />
+        <undefined size="4" name="_Unnamed0" offset="8" visible="True" />
+        <undefined size="4" name="_Unnamed1" offset="12" visible="True" />
+      </tagblock>
+      <tagblock name="Pixel Shader Combiners" offset="414" elementSize="32" maxelements="1024" label="" visible="True">
+        <undefined size="16" name="_Unnamed0" offset="0" visible="True" />
+        <int8 name="Constant Color0 A" offset="16" visible="True" />
+        <int8 name="Constant Color0 R" offset="20" visible="True" />
+        <int8 name="Constant Color0 G" offset="24" visible="True" />
+        <int8 name="Constant Color0 B" offset="28" visible="True" />
+        <int8 name="Constant Color1 A" offset="20" visible="True" />
+        <int8 name="Constant Color1 R" offset="24" visible="True" />
+        <int8 name="Constant Color1 G" offset="28" visible="True" />
+        <int8 name="Constant Color1 B" offset="32" visible="True" />
+        <int8 name="Color A Register Ptr Index" offset="24" visible="True" />
+        <int8 name="Color B Register Ptr Index" offset="25" visible="True" />
+        <int8 name="Color C Register Ptr Index" offset="26" visible="True" />
+        <int8 name="Color D Register Ptr Index" offset="27" visible="True" />
+        <int8 name="Alpha A Register Ptr Index" offset="28" visible="True" />
+        <int8 name="Alpha B Register Ptr Index" offset="29" visible="True" />
+        <int8 name="Alpha C Register Ptr Index" offset="30" visible="True" />
+        <int8 name="Alpha D Register Ptr Index" offset="31" visible="True" />
+      </tagblock>
+      <tagblock name="Pixel Shader Constants" offset="422" elementSize="6" maxelements="1024" label="" visible="True">
+        <enum8 name="Parameter Type" offset="0" visible="True">
+          <option name="Bitmap" value="0" />
+          <option name="Value" value="1" />
+          <option name="Color" value="2" />
+          <option name="Switch" value="3" />
+        </enum8>
+        <int8 name="Combiner Index" offset="1" visible="True" />
+        <int8 name="Register Index" offset="2" visible="True" />
+        <enum8 name="Component Mask" offset="3" visible="True">
+          <option name="X (Value)" value="0" />
+          <option name="Y (Value)" value="1" />
+          <option name="Z (Value)" value="2" />
+          <option name="W (Value)" value="3" />
+          <option name="Xyz/Rgb (Color)" value="4" />
+        </enum8>
+        <undefined size="1" name="_Unnamed0" offset="4" visible="True" />
+        <undefined size="1" name="_Unnamed1" offset="5" visible="True" />
+      </tagblock>
+      <undefined size="4" name="_Unnamed6" offset="430" visible="True" />
+      <undefined size="4" name="_Unnamed7" offset="434" visible="True" />
+    </tagblock>
+  </tagblock>
+</plugin>

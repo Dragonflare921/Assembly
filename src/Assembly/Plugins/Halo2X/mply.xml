@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="8">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <tagblock name="Multiplayer Scenarios" offset="0" elementSize="52" maxelements="32" label="Descriptive Bitmap" visible="True">
+    <tagRef name="Descriptive Bitmap" offset="0" visible="True" />
+    <tagRef name="Displayed Map Name" offset="8" visible="True" />
+    <ascii name="Scenario Tag Directory Path" offset="16" visible="True" />
+    <undefined size="4" name="_Unnamed0" offset="48" visible="True" />
+  </tagblock>
+</plugin>

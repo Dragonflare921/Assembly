@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin game="Halo2" baseSize="12">
+  <revisions>
+    <revision author="XZodia" version="1">Provided entity plugin</revision>
+    <revision author="Dragon" version="2">Converted entity plugin</revision>
+  </revisions>
+  <flags32 name="Flags" offset="0" visible="True">
+  </flags32>
+  <tagblock name="Control Points" offset="4" elementSize="28" maxelements="16" label="" visible="True">
+    <float32 name="Position X" offset="0" visible="True" />
+    <float32 name="Position Y" offset="4" visible="True" />
+    <float32 name="Position Z" offset="8" visible="True" />
+    <float32 name="Orientation i" offset="12" visible="True" />
+    <float32 name="Orientation j" offset="16" visible="True" />
+    <float32 name="Orientation k" offset="20" visible="True" />
+    <float32 name="Orientation w" offset="24" visible="True" />
+  </tagblock>
+</plugin>
