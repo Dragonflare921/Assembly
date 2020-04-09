@@ -77,7 +77,7 @@
 
     <engine name="Halo 2 Xbox" version="02.09.27.09809">
         <shortName>Halo2</shortName>
-        <plugins>Halo2X</plugins>
+        <plugins>Halo2</plugins>
         <engineInfo>
             <headerSize>0x800</headerSize>
             <!-- TODO: this might not be accurate -->

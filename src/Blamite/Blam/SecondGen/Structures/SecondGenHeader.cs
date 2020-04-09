@@ -51,13 +51,38 @@ namespace Blamite.Blam.SecondGen.Structures
 
 		public uint Checksum { get; set; }
 
+        private uint _saved_meta_size_hack = 0;
+
 		public StructureValueCollection Serialize()
 		{
 			var result = new StructureValueCollection();
 			result.SetInteger("file size", FileSize);
 			result.SetInteger("meta offset", (uint) MetaArea.Offset);
-			result.SetInteger("meta size", (uint) MetaArea.Size);
-			result.SetInteger("meta offset mask", (uint)MetaArea.BasePointer);
+
+            // hack to set a saved "meta size" for ogbox
+            // since this value isnt actually the meta size
+            // but the console crashes otherwise. idk, needs more research
+            if (BuildString == "02.09.27.09809")
+            {
+                result.SetInteger("meta size", _saved_meta_size_hack);
+            }
+            else
+            {
+                result.SetInteger("meta size", (uint)MetaArea.Size);
+            }
+
+            // hack to set meta offset mask to 0
+            // technically we could get away without this but im stupid and use
+            // a meta offset mask of 0 as an xbox identifier so uh yeah
+            if (BuildString == "02.09.27.09809")
+            {
+                result.SetInteger("meta offset mask", 0);
+            }
+            else
+            {
+                result.SetInteger("meta offset mask", (uint)MetaArea.BasePointer);
+            }
+
 			result.SetInteger("type", (uint) Type);
 			result.SetInteger("string table count", (uint) StringIDCount);
 			result.SetInteger("string table size", (uint) StringIDData.Size);
@@ -89,6 +114,8 @@ namespace Blamite.Blam.SecondGen.Structures
             if (BuildString == "02.09.27.09809")
             {
                 metaSize = (int)values.GetInteger("tag data offset") + (int)values.GetInteger("tag data size");
+                // hack to rewrite the "meta size" value even though its not actually the meta size
+                _saved_meta_size_hack = (uint)values.GetInteger("meta size");
             }
             else
             {

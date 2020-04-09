@@ -50,7 +50,7 @@
   <float32 name="Detail Fade Factor" offset="8" visible="True" />
   <float32 name="Sharpen Amount" offset="12" visible="True" />
   <float32 name="Bump Height" offset="16" visible="True" />
-  <enum16 name="_Unnamed0" offset="20" visible="True">
+  <enum16 name="Sprite Budget Size" offset="20" visible="True">
     <option name="32 X 32" value="0" />
     <option name="64 X 64" value="1" />
     <option name="128 X 128" value="2" />
@@ -58,7 +58,7 @@
     <option name="512 X 512" value="4" />
     <option name="1024 X 1024" value="5" />
   </enum16>
-  <int16 name="_Unnamed1" offset="22" visible="True" />
+  <int16 name="Sprite Budget Count" offset="22" visible="True" />
   <int16 name="Color Plate Width" offset="24" visible="True" />
   <int16 name="Color Plate Height" offset="26" visible="True" />
   <undefined size="8" name="_Unnamed2" offset="28" visible="True" />
