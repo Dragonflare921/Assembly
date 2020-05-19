@@ -32,7 +32,7 @@ using Microsoft.Win32;
 using Newtonsoft.Json;
 using XBDMCommunicator;
 using Blamite.Blam.ThirdGen;
-using Blamite.RTE.MCC;
+using Blamite.RTE.ThirdGen;
 using Blamite.RTE.H1PC;
 
 namespace Assembly.Metro.Controls.PageTemplates.Games

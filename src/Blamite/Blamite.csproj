@@ -215,7 +215,6 @@
     <Compile Include="Native\ProcessModuleMemoryStream.cs" />
     <Compile Include="RTE\H1PC\H1PCMapPointerReader.cs" />
     <Compile Include="RTE\H1PC\H1PCRTEProvider.cs" />
-    <Compile Include="RTE\MCC\MCCRTEProvider.cs" />
     <Compile Include="RTE\MCCRTEProvider.cs" />
     <Compile Include="RTE\SecondGen\MapPointerReader.cs" />
     <Compile Include="RTE\SecondGen\SecondGenMCCRTEProvider.cs" />
@@ -389,6 +388,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Formats\Halo1\Layouts\H1_Layouts_Core.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Formats\Halo2AMCC\H2AMCC_LocaleSymbols.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
