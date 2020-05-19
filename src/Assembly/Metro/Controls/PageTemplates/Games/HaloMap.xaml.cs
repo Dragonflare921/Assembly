@@ -25,7 +25,7 @@ using Blamite.Injection;
 using Blamite.IO;
 using Blamite.Plugins;
 using Blamite.RTE;
-using Blamite.RTE.H2Vista;
+using Blamite.RTE.SecondGen;
 using Blamite.Util;
 using CloseableTabItemDemo;
 using Microsoft.Win32;
@@ -206,14 +206,17 @@ namespace Assembly.Metro.Controls.PageTemplates.Games
                         break;
 
 					case EngineType.SecondGeneration:
-						_rteProvider = new H2VistaRTEProvider(_buildInfo);
+						if (!string.IsNullOrEmpty(_buildInfo.GameModule))
+							_rteProvider = new SecondGenMCCRTEProvider(_buildInfo);
+						else
+							_rteProvider = new SecondGenRTEProvider(_buildInfo);
 						break;
 
 					case EngineType.ThirdGeneration:
 						if (_cacheFile.Endianness == Endian.BigEndian)
 							_rteProvider = new XBDMRTEProvider(App.AssemblyStorage.AssemblySettings.Xbdm);
 						else
-							_rteProvider = new MCCRTEProvider(_buildInfo);
+							_rteProvider = new ThirdGenMCCRTEProvider(_buildInfo);
 						break;
 				}
 
@@ -288,10 +291,10 @@ namespace Assembly.Metro.Controls.PageTemplates.Games
 				{
 					HeaderDetails.Add(new HeaderValue
 					{
-						Title = "Meta Base:",
+						Title = "Tag Data Base:",
 						Data = "0x" + _cacheFile.MetaArea.BasePointer.ToString("X8")
 					});
-					HeaderDetails.Add(new HeaderValue {Title = "Meta Size:", Data = "0x" + _cacheFile.MetaArea.Size.ToString("X")});
+					HeaderDetails.Add(new HeaderValue {Title = "Tag Data Size:", Data = "0x" + _cacheFile.MetaArea.Size.ToString("X")});
 					HeaderDetails.Add(new HeaderValue
 					{
 						Title = "Map Magic:",

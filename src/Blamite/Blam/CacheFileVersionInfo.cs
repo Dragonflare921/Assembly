@@ -17,6 +17,7 @@ namespace Blamite.Blam
 		private const int SecondGenVersion = 8;
 
 		private const int ThirdGenVersion = 9;
+		private const int SecondGenMCCVersion = 10;
 
 		public CacheFileVersionInfo(IReader reader)
 		{

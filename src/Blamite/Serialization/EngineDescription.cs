@@ -133,6 +133,21 @@ namespace Blamite.Serialization
 		/// </summary>
 		public PokingCollection Poking { get; private set; }
 
+		/// <summary>
+		///		The offset past the header from a poking xml pointer to the value to add for address conversion.
+		/// </summary>
+		public int PokingOffset { get; private set; }
+
+		/// <summary>
+		///		Whether the cache file itself uses compression.
+		/// </summary>
+		public bool UsesCompression { get; private set; }
+
+		/// <summary>
+		///		MCC sometimes ships maps with hashes 0'd out, in some cases adding a hash can cause issues.
+		/// </summary>
+		public bool UsesHashes { get; private set; }
+
 		private void LoadSettings()
 		{
 			LoadEngineSettings();
@@ -144,6 +159,12 @@ namespace Blamite.Serialization
 			HeaderSize = Settings.GetSetting<int>("engineInfo/headerSize");
 			SegmentAlignment = Settings.GetSettingOrDefault("engineInfo/segmentAlignment", 0x1000);
 			ExpandMagic = Settings.GetSettingOrDefault("engineInfo/expandMagic", 0);
+
+			UsesCompression = Settings.GetSettingOrDefault("engineInfo/usesCompression", false);
+			UsesHashes = Settings.GetSettingOrDefault("engineInfo/usesHashes", true);
+
+			if (Settings.PathExists("engineInfo/pokingOffset"))
+				PokingOffset = Settings.GetSettingOrDefault("engineInfo/pokingOffset", 0);
 
 			if (Settings.PathExists("engineInfo/gameExecutable"))
 				GameExecutable = Settings.GetSetting<string>("engineInfo/gameExecutable");
