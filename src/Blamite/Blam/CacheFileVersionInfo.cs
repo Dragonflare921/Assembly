@@ -12,6 +12,7 @@ namespace Blamite.Blam
         private const int FirstGenXboxVersion = 5;
         private const int FirstGenPCVersion = 7;// also CEA
         private const int FirstGenCustomEditionVersion = 609;
+        private const int FirstGenInvaderVersion = 343;// invader tool uses version 343
 
         // second gen needs more checks to find the platform
 		private const int SecondGenVersion = 8;
@@ -42,13 +43,25 @@ namespace Blamite.Blam
                 reader.SeekTo(0x40);
                 BuildString = reader.ReadAscii();
             }
-            // TODO: support xbox
-            //       gonna need de/compression
+            else if (Version == FirstGenInvaderVersion)
+            {
+                // first gen is all similar enough
+                Engine = EngineType.FirstGeneration;
+
+                // Read first-generation build string
+                reader.SeekTo(0x40);
+                BuildString = reader.ReadAscii();
+            }
             else if (Version == FirstGenXboxVersion)
             {
-                throw new NotImplementedException("assembly does not support loading first gen xbox maps (yet)");
+                // first gen is all similar enough
+                Engine = EngineType.FirstGeneration;
+
+                // Read first-generation build string
+                reader.SeekTo(0x40);
+                BuildString = reader.ReadAscii();
             }
-			else if (Version == SecondGenVersion)
+			else if (Version == SecondGenVersion || Version == SecondGenMCCVersion)
 			{
                 Engine = EngineType.SecondGeneration;
 

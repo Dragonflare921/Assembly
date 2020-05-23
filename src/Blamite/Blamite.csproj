@@ -213,8 +213,10 @@
     <Compile Include="Extensions\BitArrayExtensions.cs" />
     <Compile Include="IO\IPointerExpander.cs" />
     <Compile Include="Native\ProcessModuleMemoryStream.cs" />
-    <Compile Include="RTE\H1PC\H1PCMapPointerReader.cs" />
-    <Compile Include="RTE\H1PC\H1PCRTEProvider.cs" />
+    <Compile Include="RTE\FirstGen\FirstGenMCCRTEProvider.cs" />
+    <Compile Include="RTE\FirstGen\H1PCMapPointerReader.cs" />
+    <Compile Include="RTE\FirstGen\H1PCRTEProvider.cs" />
+    <Compile Include="RTE\FirstGen\MapPointerReader.cs" />
     <Compile Include="RTE\MCCRTEProvider.cs" />
     <Compile Include="RTE\SecondGen\MapPointerReader.cs" />
     <Compile Include="RTE\SecondGen\SecondGenMCCRTEProvider.cs" />
@@ -345,6 +347,7 @@
     <Compile Include="Native\ProcessMemoryStream.cs" />
     <Compile Include="RTE\IRTEProvider.cs" />
     <Compile Include="RTE\RTEStreamManager.cs" />
+    <Compile Include="Util\Adler32.cs" />
     <Compile Include="Util\AES.cs" />
     <Compile Include="Util\CharConstant.cs" />
     <Compile Include="Util\FileSystem.cs" />
@@ -376,6 +379,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Formats\Engines.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Formats\Halo1Xbox\Layouts\H1X_Layouts_Core.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Formats\Halo1\H1AMCC_Poking.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Formats\Halo1\H1CE_Poking.xml">
@@ -646,6 +655,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
